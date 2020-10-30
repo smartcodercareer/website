@@ -1,0 +1,114 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Appdy"
+
+# css plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "plugins/jquery-magnific-popup/jquery.magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/animate.css"
+[[params.plugins.css]]
+link = "plugins/webfonts/all.min.css" # font-awesome
+# [[params.plugins.css]]
+# link = "plugins/themify-icons/themify-icons.css"
+
+# js plugin
+[[params.plugins.js]]
+link = "plugins/jquery.mixitup/jquery.mixitup.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/popper.min.js"
+[[params.plugins.js]]
+link = "plugins/wow.min.js"
+[[params.plugins.js]]
+link = "plugins/jquery-magnific-popup/jquery.magnific-popup.min.js"
+
+[[menu.main]]
+URL = "#services"
+name = "Services"
+weight = 1
+
+[[menu.main]]
+URL = "#clients"
+name = "Clients"
+weight = 2
+
+[[menu.main]]
+URL = "#free-case-study"
+name = "Case Study"
+weight = 3
+
+[[menu.main]]
+URL = "#about"
+name = "About"
+weight = 4
+
+[[menu.main]]
+URL = "#contact"
+name = "Contact"
+weight = 5
+
+
+[params]
+home = "Home"
+logo = "images/logo.png"
+phone = ""
+email = "care@appdy.co.uk"
+skype = ""
+author = "Appdy LTD"
+description = "Digital Agency Based in London"
+
+google_analytics_id = "" # Your ID
+# copyright = "© Copyright 2016-2020 Appdy LTD"
+
+# preloader
+[params.preloader]
+enable = true
+preloader = "images/preloader.gif" # use png, jpg, svg or gif format
+
+[params.navCta]
+enable = false
+
+[params.scrollToTop]
+enable = true
+
+# [[params.contact]]
+# enabled = true
+
+# [[params.cookies]]
+# enable
+
+# social site
+[params.social.facebook]
+enable = true
+icon = "fab fa-facebook-f"
+URL = "#"
+
+[params.social.instagram]
+enable = false
+icon = "fab fa-instagram"
+URL = "#"
+
+[params.social.twitter]
+enable = false
+icon = "fab fa-twitter"
+URL = "#"
+
+[params.social.youtube]
+enable = false
+icon = "fab fa-youtube"
+URL = "#"
+
+[params.social.pinterest]
+enable = false
+icon = "fab fa-pinterest-p"
+URL = "#"

@@ -1,0 +1,68 @@
+<header class="main_header">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-lg-2 col-sm-3 col-xs-6 col-5">
+        <div class="logo">
+          <a href="template-one.html#">
+            <img class="img-responsive light_logo" src="assets/images/template-one/logo-white.png" alt="logo">
+            <img class="img-responsive dark_logo" src="assets/images/template-one/logo.png" alt="logo">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-10 col-sm-9 col-xs-6 col-7">
+        <div class="main_nav ml-auto">
+
+          <!-- Main Nav Menu -->
+          <nav id="primary_navigation" class="site_navigation">
+
+            <div class="main_menu">
+              <a href="javascript:void(0);" class="close_menu"><i class="fa fa-times"></i></a>
+              <ul class="nav main_menu_list justify-content-end">
+                <li class="menu-item nav-item page-active">
+                  <a href="{{ site.BaseURL }}" class="nav-link">{{ site.Params.Home }}</a>
+                </li>
+                {{ $current := . }}
+                {{ range site.Menus.main }}
+                {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+                {{ $active = or $active (eq .Name $current.Title) }}
+                {{ if .HasChildren }}
+                <li class="menu-item nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
+                  <div class="dropdown-menu" >
+                    {{ range .Children }}
+                    <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                    {{ end }}
+                  </div>
+                </li>
+                {{ else }}
+                <li class="menu-item nav-item {{ if $active }}active{{ end }}">
+                  {{ if hasPrefix .URL "#" }}
+                  <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                  {{ else }}
+                  <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                  {{ end }}
+                </li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+
+            {{ if site.Params.navCta.enable }}
+            <a href="template-one.html#joiningPopup" class="get_quote btn blue_gradient open-popup-link">Get a quote</a>
+            {{ end }}
+
+            <!-- <a class="menu-bar mobile-navigation" href="javascript:void(0)">
+                 <span class="menu-btn-icon">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 </span>
+                 </a> -->
+
+          </nav>
+          <!-- End Main Nav Menu -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

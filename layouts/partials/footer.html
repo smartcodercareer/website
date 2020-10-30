@@ -1,0 +1,161 @@
+<footer class="main_footer wow fadeInUp blue_gradient">
+  <div class="container">
+    <div class="footer_top  text-center">
+      <div class="footer_top_logo">
+        <a href="template-one.html#" class="footer-logo"><img src="assets/images/template-one/logo-icon.png" alt="logo icon"></a>
+      </div>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
+    </div>
+    <div class="row text-center">
+      {{ if site.Params.phone }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fa fa-phone-alt"></i>
+          <h3>Call Us On</h3>
+          <a href="template-one.html#!">(123) 456-7890</a>
+        </div>
+      </div>
+      {{ end }}
+      {{ if site.Params.email }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fa fa-envelope"></i>
+          <h3>Mail us on</h3>
+          <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+        </div>
+      </div>
+      {{ end }}
+      {{ if site.Params.skype }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fab fa-skype"></i>
+          <h3>Lets Skype</h3>
+          <a href="template-one.html#">{{ site.Params.skype }}</a>
+        </div>
+      </div>
+    {{ end }}
+    </div>
+    <div class="copyrigt_text d-flex justify-content-between">
+      <span>© Copyright {{ dateFormat "2006" now }}-2020 Appdy LTD</span>
+      <!-- social icons -->
+      <div class="social_div">
+        <ul class="social_list">
+          {{ if site.Params.social.facebook.enable }}
+          {{ with site.Params.social.facebook }}
+          <li><a href="{{ .URL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+          {{ end }}
+          {{ if site.Params.social.instagram.enable }}
+          {{ with site.Params.social.instagram }}
+          <li><a href="{{ .URL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+          {{ end }}
+          {{ if site.Params.social.twitter.enable }}
+          {{ with site.Params.social.twitter }}
+          <li><a href="{{ .URL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+          {{ end }}
+          {{ if site.Params.social.youtube.enable }}
+          {{ with site.Params.social.youtube }}
+          <li><a href="{{ .URL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+          {{ end }}
+          {{ if site.Params.social.pinterest.enable }}
+          {{ with site.Params.social.pinterest }}
+          <li><a href="{{ .URL }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div><!-- /. social icons -->
+    </div>
+  </div>
+  <div class="svg_curve">
+    <svg version="1.1" x="0px" y="0px"
+      width="3293px" height="190.76px" viewBox="0 0 3293 190.76" enable-background="new 0 0 3293 190.76" xml:space="preserve">
+      <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M0,2.954V190.76h3293V0.868C3293,0.868,1760.584,400.175,0,2.954z"
+      />
+    </svg>
+  </div>
+</footer>
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range site.Params.plugins.js}}
+<script src="{{ .link | absURL }}"></script>
+{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+
+<!-- cookie -->
+{{ if site.Params.cookies.enable }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires: {{ site.Params.cookies.expire_days }}
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+{{ end }}
+
+{{ if site.Params.scrollToTop.enable}}
+<a href="javascript:void(0);" class="scrollUp"><i class="fas fa-chevron-up"></i></a>
+{{ end }}
+
+{{ if site.Params.modal }}
+<!-- The Modal -->
+<div id="joiningPopup" class="white-popup mfp-hide custom_mfp_popup">
+  <div class="modal-content">
+    <!-- Modal Header -->
+    <div class="modal-header text-center">
+      <h3 class="modal-title">Request for a Quote</h3>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
+      <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+    </div>
+    <!-- Modal body -->
+    <div class="modal-body">
+      <div class="get_quote_form">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Enter Phone No.">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="email" class="form-control" name="name" placeholder="Enter Email Address">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Enter Your Message"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn">Submit Your Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
