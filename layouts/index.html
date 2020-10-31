@@ -60,7 +60,7 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-          <p class="wow fadeInLeft">{{ .content }}</p>
+          <p class="wow fadeInLeft">{{ .description | safeHTML }}</p>
         </div>
         <div class="col-md-6">
           <div class="about_right wow fadeInRight">
@@ -68,9 +68,9 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row align-items-center">
         {{ range $index, $item := .item }}
-        <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.5}}s" data-wow-delay="0s">
+        <div class="col-lg-2 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.5}}s" data-wow-delay="0s">
           <div class="what-we-do-item text-center mt-30">
             <i class="{{ .icon }}"></i>
             <h5 class="title">{{ .title }}</h5>
@@ -86,6 +86,37 @@
   {{ end }}
   <!-- /. About Section -->
 
+  <!-- service Section -->
+  {{ if site.Data.homepage.services.enable }}
+  {{ with site.Data.homepage.services }}
+  <section class="service_sec" id="service">
+    <div class="container">
+      <div class="sec_header text-center">
+        <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
+        <p class="wow fadeInLeft">{{ .description }}</p>
+      </div>
+      <div class="servics_list">
+        <div class="row">
+          {{ range $index, $item := .item }}
+          <div class="col-sm-6 col-md-6 col-lg-3 wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.25}}s" data-wow-delay="0s">
+            <div class="service_item">
+              <div class="service_thumb"><i class="{{ .icon }}"></i></div>
+              <div class="service_content">
+                <h4>{{ .title }}</h4>
+                <p>{{ .description }}</p>
+                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  {{ end }}
+  {{ end }}
+  <!-- /. service Section -->
 
   <!-- portfolio Section -->
   {{ if site.Data.homepage.portfolio.enable }}
@@ -162,90 +193,6 @@
 
 
 
-  <!-- service Section -->
-  <section class="service_sec" id="service">
-    <div class="container">
-      <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInLeft"><span>OUR LATEST SERVICES</span>We Offer Better Soluation For
-          Your IT Business</h2>
-        <p class="wow fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-          pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elits</p>
-      </div>
-      <div class="servics_list">
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration=".25s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fas fa-search"></i></div>
-              <div class="service_content">
-                <h4>SEO</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.5s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fa fa-pen-fancy"></i></div>
-              <div class="service_content">
-                <h4>DESIGN</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.75s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fa fa-handshake"></i></div>
-              <div class="service_content">
-                <h4>CONSULTING</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fas fa-volume-up"></i></div>
-              <div class="service_content">
-                <h4>ADVERTISING</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.25s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fa fa-flag"></i></div>
-              <div class="service_content">
-                <h4>BRANDING</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.50s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="fa fa-laptop-code"></i></div>
-              <div class="service_content">
-                <h4>DEVELOPMENT</h4>
-                <p>Lorem ipsum dolor sit amet. Con eleifend sem sed dictum mattis sectetur elit. Nulla
-                  convallis pul.</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="template-one.html#" class="btn browse_btn blue_gradient wow slideInUp" data-wow-duration="1.75s"
-          data-wow-delay="0s">browse More</a>
-      </div>
-    </div>
-  </section><!-- /. service Section -->
 
 
   <!-- Team Section -->

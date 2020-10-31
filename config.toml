@@ -78,8 +78,8 @@ link = "plugins/jquery.mixitup/mixitup.min.js"
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
 
 [[menu.main]]
-URL = "#services"
-name = "Services"
+URL = "#service"
+name = "Service"
 weight = 1
 
 [[menu.main]]
