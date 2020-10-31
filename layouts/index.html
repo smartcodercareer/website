@@ -116,10 +116,11 @@
 
 
   <!-- portfolio Section -->
+  {{ if site.Data.homepage.portfolio.enable }}
   <section class="portfolio_tab_sec bg_light_gray" id="portfolio">
     <div class="container">
       <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInLeft"><span>OUR LATEST Works</span>Our Portfolio Designs</h2>
+        <h2 class="sec_heading wow fadeInLeft"><span>{{ site.Data.homepage.title}}</span>{{ site.Data.homepage.subtitle }}</h2>
         <p class="wow fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
           pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur
           adipiscing elits</p>
@@ -127,20 +128,27 @@
     </div>
     <div class="container-fluid">
       <div class="portfolio_tabs">
+        <ul class="tabs_list text-center wow fadeInUp" id="filters">
+          <li><a href="template-one.html#!" class="filter active" data-filter=".designs, .development, .seo, .marketing">All</a></li>
+          <li><a href="template-one.html#!" class="filter" data-filter=".designs">Designs</a></li>
+          <li><a href="template-one.html#!" class="filter" data-filter=".development">Development</a></li>
+          <li><a href="template-one.html#!" class="filter" data-filter=".seo">SEO</a></li>
+          <li><a href="template-one.html#!" class="filter" data-filter=".marketing">Marketing</a></li>
+        </ul>
         <div class="portfolio_list wow fadeInUp">
           <div id="portfoliolist">
-            {{ if site.Data.homepage.testimonials.enable }}
-            {{ with site.Data.homepage.testimonials }}
+            {{ if site.Data.homepage.portfolio.enable }}
+            {{ with site.Data.homepage.portfolio }}
             {{ range .item }}
-            <div class="col-12 text-center">
-              <h2 class="section-title mb-5">{{ .title | markdownify }}</h2>
-            </div>
-            <div class="col col-lg-10 mx-auto trustedby-slider">
-              <div class="text-center trustedby-content">
-                <img alt="Mockup of website {{ .website }}." src="{{ .image | relURL }}" class="img-fluid mockup">
-                <p class="opinion">{{ .opinion }}</p>
-                <span class="client">~ {{ .client }} ({{ if .URL }}<a href="{{ .URL | relURL }}" class="website">{{ .website }}</a>{{ else }}<span class="website">{{ .website }}</span>{{ end }})</span>
-              </div>
+            <div class="portfolio_item portfolio designs" data-cat="designs" style="display: inline-block;">
+              <a href="{{ if .URL }}{{ .URL | relURL }}{{ else }}#{{ end }}"}>
+                <img src="{{ .image  }}" alt="portfolio">
+                <div class="p_caption">
+                  <div class="plus_icon"></div>
+                  <h4>Our Design 1</h4>
+                  <p>Check Our Work</p>
+                </div>
+              </a>
             </div>
             {{ end }}
             {{ end }}
@@ -148,8 +156,8 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
+  {{ end }}
   <!-- /. portfolio Section -->
 
 
@@ -325,47 +333,50 @@
   </section><!-- /. Team Section -->
 
   <!-- Counter Section -->
-  <div class="counter_sec love_counter">
-    <div class="container">
+  <!--
+       <div class="counter_sec love_counter">
+       <div class="container">
 
-      <div class="counter_area mt-30 text-center">
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="counter wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
-              <sub><span class="love_count">569</span> <sup>+</sup></sub>
-              <span>Projct Complate</span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
-                laudantium</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="counter wow slideInUp mt-55" data-wow-duration="1s" data-wow-delay="0s">
-              <sub><span class="love_count">783</span> <sup>+</sup></sub>
-              <span>Business Partners</span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
-                laudantium</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="counter wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-              <sub><span class="love_count">356</span> <sup>+</sup></sub>
-              <span>Happy Clients</span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
-                laudantium</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="counter wow slideInUp mt-55" data-wow-duration="2s" data-wow-delay="0s">
-              <sub><span class="love_count">894</span> <sup>+</sup></sub>
-              <span>IT Consultant</span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
-                laudantium</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- /. Counter Section -->
+       <div class="counter_area mt-30 text-center">
+       <div class="row">
+       <div class="col-sm-6 col-md-6 col-lg-3">
+       <div class="counter wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
+       <sub><span class="love_count">569</span> <sup>+</sup></sub>
+       <span>Projct Complate</span>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
+       laudantium</p>
+       </div>
+       </div>
+       <div class="col-sm-6 col-md-6 col-lg-3">
+       <div class="counter wow slideInUp mt-55" data-wow-duration="1s" data-wow-delay="0s">
+       <sub><span class="love_count">783</span> <sup>+</sup></sub>
+       <span>Business Partners</span>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
+       laudantium</p>
+       </div>
+       </div>
+       <div class="col-sm-6 col-md-6 col-lg-3">
+       <div class="counter wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+       <sub><span class="love_count">356</span> <sup>+</sup></sub>
+       <span>Happy Clients</span>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
+       laudantium</p>
+       </div>
+       </div>
+       <div class="col-sm-6 col-md-6 col-lg-3">
+       <div class="counter wow slideInUp mt-55" data-wow-duration="2s" data-wow-delay="0s">
+       <sub><span class="love_count">894</span> <sup>+</sup></sub>
+       <span>IT Consultant</span>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque
+       laudantium</p>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>
+  -->
+  <!-- /. Counter Section -->
 
 
 
@@ -438,193 +449,197 @@
   </section>  <!-- /. Testimonials Section -->
 
   <!-- News Section -->
-  <section class="news_sec" id="blog">
-    <div class="container">
-      <div class="sec_header">
-        <h2 class="sec_heading wow fadeInLeft"><span>OUR Latest Blogs</span>Read Our Latest News & Blog</h2>
-        <p class="wow fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-          pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elits</p>
-      </div>
-      <div class="blogs_list text-center">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.25s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.50s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img2.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.75s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img3.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.00s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img4.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.25s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img5.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.50s" data-wow-delay="0s">
-            <div class="blog_item">
-              <div class="blog_thumb">
-                <a href="single-blog.html"><img src="images/template-one/blog-img6.jpg" alt="team Member"></a>
-              </div>
-              <div class="blog_item_content">
-                <ul class="blog_item_info">
-                  <li>
-                    <i class="fa fa-user"></i>by John Doe
-                  </li>
-                  <li>
-                    <i class="fa fa-calendar-alt"></i>Nov 22, 2018
-                  </li>
-                  <li>
-                    <i class="fa fa-comments"></i>2
-                  </li>
-                </ul>
-                <a href="single-blog.html">
-                  <h4>Software Testing Service</h4>
-                </a>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
-                  pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
-                  consectetur
-                  adipiscing elits</p>
-                <a href="single-blog.html" class="btn">Read More</a>
-              </div>
-            </div>
-          </div>
+  <!--
+       <section class="news_sec" id="blog">
+       <div class="container">
+       <div class="sec_header">
+       <h2 class="sec_heading wow fadeInLeft"><span>OUR Latest Blogs</span>Read Our Latest News & Blog</h2>
+       <p class="wow fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur
+       adipiscing elits</p>
+       </div>
+       <div class="blogs_list text-center">
+       <div class="row">
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.25s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.50s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img2.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.75s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img3.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.00s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img4.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.25s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img5.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
+       <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.50s" data-wow-delay="0s">
+       <div class="blog_item">
+       <div class="blog_thumb">
+       <a href="single-blog.html"><img src="images/template-one/blog-img6.jpg" alt="team Member"></a>
+       </div>
+       <div class="blog_item_content">
+       <ul class="blog_item_info">
+       <li>
+       <i class="fa fa-user"></i>by John Doe
+       </li>
+       <li>
+       <i class="fa fa-calendar-alt"></i>Nov 22, 2018
+       </li>
+       <li>
+       <i class="fa fa-comments"></i>2
+       </li>
+       </ul>
+       <a href="single-blog.html">
+       <h4>Software Testing Service</h4>
+       </a>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+       pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet,
+       consectetur
+       adipiscing elits</p>
+       <a href="single-blog.html" class="btn">Read More</a>
+       </div>
+       </div>
+       </div>
 
-        </div>
-        <a href="blog-list.html" class="btn browse_btn blue_gradient wow slideInUp">browse
-          More</a>
-      </div>
-    </div>
-  </section><!-- /. News Section -->
+       </div>
+       <a href="blog-list.html" class="btn browse_btn blue_gradient wow slideInUp">browse
+       More</a>
+       </div>
+       </div>
+       </section>
+  -->
+  <!-- /. News Section -->
 
   <!-- Pricing Section -->
+  <!--
   <section class="pricing_sec">
     <div class="pricing_list">
       <div class="container">
@@ -689,7 +704,9 @@
         </div>
       </div>
     </div>
-  </section><!-- /. Pricing Section -->
+  </section>
+  -->
+  <!-- /. Pricing Section -->
 
   <!-- Contact Section -->
   <section class="contact_sec" id="contact">

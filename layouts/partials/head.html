@@ -23,14 +23,19 @@
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
   {{ $toCssOptions := (dict "outputStyle" "compressed" "enableSourceMap" false) }}
-  {{ $postCSSOptions := (dict "noMap" true)}}
+  {{ $postCssOptions := (dict "noMap" false) }}
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsProduction }}
   {{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $postCSSOptions = (dict "noMap" false)}}
+  {{ $postCssOptions = (dict "noMap" true) }}
   {{ end }}
 
-  {{ $styles := resources.Get "css/style.scss" | resources.ToCSS $toCssOptions | resources.PostCSS $postCSSOptions | resources.Minify | resources.Fingerprint }}
+  {{ $styles := resources.Get "css/style.scss" | resources.ToCSS $toCssOptions | resources.PostCSS $postCssOptions }}
+
+  {{ if hugo.IsProduction }}
+  {{ $styles = $styles | resources.Minify | resources.Fingerprint }}
+  {{ end }}
+
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   {{ "<!--Favicon-->" | safeHTML }}
