@@ -18,9 +18,21 @@
   },
   "homepage": "https://github.com/Appdy/site#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@popperjs/core": "^2.5.4",
+    "animate.css": "^4.1.1",
     "autoprefixer": "^10.0.1",
+    "bootstrap": "^4.5.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "magnific-popup": "^1.1.0",
+    "mixitup": "^3.3.1",
     "postcss": "^8.1.4",
-    "postcss-cli": "^8.1.0"
-  }
+    "postcss-cli": "^8.1.0",
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
+  },
+  "dependencies": {}
 }

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer_top  text-center">
       <div class="footer_top_logo">
-        <a href="template-one.html#" class="footer-logo"><img src="assets/images/template-one/logo-icon.png" alt="logo icon"></a>
+        <a href="template-one.html#" class="footer-logo"><img src="images/template-one/logo-icon.png" alt="logo icon"></a>
       </div>
       <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
     </div>
@@ -84,7 +84,10 @@
 {{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}
-{{ $script := resources.Get "js/script.js" | minify}}
+{{ $script := resources.Get "js/script.js" }}
+{{ if hugo.IsProduction }}
+{{ $script = resources.Get "js/script.js" | minify}}
+{{ end }}
 <script src="{{ $script.Permalink }}"></script>
 
 <!-- cookie -->

@@ -37,6 +37,13 @@ Version: 1.0.0
 /*  1.0 Global Style
 ========================================================================== */
 
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/animate.css/animate";
+
 /*Poppins font*/
 @font-face {
     font-family: 'Poppins';
@@ -1497,7 +1504,7 @@ ul.star_rating li i.fill{
     background: rgba(51,99,245,0.9);
 }
 .hiring_block.lets_work_block:after{
-    background: rgba(113,3,188,0.9);    
+    background: rgba(113,3,188,0.9);
 }
 .lets_work_block h2{
     color: #fff;
@@ -1520,7 +1527,7 @@ ul.star_rating li i.fill{
     position: relative;
     color: #fff;
 }
- 
+
 
 
 /*  14.0 Main footer Style
@@ -1782,7 +1789,7 @@ a.close_menu {
     left: 0;
 }
 .p_v_per_month em {
-    font-style: 
+    font-style:
     normal;font-size: 20px;
     position: absolute;
     right: 0;
@@ -1955,9 +1962,9 @@ a.close_menu {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3363f5', endColorstr='#7103bc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .blue_gradient:hover {
-    background: #7103bc; 
-    background: -moz-linear-gradient(-45deg,  #7103bc 0%, #3363f5 100%); 
-    background: -webkit-linear-gradient(-45deg,  #7103bc 0%,#3363f5 100%); 
+    background: #7103bc;
+    background: -moz-linear-gradient(-45deg,  #7103bc 0%, #3363f5 100%);
+    background: -webkit-linear-gradient(-45deg,  #7103bc 0%,#3363f5 100%);
     background: linear-gradient(135deg,  #7103bc 0%,#3363f5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7103bc', endColorstr='#3363f5',GradientType=1 );
 }
@@ -2047,7 +2054,7 @@ a.close_menu {
     position: fixed;
     background: #fff;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-    padding: 12px 0; 
+    padding: 12px 0;
 }
 .dark_logo,
 .main_header.dark_bg .light_logo{
@@ -2119,17 +2126,17 @@ a.close_menu {
 .template-three .scrollUp,
 .template-three .main_footer,
 .template-three .team_member_overlay:after {
-    background: #fc4a1a; 
+    background: #fc4a1a;
     background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
-    background: linear-gradient(to right, #f7b733, #fc4a1a);  
+    background: linear-gradient(to right, #f7b733, #fc4a1a);
 }
 .template-three .pricing_sec,
 .template-three .counter_sec{
-   background-image: url(../images/template-three/footer-bg.jpg); 
+   background-image: url(../images/template-three/footer-bg.jpg);
 }
 
 .orange_gradient:hover {
-    background: #f7b733; 
+    background: #f7b733;
     background: -webkit-linear-gradient(to right, #fc4a1a, #f7b733);
     background: linear-gradient(to right, #fc4a1a, #f7b733);
 }
@@ -2231,7 +2238,7 @@ a.close_menu {
     position: fixed;
     background: #fff;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-    padding: 12px 0; 
+    padding: 12px 0;
 }
 .template-three a.get_quote:after {
     border-radius: 0px;
@@ -2285,7 +2292,7 @@ a.close_menu {
 }
 .template-four .pricing_sec,
 .template-four .counter_sec{
-   background-image: url(../images/template-three/footer-bg.jpg); 
+   background-image: url(../images/template-three/footer-bg.jpg);
 }
 
 .four_gradient:hover {
@@ -2391,7 +2398,7 @@ a.close_menu {
     position: fixed;
     background: #fff;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-    padding: 12px 0; 
+    padding: 12px 0;
 }
 .template-four a.get_quote:after {
     border-radius: 0px;
@@ -2466,23 +2473,23 @@ a.close_menu {
 .template-five .team_member_overlay:after {
     background: #00a3c8;
     background: -moz-linear-gradient(-45deg,  #00a3c8 0%, #75e5ff 100%);
-    background: -webkit-linear-gradient(-45deg,  #00a3c8 0%,#75e5ff 100%); 
-    background: linear-gradient(135deg,  #00a3c8 0%,#75e5ff 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a3c8', endColorstr='#75e5ff',GradientType=1 ); 
+    background: -webkit-linear-gradient(-45deg,  #00a3c8 0%,#75e5ff 100%);
+    background: linear-gradient(135deg,  #00a3c8 0%,#75e5ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a3c8', endColorstr='#75e5ff',GradientType=1 );
 
 }
 .template-five .pricing_sec,
 .template-five .counter_sec,
 .template-five .counter_sec{
-   background-image: url(../images/template-five/footer-bg.jpg); 
+   background-image: url(../images/template-five/footer-bg.jpg);
 }
 
 .medi_gradient:hover {
     background: #75e5ff;
     background: -moz-linear-gradient(-45deg,  #75e5ff 0%, #00a3c8 100%);
-    background: -webkit-linear-gradient(-45deg,  #75e5ff 0%,#00a3c8 100%); 
-    background: linear-gradient(135deg,  #75e5ff 0%,#00a3c8 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75e5ff', endColorstr='#00a3c8',GradientType=1 ); 
+    background: -webkit-linear-gradient(-45deg,  #75e5ff 0%,#00a3c8 100%);
+    background: linear-gradient(135deg,  #75e5ff 0%,#00a3c8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75e5ff', endColorstr='#00a3c8',GradientType=1 );
 }
 .template-five .lets_work_block:after,
 .template-five .hiring_block.lets_work_block:after {
@@ -2583,7 +2590,7 @@ a.close_menu {
     position: fixed;
     background: #fff;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-    padding: 12px 0; 
+    padding: 12px 0;
 }
 .template-five a.get_quote:after {
     border-radius: 0px;

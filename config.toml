@@ -2,35 +2,76 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Appdy"
 
+[module]
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "static/fonts"
+target = "static/fonts"
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+target = "static/webfonts"
+
+[[module.mounts]]
+source = "node_modules/jquery/dist"
+target = "static/plugins/jquery"
+
+[[module.mounts]]
+source = "node_modules/bootstrap/dist/js"
+target = "static/plugins/bootstrap"
+
+[[module.mounts]]
+source = "node_modules/animate.css"
+target = "static/plugins/animate.css"
+
+[[module.mounts]]
+source = "node_modules/slick-carousel/slick"
+target = "static/plugins/slick-carousel"
+
+[[module.mounts]]
+source = "node_modules/@popperjs/core/dist/umd"
+target = "static/plugins/popper"
+
+[[module.mounts]]
+source = "node_modules/wow.js/dist"
+target = "static/plugins/wow"
+
+[[module.mounts]]
+source = "node_modules/mixitup/dist"
+target = "static/plugins/jquery.mixitup"
+
 # css plugins
-[[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
-[[params.plugins.css]]
-link = "plugins/slick/slick.css"
-[[params.plugins.css]]
-link = "plugins/jquery-magnific-popup/jquery.magnific-popup.css"
-[[params.plugins.css]]
-link = "plugins/animate.css"
-[[params.plugins.css]]
-link = "plugins/webfonts/all.min.css" # font-awesome
+# [[params.plugins.css]]
+# link = "plugins/bootstrap/bootstrap.min.css"
+# [[params.plugins.css]]
+# link = "plugins/slick/slick.css"
+# [[params.plugins.css]]
+# link = "plugins/jquery-magnific-popup/jquery.magnific-popup.css"
+# [[params.plugins.css]]
+# link = "plugins/animate.css/animate.min.css"
+# [[params.plugins.css]]
+# link = "plugins/webfonts/all.min.css" # font-awesome
 # [[params.plugins.css]]
 # link = "plugins/themify-icons/themify-icons.css"
 
 # js plugin
 [[params.plugins.js]]
-link = "plugins/jquery.mixitup/jquery.mixitup.min.js"
+link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
-link = "plugins/slick/slick.min.js"
+link = "plugins/jquery.mixitup/mixitup.min.js"
 [[params.plugins.js]]
-link = "plugins/jQuery/jquery.min.js"
+link = "plugins/slick-carousel/slick.min.js"
 [[params.plugins.js]]
-link = "plugins/popper.min.js"
+link = "plugins/popper/popper.min.js"
 [[params.plugins.js]]
-link = "plugins/wow.min.js"
-[[params.plugins.js]]
-link = "plugins/jquery-magnific-popup/jquery.magnific-popup.min.js"
+link = "plugins/wow/wow.min.js"
+# [[params.plugins.js]]
+# link = "plugins/jquery-magnific-popup/jquery.magnific-popup.min.js"
 
 [[menu.main]]
 URL = "#services"
@@ -60,7 +101,8 @@ weight = 5
 
 [params]
 home = "Home"
-logo = "images/logo.png"
+logoDark = "images/template-one/logo.png"
+logoLight = "images/template-one/logo-white.png"
 phone = ""
 email = "care@appdy.co.uk"
 skype = ""

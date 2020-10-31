@@ -1,0 +1,38 @@
+testimonials:
+  enable: true
+  title: "What Our Clients Say"
+  item:
+    - website: "podcastarts.com"
+      URL: "https://podcastarts.com/"
+      image: "images/portfolio/podcastarts.jpg"
+      opinion: "We asked Appdy to create a new design for our agency website. The Appdy team did a fantastic job. The level of detail and creativity are world-class. They also created an entire sales funnel, optimized for conversion, optimized website SEO, and ran Adwords ads for us. Great experience!"
+      client: "Mary J. Wood"
+      service: "Web Design"
+
+    - website: "warmwanted.com"
+      URL: "https://warmwanted.com"
+      image: "images/portfolio/warmwanted-mockup.jpg"
+      opinion: "We wanted to launch another dropshipping store just before Black Friday/Cyber Monday, and it was already the middle of October. Appdy did a fantastic job designing a brand and shop on time so that we could test our products at the peak of the season."
+      client: "Carolyn Cribbs"
+      service: "Web Design"
+
+    - website: "wucaivase.com"
+      URL: ""
+      image: "images/portfolio/wucai-vase-project.jpg"
+      opinion: "Appdy team is very skillful! My dropshipping store looks fantastic, they implemented the shop precisely as I described. The website loads very fast, much faster than Shopify. I highly recommend Appdy, and we will work again."
+      client: "Mark A. Navarro"
+      service: "Web Design"
+
+    - website: "posturegainer.com"
+      URL: ""
+      image: "images/portfolio/posturegainer-mockup.jpg"
+      opinion: "I wanted to copy another dropshipping store that claimed to be successful. Appdy created a store and did all the branding in no time. The store looks very good and is very fast, especially on mobile, which is a must in this business. Well done! I recommend Appdy."
+      client: "Steven Patterson"
+      service: "Web Design"
+
+    - website: "smartbetterliving.com"
+      URL: ""
+      image: "images/portfolio/smartbetterliving-mockup.jpg"
+      opinion: "a"
+      client: "b"
+      service: "Web Design"

@@ -1,14 +1,9 @@
 {{ define "main" }}
 
-  <!-- Loader -->
-  <div class="loader">
-    <div class="loader_div"></div>
-  </div>
-
   <!-- banner Section -->
   <section class="banner_sec" id="home">
     <div class="banner_slider">
-      <div class="b_slide" style="background-image: url(assets/images/template-one/banner.jpg);">
+      <div class="b_slide" style="background-image: url({{`images/template-one/banner.jpg` | relURL}});">
         <div class="container">
           <div class="banner_caption text-center">
             <h3 data-animation="fadeInLeft" data-delay="0.5s">SMART AND PROFESSIONAL</h3>
@@ -21,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="b_slide" style="background-image: url(assets/images/template-one/banner2.jpg);">
+      <div class="b_slide" style="background-image: url({{`images/template-one/banner2.jpg` | relURL}});">
         <div class="container">
           <div class="banner_caption text-center">
             <h3 data-animation="fadeInLeft" data-delay="0.5s">SMART AND PROFESSIONAL</h3>
@@ -34,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="b_slide" style="background-image: url(assets/images/template-one/banner3.jpg);">
+      <div class="b_slide" style="background-image: url({{`images/template-one/banner3.jpg` | relURL}} );">
         <div class="container">
           <div class="banner_caption text-center">
             <h3 data-animation="fadeInLeft" data-delay="0.5s">SMART AND PROFESSIONAL</h3>
@@ -77,7 +72,7 @@
         </div>
         <div class="col-md-6">
           <div class="about_right wow fadeInRight">
-            <img src="assets/images/template-one/about-img.jpg" alt="about">
+            <img src="{{`images/template-one/about-img.jpg` | relURL}}" alt="about">
           </div>
         </div>
       </div>
@@ -132,95 +127,24 @@
     </div>
     <div class="container-fluid">
       <div class="portfolio_tabs">
-        <ul class="tabs_list text-center wow fadeInUp" id="filters">
-          <li><a href="template-one.html#!" class="filter active" data-filter=".designs, .development, .seo, .marketing">All</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".designs">Designs</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".development">Development</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".seo">SEO</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".marketing">Marketing</a></li>
-        </ul>
         <div class="portfolio_list wow fadeInUp">
           <div id="portfoliolist">
-            <div class="portfolio_item portfolio designs" data-cat="designs" style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-1.jpg">
-                <img src="assets/images/template-one/portfolio-1.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
+            {{ if site.Data.homepage.testimonials.enable }}
+            {{ with site.Data.homepage.testimonials }}
+            {{ range .item }}
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-5">{{ .title | markdownify }}</h2>
             </div>
-            <div class="portfolio_item portfolio designs" data-cat="designs"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-2.jpg">
-                <img src="assets/images/template-one/portfolio-2.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
+            <div class="col col-lg-10 mx-auto trustedby-slider">
+              <div class="text-center trustedby-content">
+                <img alt="Mockup of website {{ .website }}." src="{{ .image | relURL }}" class="img-fluid mockup">
+                <p class="opinion">{{ .opinion }}</p>
+                <span class="client">~ {{ .client }} ({{ if .URL }}<a href="{{ .URL | relURL }}" class="website">{{ .website }}</a>{{ else }}<span class="website">{{ .website }}</span>{{ end }})</span>
+              </div>
             </div>
-            <div class="portfolio_item portfolio development" data-cat="development"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-3.jpg">
-                <img src="assets/images/template-one/portfolio-3.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
-            <div class="portfolio_item portfolio seo" data-cat="seo"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-4.jpg">
-                <img src="assets/images/template-one/portfolio-4.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
-            <div class="portfolio_item portfolio marketing" data-cat="marketing"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-5.jpg">
-                <img src="assets/images/template-one/portfolio-5.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
-            <div class="portfolio_item portfolio marketing" data-cat="marketing"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-6.jpg">
-                <img src="assets/images/template-one/portfolio-6.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
-            <div class="portfolio_item portfolio seo" data-cat="seo"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-1.jpg">
-                <img src="assets/images/template-one/portfolio-1.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
-            <div class="portfolio_item portfolio development" data-cat="development"  style="display: inline-block;">
-              <a href="assets/images/template-one/portfolio-2.jpg">
-                <img src="assets/images/template-one/portfolio-2.jpg" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
-                  <p>Check Our Work</p>
-                </div>
-              </a>
-            </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
           </div>
         </div>
       </div>
@@ -233,7 +157,7 @@
   <section class="lets_work_sec" id="lets_work">
     <div class="row no-gutters">
       <div class="col-md-6">
-        <div class="lets_work_block text-center" style="background-image: url(assets/images/template-one/lets-work-bg-1.jpg);">
+        <div class="lets_work_block text-center" style="background-image: url(images/template-one/lets-work-bg-1.jpg);">
           <div class="lets_work_block_inner">
             <h2><span>Let's Work Together</span>Start Your Project</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -242,7 +166,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div class="lets_work_block hiring_block  text-center" style="background-image: url(assets/images/template-one/lets-work-bg-2.jpg);">
+        <div class="lets_work_block hiring_block  text-center" style="background-image: url(images/template-one/lets-work-bg-2.jpg);">
           <div class="lets_work_block_inner">
             <h2><span>Join our Team</span>We Are Hiring</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -353,7 +277,7 @@
       <div class="team_list">
         <div class="team_member">
           <div class="team_member_inner">
-            <img src="assets/images/template-one/team-member.jpg" alt="team Member">
+            <img src="images/template-one/team-member.jpg" alt="team Member">
             <div class="team_member_overlay">
               <h5>David Jhon</h5>
               <div class="memeber_role">IT CONSULTANT</div>
@@ -362,7 +286,7 @@
         </div>
         <div class="team_member">
           <div class="team_member_inner">
-            <img src="assets/images/template-one/team-member2.jpg" alt="team Member">
+            <img src="images/template-one/team-member2.jpg" alt="team Member">
             <div class="team_member_overlay">
               <h5>David Jhon</h5>
               <div class="memeber_role">IT CONSULTANT</div>
@@ -371,7 +295,7 @@
         </div>
         <div class="team_member">
           <div class="team_member_inner">
-            <img src="assets/images/template-one/team-member3.jpg" alt="team Member">
+            <img src="images/template-one/team-member3.jpg" alt="team Member">
             <div class="team_member_overlay">
               <h5>David Jhon</h5>
               <div class="memeber_role">IT CONSULTANT</div>
@@ -380,7 +304,7 @@
         </div>
         <div class="team_member">
           <div class="team_member_inner">
-            <img src="assets/images/template-one/team-member4.jpg" alt="team Member">
+            <img src="images/template-one/team-member4.jpg" alt="team Member">
             <div class="team_member_overlay">
               <h5>David Jhon</h5>
               <div class="memeber_role">IT CONSULTANT</div>
@@ -389,7 +313,7 @@
         </div>
         <div class="team_member">
           <div class="team_member_inner">
-            <img src="assets/images/template-one/team-member5.jpg" alt="team Member">
+            <img src="images/template-one/team-member5.jpg" alt="team Member">
             <div class="team_member_overlay">
               <h5>David Jhon</h5>
               <div class="memeber_role">IT CONSULTANT</div>
@@ -527,7 +451,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.25s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -555,7 +479,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.50s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img2.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img2.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -583,7 +507,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.75s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img3.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img3.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -611,7 +535,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.00s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img4.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img4.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -639,7 +563,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.25s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img5.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img5.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -667,7 +591,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="1.50s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
-                <a href="single-blog.html"><img src="assets/images/template-one/blog-img6.jpg" alt="team Member"></a>
+                <a href="single-blog.html"><img src="images/template-one/blog-img6.jpg" alt="team Member"></a>
               </div>
               <div class="blog_item_content">
                 <ul class="blog_item_info">
@@ -851,25 +775,25 @@
     <div class="container">
       <div class="partners_slider">
         <div class="partner_item">
-          <img src="assets/images/partner-1.png" alt="partner">
+          <img src="images/partner-1.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-2.png" alt="partner">
+          <img src="images/partner-2.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-3.png" alt="partner">
+          <img src="images/partner-3.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-4.png" alt="partner">
+          <img src="images/partner-4.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-5.png" alt="partner">
+          <img src="images/partner-5.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-6.png" alt="partner">
+          <img src="images/partner-6.png" alt="partner">
         </div>
         <div class="partner_item">
-          <img src="assets/images/partner-7.png" alt="partner">
+          <img src="images/partner-7.png" alt="partner">
         </div>
       </div>
     </div>
