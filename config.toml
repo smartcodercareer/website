@@ -43,6 +43,10 @@ target = "static/plugins/wow"
 source = "node_modules/mixitup/dist"
 target = "static/plugins/jquery.mixitup"
 
+[[module.mounts]]
+source = "node_modules/magnific-popup/dist/"
+target = "static/plugins/jquery-magnific-popup"
+
 # css plugins
 # [[params.plugins.css]]
 # link = "plugins/bootstrap/bootstrap.min.css"
@@ -61,17 +65,17 @@ target = "static/plugins/jquery.mixitup"
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
+link = "plugins/popper/popper.min.js"
 [[params.plugins.js]]
-link = "plugins/jquery.mixitup/mixitup.min.js"
+link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/slick-carousel/slick.min.js"
 [[params.plugins.js]]
-link = "plugins/popper/popper.min.js"
-[[params.plugins.js]]
 link = "plugins/wow/wow.min.js"
-# [[params.plugins.js]]
-# link = "plugins/jquery-magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/jquery.mixitup/mixitup.min.js"
+[[params.plugins.js]]
+link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
 
 [[menu.main]]
 URL = "#services"

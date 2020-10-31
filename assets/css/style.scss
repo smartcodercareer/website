@@ -43,6 +43,7 @@ Version: 1.0.0
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "node_modules/slick-carousel/slick/slick.scss";
 @import "node_modules/animate.css/animate";
+@import "node_modules/magnific-popup/dist/magnific-popup";
 
 /*Poppins font*/
 @font-face {
@@ -1046,7 +1047,7 @@ ul.tabs_list li a {
     color: #444444;
     cursor: pointer;
 }
-ul.tabs_list li a.active {
+ul.tabs_list li a.mixitup-control-active {
     color: #fff!important;
 }
 #portfoliolist1,
@@ -1061,7 +1062,7 @@ ul.tabs_list li a.active {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
-	width:25%;
+	width: 32%;
 	padding: 0 15px;
 	margin:0 0 30px;
 	display:none;
@@ -1108,30 +1109,30 @@ ul.tabs_list li a.active {
     width: 100%;
     color: #fff;
 }
-.plus_icon {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    margin: 0 0 25px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    padding: 5px;
-}
-.plus_icon:after,.plus_icon:before {
-    display: inline-block;
-    content: "";
-    height: 2px;
-    width: 26px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: -1px auto 0;
-}
-.plus_icon:after {
-    transform: rotate(90deg);
-}
+// .plus_icon {
+//     position: relative;
+//     height: 50px;
+//     width: 50px;
+//     margin: 0 0 25px;
+//     border-radius: 50%;
+//     border: 2px solid #fff;
+//     padding: 5px;
+// }
+// .plus_icon:after,.plus_icon:before {
+//     display: inline-block;
+//     content: "";
+//     height: 2px;
+//     width: 26px;
+//     background: #fff;
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     right: 0;
+//     margin: -1px auto 0;
+// }
+// .plus_icon:after {
+//     transform: rotate(90deg);
+// }
 
 
 
@@ -1947,7 +1948,7 @@ a.close_menu {
 .tempate-two .about_sec .what-we-do-item a,
 .tempate-two .counter_sec:after,
 .tempate-two .dots_bottom ul.slick-dots li.slick-active button,
-.tempate-two ul.tabs_list li a.active,
+.tempate-two ul.tabs_list li a.mixitup-control-active,
 .tempate-two .portfolio_item a .p_caption:after,
 .tempate-two .modal-content,
 .tempate-two .pricing_sec:after,
@@ -2736,7 +2737,7 @@ section.single_blog_page {
 	#portfoliolist1 .portfolio,
     #portfoliolist .portfolio,
     .portfoliolist .portfolio {
-	    width: 33.333%;
+	    width: 100%;
 	}
   .main_menu {
         display: block;
@@ -2939,7 +2940,7 @@ section.single_blog_page {
     #portfoliolist1 .portfolio,
     #portfoliolist .portfolio,
     .portfoliolist .portfolio {
-    	    width: 50%;
+    	    width: 100%;
     }
     ul.tabs_list li {
         margin: 0 1px 5px;

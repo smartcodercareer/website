@@ -120,7 +120,7 @@
   <section class="portfolio_tab_sec bg_light_gray" id="portfolio">
     <div class="container">
       <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInLeft"><span>{{ site.Data.homepage.title}}</span>{{ site.Data.homepage.subtitle }}</h2>
+        <h2 class="sec_heading wow fadeInLeft"><span>{{ site.Data.homepage.portfolio.title }}</span>{{ site.Data.homepage.portfolio.subtitle }}</h2>
         <p class="wow fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
           pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur
           adipiscing elits</p>
@@ -128,24 +128,26 @@
     </div>
     <div class="container-fluid">
       <div class="portfolio_tabs">
-        <ul class="tabs_list text-center wow fadeInUp" id="filters">
-          <li><a href="template-one.html#!" class="filter active" data-filter=".designs, .development, .seo, .marketing">All</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".designs">Designs</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".development">Development</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".seo">SEO</a></li>
-          <li><a href="template-one.html#!" class="filter" data-filter=".marketing">Marketing</a></li>
+        <!--
+        <ul class="tabs_list text-center wow fadeInUp controls" id="filters">
+          <li><a href="#!" class="control filter" data-filter="all">All</a></li>
+          <li><a href="#!" class="control filter" data-filter=".designs">Designs</a></li>
+          <li><a href="#!" class="control filter" data-filter=".development">Development</a></li>
+          <li><a href="#!" class="control filter" data-filter=".seo">SEO</a></li>
+          <li><a href="#!" class="control filter" data-filter=".marketing">Marketing</a></li>
         </ul>
+        -->
         <div class="portfolio_list wow fadeInUp">
-          <div id="portfoliolist">
+          <div id="portfoliolist" class="targets container">
             {{ if site.Data.homepage.portfolio.enable }}
             {{ with site.Data.homepage.portfolio }}
             {{ range .item }}
-            <div class="portfolio_item portfolio designs" data-cat="designs" style="display: inline-block;">
-              <a href="{{ if .URL }}{{ .URL | relURL }}{{ else }}#{{ end }}"}>
+            <div class="mix portfolio_item portfolio designs" style="display: inline-block;">
+              <a href="{{ .image }}"}>
                 <img src="{{ .image  }}" alt="portfolio">
                 <div class="p_caption">
                   <div class="plus_icon"></div>
-                  <h4>Our Design 1</h4>
+                  <h4>{{ .website }}</h4>
                   <p>Check Our Work</p>
                 </div>
               </a>
@@ -156,6 +158,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
   {{ end }}
   <!-- /. portfolio Section -->

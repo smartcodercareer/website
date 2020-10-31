@@ -6,65 +6,57 @@
   }
 
   // Portfolio tabs
-  var portfoliolist = document.querySelectorAll('#portfoliolist');
-  if (portfoliolist.length) {
-    mixitup(portfoliolist, {
-      selectors: {
-        target: '.portfolio'
-      },
-      load: {
-        filter: '.designs, .development, .seo, .marketing'
-      }
-    }).filter('.filter');
-  }
+  // var portfoliolist = document.getElementById('portfoliolist');
+  // var portfoliolist = document.querySelector('.portfolio_tabs');
+  // if (portfoliolist) {
+  //   mixitup(portfoliolist, {
+  // controls: {
+  //   scope: 'local'
+  // },
+  // selectors: {
+  // target: '.portfolio'
+  // },
+  // load: {
+  //   filter: '.designs, .development, .seo, .marketing'
+  // }
+  // }); //.filter('.filter');
+  // }
 
-  // document.querySelectorAll('#portfoliolist').forEach(function(item) {
-  //   mixitup(item, {
+  // var portfoliolist1 = document.querySelectorAll('#portfoliolist1');
+  // if (portfoliolist1.length) {
+  //   mixitup(portfoliolist1, {
   //     selectors: {
-  //       target: '.portfolio',
-  //       filter: '.filter'
+  //       target: '.portfolio'
   //     },
   //     load: {
-  //       filter: '.designs, .development, .seo, .marketing'
+  //       filter: '.yoga, .fitness, .gym, .running'
   //     }
-  //   });
-  // });
+  //   }).filter('.filter');
+  // }
 
-  var portfoliolist1 = document.querySelectorAll('#portfoliolist1');
-  if (portfoliolist1.length) {
-    mixitup(portfoliolist1, {
-      selectors: {
-        target: '.portfolio'
-      },
-      load: {
-        filter: '.yoga, .fitness, .gym, .running'
-      }
-    }).filter('.filter');
-  }
+  // var portfoliolist2 = document.querySelectorAll('#portfoliolist2');
+  // if (portfoliolist2.length) {
+  //   mixitup(portfoliolist2, {
+  //     selectors: {
+  //       target: '.portfolio'
+  //     },
+  //     load: {
+  //       filter: '.breakfast, .lunch, .dinner, .snack'
+  //     }
+  //   }).filter('.filter');
+  // }
 
-  var portfoliolist2 = document.querySelectorAll('#portfoliolist2');
-  if (portfoliolist2.length) {
-    mixitup(portfoliolist2, {
-      selectors: {
-        target: '.portfolio'
-      },
-      load: {
-        filter: '.breakfast, .lunch, .dinner, .snack'
-      }
-    }).filter('.filter');
-  }
-
-  var portfoliolist3 = document.querySelectorAll('#portfoliolist3');
-  if (portfoliolist3.length) {
-    mixitup(portfoliolist3, {
-      selectors: {
-        target: '.portfolio'
-      },
-      load: {
-        filter: '.cardiology, .dental, .surgeries, .patology'
-      }
-    }).filter('.filter');
-  }
+  // var portfoliolist3 = document.querySelectorAll('#portfoliolist3');
+  // if (portfoliolist3.length) {
+  //   mixitup(portfoliolist3, {
+  //     selectors: {
+  //       target: '.portfolio'
+  //     },
+  //     load: {
+  //       filter: '.cardiology, .dental, .surgeries, .patology'
+  //     }
+  //   }).filter('.filter');
+  // }
 
   function mainSlider() {
     var BasicSlider = $('.banner_slider');
@@ -383,23 +375,22 @@
       });
 
       // portfolio popup js
-      // $('#portfoliolist .portfolio_item,#portfoliolist1 .portfolio_item,.galleryList .gallery_item').magnificPopup({
-      //   delegate: 'a',
-      //   gallery: {
-      //     enabled: true
-      //   },
-      //   type: 'image'
-      // });
+      $('#portfoliolist .portfolio_item, #portfoliolist1 .portfolio_item, .galleryList .gallery_item').magnificPopup({
+        delegate: 'a',
+        gallery: {
+          enabled: true
+        },
+        type: 'image'
+      });
 
       // // portfolio popup js
-      // $('.get_quote').magnificPopup({
-      // });
+      $('.get_quote').magnificPopup({});
 
 
-      // $('.open-popup-link').magnificPopup({
-      //   type:'inline',
-      //   midClick: true
-      // });
+      $('.open-popup-link').magnificPopup({
+        type:'inline',
+        midClick: true
+      });
 
       // mobile menu toggle
       $(".menu-bar").on('click', function() {
