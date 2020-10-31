@@ -1844,7 +1844,7 @@ a.close_menu {
 /*  16.0 Partners Style
 ========================================================================== */
 .partners_sec {
-    padding: 0 0 80px;
+    padding: 80px 0 80px;
 }
 .partner_item {
     padding: 0 15px;
@@ -2712,6 +2712,9 @@ section.single_blog_page {
     padding: 30px 0;
 }
 
+section#contact {
+  background: #f5f7fe;
+}
 
 /*  21.0 Responsive Style
 ========================================================================== */
@@ -2904,7 +2907,7 @@ section.single_blog_page {
     justify-content: center!important;
 }
 .partners_sec {
-    padding: 0 0 40px;
+    padding: 40px 0 40px;
 }
 
 
