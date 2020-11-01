@@ -36,7 +36,7 @@
     {{ end }}
     </div>
     <div class="copyrigt_text d-flex justify-content-between">
-      <span>© Copyright {{ dateFormat "2006" now }}-2020 Appdy LTD</span>
+      <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} Appdy LTD</span>
       <!-- social icons -->
       <div class="social_div">
         <ul class="social_list">

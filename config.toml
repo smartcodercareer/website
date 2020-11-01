@@ -112,6 +112,7 @@ email = ""
 skype = ""
 author = "Appdy LTD"
 description = "Digital Agency Based in London"
+startYear = "2016-01-01"
 
 google_analytics_id = "" # Your ID
 # copyright = "© Copyright 2016-2020 Appdy LTD"
