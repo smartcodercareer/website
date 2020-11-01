@@ -7,33 +7,39 @@ hero:
       subtitle: "It's about time to get an fair return from your online marketing investments."
       image: "images/template-one/banner.jpg"
       mainCTA:
+        enable: true
         caption: "Read More"
-        URL: "#home"
-        secondaryCTA:
-          caption: "Our Portfolio"
-          URL: "#portfolio"
+        URL: "#about"
+      secondaryCTA:
+        enable: false
+        caption: "Our Portfolio"
+        URL: "#portfolio"
 
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
       subtitle: "It's about time to get an fair return from your online marketing investments."
       image: "images/template-one/banner2.jpg"
       mainCTA:
+        enable: true
         caption: "Read More"
-        URL: "#home"
-        secondaryCTA:
-          caption: "Our Portfolio"
-          URL: "#portfolio"
+        URL: "#about"
+      secondaryCTA:
+        enable: false
+        caption: "Our Portfolio"
+        URL: "#portfolio"
 
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
       subtitle: "It's about time to get an fair return from your online marketing investments."
       image: "images/template-one/banner3.jpg"
       mainCTA:
+        enable: true
         caption: "Read More"
-        URL: "#home"
-        secondaryCTA:
-          caption: "Our Portfolio"
-          URL: "#portfolio"
+        URL: "#about"
+      secondaryCTA:
+        enable: false
+        caption: "Our Portfolio"
+        URL: "#portfolio"
 
 about:
   enable: true

@@ -11,8 +11,12 @@
             <h3 data-animation="fadeInLeft" data-delay="0.5s">{{ .heading }}</h3>
             <h1 data-animation="fadeInLeft" data-delay="0.9s">{{ .title }}</h1>
             <p data-animation="fadeInLeft" data-delay="1.3s">{{ .subtitle }}</p>
+            {{ if .mainCTA.enable }}
             <a href="{{ .mainCTA.URL }}" class="btn btn_white" data-animation="fadeInUp" data-delay="1.6s">{{ .mainCTA.caption }}</a>
-            <a href="{{ .mainCTA.URL }}" class="btn btn_outline" data-animation="fadeInUp" data-delay="1.6s">{{ .mainCTA.caption}}</a>
+            {{ end }}
+            {{ if .secondaryCTA.enable }}
+            <a href="{{ .mainCTA.URL }}" class="btn btn_outline" data-animation="fadeInUp" data-delay="1.6s">{{ .secondaryCTA.caption}}</a>
+            {{ end }}
           </div>
         </div>
       </div>

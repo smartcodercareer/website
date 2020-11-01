@@ -108,7 +108,7 @@ home = "Home"
 logoDark = "images/template-one/logo.png"
 logoLight = "images/template-one/logo-white.png"
 phone = ""
-email = "care@appdy.co.uk"
+email = ""
 skype = ""
 author = "Appdy LTD"
 description = "Digital Agency Based in London"
@@ -122,7 +122,7 @@ enable = true
 preloader = "images/preloader.gif" # use png, jpg, svg or gif format
 
 [params.navCta]
-enable = false
+enable = true
 
 [params.scrollToTop]
 enable = true

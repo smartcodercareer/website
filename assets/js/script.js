@@ -116,7 +116,7 @@
       });
     });
 
-    $('.main_menu_list li a').on('click', function(e) {
+    $('a[href^="#"]').on('click', function(e) {
       e.preventDefault()
 
       $('html, body').animate(
@@ -248,38 +248,38 @@
     })
 
     // related items slider js
-    $('.related_items_slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      arrows:false,
-      autoplay:true,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 479,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    })
+    // $('.related_items_slider').slick({
+    //   dots: true,
+    //   infinite: true,
+    //   speed: 500,
+    //   slidesToShow: 3,
+    //   arrows:false,
+    //   autoplay:true,
+    //   slidesToScroll: 1,
+    //   responsive: [
+    //     {
+    //       breakpoint: 991,
+    //       settings: {
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 767,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 479,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1
+    //       }
+    //     }
+    //   ]
+    // })
 
     // testimonials slider  js
     $('.testi_slider').slick({
@@ -357,10 +357,9 @@
     })
 
     // Main Slider Slide animation
-    if ($(".b_slide").hasClass(".slick-active") ) {
-      alert("sfsd");
-      $(this).find(".wow").removeClass('wow');
-    }
+    // if ($(".b_slide").hasClass(".slick-active") ) {
+    //   $(this).find(".wow").removeClass('wow');
+    // }
 
     $(document).ready(function () {
       // scroll Down js
@@ -384,23 +383,23 @@
       });
 
       // // portfolio popup js
-      $('.get_quote').magnificPopup({});
+      // $('.get_quote').magnificPopup({});
 
 
-      $('.open-popup-link').magnificPopup({
-        type:'inline',
-        midClick: true
-      });
+      // $('.open-popup-link').magnificPopup({
+      //   type:'inline',
+      //   midClick: true
+      // });
 
       // mobile menu toggle
-      $(".menu-bar").on('click', function() {
-        $(this).addClass('active');
-        $('.main_menu').addClass('opened');
-      });
-      $(".close_menu").on('click', function() {
-        $('.menu-bar').removeClass('active');
-        $('.main_menu').removeClass('opened');
-      });
+      // $(".menu-bar").on('click', function() {
+      //   $(this).addClass('active');
+      //   $('.main_menu').addClass('opened');
+      // });
+      // $(".close_menu").on('click', function() {
+      //   $('.menu-bar').removeClass('active');
+      //   $('.main_menu').removeClass('opened');
+      // });
     });
   });
 })();
