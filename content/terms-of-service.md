@@ -2,7 +2,7 @@
 title: "Terms of Service"
 date: 2020-11-01T21:55:01Z
 type: single
-draft: true
+draft: false
 ---
 
 OVERVIEW

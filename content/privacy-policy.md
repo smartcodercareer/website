@@ -2,7 +2,7 @@
 title: "Privacy Policy"
 date: 2020-11-01T19:59:07Z
 type: single
-draft: true
+draft: false
 ---
 
 1. Introduction
