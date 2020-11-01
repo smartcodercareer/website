@@ -127,7 +127,7 @@ URL = "privacy-policy"
 
 [[params.footer.links]]
 label = "Terms Of Service"
-URL = "#terms-of-service"
+URL = "terms-of-service"
 
 # preloader
 [params.preloader]
