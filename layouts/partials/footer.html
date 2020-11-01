@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer_top  text-center">
       <div class="footer_top_logo">
-        <a href="template-one.html#" class="footer-logo"><img src="images/template-one/logo-icon.png" alt="logo icon"></a>
+        <a href="{{ site.BaseURL }}" class="footer-logo"><img src="{{ `images/logo-icon.png` | relURL }}" alt="logo icon"></a>
       </div>
       <p>{{ site.Params.footer.description }}</p>
     </div>
@@ -36,7 +36,14 @@
     {{ end }}
     </div>
     <div class="copyrigt_text d-flex justify-content-between">
-      <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} Appdy LTD</span>
+      <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} Appdy LTD ·
+        <span class="footer-links">
+          {{ range $index, $item := site.Params.footer.links }}
+          {{ if ne $index 0 }}|{{ end }}
+          <a href="{{ .URL | relURL}}">{{ .label }}</a>
+          {{ end }}
+        </span>
+      </span>
       <!-- social icons -->
       <div class="social_div">
         <ul class="social_list">

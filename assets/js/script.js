@@ -93,9 +93,9 @@
     $(window).on("scroll", function(){
       var scroll = $(window).scrollTop();
       if (scroll >= 2) {
-        $(".main_header").addClass("dark_bg");
+        $(".main_header.with-transition").addClass("dark_bg");
       } else {
-        $(".main_header").removeClass("dark_bg");
+        $(".main_header.with-transition").removeClass("dark_bg");
       }
     });
 

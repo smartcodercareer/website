@@ -2,8 +2,8 @@
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{- partial "head.html" . -}}
 
-  <body>
-    {{- partial "header-with-transition.html" . -}}
+  <body class="single">
+    {{- partial "header.html" . -}}
     <div id="content">
       {{- block "main" . }}{{- end }}
     </div>
