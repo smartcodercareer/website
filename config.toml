@@ -117,6 +117,10 @@ startYear = "2016-01-01"
 google_analytics_id = "" # Your ID
 # copyright = "© Copyright 2016-2020 Appdy LTD"
 
+
+[params.footer]
+description = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam"
+
 # preloader
 [params.preloader]
 enable = true
