@@ -105,8 +105,8 @@ weight = 5
 
 [params]
 home = "Home"
-logoDark = "images/template-one/logo.png"
-logoLight = "images/template-one/logo-white.png"
+logoDark = "images/logo.png"
+logoLight = "images/logo-white.png"
 phone = ""
 email = ""
 skype = ""
