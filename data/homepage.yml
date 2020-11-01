@@ -1,8 +1,39 @@
 hero:
-  heading: "SMART DIGITAL PARTNER"
-  title: "Appdy Digital Agency"
-  subtitle: "It's about time to get an fair return from your online marketing investments."
+  enable: true
+  scrollDownIcon: true
+  item:
+    - heading: "SMART DIGITAL PARTNER"
+      title: "Appdy Digital Agency"
+      subtitle: "It's about time to get an fair return from your online marketing investments."
+      image: "images/template-one/banner.jpg"
+      mainCTA:
+        caption: "Read More"
+        URL: "#home"
+        secondaryCTA:
+          caption: "Our Portfolio"
+          URL: "#portfolio"
 
+    - heading: "SMART DIGITAL PARTNER"
+      title: "Appdy Digital Agency"
+      subtitle: "It's about time to get an fair return from your online marketing investments."
+      image: "images/template-one/banner2.jpg"
+      mainCTA:
+        caption: "Read More"
+        URL: "#home"
+        secondaryCTA:
+          caption: "Our Portfolio"
+          URL: "#portfolio"
+
+    - heading: "SMART DIGITAL PARTNER"
+      title: "Appdy Digital Agency"
+      subtitle: "It's about time to get an fair return from your online marketing investments."
+      image: "images/template-one/banner3.jpg"
+      mainCTA:
+        caption: "Read More"
+        URL: "#home"
+        secondaryCTA:
+          caption: "Our Portfolio"
+          URL: "#portfolio"
 
 about:
   enable: true
@@ -38,7 +69,23 @@ services:
 portfolio:
   enable: true
   title: "OUR LATEST Works"
-  subtitle: "Our Portfolio Designs"
+  subtitle: "Our Portfolio of Designs"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elits."
+  CTA: "Check Our Work"
+  filter:
+    enable: false
+    item:
+      - label: "Designs"
+        selector: ".designs"
+
+      - label: "Development"
+        selector: ".development"
+
+      - label: "SEO"
+        selector: ".seo"
+
+      - label: "Marketing"
+        selector: ".marketing"
   item:
     - website: "podcastarts.com"
       URL: "https://podcastarts.com/"
@@ -91,7 +138,7 @@ team:
   enable: true
   title: "OUR Team"
   subtitle: "MEET OUR LEADERS"
-  description: ""
+  description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
   item:
     - name: "Adam Faryna"
       role: "CEO"
@@ -120,6 +167,10 @@ counter:
     - title: "IT Consultant"
       number: "894"
       description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+
+
+pricing:
+  enable: false
 
 
 testimonials:
@@ -156,3 +207,39 @@ testimonials:
     #   URL: ""
     #   client: "b"
     #   role: "Marketing Manager"
+
+
+contact:
+  enable: true
+  title: "Contact us"
+  subtitle: "Let's create Progress together"
+  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
+  contentTitle: "contact us"
+  content: "Feel free to contact us. A business has to be involving, it has to be fun, and it has to exercise your creative instincts. Start where you are. Use what you have. Do what you can. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  form:
+    title: "Don't Hesitate To Contact With Us, Say Hello......"
+    embed: ""
+  address:
+    enable: false
+    address: "1234 Some Avenue, New York, NY 1234"
+    email: "info@yourwebsite.com"
+    phone: "(123) 456-7890"
+
+
+partners:
+  enable: true
+  item:
+    - image: "images/partner-1.png"
+    - image: "images/partner-2.png"
+    - image: "images/partner-3.png"
+    - image: "images/partner-4.png"
+    - image: "images/partner-5.png"
+    - image: "images/partner-6.png"
+    - image: "images/partner-7.png"
+
+
+news:
+  enable: false
+  title: "OUR Latest Blogs"
+  subtitle: "Read Our Latest News & Blog"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elits."
