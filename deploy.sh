@@ -37,14 +37,14 @@ git worktree add -B $branch public $repo/$branch
 echo "Generating site"
 hugo
 
-# cd public
+cd public
 
 if [[ -z $domain ]]
 then
-  echo $domain > public/CNAME
+  echo $domain > CNAME
 fi
 
 echo "Updating $branch branch"
-git add --all . && git commit -m "Publishing to $branch"
+git add --all && git commit -m "Publishing to $branch"
 
-# cd ..
+cd ..
