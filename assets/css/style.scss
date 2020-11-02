@@ -65,7 +65,7 @@ label {
   color: #2e3337;
 }
 
-body a {
+p a {
   color: map-get($colors, "text");
   text-decoration: none;
   border-bottom: 1px dashed map-get($colors, text);
