@@ -180,7 +180,7 @@
 
     // banner slider js
     $('.banner_slider').slick({
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 2000,
       // fade:true,

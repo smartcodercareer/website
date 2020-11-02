@@ -87,10 +87,10 @@ URL = "#clients"
 name = "Clients"
 weight = 2
 
-[[menu.main]]
-URL = "#free-case-study"
-name = "Case Study"
-weight = 3
+# [[menu.main]]
+# URL = "#free-case-study"
+# name = "Case Study"
+# weight = 3
 
 [[menu.main]]
 URL = "#about"
@@ -150,7 +150,7 @@ enable = true
 [params.social.facebook]
 enable = true
 icon = "fab fa-facebook-f"
-URL = "#"
+URL = "https://www.facebook.com/appdy.net"
 
 [params.social.instagram]
 enable = false

@@ -2,25 +2,25 @@ hero:
   enable: true
   scrollDownIcon: true
   item:
-    - heading: "SMART DIGITAL PARTNER"
-      title: "Appdy Digital Agency"
-      subtitle: "It's about time to get an fair return from your online marketing investments."
-      image: "images/template-one/banner.jpg"
-      mainCTA:
-        enable: true
-        caption: "Read More"
-        URL: "#about"
-      secondaryCTA:
-        enable: false
-        caption: "Our Portfolio"
-        URL: "#portfolio"
+    # - heading: "SMART DIGITAL PARTNER"
+    #   title: "Appdy Digital Agency"
+    #   subtitle: "It's about time to get an fair return from your online marketing investments."
+    #   image: "images/template-one/banner.jpg"
+    #   mainCTA:
+    #     enable: true
+    #     caption: "Read More"
+    #     URL: "#about"
+    #   secondaryCTA:
+    #     enable: false
+    #     caption: "Our Portfolio"
+    #     URL: "#portfolio"
 
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
       subtitle: "It's about time to get an fair return from your online marketing investments."
       image: "images/template-one/banner2.jpg"
       mainCTA:
-        enable: true
+        enable: false
         caption: "Read More"
         URL: "#about"
       secondaryCTA:
@@ -28,18 +28,18 @@ hero:
         caption: "Our Portfolio"
         URL: "#portfolio"
 
-    - heading: "SMART DIGITAL PARTNER"
-      title: "Appdy Digital Agency"
-      subtitle: "It's about time to get an fair return from your online marketing investments."
-      image: "images/template-one/banner3.jpg"
-      mainCTA:
-        enable: true
-        caption: "Read More"
-        URL: "#about"
-      secondaryCTA:
-        enable: false
-        caption: "Our Portfolio"
-        URL: "#portfolio"
+    # - heading: "SMART DIGITAL PARTNER"
+    #   title: "Appdy Digital Agency"
+    #   subtitle: "It's about time to get an fair return from your online marketing investments."
+    #   image: "images/template-one/banner3.jpg"
+    #   mainCTA:
+    #     enable: true
+    #     caption: "Read More"
+    #     URL: "#about"
+    #   secondaryCTA:
+    #     enable: false
+    #     caption: "Our Portfolio"
+    #     URL: "#portfolio"
 
 about:
   enable: true
@@ -54,22 +54,29 @@ services:
   title: "Our Services"
   subtitle: "Results Generators"
   description: ""
+  CTA:
+    caption: "Get Started"
+    URL: "#contact"
   item:
     - title: "Web Design"
       icon: "fa fa-pen-fancy"
       description: "You have a beautiful website. Probably it cost arm and leg, but how many % of visitors it converts to clients? Don’t worry. We will turn your website into your private ATM."
+      URL: ""
 
     - title: "Sales funnels"
       icon: "fas fa-cogs"
       description: "We are optimization freaks always trying to get things to next better level. With our custom sales funnels, your business will optimize it's profit from every single client."
+      URL: ""
 
     - title: "Paid Advertising"
       icon: "fas fa-volume-up"
       description: "Paid advertising done right will let you create new clients from thin air. We offer CPA optimization services for search engines and social media platforms."
+      URL: ""
 
     - title: "SEO"
       icon: "fas fa-search"
       description: "Does your website costs you or earns you money? We will make sure the latest is true. We will plan and implement a long term SEO strategy for your business."
+      URL: ""
 
 
 portfolio:

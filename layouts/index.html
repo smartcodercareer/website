@@ -75,7 +75,7 @@
   {{ if site.Data.homepage.services.enable }}
   {{ with site.Data.homepage.services }}
   <section class="service_sec" id="service">
-    <div class="container">
+    <div class="container text-center">
       <div class="sec_header text-center">
         <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
         <p class="wow fadeInLeft">{{ .description }}</p>
@@ -89,14 +89,18 @@
               <div class="service_content">
                 <h4>{{ .title }}</h4>
                 <p>{{ .description }}</p>
-                <a href="template-one.html#" class="btn blue_gradient">Read More</a>
+                {{ with .URL }}
+                <a href="{{ .URL | relURL }}" class="btn blue_gradient">Read More</a>
+                {{ end }}
               </div>
             </div>
           </div>
           {{ end }}
         </div>
       </div>
-    </div>
+      {{ if .CTA.URL }}
+      <a href="{{ .CTA.URL | relURL }}" class="btn blue_gradient">{{ .CTA.caption }}</a>
+      {{ end }}
     </div>
   </section>
   {{ end }}
