@@ -25,26 +25,25 @@ git worktree prune
 
 if [[ -d ".git/worktrees/public/" ]]
 then
+  echo "Delating .git/worktrees/public/"
   rm -rf .git/worktrees/public/
 fi
 
 echo "Checking out $branch branch into public"
 git worktree add -B $branch public $repo/$branch
 
-# echo "Removing existing files"
-# rm -rf public/*
-
 echo "Generating site"
 hugo
 
 cd public
 
-if [[ -z $domain ]]
+if [[ -n $domain ]]
 then
+  echo "Adding CNAME"
   echo $domain > CNAME
 fi
 
 echo "Updating $branch branch"
-git add --all && git commit -m "Publishing to $branch"
+git add --all && git commit --allow-empty -m "Publishing to $branch" && git push $repo $branch
 
 cd ..
