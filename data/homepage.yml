@@ -231,7 +231,7 @@ contact:
   content: "Feel free to contact us. A business has to be involving, it has to be fun, and it has to exercise your creative instincts. Start where you are. Use what you have. Do what you can. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   form:
     title: "Don't Hesitate To Contact With Us, Say Hello......"
-    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="640" height="400" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
+    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
   address:
     enable: false
     address: "1234 Some Avenue, New York, NY 1234"
