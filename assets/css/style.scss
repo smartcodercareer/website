@@ -46,12 +46,13 @@ Version: 1.0.0
 @import "node_modules/animate.css/animate";
 @import "node_modules/magnific-popup/dist/magnific-popup";
 @import "fonts";
+@import "colors";
 
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 26px;
-  color: #7e7e7e;
+  color: map-get($colors, "text");
   overflow-x: hidden;
 
   &.single #content {
@@ -64,9 +65,15 @@ label {
   color: #2e3337;
 }
 
-a {
-  color: #2e3337;
+body a {
+  color: map-get($colors, "text");
   text-decoration: none;
+  border-bottom: 1px dashed map-get($colors, text);
+
+  &:hover {
+    color: map-get($colors, primary);
+    border-bottom-color: map-get($colors, primary);
+  }
 }
 
 a:hover {
