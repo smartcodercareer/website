@@ -44,6 +44,6 @@ then
 fi
 
 echo "Updating $branch branch"
-git add --all && git commit --allow-empty -m "Publishing to $branch" && git push $repo $branch
+git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
 
 cd ..
