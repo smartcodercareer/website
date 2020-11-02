@@ -86,8 +86,13 @@
 </footer>
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
-{{ range site.Params.plugins.js}}
-<script src="{{ .link | relURL }}"></script>
+{{ range $index, $item := site.Params.assets.js}}
+{{ $script := resources.Get $item.link | resources.Minify }}
+<script src="{{ $script.Permalink }}"></script>
+{{ end }}
+
+{{ range site.Params.static.js}}
+<script src="{{ .link }}"></script>
 {{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}

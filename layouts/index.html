@@ -8,14 +8,14 @@
       <div class="b_slide" style="background-image: url({{ .image | relURL}});">
         <div class="container">
           <div class="banner_caption text-center">
-            <h3 data-animation="fadeInLeft" data-delay="0.5s">{{ .heading }}</h3>
-            <h1 data-animation="fadeInLeft" data-delay="0.9s">{{ .title }}</h1>
-            <p data-animation="fadeInLeft" data-delay="1.3s">{{ .subtitle }}</p>
+            <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading }}</h3>
+            <h1 class="wow fadeInLeft" data-wow-delay="0.9s">{{ .title }}</h1>
+            <p class="wow fadeInLeft" data-wow-delay="1.3s">{{ .subtitle }}</p>
             {{ if .mainCTA.enable }}
-            <a href="{{ .mainCTA.URL }}" class="btn btn_white" data-animation="fadeInUp" data-delay="1.6s">{{ .mainCTA.caption }}</a>
+            <a href="{{ .mainCTA.URL }}" class="btn btn_white wow fadeInUp" data-wow-delay="1.6s">{{ .mainCTA.caption }}</a>
             {{ end }}
             {{ if .secondaryCTA.enable }}
-            <a href="{{ .mainCTA.URL }}" class="btn btn_outline" data-animation="fadeInUp" data-delay="1.6s">{{ .secondaryCTA.caption}}</a>
+            <a href="{{ .mainCTA.URL }}" class="btn btn_outline wow fadeInUp" data-wow-delay="1.6s">{{ .secondaryCTA.caption}}</a>
             {{ end }}
           </div>
         </div>
@@ -99,7 +99,7 @@
         </div>
       </div>
       {{ if .CTA.URL }}
-      <a href="{{ .CTA.URL | relURL }}" class="btn blue_gradient">{{ .CTA.caption }}</a>
+      <a href="{{ .CTA.URL | relURL }}" class="btn blue_gradient wow slideInUp">{{ .CTA.caption }}</a>
       {{ end }}
     </div>
   </section>
@@ -351,8 +351,8 @@
   <section class="contact_sec" id="contact">
     <div class="sec_header text-center">
       <div class="container">
-        <h2 class="sec_heading wow fadeInUp"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-        <p class="wow fadeInUp">{{ .description }}</p>
+        <h2 class="sec_heading wow fadeInUp" data-aos="fade-up"><span>{{ .title }}</span>{{ .subtitle }}</h2>
+        <p class="wow fadeInUp" data-aos="fade-up">{{ .description }}</p>
       </div>
     </div>
     <div class="container">
@@ -413,7 +413,7 @@
       </div>
       <div class="blogs_list text-center">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.25s" data-wow-delay="0s">
+          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.25s" data-wow-duration="0s">
             <div class="blog_item">
               <div class="blog_thumb">
                 <a href="single-blog.html"><img src="images/template-one/blog-img.jpg" alt="team Member"></a>
@@ -441,7 +441,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.50s" data-wow-delay="0s">
+          <div class="col-sm-12 col-md-6 col-lg-4 wow slideInUp" data-wow-duration="0.5s" data-wow-delay="0s">
             <div class="blog_item">
               <div class="blog_thumb">
                 <a href="single-blog.html"><img src="images/template-one/blog-img2.jpg" alt="team Member"></a>

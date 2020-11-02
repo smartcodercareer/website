@@ -42,9 +42,9 @@ Version: 1.0.0
 @import "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
 @import "node_modules/animate.css/animate";
 @import "node_modules/magnific-popup/dist/magnific-popup";
-
 @import "fonts";
 
 body {
@@ -2052,6 +2052,10 @@ section#contact {
     border-bottom: 1px dashed white;
     margin: 0 2px;
   }
+}
+
+.slick-dots li button:before {
+  content: none;
 }
 
 /*  21.0 Responsive Style

@@ -1,4 +1,5 @@
-baseURL = "https://appdy.github.io/site"
+# baseURL = "https://appdy.github.io/"
+baseURL = "http://localhost:5000"
 languageCode = "en-us"
 title = "Appdy"
 
@@ -12,8 +13,24 @@ source = "static/fonts"
 target = "static/fonts"
 
 [[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "assets/plugins"
+target = "assets/plugins"
+
+[[module.mounts]]
+source = "static/plugins"
+target = "static/plugins"
+
+[[module.mounts]]
 source = "node_modules/@fortawesome/fontawesome-free/webfonts"
 target = "static/webfonts"
+
+[[module.mounts]]
+source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+target = "static/plugins/fontawesome"
 
 [[module.mounts]]
 source = "node_modules/jquery/dist"
@@ -23,13 +40,29 @@ target = "static/plugins/jquery"
 source = "node_modules/bootstrap/dist/js"
 target = "static/plugins/bootstrap"
 
+# [[module.mounts]]
+# source = "node_modules/animate.css"
+# target = "assets/plugins/animate.css"
+
 [[module.mounts]]
-source = "node_modules/animate.css"
-target = "static/plugins/animate.css"
+source = "node_modules/slick-carousel/slick"
+target = "assets/plugins/slick-carousel"
 
 [[module.mounts]]
 source = "node_modules/slick-carousel/slick"
 target = "static/plugins/slick-carousel"
+
+# [[module.mounts]]
+# source = "node_modules/aos/dist"
+# target = "static/plugins/aos"
+
+[[module.mounts]]
+source = "node_modules/slick-carousel/slick/ajax-loader.gif"
+target = "static/css/ajax-loader.gif"
+
+[[module.mounts]]
+source = "node_modules/slick-carousel/slick/fonts"
+target = "static/css/fonts"
 
 [[module.mounts]]
 source = "node_modules/@popperjs/core/dist/umd"
@@ -50,32 +83,48 @@ target = "static/plugins/jquery-magnific-popup"
 # css plugins
 # [[params.plugins.css]]
 # link = "plugins/bootstrap/bootstrap.min.css"
+
 # [[params.plugins.css]]
-# link = "plugins/slick/slick.css"
+# link = "plugins/slick-carousel/slick.css"
 # [[params.plugins.css]]
-# link = "plugins/jquery-magnific-popup/jquery.magnific-popup.css"
+# link = "plugins/slick-carousel/slick-theme.css"
 # [[params.plugins.css]]
 # link = "plugins/animate.css/animate.min.css"
+
+# [[params.plugins.css]]
+# link = "plugins/jquery-magnific-popup/magnific-popup.css"
 # [[params.plugins.css]]
 # link = "plugins/webfonts/all.min.css" # font-awesome
 # [[params.plugins.css]]
 # link = "plugins/themify-icons/themify-icons.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/brands.min.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/fontawesome.min.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/solid.min.css"
 
 # js plugin
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/jquery/jquery.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/popper/popper.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/slick-carousel/slick.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/wow/wow.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/jquery.mixitup/mixitup.min.js"
-[[params.plugins.js]]
+[[params.static.js]]
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
+# [[params.static.js]]
+# link = "plugins/aos/aos.js"
+
+# [[params.assets.js]]
+# link = "plugins/slick-carousel/slick.min.js"
+
 
 [[menu.main]]
 URL = "#service"
