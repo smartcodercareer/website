@@ -88,11 +88,11 @@
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range $index, $item := site.Params.assets.js}}
 {{ $script := resources.Get $item.link | resources.Minify }}
-<script src="{{ $script.Permalink }}"></script>
+<script src="{{ $script.Permalink | relURL }}"></script>
 {{ end }}
 
 {{ range site.Params.static.js}}
-<script src="{{ .link }}"></script>
+<script src="{{ .link | relURL }}"></script>
 {{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}
@@ -100,7 +100,7 @@
 {{ if hugo.IsProduction }}
 {{ $script = resources.Get "js/script.js" | minify}}
 {{ end }}
-<script src="{{ $script.Permalink }}"></script>
+<script src="{{ $script.Permalink | relURL }}"></script>
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}
