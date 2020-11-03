@@ -208,39 +208,39 @@
 
 
     // Teams slider js
-    $('.team_list').slick({
-      dots: false,
-      infinite: true,
-      speed: 500,
-      // fade:true,
-      slidesToShow: 4,
-      arrows:true,
-      autoplay:true,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 479,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    })
+    // $('.team_list').slick({
+    //   dots: false,
+    //   infinite: true,
+    //   speed: 500,
+    //   // fade:true,
+    //   slidesToShow: 4,
+    //   arrows:true,
+    //   autoplay:true,
+    //   slidesToScroll: 1,
+    //   responsive: [
+    //     {
+    //       breakpoint: 991,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 600,
+    //       settings: {
+    //         slidesToShow: 2,
+    //         slidesToScroll: 1
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 479,
+    //       settings: {
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1
+    //       }
+    //     }
+    //   ]
+    // })
 
     // related items slider js
     // $('.related_items_slider').slick({
@@ -281,7 +281,7 @@
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 3,
       arrows:false,
       autoplay:true,
       slidesToScroll: 1,

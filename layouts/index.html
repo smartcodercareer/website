@@ -8,7 +8,7 @@
       <div class="b_slide" style="background-image: url({{ .image | relURL}});">
         <div class="container">
           <div class="banner_caption text-center">
-            <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading }}</h3>
+            <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading | safeHTML }}</h3>
             <h1 class="wow fadeInLeft" data-wow-delay="0.9s">{{ .title }}</h1>
             <p class="wow fadeInLeft" data-wow-delay="1.3s">{{ .subtitle }}</p>
             {{ if .mainCTA.enable }}
@@ -193,16 +193,12 @@
         <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
         <p class="wow fadeInLeft">{{ .description }}</p>
       </div>
-      <div class="team_list">
+      <div class="team_list wow fadeInUp">
         {{range .item }}
         <div class="team_member">
-          <div class="team_member_inner">
-            <img src="{{ .image | relURL}}" alt="team Member">
-            <div class="team_member_overlay">
-              <h5>{{ .name }}</h5>
-              <div class="memeber_role">{{ .role }}</div>
-            </div>
-          </div>
+          <img src="{{ .image | relURL}}" alt="team Member">
+          <h3 class="name">{{ .name }}</h3>
+          <div class="role">{{ .role }}</div>
         </div>
         {{ end }}
       </div>
@@ -217,14 +213,14 @@
   <div class="counter_sec love_counter">
     <div class="container">
       <div class="counter_area mt-30 text-center">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           {{ range $index, $item := .item }}
           {{ with $item}}
           <div class="col-sm-6 col-md-6 col-lg-3">
             <div class="counter wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.5}}s" data-wow-delay="0s">
-              <sub><span class="love_count">{{ .number }}</span> <sup>+</sup></sub>
+              <sub><span class="love_count">{{ .number }}</span><span>+</span></sub>
               <span>{{ .title }}</span>
-              <p>{{ .description }}</p>
+              {{ if .description }}<p>{{ .description }}</p>{{ end }}
             </div>
           </div>
           {{ end }}
@@ -312,32 +308,30 @@
   {{ with site.Data.homepage.testimonials }}
   <section class="testimonials_sec" id="testimonials">
     <div class="container">
-      <div class="testimonials_inner">
-        <div class="sec_header">
-          <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-          <p class="wow fadeInLeft">{{ .description }}</p>
-        </div>
-        <div class="testi_wrap">
-          <div class="testi_slider dots_bottom">
-            {{ range .item }}
-            <div class="testi_item">
-              <div class="testi_content">
-                <ul class="star_rating">
-                  <li><i class="fa fa-star fill"></i></li>
-                  <li><i class="fa fa-star fill"></i></li>
-                  <li><i class="fa fa-star fill"></i></li>
-                  <li><i class="fa fa-star fill"></i></li>
-                  <li><i class="fa fa-star fill"></i></li>
-                </ul>
-                <p>{{ .opinion }}</p>
-              </div>
-              <div class="testi_author">
-                <div class="testi_name">{{ .client }}</div>
-                <div class="testi_designation">{{ .role }}</div>
-              </div>
+      <div class="sec_header text-center">
+        <h2 class="sec_heading wow fadeInRight"><span>{{ .title }}</span>{{ .subtitle }}</h2>
+        <p class="wow fadeInRight">{{ .description }}</p>
+      </div>
+      <div class="testi_wrap wow fadeInUp">
+        <div class="testi_slider dots_bottom">
+          {{ range .item }}
+          <div class="testi_item">
+            <div class="testi_content">
+              <ul class="star_rating">
+                <li><i class="fa fa-star fill"></i></li>
+                <li><i class="fa fa-star fill"></i></li>
+                <li><i class="fa fa-star fill"></i></li>
+                <li><i class="fa fa-star fill"></i></li>
+                <li><i class="fa fa-star fill"></i></li>
+              </ul>
+              <p>{{ .opinion }}</p>
             </div>
-            {{ end }}
+            <div class="testi_author">
+              <div class="testi_name">{{ .client }}</div>
+              <div class="testi_designation">{{ .role }}</div>
+            </div>
           </div>
+          {{ end }}
         </div>
       </div>
     </div>
@@ -361,7 +355,8 @@
           <div class="col-sm-12 col-md-5">
             <div class="contact_info wow fadeInLeft">
               <h3>{{ .contentTitle }}</h3>
-              <p>{{ .content }}</p>
+              <p>{{ .content | safeHTML }}</p>
+              <div class="for-you if"></div>
               {{ if .address.enable }}
               <hr>
               <h5><i class="fa fa-map-marker"></i> {{ .address.address }}

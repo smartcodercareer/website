@@ -17,7 +17,7 @@ hero:
 
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
-      subtitle: "It's about time to get an fair return from your online marketing investments."
+      subtitle: "It's about time to get a fair return from your online marketing investments."
       image: "images/template-one/banner2.jpg"
       mainCTA:
         enable: false
@@ -52,7 +52,7 @@ When we design an order confirmation page, we think what your customer should do
 services:
   enable: true
   title: "Our Services"
-  subtitle: "Results Generators"
+  subtitle: "Results Generating Services"
   description: ""
   CTA:
     caption: "Get Started"
@@ -60,7 +60,7 @@ services:
   item:
     - title: "Web Design"
       icon: "fa fa-pen-fancy"
-      description: "You have a beautiful website. Probably it cost arm and leg, but how many % of visitors it converts to clients? Don’t worry. We will turn your website into your private ATM."
+      description: "You have amazing website. It probably cost you arm and leg, but how many % of visitors convert to clients? Don’t worry. Let's turn your website into your private ATM. "
       URL: ""
 
     - title: "Sales funnels"
@@ -83,7 +83,7 @@ portfolio:
   enable: true
   title: "OUR LATEST Works"
   subtitle: "Our Portfolio of Designs"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elits."
+  description: ""
   CTA: "Check Our Work"
   filter:
     enable: false
@@ -136,25 +136,25 @@ letsWorkTogether:
   forClient:
     title: "Let's Work Together"
     subtitle: "Start Your Project"
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    description: "Contact us for a FREE audit call, and get clear how your business can flourish."
     URL: "#contact"
-    CTA: "START WITH US NOW"
+    CTA: "GET YOUR FREE AUDIT NOW"
   forCandidate:
     title: "Join our Team"
     subtitle: "We Are Hiring"
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-    URL: "#"
+    description: "If you think you are the best and you can prove it, we are always happy to chat."
+    URL: "career"
     CTA: "JOIN US NOW"
 
 
 team:
   enable: true
-  title: "OUR Team"
-  subtitle: "MEET OUR LEADERS"
-  description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+  title: "Our Team"
+  subtitle: "Meet Our Leaders"
+  description: "We believe solid leadership is a foundation of a creative and productive workspace. More than 25 years of combined industry experience helps us tackle any challenge our clients have."
   item:
     - name: "Adam Faryna"
-      role: "CEO"
+      role: "Head of Marketing"
       image: "images/team/Adam Faryna.jpg"
 
     - name: "Marcin Faryna"
@@ -165,21 +165,25 @@ team:
 counter:
   enable: true
   item:
+    - title: "Years of Experience Combined"
+      number: "30"
+      description: ""
+
     - title: "Projects Completed"
-      number: "569"
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+      number: "17"
+      description: ""
 
     - title: "Business Partners"
-      number: "783"
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+      number: "8"
+      description: ""
 
-    - title: "Happy Clients"
-      number: "356"
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+    # - title: "Happy Clients"
+    #   number: "356"
+    #   description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
 
-    - title: "IT Consultant"
-      number: "894"
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium."
+    - title: "IT Consultants"
+      number: "11"
+      description: ""
 
 
 pricing:
@@ -190,11 +194,11 @@ testimonials:
   enable: true
   title: "Testimonials"
   subtitle: "What Our Clients Say"
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur."
+  description: "Let's the results we deliver speak for themselves."
   item:
     - website: "podcastarts.com"
       URL: "https://podcastarts.com/"
-      opinion: "We asked Appdy to create a new design for our agency website. The Appdy team did a fantastic job. The level of detail and creativity are world-class. They also created an entire sales funnel, optimized for conversion, optimized website SEO, and ran Adwords ads for us. Great experience!"
+      opinion: "We asked Appdy to create a new design for our design agency website. The Appdy team did a fantastic job. The level of detail is top notch. They also created an entire sales funnel, optimized for conversion, website SEO, and setup Adwords ads for us. Our AOV and conversion increased significantly. Very well done!"
       client: "Mary J. Wood"
       role: "Marketing Manager"
 
@@ -202,19 +206,19 @@ testimonials:
       URL: "https://warmwanted.com/"
       opinion: "We wanted to launch another dropshipping store just before Black Friday/Cyber Monday, and it was already the middle of October. Appdy did a fantastic job designing a brand and shop on time so that we could test our products at the peak of the season."
       client: "Carolyn Cribbs"
-      role: "Marketing Manager"
+      role: "Owner"
 
     - website: "wucaivase.com"
       URL: ""
-      opinion: "Appdy team is very skillful! My dropshipping store looks fantastic, they implemented the shop precisely as I described. The website loads very fast, much faster than Shopify. I highly recommend Appdy, and we will work again."
+      opinion: "Appdy team is very skillful! My dropshipping store looks fantastic, they implemented the shop precisely as we described. The website loads very fast, much faster than Shopify which we tried before. I highly recommend Appdy, we will definitely work again."
       client: "Mark A. Navarro"
       role: "Marketing Manager"
 
-    - website: "posturegainer.com"
+    - website: ""
       URL: ""
-      opinion: "I wanted to copy another dropshipping store that claimed to be successful. Appdy created a store and did all the branding in no time. The store looks very good and is very fast, especially on mobile, which is a must in this business. Well done! I recommend Appdy."
+      opinion: "I wanted Appdy to build dropshipping store similar to the one that claimed to be successful. Appdy created a store and did all the branding in no time. The store looks very good and is very fast, especially on mobile, which is a must in this business."
       client: "Steven Patterson"
-      role: "Marketing Manager"
+      role: "Owner"
 
     # - website: "smartbetterliving.com"
     #   URL: ""
@@ -224,11 +228,12 @@ testimonials:
 
 contact:
   enable: true
-  title: "Contact us"
-  subtitle: "Let's create Progress together"
-  description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
-  contentTitle: "contact us"
-  content: "Feel free to contact us. A business has to be involving, it has to be fun, and it has to exercise your creative instincts. Start where you are. Use what you have. Do what you can. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  title: "Schedule Your Call With Adam"
+  # subtitle: "Let's Create Progress Together"
+  subtitle: "Free 15-Minute Audit Demo Call"
+  description: ""
+  contentTitle: "Contact Us"
+  content: "By the end of this audit call, you will have clear understand for the next steps you can take for your business to start generating consistent and reliable results online using conversion optimized web pages and online traffic.<br><br><strong>Disclaimer:</strong> We don't want to waste your nor our time. We will contact you back to schedule the call only if we feel we can provide immense value to your business."
   form:
     title: "Don't Hesitate To Contact With Us, Say Hello......"
     embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"></iframe>'

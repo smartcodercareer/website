@@ -163,7 +163,7 @@ google_analytics_id = "" # Your ID
 
 
 [params.footer]
-description = "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam"
+description = "Appdy LTD is a business registered in England and Wales since 2016.<br>Company number 10541738"
 
 [[params.footer.links]]
 label = "Privacy Policy"
@@ -215,3 +215,6 @@ URL = "#"
 enable = false
 icon = "fab fa-pinterest-p"
 URL = "#"
+
+[params.modal]
+enable = false
