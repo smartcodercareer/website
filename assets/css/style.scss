@@ -1467,9 +1467,11 @@ a.footer-logo:after {
 .btn.cta {
   padding: 15px 25px;
   border-radius: 10px;
+  transition: transform .15s ease-in-out;
 
   &:hover {
     color: white;
+    transform: scale(1.05);
   }
 
   .title {
