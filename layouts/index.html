@@ -98,8 +98,10 @@
           {{ end }}
         </div>
       </div>
-      {{ if .CTA.URL }}
-      <a href="{{ .CTA.URL | relURL }}" class="btn blue_gradient wow slideInUp">{{ .CTA.caption }}</a>
+      {{ if site.Data.homepage.CTA.URL }}
+      {{ with site.Data.homepage.CTA}}
+      <a href="{{ .URL | relURL }}" class="btn blue_gradient wow slideInUp cta"><span class="title">{{ .title }}</span><span class="subtitle">{{ .subtitle }}</span></a>
+      {{ end }}
       {{ end }}
     </div>
   </section>
@@ -329,6 +331,7 @@
             <div class="testi_author">
               <div class="testi_name">{{ .client }}</div>
               <div class="testi_designation">{{ .role }}</div>
+              <div class="website">{{ .website }}</div>
             </div>
           </div>
           {{ end }}
@@ -356,7 +359,18 @@
             <div class="contact_info wow fadeInLeft">
               <h3>{{ .contentTitle }}</h3>
               <p>{{ .content | safeHTML }}</p>
-              <div class="for-you if"></div>
+              {{ if .whenThisIsForYou.enable }}
+              {{ with .whenThisIsForYou }}
+              <div class="when-this-is-for-you">
+                <h3>{{ .description }}</h3>
+                <ul>
+                  {{ range .item }}
+                  <li><i class="fas fa-check-circle"></i>{{ .content | safeHTML }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+              {{ end }}
+              {{ end }}
               {{ if .address.enable }}
               <hr>
               <h5><i class="fa fa-map-marker"></i> {{ .address.address }}

@@ -1,3 +1,8 @@
+CTA:
+  title: "Contact Us"
+  subtitle: "Get Your FREE Marketing Audit Now"
+  URL: "#contact"
+
 hero:
   enable: true
   scrollDownIcon: true
@@ -54,9 +59,6 @@ services:
   title: "Our Services"
   subtitle: "Results Generating Services"
   description: ""
-  CTA:
-    caption: "Get Started"
-    URL: "#contact"
   item:
     - title: "Web Design"
       icon: "fa fa-pen-fancy"
@@ -135,14 +137,14 @@ letsWorkTogether:
   enable: true
   forClient:
     title: "Let's Work Together"
-    subtitle: "Start Your Project"
-    description: "Contact us for a FREE audit call, and get clear how your business can flourish."
+    subtitle: "Website To ATM"
+    description: "Contact us for a FREE audit call and get clear how your business can flourish"
     URL: "#contact"
     CTA: "GET YOUR FREE AUDIT NOW"
   forCandidate:
     title: "Join our Team"
     subtitle: "We Are Hiring"
-    description: "If you think you are the best and you can prove it, we are always happy to chat."
+    description: "If you think you are the best and you can prove it let's have a chat"
     URL: "career"
     CTA: "JOIN US NOW"
 
@@ -151,7 +153,7 @@ team:
   enable: true
   title: "Our Team"
   subtitle: "Meet Our Leaders"
-  description: "We believe solid leadership is a foundation of a creative and productive workspace. More than 25 years of combined industry experience helps us tackle any challenge our clients have."
+  description: "We believe solid leadership is a foundation of both a creative and productive workspace. More than 25 years of combined industry experience helps us tackle any challenge our clients have."
   item:
     - name: "Adam Faryna"
       role: "Head of Marketing"
@@ -170,7 +172,7 @@ counter:
       description: ""
 
     - title: "Projects Completed"
-      number: "17"
+      number: "21"
       description: ""
 
     - title: "Business Partners"
@@ -214,7 +216,7 @@ testimonials:
       client: "Mark A. Navarro"
       role: "Marketing Manager"
 
-    - website: ""
+    - website: "smartbetterliving.com"
       URL: ""
       opinion: "I wanted Appdy to build dropshipping store similar to the one that claimed to be successful. Appdy created a store and did all the branding in no time. The store looks very good and is very fast, especially on mobile, which is a must in this business."
       client: "Steven Patterson"
@@ -228,15 +230,23 @@ testimonials:
 
 contact:
   enable: true
-  title: "Schedule Your Call With Adam"
+  title: "Schedule Your Call With Our Expert"
   # subtitle: "Let's Create Progress Together"
   subtitle: "Free 15-Minute Audit Demo Call"
   description: ""
   contentTitle: "Contact Us"
-  content: "By the end of this audit call, you will have clear understand for the next steps you can take for your business to start generating consistent and reliable results online using conversion optimized web pages and online traffic.<br><br><strong>Disclaimer:</strong> We don't want to waste your nor our time. We will contact you back to schedule the call only if we feel we can provide immense value to your business."
+  content: "By the end of this audit call, you will have clear understand for the next steps you can take for your business to start generating consistent and reliable results online using conversion optimized web pages and online traffic."
+  whenThisIsForYou:
+    enable: true
+    description: "This Audit is for you if"
+    item:
+      - content: "You want to <strong>increase the average order value</strong> (AOV) of your online business"
+      - content: "You want to <strong>increase the volume of traffic</strong> on your website"
+      - content: "You want your website <strong>visitors stay longer and buy more</strong>"
+      - content: "You want to know which marketing strategy will <strong>work the best for your business</strong>"
   form:
     title: "Don't Hesitate To Contact With Us, Say Hello......"
-    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
+    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="460" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
   address:
     enable: false
     address: "1234 Some Avenue, New York, NY 1234"
