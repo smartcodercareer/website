@@ -38,6 +38,9 @@ Version: 1.0.0
 ========================================================================== */
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -46,6 +49,10 @@ body {
 
   &.single #content {
     margin-top: 100px;
+  }
+
+  #content {
+    flex: 1;
   }
 }
 
