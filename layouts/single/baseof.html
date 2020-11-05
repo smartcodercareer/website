@@ -3,6 +3,7 @@
   {{- partial "head.html" . -}}
 
   <body class="single">
+    {{ partial "gtag.html" .}}
     {{- partial "header.html" . -}}
     <div id="content">
       {{- block "main" . }}{{- end }}

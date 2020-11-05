@@ -154,13 +154,14 @@ logoLight = "images/logo-white.png"
 phone = ""
 email = ""
 skype = ""
-author = "Appdy LTD"
+author = "Appdy"
+owner = "Appdy"
 description = "Digital Agency Based in London"
 startYear = "2016-01-01"
 
-google_analytics_id = "" # Your ID
+gtag = "GTM-WVDXKLS"
+# google_analytics_id = "UA-129161973-1"
 # copyright = "© Copyright 2016-2020 Appdy LTD"
-
 
 [params.footer]
 description = "Appdy LTD is a business registered in England and Wales since 2016.<br>Company number 10541738"

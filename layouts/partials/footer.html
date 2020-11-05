@@ -36,7 +36,7 @@
     {{ end }}
     </div>
     <div class="copyrigt_text d-flex justify-content-between">
-      <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} Appdy LTD&nbsp;<span class="dot">·</span>
+      <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} {{ site.Params.owner }}&nbsp;<span class="dot">·</span>
         <span class="footer-links">
           {{ range $index, $item := site.Params.footer.links }}
           {{ if ne $index 0 }}|{{ end }}
