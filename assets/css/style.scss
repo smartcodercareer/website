@@ -1022,12 +1022,12 @@ ul.tabs_list li a.mixitup-control-active {
 }
 
 .team_member {
-  // position: relative;
   padding: 0 15px;
+  margin-bottom: 20px;
   outline: none;
-  // overflow: hidden;
 
   img {
+    max-width: 250px;
     margin-bottom: 15px;
   }
 
@@ -1044,6 +1044,7 @@ ul.tabs_list li a.mixitup-control-active {
 .team_list {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding-top: 25px;
 }
 
