@@ -125,24 +125,44 @@ link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
 # [[params.assets.js]]
 # link = "plugins/slick-carousel/slick.min.js"
 
-
-[[menu.main]]
+[[menu.homepage]]
 URL = "#service"
 name = "Service"
 weight = 1
 
-[[menu.main]]
+[[menu.homepage]]
 URL = "#portfolio"
 name = "Portfolio"
 weight = 2
 
-[[menu.main]]
+[[menu.homepage]]
 URL = "#about"
 name = "About"
 weight = 3
 
-[[menu.main]]
+[[menu.homepage]]
 URL = "#contact"
+name = "Contact"
+weight = 4
+
+
+[[menu.main]]
+URL = "/service/"
+name = "Service"
+weight = 1
+
+[[menu.main]]
+URL = "/portfolio/"
+name = "Portfolio"
+weight = 2
+
+[[menu.main]]
+URL = "/about/"
+name = "About"
+weight = 3
+
+[[menu.main]]
+URL = "/contact/"
 name = "Contact"
 weight = 4
 

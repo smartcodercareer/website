@@ -1,4 +1,4 @@
-<header class="main_header dark_bg">
+<header class="main_header {{ if .IsHome }}{{ else }}dark_bg{{ end }}">
   <div class="container-fluid">
     <div class="row align-items-center">
       <div class="col-lg-2 col-sm-3 col-xs-6 col-5">
@@ -22,7 +22,13 @@
                   <a href="{{ site.BaseURL }}" class="nav-link">{{ site.Params.Home }}</a>
                 </li>
                 {{ $current := . }}
-                {{ range site.Menus.main }}
+                {{ $menu := site.Menus.main }}
+
+                {{ if .IsHome }}
+                {{ $menu = site.Menus.homepage }}
+                {{ end }}
+
+                {{ range $menu }}
                 {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
                 {{ $active = or $active (eq .Name $current.Title) }}
                 {{ if .HasChildren }}

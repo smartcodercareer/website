@@ -86,14 +86,16 @@
 
   $(function() {
     // header Fixed class
-    $(window).on("scroll", function(){
-      var scroll = $(window).scrollTop();
-      if (scroll >= 2) {
-        $(".main_header.with-transition").addClass("dark_bg");
-      } else {
-        $(".main_header.with-transition").removeClass("dark_bg");
-      }
-    });
+    if ($(".dynamic-header .main_header").length) {
+      $(window).on("scroll", function(){
+        var scroll = $(window).scrollTop();
+        if (scroll >= 2) {
+          $(".dynamic-header .main_header").addClass("dark_bg");
+        } else {
+          $(".dynamic-header .main_header").removeClass("dark_bg");
+        }
+      });
+    }
 
     // header Menu Scroll down js
     $(window).on("scroll", function(){
