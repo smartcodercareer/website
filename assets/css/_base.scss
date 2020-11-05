@@ -47,12 +47,13 @@ body {
   color: map-get($colors, "text");
   overflow-x: hidden;
 
-  &.single #content {
+  #content {
+    flex: 1;
     margin-top: 100px;
   }
 
-  #content {
-    flex: 1;
+  &.dynamic-header #content {
+    margin-top: 0;
   }
 }
 
