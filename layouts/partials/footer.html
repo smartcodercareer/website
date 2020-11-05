@@ -85,7 +85,7 @@
   </div>
 </footer>
 
-{{ "<!-- JS Plugins -->" | safeHTML }}
+<!-- JS Plugins -->
 {{ range $index, $item := site.Params.assets.js}}
 {{ $script := resources.Get $item.link | resources.Minify }}
 <script src="{{ $script.Permalink | relURL }}"></script>
@@ -95,15 +95,15 @@
 <script src="{{ .link | relURL }}"></script>
 {{ end }}
 
-{{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" }}
 {{ if hugo.IsProduction }}
-{{ $script = resources.Get "js/script.js" | minify}}
+{{ $script = $script | minify}}
 {{ end }}
 <script src="{{ $script.Permalink | relURL }}"></script>
 
-<!-- cookie -->
+
 {{ if site.Params.cookies.enable }}
+<!-- cookie -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <div id="js-cookie-box" class="cookie-box cookie-box-hide">
 	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
@@ -126,10 +126,46 @@
 {{ end }}
 
 
+{{ if site.Params.gtag }}
+<div id="consent-container">
+  <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
+  <div class="content">
+    <span class="description">This website uses cookies to enhance site navigation, analyse site usage, and assist in our marketing efforts. Without cookies some feature may not be available. By clicking "Accept cookies" you agree to our <a href="/privacy-policy" class="consent-cookie-policy">Cookie Policy</a>.</span>
+    <form>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="necessary" checked="checked" disabled="disabled"><span>Necessary</span>
+        </label>
+      </div>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="marketing"><span>Marketing</span>
+        </label>
+      </div>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="analytics"><span>Analytics</span>
+        </label>
+      </div>
+      <div class="buttons"><button type="button" class="save">Save</button><button type="button" class="accept-all">Accept All</button></div>
+    </form>
+  </div>
+</div>
+
+{{ $buildConf := (dict "minify" false "target" "esnext") }}
+
+{{ if hugo.IsProduction }}
+{{ $buildConf = merge $buildConf (dict "minify" true) }}
+{{ end }}
+
+{{ $script = resources.Get "js/consent.js" | js.Build $buildConf }}
+<script src="{{ $script.Permalink | relURL }}"></script>
+{{ end }}
+
+
 {{ if site.Params.scrollToTop.enable}}
 <a href="javascript:void(0);" class="scrollUp"><i class="fas fa-chevron-up"></i></a>
 {{ end }}
-
 
 {{ if site.Params.modal.enable }}
 {{ with site.Params.modal }}

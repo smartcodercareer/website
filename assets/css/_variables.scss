@@ -1,0 +1,68 @@
+$mobile-s: 320px; // iPhone SE
+$mobile-m: 375px; // iPhone 8
+$iphone-8-plus: 414px; // iPhone 8 plus
+$mobile-l: 425px;
+$iphone-se-horizontal: 568px; // iPhone SE horizontal
+$iphone-8-horizontal: 667px; // iPhone 8 horizontal
+$ipad-mini-7: 694px;
+$iphone-8-plus-horizontal: 736px; // iPhone 8 plus horizontal
+$tablet: 768px; // iPad mini 7.9", iPad 9.7"
+$ipad-pro-10: 834px; // iPad pro 10.5"
+$laptop: 1024px; // iPad mini 7.9" horizontal, iPad 9.7" horizontal
+$ipad-pro-10-horizontal: 1112px; // iPad pro 10.5" horizontal
+$ipad-pro-12: 1366px; // iPad pro 12.9"
+$laptop-l: 1440px;
+$k4: 2560px;
+
+// $fonts: (
+//   heading: Roboto,
+//   content: Quicksand
+// );
+
+$fonts: (
+  heading: "Nunito, sans-serif",
+  content: "Poppins, sans-serif"
+);
+
+$colors: (
+  primary: #7103bc,
+  secondary: #7e7e7e,
+  primary-hover: #007bff,
+  secondary-hover: #fcc100,
+  spinner: #5c5c5c,
+  error: #e2401c,
+  urgent-notice: #e2401c,
+  error-notice: #f1775c,
+  option-selected: #e2401c,
+  price-old: #222, // with opacity .5 // #6d6d6d,
+  price-current: #333333,
+  underline: #6d6d6d,
+  info-notice: #21a1d2,
+  success-notice: #0f834d,
+  success: #44a944,
+  border: #e6e6e6, // #f0f0f0
+  input-valid: #0f834d,
+  shadow: rgba(0,0,0,0.2),
+  text: #383333, // rgb(51, 51, 51), // #6d6d6d,
+  link: #727272,
+  link-hover: #747474,
+  link-secondary: #96588a,
+  link-handheld: #000,
+  quantity-control: rgb(114,114,114),
+  overlay: #727272,
+  background-secondary: #f8f8f8,
+  list-item-mask: rgba(202, 197, 197, .55),
+  outline: #ffc800,
+  popup-overlay: #525151a8,
+  exit-intent-overlay: #020202
+);
+
+$color-light: (
+  border: rgba(175,175,175,0.34),
+  text: rgb(84, 84, 84),
+);
+
+$color-strong: (
+  border: rgba(0,0,0,0.25),
+  text: #323232
+);

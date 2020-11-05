@@ -1,0 +1,695 @@
+@mixin media($breakpoint-min) {
+  @media (min-width: $breakpoint-min) {
+    @content;
+  }
+}
+
+@mixin media-max($breakpoint-max) {
+  @media (max-width: $breakpoint-max - 1px) {
+    @content;
+  }
+}
+
+@mixin media-min-max($breakpoint-min, $breakpoint-max) {
+  @media (min-width: $breakpoint-min) and (max-width: $breakpoint-max - 1px) {
+    @content;
+  }
+}
+
+@mixin icon-size($size) {
+  &:before {
+    height: $size;
+    width: $size;
+    background-size: $size $size;
+    mask-size: $size;
+  }
+}
+
+@mixin icon($size: 1rem) {
+  @include icon-size($size);
+  content: '';
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: middle;
+  stroke-width: 1px;
+  background: none;
+  pointer-events: none;
+  mask-repeat: no-repeat;
+  background-color: map-get($color, text);
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $isMediaQuery, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+  $emValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+    $emValues: #{$emValues + $value}em;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+      $emValues: #{$emValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+
+  // for compatibility with Safari
+  @if isMediaQuery {
+    #{$property}: $emValues;
+
+  } @else {
+    #{$property}: $remValues;
+  }
+}
+
+@mixin style-price {
+  @content;
+
+  .amount {
+    &,
+    .woocommerce-Price-currencySymbol {
+      @content;
+    }
+  }
+
+  del {
+    color: #3c3c3c;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin order-review-border($padding-right: 4rem, $width: 53%) {
+  border-right: 1px solid #e6e6e6;
+  padding-right: $padding-right;
+  width: $width;
+}
+
+/*
+@mixin product-remove() {
+  a {
+    font-size: .8rem;
+    border-bottom: 1px solid map-get($color, underline);
+  }
+}
+
+@mixin quantity-buttons {
+  margin: 0;
+
+  .quantity-selector {
+    display: inline;
+  }
+}
+
+@mixin primary-button {
+  font-size: 1.3rem;
+  line-height: initial;
+}
+
+@mixin reset-border {
+  border: 1px solid $input-border !important;
+}
+
+@mixin input {
+  font-family: map-get($fonts, heading) Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: .7rem .8rem;
+  width: 100%;
+  height: 4rem;
+  border: 1px solid $input-border;
+  box-shadow: 0 0 0 30px white inset !important;
+  background-color: white !important;
+
+  &:focus {
+    background-color: initial;
+
+		&[placeholder]:focus::-webkit-input-placeholder {
+			opacity: initial;
+		}
+  }
+}
+
+@mixin modal-menu($side) {
+  &.modal-menu {
+    position: fixed;
+    display: block;
+    visibility: hidden;
+    top: 0;
+    height: 100%;
+    width: calc(100vw - 35px);
+    background-color: white;
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), visibility 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 11;
+
+    @if $side == right {
+      left: initial;
+      right: 0;
+      transform: translateX(100%);
+
+    } @else {
+      left: 0;
+      right: initial;
+      transform: translateX(-100%);
+    }
+
+    @include media($mobile-l) {
+      width: calc(100vw - 70px);
+    }
+
+    @include media($tablet) {
+      width: 28rem;
+    }
+
+    @include media($laptop) {
+      width: 35rem;
+    }
+
+    &.active {
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 5rem;
+      padding: 0 1.8rem;
+
+      span {
+        font-size: 19px;
+      }
+
+      a {
+        color: map-get($color, link); // #404040;
+        background-color: transparent;
+
+        i {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-size: 1.5rem 1.5rem;
+        }
+      }
+
+      svg {
+        stroke-width: 1.5px;
+      }
+    }
+
+    .buttons {
+      background-color: initial;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    @content;
+  }
+}
+
+@mixin reduced-price($size-from) {
+  del {
+    span.woocommerce-Price-amount.amount {
+      &,
+      .woocommerce-Price-currencySymbol {
+        font-size: $size-from - 3px;
+        -webkit-font-smoothing: subpixel-antialiased;
+      }
+    }
+  }
+
+  ins {
+    margin-left: .5rem;
+
+    span.woocommerce-Price-amount.amount {
+      &,
+      .woocommerce-Price-currencySymbol {
+        font-size: $size-from;
+        -webkit-font-smoothing: subpixel-antialiased;
+      }
+    }
+  }
+}
+
+@mixin text-dotted($width) {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: $width;
+}
+
+@mixin checkbox {
+  position: relative;
+  padding: 0;
+  border-radius: 4px;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  vertical-align: -4px;
+  background: transparent;
+  -webkit-font-smoothing: inherit;
+  appearance: none;
+  border: 1px solid map-get($color, border);
+  box-shadow: 0 0 0 0 map-get($color, input-shadow) inset;
+
+  &:checked {
+    border-color: initial;
+    box-shadow: 0 0 0 10px map-get($color, input-shadow) inset;
+
+    &:after {
+      margin-left: -5px;
+      margin-right: -4px;
+      opacity: 1;
+      background-image: url(../img/checkbox-tick.svg),none;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    top: 30%;
+    left: 50%;
+    transition: all 0.2s ease-in-out 0.1s;
+    transform: scale(1);
+    opacity: 0;
+  }
+
+}
+
+@mixin product-name($width: 7.9rem) {
+  @include text-dotted($width);
+
+  @include media($mobile-m) {
+    white-space: initial;
+    width: 11.8rem;
+  }
+
+  @include media($iphone-8-plus) {
+    width: 12.6rem;
+  }
+
+  @include media($iphone-se-horizontal) {
+    width: 21rem;
+  }
+
+  @include media($iphone-8-horizontal) {
+    width: 28rem;
+  }
+
+  @include media($ipad-mini-7) {
+    width: 30rem;
+  }
+
+  @include media($iphone-8-plus-horizontal) {
+    width: 33rem;
+  }
+
+  @include media($tablet) {
+    width: 15rem;
+  }
+
+  @include media($laptop) {
+    width: 18rem;
+    white-space: initial;
+  }
+}
+
+@mixin payment-method-button-size {
+  width: 100%;
+
+  @include media($mobile-l) {
+    display: inline-block;
+    width: 18.5rem !important;
+  }
+
+  @include media($tablet) {
+    width: 30rem !important;
+  }
+}
+
+@mixin gslr-rating-short {
+  .glsr-summary-stars {
+    margin-bottom: 0;
+
+    .glsr-star-full,
+    .glsr-star-empty {
+      width: 15px;
+      height: 15px;
+      background-size: 15px;
+    }
+  }
+
+  .glsr-summary-text {
+    display: inline-block;
+  }
+
+  @content;
+}
+
+@mixin order-review-shop-table {
+  display: block;
+  margin-bottom: 0;
+  transition: all .4s ease-out;
+
+  @include media($laptop) {
+    height: initial;
+  }
+
+  tr.cart-discount {
+    th {
+      font-weight: 600;
+    }
+
+    td {
+      font-weight: 600;
+
+      @include style-price {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@mixin order-review-shop-table-checkout-plus {
+  @include order-review-shop-table;
+  height: 47rem;
+
+  @include media($laptop) {
+    height: initial;
+  }
+
+  tr.woocommerce-shipping-methods-wrapper {
+    #shipping_method {
+      li {
+        position: relative;
+        text-align: left;
+
+        input {
+          position: absolute;
+          top: 5px;
+          left: 1px;
+        }
+
+        label {
+          display: inline-block;
+          width: 100%;
+          clear: right;
+          font-weight: 300;
+
+          span.not-available {
+            float: right;
+            font-weight: 400;
+          }
+
+          .amount {
+            float: right;
+          }
+        }
+
+        input[type="radio"] {
+          & ~ label {
+            padding-left: 20px;
+
+            .amount {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > thead {
+    display: none;
+  }
+
+  tbody,
+  tfoot {
+    display: block;
+    table-layout: fixed;
+  }
+
+  tr {
+    display: table;
+    width: 100%;
+
+    & ~ tr {
+      th,
+      td {
+        padding-top: 0em;
+      }
+    }
+
+    th,
+    td {
+      padding: .5em 0;
+    }
+
+    td {
+      font-weight: 500;
+
+      .tax_label {
+        display: none;
+      }
+
+      @include style-price {
+        font-weight: 300;
+      }
+    }
+  }
+
+  tbody {
+    overflow-y: auto;
+
+    @include media($laptop) {
+      max-height: 51rem;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    td.product-thumbnail {
+      position: relative;
+      padding-top: 1em;
+      padding-bottom: 1.7em;
+      color: $text-light;
+      line-height: 1.5;
+
+      img {
+        border: 1px solid $thumbnail-border;
+        border-radius: 8px;
+        background-color: white;
+        margin: 0;
+      }
+
+      .quantity {
+        position: absolute;
+        font-size: 12px;
+        font-weight: 500;
+        top: 3px;
+        left: 53px;
+        border-radius: 1.75em;
+        background-color: map-get($color, quantity-control);
+        color: white;
+        line-height: 1.9;
+        padding: 0 0.58333em;
+        z-index: 3;
+      }
+    }
+
+    td.product-name {
+      width: initial;
+
+      .name {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 1em;
+        @include media-max($laptop) {
+          @include text-dotted(9rem);
+        }
+
+        @include media($mobile-m) {
+          width: 11rem;
+        }
+
+        @include media($mobile-l) {
+          width: 16rem;
+        }
+
+        @include media($tablet) {
+          width: 37rem;
+        }
+
+        @include media($laptop) {
+          width: 16rem;
+        }
+
+        @include media($laptop-l) {
+          width: 22rem;
+        }
+      }
+    }
+
+    td.product-total {
+      text-align: right;
+      padding: 1em 0;
+    }
+  }
+
+  tfoot {
+    max-height: 46rem;
+
+    tr {
+      td {
+        text-align: right;
+        padding-right: 0;
+      }
+    }
+
+    tr.coupon {
+      td {
+        text-align: center;
+        clear: both;
+        padding: 1.5rem 0;
+        border-top: 1px solid $border-light;
+
+        @include media($laptop) {
+          display: table-cell;
+        }
+
+        .form-field {
+          display: block;
+
+          @include media-max($laptop) {
+            margin-bottom: 1rem;
+          }
+
+          @include media($laptop) {
+            display: inline-block;
+            width: initial;
+          }
+
+          input[type="text"] {
+            width: 100%;
+
+            @include media($laptop) {
+              width: 15.2rem;
+            }
+
+            @include media($laptop-l) {
+              width: 20.5rem;
+            }
+          }
+        }
+
+        button {
+          height: 4rem;
+
+          @include media($laptop) {
+            margin-left: .7rem;
+            width: initial;
+          }
+        }
+      }
+    }
+
+    tr.cart-subtotal {
+      th,
+      td {
+        padding: 1rem 0 .5rem;
+        border-top: 1px solid $border-light;
+      }
+    }
+
+    tr.shipping {
+      th,
+      td {
+        padding-bottom: 1rem;
+      }
+
+      ul#shipping_method {
+        margin-bottom: 0;
+
+        input.shipping_method {
+          display: none;
+        }
+
+        li {
+          text-align: right;
+        }
+      }
+    }
+
+    tr.order-total {
+      border-top: 1px solid $border-light;
+
+      th,
+      td {
+        padding: 1rem 0;
+        border-top: 1px solid $border-light;
+      }
+
+      th {
+        font-weight: 600;
+        font-size: 24px;
+      }
+
+      td {
+        .includes_tax {
+          display: none;
+        }
+
+        @include style-price {
+          color: $text-light;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    tr.tax-in-total {
+      td {
+        padding-top: 0;
+
+        span,
+        span span,
+        span span.amount span {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+*/
