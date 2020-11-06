@@ -194,6 +194,10 @@ URL = "privacy-policy"
 label = "Terms Of Service"
 URL = "terms-of-service"
 
+[[params.footer.links]]
+label = "Business Proposals"
+URL = "proposals"
+
 # preloader
 [params.preloader]
 enable = true
