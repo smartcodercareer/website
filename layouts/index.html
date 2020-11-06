@@ -48,48 +48,7 @@
   {{ end }}
 
   {{ if site.Data.homepage.portfolio.enable }}
-  {{ with site.Data.homepage.portfolio }}
-  <section class="portfolio_tab_sec bg_light_gray" id="portfolio">
-    <div class="container">
-      <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-        <p class="wow fadeInLeft">{{ .description }}</p>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="portfolio_tabs">
-        {{ if .filter.enable }}
-        <ul class="tabs_list text-center wow fadeInUp controls" id="filters">
-          <li><a href="#!" class="control filter" data-filter="all">All</a></li>
-          {{ range .filter.item }}
-          <li><a href="#!" class="control filter" data-filter="{{ .selector }}">{{ .label }}</a></li>
-          {{ end }}
-        </ul>
-        {{ end }}
-        <div class="portfolio_list wow fadeInUp">
-          <div id="portfoliolist" class="targets container">
-            {{ if site.Data.homepage.portfolio.enable }}
-            {{ with site.Data.homepage.portfolio }}
-            {{ range .item }}
-            <div class="mix portfolio_item portfolio designs" style="display: inline-block;">
-              <a href="{{ .image }}"}>
-                <img src="{{ .image  }}" alt="portfolio">
-                <div class="p_caption">
-                  <div class="plus_icon"></div>
-                  <h4>{{ .website }}</h4>
-                  <p>{{ site.Data.homepage.portfolio.CTA }}</p>
-                </div>
-              </a>
-            </div>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {{ end }}
+  {{ partial "section-portfolio.html" . }}
   {{ end }}
 
 
