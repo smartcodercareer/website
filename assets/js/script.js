@@ -56,29 +56,32 @@
 
   function mainSlider() {
     var BasicSlider = $('.banner_slider');
-    BasicSlider.on('init', function(e, slick) {
-      var $firstAnimatingElements = $('.b_slide').find('[data-animation]');
-      doAnimations($firstAnimatingElements);
-    });
-    BasicSlider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
-      var $animatingElements = $('.b_slide[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
-      doAnimations($animatingElements);
-    });
 
-    function doAnimations(elements) {
-      var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-      elements.each(function() {
-        var $this = $(this);
-        var $animationDelay = $this.data('delay');
-        var $animationType = 'animated ' + $this.data('animation');
-        $this.css({
-          'animation-delay': $animationDelay,
-          '-webkit-animation-delay': $animationDelay
-        });
-        $this.addClass($animationType).one(animationEndEvents, function() {
-          $this.removeClass($animationType);
-        });
+    if (BasicSlider.length) {
+      BasicSlider.on('init', function(e, slick) {
+        var $firstAnimatingElements = $('.b_slide').find('[data-animation]');
+        doAnimations($firstAnimatingElements);
       });
+      BasicSlider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+        var $animatingElements = $('.b_slide[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+        doAnimations($animatingElements);
+      });
+
+      function doAnimations(elements) {
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function() {
+          var $this = $(this);
+          var $animationDelay = $this.data('delay');
+          var $animationType = 'animated ' + $this.data('animation');
+          $this.css({
+            'animation-delay': $animationDelay,
+            '-webkit-animation-delay': $animationDelay
+          });
+          $this.addClass($animationType).one(animationEndEvents, function() {
+            $this.removeClass($animationType);
+          });
+        });
+      }
     }
   }
 
@@ -144,21 +147,26 @@
     // Counter js
     $(window).scroll(startCounter);
     function startCounter() {
-      var hT = jQuery('.love_counter').offset().top,
-          hH = jQuery('.love_counter').outerHeight(),
-          wH = jQuery(window).height();
-      if (jQuery(window).scrollTop() > hT+hH-wH) {
-        jQuery(window).off("scroll", startCounter);
-        jQuery('.love_count').each(function () {
-          var $this = jQuery(this);
-          jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function () {
-              $this.text(Math.ceil(this.Counter) );
-            }
+      var $loveCounter = jQuery('.love_counter');
+
+      if ($loveCounter.length) {
+        var hT = $loveCounter.offset().top,
+            hH = $loveCounter.outerHeight(),
+            wH = jQuery(window).height();
+
+        if (jQuery(window).scrollTop() > hT+hH-wH) {
+          jQuery(window).off("scroll", startCounter);
+          jQuery('.love_count').each(function () {
+            var $this = jQuery(this);
+            jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+              duration: 2000,
+              easing: 'swing',
+              step: function () {
+                $this.text(Math.ceil(this.Counter) );
+              }
+            });
           });
-        });
+        }
       }
     }
 
@@ -168,7 +176,7 @@
     });
 
     // go down
-    $(".go_down_arrow i.fa,.sliding_link").on('click', function() {
+    $(".go_down_arrow i.fa, .sliding_link").on('click', function() {
       $('html, body').animate({
         scrollTop: $("#main_body").offset().top
       }, 800);
