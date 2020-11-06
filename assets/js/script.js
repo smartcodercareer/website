@@ -316,7 +316,8 @@
     $('.partners_slider').slick({
       dots: false,
       infinite: true,
-      speed: 500,
+      speed: 600,
+      autoplaySpeed: 900,
       slidesToShow: 5,
       arrows:false,
       autoplay:true,

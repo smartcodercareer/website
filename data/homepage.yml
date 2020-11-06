@@ -106,31 +106,49 @@ portfolio:
       URL: "https://podcastarts.com/"
       image: "images/portfolio/podcastarts.jpg"
       client: "Mary J. Wood"
-      service: "Web Design"
+      service: "Web Development"
 
     - website: "warmwanted.com"
       URL: "https://warmwanted.com"
       image: "images/portfolio/warmwanted-mockup.jpg"
       client: "Carolyn Cribbs"
-      service: "Web Design"
+      service: "Web Development"
 
     - website: "wucaivase.com"
-      URL: ""
+      URL: "https://wucaivase.com"
       image: "images/portfolio/wucai-vase-project.jpg"
       client: "Mark A. Navarro"
-      service: "Web Design"
+      service: "Web Development"
 
     - website: "posturegainer.com"
-      URL: ""
+      URL: "https://posturegainer.com"
       image: "images/portfolio/posturegainer-mockup.jpg"
       client: "Steven Patterson"
-      service: "Web Design"
+      service: "Web Development"
 
     - website: "smartbetterliving.com"
-      URL: ""
+      URL: "https://smartbetterliving.com"
       image: "images/portfolio/smartbetterliving-mockup.jpg"
-      client: "b"
-      service: "Web Design"
+      client: ""
+      service: "Web Development"
+
+    - website: "cyfrowypolsat.pl"
+      URL: "https://cyfrowypolsat.pl"
+      image: "images/portfolio/cyfrowypolsat-mockup.jpg"
+      client: "Cyfrowy Polsat"
+      service: "Web Development"
+
+    - website: "poir.opi.org.pl"
+      URL: "http://www.poir.opi.org.pl/"
+      image: "images/portfolio/opi-mockup.jpg"
+      client: "OPI - Information Processing Center"
+      service: "Web Development"
+
+    - website: "t-mobilebankowe.pl"
+      URL: "https://www.t-mobilebankowe.pl"
+      image: "images/portfolio/tmobile-mockup.jpg"
+      client: "T-Mobile Finance Services Poland"
+      service: "Web Development"
 
 
 letsWorkTogether:
@@ -257,13 +275,41 @@ contact:
 partners:
   enable: true
   item:
-    - image: "images/partners/partner-1.png"
-    - image: "images/partners/partner-2.png"
-    - image: "images/partners/partner-3.png"
-    - image: "images/partners/partner-4.png"
-    - image: "images/partners/partner-5.png"
-    - image: "images/partners/partner-6.png"
-    - image: "images/partners/partner-7.png"
+    - title: "Amazon Web Services"
+      image: "images/partners/aws.png"
+
+    - title: "Google Cloud Platform"
+      image: "images/partners/gcp.png"
+
+    - title: "Microsoft Azure"
+      image: "images/partners/azure.png"
+
+    - title: "Magento"
+      image: "images/partners/magento.png"
+
+    - title: "Wordpress"
+      image: "images/partners/wordpress.png"
+
+    - title: "Woocommerce"
+      image: "images/partners/woocommerce.png"
+
+    - title: "React"
+      image: "images/partners/react.png"
+
+    - title: "Vue"
+      image: "images/partners/vue.png"
+
+    - title: "Java"
+      image: "images/partners/java.png"
+
+    - title: "Jenkins"
+      image: "images/partners/jenkins.png"
+
+    # - title: "Mailchimp"
+    #   image: "images/partners/mailchimp.png"
+
+    - title: "ClickFunnels"
+      image: "images/partners/clickfunnels.png"
 
 
 news:
