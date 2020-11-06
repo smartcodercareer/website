@@ -49,11 +49,17 @@ body {
 
   #content {
     flex: 1;
-    margin-top: 100px;
+    padding: 150px 0 50px 0;
   }
 
   &.dynamic-header #content {
-    margin-top: 0;
+    padding: 0;
+  }
+}
+
+.content {
+  ul {
+    margin-bottom: 20px;
   }
 }
 
@@ -109,32 +115,32 @@ h6 {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 60px;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 45px;
   font-weight: 800;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 800;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 700;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -173,6 +179,13 @@ q {
 	-moz-border-radius: 0;
 	-ms-border-radius: 0;
 }
+
+.page-title {
+  span {
+    color: map-get($colors, primary);
+  }
+}
+
 .gradientOne {
   background: rgb(48, 194, 241);
   background: -moz-linear-gradient(-45deg, rgba(48, 194, 241, 1) 0%, rgba(146, 90, 164, 1) 100%);
@@ -1464,6 +1477,7 @@ a.footer-logo:after {
   padding: 15px 25px;
   border-radius: 10px;
   transition: transform .15s ease-in-out;
+  line-height: 1;
 
   &:hover {
     color: white;
@@ -1473,16 +1487,17 @@ a.footer-logo:after {
   .title {
     font-size: 24px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.5;
     letter-spacing: 1px;
   }
 
   .subtitle {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     text-transform: none;
     line-height: 1.2;
+    opacity: .7;
   }
 }
 
