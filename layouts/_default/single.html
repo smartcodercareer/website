@@ -18,9 +18,13 @@
         <div class="col-lg-9">
           <div class="content">
             {{.Content }}
+            {{ if .Params.CTA }}
+            {{ with .Params.CTA }}
             <div class="text-center">
-            {{ partial "cta-button.html" (dict "URL" site.Data.career.form "title" "Apply Now" "target" "_blank")}}
+            {{ partial "cta-button.html" (dict "URL" .URL  "title" .title "target" .target) }}
             </div>
+            {{ end }}
+            {{ end }}
           </div>
         </div>
       </div>

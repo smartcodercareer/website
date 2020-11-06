@@ -1,0 +1,34 @@
+<section class="service_sec" id="service">
+  {{ with site.Data.homepage.services }}
+  <div class="container text-center">
+    <div class="sec_header text-center">
+      <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
+      <p class="wow fadeInLeft">{{ .description }}</p>
+    </div>
+    <div class="servics_list">
+      <div class="row">
+        {{ range $index, $item := .item }}
+        <div class="col-sm-6 col-md-6 col-lg-3 wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.25}}s" data-wow-delay="0s">
+          <div class="service_item">
+            <div class="service_thumb"><i class="{{ .icon }}"></i></div>
+            <div class="service_content">
+              <h4>{{ .title }}</h4>
+              <p>{{ .description }}</p>
+              {{ with .URL }}
+              <a href="{{ .URL | relURL }}" class="btn blue_gradient">Read More</a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    {{ if .CTA }}
+    {{ with .CTA}}
+    {{ partial "cta-button.html" (dict "URL" .URL "title" .title "subtitle" .subtitle)}}
+    {{ end }}
+    {{ end }}
+  </div>
+</section>

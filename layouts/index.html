@@ -2,7 +2,7 @@
 
 {{ if site.Data.homepage.hero.enable }}
 {{ with site.Data.homepage.hero }}
-  <section class="banner_sec" id="home">
+<section class="banner_sec" id="home">
     <div class="banner_slider">
       {{ range .item}}
       <div class="b_slide" style="background-image: url({{ .image | relURL}});">
@@ -71,43 +71,9 @@
   {{ end }}
   {{ end }}
 
-
   {{ if site.Data.homepage.services.enable }}
-  {{ with site.Data.homepage.services }}
-  <section class="service_sec" id="service">
-    <div class="container text-center">
-      <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInLeft"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-        <p class="wow fadeInLeft">{{ .description }}</p>
-      </div>
-      <div class="servics_list">
-        <div class="row">
-          {{ range $index, $item := .item }}
-          <div class="col-sm-6 col-md-6 col-lg-3 wow slideInUp" data-wow-duration="{{ mul (add $index 1) 0.25}}s" data-wow-delay="0s">
-            <div class="service_item">
-              <div class="service_thumb"><i class="{{ .icon }}"></i></div>
-              <div class="service_content">
-                <h4>{{ .title }}</h4>
-                <p>{{ .description }}</p>
-                {{ with .URL }}
-                <a href="{{ .URL | relURL }}" class="btn blue_gradient">Read More</a>
-                {{ end }}
-              </div>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-      {{ if site.Data.homepage.CTA.URL }}
-      {{ with site.Data.homepage.CTA}}
-      {{ partial "cta-button.html" (dict "URL" .URL "title" .title "subtitle" .subtitle)}}
-      {{ end }}
-      {{ end }}
-    </div>
-  </section>
+  {{ partial "section-services.html" (dict "CTA" site.Data.homepage.CTA) }}
   {{ end }}
-  {{ end }}
-
 
   {{ if site.Data.homepage.portfolio.enable }}
   {{ with site.Data.homepage.portfolio }}
@@ -307,108 +273,15 @@
 
 
   {{ if site.Data.homepage.testimonials.enable }}
-  {{ with site.Data.homepage.testimonials }}
-  <section class="testimonials_sec" id="testimonials">
-    <div class="container">
-      <div class="sec_header text-center">
-        <h2 class="sec_heading wow fadeInRight"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-        <p class="wow fadeInRight">{{ .description }}</p>
-      </div>
-      <div class="testi_wrap wow fadeInUp">
-        <div class="testi_slider dots_bottom">
-          {{ range .item }}
-          <div class="testi_item">
-            <div class="testi_content">
-              <ul class="star_rating">
-                <li><i class="fa fa-star fill"></i></li>
-                <li><i class="fa fa-star fill"></i></li>
-                <li><i class="fa fa-star fill"></i></li>
-                <li><i class="fa fa-star fill"></i></li>
-                <li><i class="fa fa-star fill"></i></li>
-              </ul>
-              <p>{{ .opinion }}</p>
-            </div>
-            <div class="testi_author">
-              <div class="testi_name">{{ .client }}</div>
-              <div class="testi_designation">{{ .role }}</div>
-              <div class="website">{{ .website }}</div>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ partial "section-testimonials.html" . }}
   {{ end }}
-  {{ end }}
-
 
   {{ if site.Data.homepage.contact.enable }}
-  {{ with site.Data.homepage.contact }}
-  <section class="contact_sec" id="contact">
-    <div class="sec_header text-center">
-      <div class="container">
-        <h2 class="sec_heading wow fadeInUp" data-aos="fade-up"><span>{{ .title }}</span>{{ .subtitle }}</h2>
-        <p class="wow fadeInUp" data-aos="fade-up">{{ .description }}</p>
-      </div>
-    </div>
-    <div class="container">
-      <div class="contact-details d-flex">
-        <div class="row">
-          <div class="col-sm-12 col-md-5">
-            <div class="contact_info wow fadeInLeft">
-              <h3>{{ .contentTitle }}</h3>
-              <p>{{ .content | safeHTML }}</p>
-              {{ if .whenThisIsForYou.enable }}
-              {{ with .whenThisIsForYou }}
-              <div class="when-this-is-for-you">
-                <h3>{{ .description }}</h3>
-                <ul>
-                  {{ range .item }}
-                  <li><i class="fas fa-check-circle"></i>{{ .content | safeHTML }}</li>
-                  {{ end }}
-                </ul>
-              </div>
-              {{ end }}
-              {{ end }}
-              {{ if .address.enable }}
-              <hr>
-              <h5><i class="fa fa-map-marker"></i> {{ .address.address }}
-              </h5>
-              <h5><i class="fa fa-envelope"></i> {{ .address.email }}
-              </h5>
-              <h5><i class="fa fa-phone"></i> {{ .address.phone }}
-              </h5>
-              {{ end }}
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-7">
-            <div class="contact-form-area wow fadeInRight">
-              {{ if .form.embed }}{{ .form.embed | safeHTML }}{{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ partial "section-audit.html" . }}
   {{ end }}
-  {{ end }}
-
 
   {{ if site.Data.homepage.partners.enable }}
-  {{ with site.Data.homepage.partners }}
-  <div class="partners_sec">
-    <div class="container">
-      <div class="partners_slider">
-        {{ range .item }}
-        <div class="partner_item">
-          <img src="{{ .image }}" alt="partner">
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-  {{ end }}
+  {{ partial "section-partners.html" . }}
   {{ end }}
 
 

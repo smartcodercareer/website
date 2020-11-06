@@ -57,7 +57,7 @@ When we design an order confirmation page, we think what your customer should do
 services:
   enable: true
   title: "Our Services"
-  subtitle: "Results Generating Services"
+  subtitle: "Results Generating Activities"
   description: ""
   item:
     - title: "Web Design"
@@ -70,7 +70,7 @@ services:
       description: "We are optimization freaks always trying to get things to next better level. With our custom sales funnels, your business will optimize it's profit from every single client."
       URL: ""
 
-    - title: "Paid Advertising"
+    - title: "Advertising"
       icon: "fas fa-volume-up"
       description: "Paid advertising done right will let you create new clients from thin air. We offer CPA optimization services for search engines and social media platforms."
       URL: ""
@@ -264,7 +264,7 @@ contact:
       - content: "You want to know which marketing strategy will <strong>work the best for your business</strong>"
   form:
     title: "Don't Hesitate To Contact With Us, Say Hello......"
-    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="460" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
+    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="480" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
   address:
     enable: false
     address: "1234 Some Avenue, New York, NY 1234"

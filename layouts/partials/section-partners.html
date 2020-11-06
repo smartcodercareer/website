@@ -1,0 +1,13 @@
+{{ with site.Data.homepage.partners }}
+<div class="partners_sec">
+  <div class="container">
+    <div class="partners_slider">
+      {{ range .item }}
+      <div class="partner_item">
+        <img src="{{ .image | relURL }}" alt="partner">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

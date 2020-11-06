@@ -1,0 +1,33 @@
+{{ with site.Data.homepage.testimonials }}
+<section class="testimonials_sec" id="testimonials">
+  <div class="container">
+    <div class="sec_header text-center">
+      <h2 class="sec_heading wow fadeInRight"><span>{{ .title }}</span>{{ .subtitle }}</h2>
+      <p class="wow fadeInRight">{{ .description }}</p>
+    </div>
+    <div class="testi_wrap wow fadeInUp">
+      <div class="testi_slider dots_bottom">
+        {{ range .item }}
+        <div class="testi_item">
+          <div class="testi_content">
+            <ul class="star_rating">
+              <li><i class="fa fa-star fill"></i></li>
+              <li><i class="fa fa-star fill"></i></li>
+              <li><i class="fa fa-star fill"></i></li>
+              <li><i class="fa fa-star fill"></i></li>
+              <li><i class="fa fa-star fill"></i></li>
+            </ul>
+            <p>{{ .opinion }}</p>
+          </div>
+          <div class="testi_author">
+            <div class="testi_name">{{ .client }}</div>
+            <div class="testi_designation">{{ .role }}</div>
+            <div class="website">{{ .website }}</div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
