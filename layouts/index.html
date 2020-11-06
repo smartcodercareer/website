@@ -12,10 +12,10 @@
             <h1 class="wow fadeInLeft" data-wow-delay="0.9s">{{ .title }}</h1>
             <p class="wow fadeInLeft" data-wow-delay="1.3s">{{ .subtitle }}</p>
             {{ if .mainCTA.enable }}
-            <a href="{{ .mainCTA.URL }}" class="btn btn_white wow fadeInUp" data-wow-delay="1.6s">{{ .mainCTA.caption }}</a>
+            <a href="{{ .mainCTA.URL }}" class="btn btn_white wow fadeInUp" data-wow-delay="1.6s">{{ .mainCTA.label }}</a>
             {{ end }}
             {{ if .secondaryCTA.enable }}
-            <a href="{{ .mainCTA.URL }}" class="btn btn_outline wow fadeInUp" data-wow-delay="1.6s">{{ .secondaryCTA.caption}}</a>
+            <a href="{{ .mainCTA.URL }}" class="btn btn_outline wow fadeInUp" data-wow-delay="1.6s">{{ .secondaryCTA.label}}</a>
             {{ end }}
           </div>
         </div>
@@ -100,7 +100,7 @@
       </div>
       {{ if site.Data.homepage.CTA.URL }}
       {{ with site.Data.homepage.CTA}}
-      <a href="{{ .URL | relURL }}" class="btn blue_gradient wow slideInUp cta"><span class="title">{{ .title }}</span><span class="subtitle">{{ .subtitle }}</span></a>
+      {{ partial "cta-button.html" (dict "URL" .URL "title" .title "subtitle" .subtitle)}}
       {{ end }}
       {{ end }}
     </div>

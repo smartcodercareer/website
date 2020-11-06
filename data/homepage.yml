@@ -26,11 +26,11 @@ hero:
       image: "images/template-one/banner2.jpg"
       mainCTA:
         enable: false
-        caption: "Read More"
+        label: "Read More"
         URL: "#about"
       secondaryCTA:
         enable: false
-        caption: "Our Portfolio"
+        label: "Our Portfolio"
         URL: "#portfolio"
 
     # - heading: "SMART DIGITAL PARTNER"

@@ -3,6 +3,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
+        {{ if .Params.subtitle }}
+        <span>{{ .Params.subtitle }}</span>
+        {{ end }}
         <h1 class="text-dark font-tertiary">{{.Title}}</h1>
       </div>
     </div>
