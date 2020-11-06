@@ -27,7 +27,7 @@
 
     {{ if .CTA }}
     {{ with .CTA}}
-    {{ partial "cta-button.html" (dict "URL" .URL "title" .title "subtitle" .subtitle)}}
+    {{ partial "cta-button.html" (dict "CTA" (dict "URL" .URL "title" .title "subtitle" .subtitle)) }}
     {{ end }}
     {{ end }}
   </div>

@@ -21,7 +21,7 @@
             {{ if .Params.CTA }}
             {{ with .Params.CTA }}
             <div class="text-center">
-            {{ partial "cta-button.html" (dict "URL" .URL  "title" .title "target" .target) }}
+            {{ partial "cta-button.html" (dict "CTA" (dict "URL" .URL "title" .title "target" .target)) }}
             </div>
             {{ end }}
             {{ end }}
