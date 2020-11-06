@@ -239,3 +239,9 @@ URL = "#"
 
 [params.modal]
 enable = false
+
+# [blackfriday]
+# extensions = ["hardLineBreak"]
+
+# [markup.goldmark.renderer]
+# hardWraps = true

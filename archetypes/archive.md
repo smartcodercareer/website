@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }} | {{ .Site.Title }}"
+title: "{{ replace .Name "-" " " | title }}"
 aliases: []
 type: archive
 description:

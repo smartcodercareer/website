@@ -1,13 +1,13 @@
 ---
-title: "Wordpress Developer"
+title: "Magento Developer"
 draft: false
 ---
 
-We are looking for a talented Web Developer to join our team.
+We are looking for a talented Magento Developer to join our team.
 
-We don't care how old are you, where you are from, what are your personal preferences, or what drives you. We want to cultivate a respective workplace, where professional attitude matters the most. The only thing we care about is if you can take a job and deliver.
+We don't care how old are you, where you are from, what are your personal preferences, or what drives you. We want to cultivate a respective work place, where professional attitude matters the most. The only thing we care about is if you can take a job and deliver.
     
-You don't have to have plenty of experience (but that helps). If you have skills, talent, and you feel a passion for building WordPress websites, and you can prove it, we are happy to talk to you.
+You don't have to have plenty of experience (but that helps). If you have skills, talent, and you feel a passion to build awesome Magento stores, and you can prove it, we are happy to talk to you.
 
 ### In this position, you will:
 
@@ -18,8 +18,8 @@ You don't have to have plenty of experience (but that helps). If you have skills
 ### Requirements:
 
 - expert in HTML5, CSS3, JS, jQuery
-- good knowledge of PHP
-- expert in WordPress and Woocommerce as a user and developer (especially the implementation of themes from designs in WordPress)
+- expert in PHP
+- expert in Magento as a user and developer (especially the implementation of themes from designs in WordPress)
 - fluent with SCSS and CSS code management methodologies (BEM, SMACSS, etc.)
 - expert at creating responsive mobile-first websites
 - knowledge of NPM and project dependency management

@@ -2,7 +2,7 @@
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
   {{ partial "head.html" . }}
 
-  <body>
+  <body class="{{ .Type }}-page">
     <div class="loader">
       <div class="loader_div"></div>
     </div>

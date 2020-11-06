@@ -181,8 +181,67 @@ q {
 }
 
 .page-title {
+  margin-bottom: 75px;
+
   span {
     color: map-get($colors, primary);
+  }
+}
+
+.career-page {
+  .card-wrap {
+    &:nth-child(2n) {
+      article:after {
+        background: rgba(113, 3, 188, 0.9);
+      }
+    }
+
+    &:nth-child(3n) {
+      article:after {
+        background: rgba(24, 153, 1, 0.9);
+      }
+    }
+
+    &:nth-child(4n) {
+      article:after {
+        background: rgba(153, 94, 1, 0.9);
+      }
+    }
+
+    &:nth-child(5n) {
+      article:after {
+        background: rgba(183, 10, 212, 0.9);
+      }
+    }
+  }
+
+  .card {
+    border: none;
+    background-size: cover;
+  }
+
+  .card-title a {
+    color: white;
+  }
+
+  article {
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(51, 99, 245, 0.9);
+    }
+
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 1;
+
   }
 }
 
