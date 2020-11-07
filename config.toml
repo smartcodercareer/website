@@ -105,19 +105,62 @@ target = "static/plugins/jquery-magnific-popup"
 # [[params.plugins.css]]
 # link = "plugins/fontawesome/solid.min.css"
 
+# preloads
+[[params.preload]]
+link = "/fonts/nunito/Nunito-Bold.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/nunito/Nunito-ExtraBold.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/poppins/Poppins-Medium.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/poppins/Poppins-Light.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/nunito/Nunito-SemiBold.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/poppins/Poppins-Bold.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/webfonts/fa-brands-400.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/fonts/poppins/Poppins-Regular.woff2"
+as = "font"
+
+[[params.preload]]
+link = "/webfonts/fa-solid-900.woff2"
+as = "font"
+
 # js plugin
 [[params.static.js]]
 link = "plugins/jquery/jquery.min.js"
+
 [[params.static.js]]
 link = "plugins/popper/popper.min.js"
+
 [[params.static.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
+
 [[params.static.js]]
 link = "plugins/slick-carousel/slick.min.js"
+
 [[params.static.js]]
 link = "plugins/wow/wow.min.js"
+
 [[params.static.js]]
 link = "plugins/jquery.mixitup/mixitup.min.js"
+
 [[params.static.js]]
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
 # [[params.static.js]]
