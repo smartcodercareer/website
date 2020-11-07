@@ -191,6 +191,10 @@ label = "Privacy Policy"
 URL = "privacy-policy"
 
 [[params.footer.links]]
+label = "Cookie Policy"
+URL = "cookie-policy"
+
+[[params.footer.links]]
 label = "Terms Of Service"
 URL = "terms-of-service"
 
