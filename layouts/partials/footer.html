@@ -85,47 +85,6 @@
   </div>
 </footer>
 
-<!-- JS Plugins -->
-{{ range $index, $item := site.Params.assets.js}}
-{{ $script := resources.Get $item.link | resources.Minify }}
-<script src="{{ $script.Permalink | relURL }}"></script>
-{{ end }}
-
-{{ range site.Params.static.js}}
-<script src="{{ .link | relURL }}"></script>
-{{ end }}
-
-{{ $script := resources.Get "js/script.js" }}
-{{ if hugo.IsProduction }}
-{{ $script = $script | minify}}
-{{ end }}
-<script src="{{ $script.Permalink | relURL }}"></script>
-
-
-{{ if site.Params.cookies.enable }}
-<!-- cookie -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
-</div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires: {{ site.Params.cookies.expire_days }}
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
-{{ end }}
-
-
 {{ if site.Params.gtag }}
 <div id="consent-container">
   <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
@@ -151,7 +110,48 @@
     </form>
   </div>
 </div>
+{{ end }}
 
+<!-- JS Plugins -->
+{{ range $index, $item := site.Params.assets.js}}
+{{ $script := resources.Get $item.link | resources.Minify }}
+<script src="{{ $script.Permalink | relURL }}"></script>
+{{ end }}
+
+{{ range site.Params.static.js}}
+<script src="{{ .link | relURL }}"></script>
+{{ end }}
+
+{{ $script := resources.Get "js/script.js" }}
+{{ if hugo.IsProduction }}
+{{ $script = $script | minify}}
+{{ end }}
+<script src="{{ $script.Permalink | relURL }}"></script>
+
+{{ if site.Params.cookies.enable }}
+<!-- cookie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires: {{ site.Params.cookies.expire_days }}
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+{{ end }}
+
+{{ if site.Params.gtag }}
 {{ $buildConf := (dict "minify" false "target" "esnext") }}
 
 {{ if hugo.IsProduction }}
