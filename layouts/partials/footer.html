@@ -7,30 +7,30 @@
       <p>{{ site.Params.footer.description | safeHTML }}</p>
     </div>
     <div class="row text-center">
-      {{ if site.Params.phone }}
+      {{ if site.Params.footer.phone.enable }}
       <div class="col-sm-4">
         <div class="footer_sec">
           <i class="fa fa-phone-alt"></i>
-          <h3>Call Us On</h3>
-          <a href="template-one.html#!">(123) 456-7890</a>
+          <h3>{{ site.Params.footer.phone.title }}</h3>
+          <a href="tel:{{ site.Params.footer.phone.phone }}">{{ site.Params.footer.phone.phone }}</a>
         </div>
       </div>
       {{ end }}
-      {{ if site.Params.email }}
+      {{ if site.Params.footer.email.enable }}
       <div class="col-sm-4">
         <div class="footer_sec">
           <i class="fa fa-envelope"></i>
-          <h3>Mail us on</h3>
-          <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+          <h3>{{ site.Params.footer.email.title }}</h3>
+          <a href="mailto:{{ site.Params.footer.email.email }}">{{ site.Params.footer.email.email }}</a>
         </div>
       </div>
       {{ end }}
-      {{ if site.Params.skype }}
+      {{ if site.Params.footer.skype.enable }}
       <div class="col-sm-4">
         <div class="footer_sec">
           <i class="fab fa-skype"></i>
-          <h3>Lets Skype</h3>
-          <a href="template-one.html#">{{ site.Params.skype }}</a>
+          <h3>{{ site.Params.footer.skype.title }}</h3>
+          <a href="skype:{{ site.Params.footer.skype.skype }}?call">{{ site.Params.footer.skype.skype }}</a>
         </div>
       </div>
     {{ end }}

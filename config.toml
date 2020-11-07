@@ -186,6 +186,21 @@ gtag = "GTM-WVDXKLS"
 [params.footer]
 description = "Appdy LTD is a business registered in England and Wales since 2016.<br>Company number 10541738"
 
+[params.footer.phone]
+enable = false
+title = "Call Us On"
+phone = ""
+
+[params.footer.email]
+enable = false
+title = "Mail us on"
+email = ""
+
+[params.footer.skype]
+enable = false
+title = "Lets Skype"
+skype = ""
+
 [[params.footer.links]]
 label = "Privacy Policy"
 URL = "privacy-policy"
