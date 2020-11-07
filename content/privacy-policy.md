@@ -5,200 +5,151 @@ type: raw
 draft: false
 ---
 
-1. Introduction
+This privacy policy has been compiled to better serve those who are concerned with how their “Personally identifiable information” (PII) is being used online. PI is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
 
-1.1 We are committed to safeguarding the privacy of our website appdy.co.uk visitors and service users.
+What personal information do we collect from the people that visit our blog, website or app?
+When ordering or registering on our site, as appropriate, you may be asked to enter your name, email address, mailing address, credit card information or other details so that we can provide our services to you.
 
-1.2 This policy applies where we are acting as a data controller with respect to the personal data of our website visitors and service users; in other words, where we determine the purposes and means of the processing of that personal data.
+## When do we collect information?
 
-1.3 We use cookies on our website. Insofar as those cookies are not strictly necessary for the provision of our website and services, we will ask you to consent to our use of cookies when you first visit our website.
+We collect information from you when you register on our site, place an order, subscribe to a newsletter, fill out a form or enter information on our site.
 
-1.4 In this policy, “we”, “us” and “our” refer to Appdy LTD. For more information about us, see Section 13.
+## How do we use your information?
 
-2. Credit
+We may use such information in the following ways:
 
-2.1 This document was created using a template from SEQ Legal (https://seqlegal.com).
+- To personalize your experience on our site and to allow us to deliver the type of content and product offerings in which you are most interested.
+- To improve our website in order to better serve you.
+- To allow us to better service you in responding to your customer service requests.
+- To administer a contest, promotion, survey or other site feature.
+- To quickly process your transactions.
+- To send periodic emails regarding your order or other products and services.
+- How do we protect the information we receive?
+- Our site is reviewed on a regular basis for security vulnerabilities in order to make your visit to our site as safe as possible.
 
-3. How we use your personal data
+Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology. We do not store credit/debit card information on our systems.
 
-3.1 In this Section 3 we have set out:
+We implement a variety of security measures when a user places an order enters, submits, or accesses their information to maintain the safety of your personal information.
 
-(a) the general categories of personal data that we may process;
+All transactions are processed through a gateway provider and are not stored or processed on our servers.
 
-(b) in the case of personal data that we did not obtain directly from you, the source and specific categories of that data;
+## Do we use “cookies”?
 
-(c) the purposes for which we may process personal data; and
+Yes. For more information about cookies we are using visit our Cookies Policy page.
 
-(d) the legal bases of the processing.
+## How can you opt out, remove or modify information you have provided to us?
 
-3.2 We may process data about your use of our website and services (“usage data“). The usage data may include your IP address, geographical location, browser type and version, operating system, referral source, length of visit, page views and website navigation paths, as well as information about the timing, frequency and pattern of your service use. The source of the usage data is our analytics tracking system. This usage data may be processed for the purposes of analysing the use of the website and services. The legal basis for this processing is consent OR our legitimate interests, namely monitoring and improving our website and services.
+You can request to have your information removed by contacting us via email {{< email >}} or through the contact form.
 
-3.3 We may process your account data (“account data“). The account data may include your name and email address. The source of the account data is you or your employer. The account data may be processed for the purposes of operating our website, providing our services, ensuring the security of our website and services, maintaining back-ups of our databases and communicating with you. The legal basis for this processing is consent OR our legitimate interests, namely the proper administration of our website and business OR the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.
+Please note that we may maintain information about an individual sales transaction in order to complete that transaction and for record keeping purposes.
 
-3.4 We may process your information included in your personal profile on our website (“profile data“). The profile data may include your name, address, telephone number, email address, profile pictures, gender, date of birth, relationship status, interests and hobbies, educational details and employment details. The profile data may be processed for the purposes of enabling and monitoring your use of our website and services. The legal basis for this processing is consent OR our legitimate interests, namely the proper administration of our website and business OR the performance of a contract between you and us and/or taking steps, at you request, to enter into such a contract.
+## Unsubscribing from email list
 
-3.5 We may process your personal data that are provided in the course of the use of our services (“service data“). The service data may include cookies. The source of the service data is you or your employer. The service data may be processed for the purposes of operating our website, providing our services, ensuring the security of our website and services, maintaining back-ups of our databases and communicating with you. The legal basis for this processing is consent OR our legitimate interests, namely the proper administration of our website and business OR the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.
+To unsubscribe, opt out from the email list follow the link in email footer.
 
-3.6 We may process information that you post for publication on our website or through our services (“publication data“). The publication data may be processed for the purposes of enabling such publication and administering our website and services. The legal basis for this processing is consent OR our legitimate interests, namely the proper administration of our website and business OR the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.
+## Third Party Disclosures
 
-3.7 We may process information contained in any enquiry you submit to us regarding goods and/or services (“enquiry data“). The enquiry data may be processed for the purposes of offering, marketing and selling relevant goods and/or services to you. The legal basis for this processing is consent.
+We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information unless we provide you with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others’ rights, property, or safety.
 
-3.8 We may process information relating to our customer relationships, including customer contact information (“customer relationship data“). The customer relationship data may include your name, your employer, your job title or role, your contact details, and information contained in communications between us and you or your employer. The source of the customer relationship data is you or your employer. The customer relationship data may be processed for the purposes of managing our relationships with customers, communicating with customers, keeping records of those communications and promoting our products and services to customers. The legal basis for this processing is consent OR our legitimate interests, namely the proper management of our customer relationships.
+However, non-personally identifiable visitor information may be provided to other parties for marketing, advertising, or other uses.
 
-3.10 We may process information that you provide to us for the purpose of subscribing to our email notifications and/or newsletters (“notification data“). The notification data may be processed for the purposes of sending you the relevant notifications and/or newsletters. The legal basis for this processing is consent OR the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.
+## Third party Links
 
-3.11 We may process information contained in or relating to any communication that you send to us (“correspondence data“). The correspondence data may include the communication content and metadata associated with the communication. Our website will generate the metadata associated with communications made using the website contact forms. The correspondence data may be processed for the purposes of communicating with you and record-keeping. The legal basis for this processing is our legitimate interests, namely the proper administration of our website and business and communications with users.
+Occasionally, at our discretion, we may include or offer third party products or services on our website. These third party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
 
-3.12 We may process identify general category of data. This data may include list specific items of data. The source of this data is Google Analytics service. This data may be processed for specify purposes. The legal basis for this processing is consent OR our legitimate interests OR the performance of a contract between you and us and/or taking steps, at your request, to enter into such a contract.
+## Transfer Of Your Personal Information
 
-3.13 We may process any of your personal data identified in this policy where necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure. The legal basis for this processing is our legitimate interests, namely the protection and assertion of our legal rights, your legal rights and the legal rights of others.
+Your information, including personal information, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.
 
-3.14 We may process any of your personal data identified in this policy where necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, or obtaining professional advice. The legal basis for this processing is our legitimate interests, namely the proper protection of our business against risks.
+We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your personal information will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.
 
-3.15 In addition to the specific purposes for which we may process your personal data set out in this Section 3, we may also process any of your personal data where such processing is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.
+## Disclosure Of Your Personal Information
 
-3.16 Please do not supply any other person’s personal data to us, unless we prompt you to do so.
+If we are involved in a merger, acquisition or asset sale, your personal information may be transferred. We will provide notice before your personal information is transferred and becomes subject to a different Privacy Policy.
 
-4. Providing your personal data to others
+Under certain circumstances, we may be required to disclose your personal information if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
 
-4.1 We may disclose your personal data to our insurers and/or professional advisers insofar as reasonably necessary for the purposes of obtaining or maintaining insurance coverage, managing risks, obtaining professional advice, or the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.
+## Retention of Your Personal Information
 
-4.3 We may disclose specify personal data category or categories to our suppliers or subcontractors insofar as reasonably necessary for sole purpose of service delivery.
+We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
 
-4.5 We may disclose your enquiry data to one or more of those selected third party suppliers of goods and services identified on our website for the purpose of enabling them to contact you so that they can offer, market and sell to you relevant goods and/or services. Each such third party will act as a data controller in relation to the enquiry data that we supply to it; and upon contacting you, each such third party will supply to you a copy of its own privacy policy, which will govern that third party’s use of your personal data.
+Information Regarding Your Data Protection Rights Under General Data Protection Regulation (GDPR)
+For the purpose of this Privacy Policy, we are a Data Controller of your personal information.
 
-4.6 In addition to the specific disclosures of personal data set out in this Section 4, we may disclose your personal data where such disclosure is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.We may also disclose your personal data where such disclosure is necessary for the establishment, exercise or defence of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.
+If you are from the European Economic Area (EEA), our legal basis for collecting and using your personal information, as described in this Privacy Policy, depends on the information we collect and the specific context in which we collect it.
 
-5. International transfers of your personal data
+## We may process your personal information because:
 
-5.1 In this Section 5, we provide information about the circumstances in which your personal data may be transferred to countries outside United Kingdom and the European Economic Area (EEA).
+- You have given us permission to do so
+- The processing is in our legitimate interests and it’s not overridden by your rights
+- For payment processing purposes
+- To comply with the law
 
-5.5 You acknowledge that personal data that you submit for publication through our website or services may be available, via the internet, around the world. We cannot prevent the use (or misuse) of such personal data by others.
+## If you are a resident of the European Economic Area (EEA)
 
-6. Retaining and deleting personal data.
+If you are a resident of the European Economic Area (EEA), you have certain data protection rights.
 
-6.1 This Section 6 sets out our data retention policies and procedure, which are designed to help ensure that we comply with our legal obligations in relation to the retention and deletion of personal data.
+In certain circumstances, you have the following data protection rights:
 
-6.2 Personal data that we process for any purpose or purposes shall not be kept for longer than is necessary for that purpose or those purposes.
+- The right to access, update or to delete the personal information we have on you
+- The right of rectification
+- The right to object
+- The right of restriction
+- The right to data portability
+- The right to withdraw consent
 
-6.3 We will retain your personal data as follows:
+Please note that we may ask you to verify your identity before responding to such requests.
 
-(a) contact data like email address, your company address, phone and mobile numbers will be retained for a minimum period of a six months following the date they have been provided to us, and for a maximum period of a year.
+You have the right to complain to a Data Protection Authority about our collection and use of your personal information. For more information, please contact your local data protection authority in the European Economic Area (EEA).
 
-(b) your name and surname, your company name will be retained for a minimum period of a six months following the date they have been provided to us, and for a maximum period of a year.
+## If you are California consumer under California Consumer Privacy Act (CCPA)
 
-6.5 Notwithstanding the other provisions of this Section 6, we may retain your personal data where such retention is necessary for compliance with a legal obligation to which we are subject, or in order to protect your vital interests or the vital interests of another natural person.
+“Do Not Sell My Personal Information” Notice for California consumers under California Consumer Privacy Act (CCPA)
 
-6.6. Every user of our website has unrestricted access to his/heirs data records and can modify and update this data without restrictions. You can also request us to delete all the information we store about your presence on our website by sending an email to care@appdy.co.uk. We are obligated to keep data related to purchase transactions, as stated in United Kingdom government regulations.
+Under the CCPA, California consumers have the right to:
 
-7. Amendments
+- Request that a business that collects a consumer’s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.
+- Request that a business delete any personal data about the consumer that a business has collected.
+- Request that a business that sells a consumer’s personal data, not sell the consumer’s personal data.
 
-7.1 We may update this policy from time to time by publishing a new version on our website.
+If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
 
-7.2 You should check this page occasionally to ensure you are happy with any changes to this policy.
+## Service Providers
 
-7.3 We may notify you of significant changes to this policy by email or through the private messaging system on our website.
+We employ third party companies and individuals to facilitate our Website (“Service Providers”), to provide our Website on our behalf, to perform Website-related services or to assist us in analyzing how our Website is used. These third-parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
 
-8. Your rights
+### Analytics
 
-8.1 In this Section 8, we have summarised the rights that you have under data protection law. Some of the rights are complex, and not all of the details have been included in our summaries. Accordingly, you should read the relevant laws and guidance from the regulatory authorities for a full explanation of these rights.
+Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
 
-8.2 Your principal rights under data protection law are:
+You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
 
-(a) the right to access;
+You can opt-out of having made your activity on the Service available to Google Analytics by disabling Analytics option in cookies consent as described in our Cookie Policy.
 
-(b) the right to rectification;
+For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: http://www.google.com/intl/en/policies/privacy/
 
-(c) the right to erasure;
+### Marketing
 
-(d) the right to restrict processing;
+#### Facebook Pixel
 
-(e) the right to object to processing;
+Facebook Pixel is a web service offered by Facebook that tracks website traffic and user interactions to create personalized and retargeting marketing campaigns. Facebook uses the data collected to track and monitor the use of our Service.
 
-(f) the right to data portability;
+You can opt-out of having made your activity on the Service available to Facebook by disabling Marketing option in cookies consent as described in our [Cookie Policy]({{< relref "cookie-policy" >}}).
 
-(g) the right to complain to a supervisory authority; and
+For more information on the privacy practices of Facebook, please visit the Facebook Privacy & Terms web page: https://www.facebook.com/policy.php
 
-(h) the right to withdraw consent.
+#### Google Adwords
 
-8.3 You have the right to confirmation as to whether or not we process your personal data and, where we do, access to the personal data, together with certain additional information. That additional information includes details of the purposes of the processing, the categories of personal data concerned and the recipients of the personal data. Providing the rights and freedoms of others are not affected, we will supply to you a copy of your personal data. The first copy will be provided free of charge, but additional copies may be subject to a reasonable fee. You can access your personal data by sending us enquiry by email, your data will be send to you as encrypted spreadsheet which you can access using authentication data provided to us before.
+Google Adwords is an advertising service provided by Google. We may use Google Adwords for retargeting advertisement purposes.
 
-8.4 You have the right to have any inaccurate personal data about you rectified and, taking into account the purposes of the processing, to have any incomplete personal data about you completed.
+You can opt-out of having made your activity on the Service available to Google Adwords by disabling Marketing option in cookies consent as described in our [Cookie Policy]({{< relref "cookie-policy" >}}).
 
-8.5 In some circumstances you have the right to the erasure of your personal data without undue delay. Those circumstances include: the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed; you withdraw consent to consent-based processing; you object to the processing under certain rules of applicable data protection law; the processing is for direct marketing purposes; and the personal data have been unlawfully processed. However, there are exclusions of the right to erasure. The general exclusions include where processing is necessary: for exercising the right of freedom of expression and information; for compliance with a legal obligation; or for the establishment, exercise or defence of legal claims.
+### Payments processors
 
-8.6 In some circumstances you have the right to restrict the processing of your personal data. Those circumstances are: you contest the accuracy of the personal data; processing is unlawful but you oppose erasure; we no longer need the personal data for the purposes of our processing, but you require personal data for the establishment, exercise or defence of legal claims; and you have objected to processing, pending the verification of that objection. Where processing has been restricted on this basis, we may continue to store your personal data. However, we will only otherwise process it: with your consent; for the establishment, exercise or defence of legal claims; for the protection of the rights of another natural or legal person; or for reasons of important public interest.
+We provide paid products and/or services on our Website. In that case, we use third-party service Stripe for payment processing (e.g. payment processors).
 
-8.7 You have the right to object to our processing of your personal data on grounds relating to your particular situation, but only to the extent that the legal basis for the processing is that the processing is necessary for: the performance of a task carried out in the public interest or in the exercise of any official authority vested in us; or the purposes of the legitimate interests pursued by us or by a third party. If you make such an objection, we will cease to process the personal information unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or the processing is for the establishment, exercise or defence of legal claims.
+We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council.
 
-8.8 You have the right to object to our processing of your personal data for direct marketing purposes (including profiling for direct marketing purposes). If you make such an objection, we will cease to process your personal data for this purpose.
+## Contacting Us
 
-8.9 You have the right to object to our processing of your personal data for scientific or historical research purposes or statistical purposes on grounds relating to your particular situation, unless the processing is necessary for the performance of a task carried out for reasons of public interest.
-
-8.10 To the extent that the legal basis for our processing of your personal data is:
-
-(a) consent; or
-
-(b) that the processing is necessary for the performance of a contract to which you are party or in order to take steps at your request prior to entering into a contract,
-
-and such processing is carried out by automated means, you have the right to receive your personal data from us in a structured, commonly used and machine-readable format. However, this right does not apply where it would adversely affect the rights and freedoms of others.
-
-8.11 If you consider that our processing of your personal information infringes data protection laws, you have a legal right to lodge a complaint with a supervisory authority responsible for data protection. You may do so in the EU member state of your habitual residence, your place of work or the place of the alleged infringement.
-
-8.12 To the extent that the legal basis for our processing of your personal information is consent, you have the right to withdraw that consent at any time. Withdrawal will not affect the lawfulness of processing before the withdrawal.
-
-8.13 You may exercise any of your rights in relation to your personal data by written notice to us, in addition to the other methods specified in this Section 8.
-
-9. About cookies
-
-9.1 A cookie is a file containing an identifier (a string of letters and numbers) that is sent by a web server to a web browser and is stored by the browser. The identifier is then sent back to the server each time the browser requests a page from the server.
-
-9.2 Cookies may be either “persistent” cookies or “session” cookies: a persistent cookie will be stored by a web browser and will remain valid until its set expiry date, unless deleted by the user before the expiry date; a session cookie, on the other hand, will expire at the end of the user session, when the web browser is closed.
-
-9.3 Cookies do not typically contain any information that personally identifies a user, but personal information that we store about you may be linked to the information stored in and obtained from cookies.
-
-10. Cookies that we use
-
-10.1 We use cookies for the following purposes:
-
-(a) cookie consent – we use cookies to store your preferences in relation to the use of cookies more generally (cookies used for this purpose are: consent).
-
-11. Cookies used by our service providers
-
-11.1 Our service providers use cookies and those cookies may be stored on your computer when you visit our website.
-
-11.2 We use Google Analytics to analyse the use of our website. Google Analytics gathers information about website use by means of cookies. The information gathered relating to our website is used to create reports about the use of our website. Google’s privacy policy is available at: https://www.google.com/policies/privacy. The relevant cookies are: _ga, _gid, _gat_gtag.
-
-11.4 We use Tawk to provide messaging service on our website. This service uses cookies for indentifing returning users and managing communication. You can view the privacy policy of this service provider at https://www.tawk.to/privacy-policy. The relevant cookies are: __tawkuuid, TawkConnectionTime.
-
-11.5 We use CloudFlare to provide CDN and caching service for our website. This service uses cookies for keeping informations about buffered website assets version on user browser (like CSS, HTML, Javascript code) providing cached data refresh if necessary. You can view the privacy policy of this service provider at https://www.cloudflare.com/privacypolicy. The relevant cookie is __cfduid.
-
-12. Managing cookies
-
-12.1 Most browsers allow you to refuse to accept cookies and to delete cookies. The methods for doing so vary from browser to browser, and from version to version. You can however obtain up-to-date information about blocking and deleting cookies via these links:
-
-(a) https://support.google.com/chrome/answer/95647?hl=en (Chrome);
-
-(b) https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences (Firefox);
-
-(c) http://www.opera.com/help/tutorials/security/cookies/ (Opera);
-
-(d) https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies (Internet Explorer);
-
-(e) https://support.apple.com/kb/PH21411 (Safari); and
-
-(f) https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy (Edge).
-
-12.2 Blocking all cookies will have a negative impact upon the usability of many websites.
-
-12.3 If you block cookies, you will not be able to use all the features on our website.
-
-12.4 If none of the above settings work for you, and you don’t want us to save cookies in your internet browser, you should leave our website immediately.
-
-13. Our details
-
-13.1 This website is owned and operated by Appdy LTD.
-
-13.2 We are registered in England and Wales under registration number 10541738, and our registered office is at International House, 12 Constance Street, E16 2DQ London, UK.
-
-For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e‑mail at care@appdy.co.uk.
+If there are any questions regarding this privacy policy you may contact us {{< email >}}.
