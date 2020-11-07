@@ -251,6 +251,15 @@ q {
     position: relative;
     z-index: 1;
 
+    .btn {
+      border: 1px solid white;
+      background: none;
+
+      &:hover {
+        background: white;
+        color: map-get($colors, primary-hover);
+      }
+    }
   }
 }
 
