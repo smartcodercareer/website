@@ -1,5 +1,6 @@
 # baseURL = "https://appdy.github.io/"
-baseURL = "http://localhost:5000"
+baseURL = "https://appdy.co.uk/"
+# baseURL = "http://localhost:5000"
 languageCode = "en-us"
 title = "Appdy"
 
