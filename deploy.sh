@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# domain="appdy.net"
+domain="appdy.co.uk"
 repo="deploy"
 branch="gh-pages"
 
