@@ -7,7 +7,7 @@ draft: false
 
 1. Introduction
 
-1.1 We are committed to safeguarding the privacy of our website Appdy.co.uk visitors and service users.
+1.1 We are committed to safeguarding the privacy of our website appdy.co.uk visitors and service users.
 
 1.2 This policy applies where we are acting as a data controller with respect to the personal data of our website visitors and service users; in other words, where we determine the purposes and means of the processing of that personal data.
 
@@ -161,19 +161,7 @@ and such processing is carried out by automated means, you have the right to rec
 
 10.1 We use cookies for the following purposes:
 
-(a) authentication – we use cookies to identify you when you visit our website and as you navigate our website (cookies used for this purpose are:
-
-__tawkuuid, TawkConnectionTime – 3rd party cookies set by Tawk messaging service.
-_ga, _gid, _gat_gtag_UA_118667015_1 – third party cookies set by Google Analytics service;
-(b) status – we use cookies to help us to determine if you are logged into our website(cookies used for this purpose are: wordpress_sec_<hash>, wordpress_test_cookie, wp-settings-1, wp-settings-time-1, wordpress_logged_in_<hash>);
-
-(c) personalisation – we use cookies to store information about your preferences and to personalise the website for you (cookies used for this purpose are: __tawkuuid, TawkConnectionTime);
-
-(d) security – we use cookies as an element of the security measures used to protect user accounts, including preventing fraudulent use of login credentials, and to protect our website and services generally (cookies used for this purpose are: wordpress_sec_<hash>, wordpress_test_cookie, wp-settings-1, wp-settings-time-1, wordpress_logged_in_<hash>);
-
-(f) analysis – we use cookies to help us to analyse the use and performance of our website and services (cookies used for this purpose are: _ga, _gid, _gat_gtag_UA_118667015_1); and
-
-(g) cookie consent – we use cookies to store your preferences in relation to the use of cookies more generally (cookies used for this purpose are: catAccCookies).
+(a) cookie consent – we use cookies to store your preferences in relation to the use of cookies more generally (cookies used for this purpose are: consent).
 
 11. Cookies used by our service providers
 
@@ -183,17 +171,7 @@ _ga, _gid, _gat_gtag_UA_118667015_1 – third party cookies set by Google Analyt
 
 11.4 We use Tawk to provide messaging service on our website. This service uses cookies for indentifing returning users and managing communication. You can view the privacy policy of this service provider at https://www.tawk.to/privacy-policy. The relevant cookies are: __tawkuuid, TawkConnectionTime.
 
-11.5 We use Yaost SEO to provide SEO toolkit for creating SEO complient content. This service uses cookies for providing SEO statistics for our website and third party advertisement. You can view the privacy policy of this service provider at https://yoast.com/privacy-policy. The relevant cookies are: hjIncludedInSample, _vis_opt_exp_<hash>_goal_2, _vis_opt_exp_<hash>_combi, _vis_opt_s, _vis_opt_test_cookie, _vwo_uuid, _vwo_uuid_<id>, _vwo_uuid_v2, selected_country, selected_shop, __cfduid, _ga, _gid.
-
 11.5 We use CloudFlare to provide CDN and caching service for our website. This service uses cookies for keeping informations about buffered website assets version on user browser (like CSS, HTML, Javascript code) providing cached data refresh if necessary. You can view the privacy policy of this service provider at https://www.cloudflare.com/privacypolicy. The relevant cookie is __cfduid.
-
-11.6 We use Cartflows wordpress plugin to provide checkout functionality. This service uses cookies to keep records on user position in checkout process. The relevant cookies: wcf-visited-flow-*,
-
-11.7 We use Multi-Currency wordpress plugin to provide multi currency functionality. This service uses cookies to keep records on currency selected by user and to provide default currency setu by user settings and . The relevant cookies: wmc_current_currency, wmc_current_currency_old, wmc_ip_info.
-
-11.8 We use Woocommerce wordpress plugin to provide checkout functionality for our store. This service uses cookies. You can view the privacy policy of this plugin provider at https://docs.woocommerce.com/document/woocommerce-cookies.
-
-11.9 We use Newsletter wordpress plugin to provide newsletter, mailing functionality. This service uses cookies, to maintain information if user signed to the newsletter. The related cookies: newsletter.
 
 12. Managing cookies
 
