@@ -58,7 +58,7 @@
     <div class="row no-gutters">
       <div class="col-md-6">
         {{ with .forClient }}
-        <div class="lets_work_block text-center" style="background-image: url(images/lets-work-bg-1.jpg);">
+        <div class="lets_work_block text-center lazyload" data-bg="images/lets-work-bg-1.jpg">
           <div class="lets_work_block_inner">
             <h2><span>{{ .title }}</span>{{ .subtitle }}</h2>
             <p>{{ .description }}</p>
@@ -69,7 +69,7 @@
       </div>
       <div class="col-md-6">
         {{ with .forCandidate }}
-        <div class="lets_work_block hiring_block  text-center" style="background-image: url(images/lets-work-bg-2.jpg);">
+        <div class="lets_work_block hiring_block text-center lazyload" data-bg="images/lets-work-bg-2.jpg">
           <div class="lets_work_block_inner">
             <h2><span>{{ .title }}</span>{{ .subtitle }}</h2>
             <p>{{ .description }}</p>

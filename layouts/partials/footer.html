@@ -8,7 +8,9 @@
   <div class="container">
     <div class="footer_top  text-center">
       <div class="footer_top_logo">
-        <a href="{{ site.BaseURL }}" class="footer-logo"><img src="{{ `images/logo-icon.png` | relURL }}" alt="logo icon"></a>
+        <a href="{{ site.BaseURL }}" class="footer-logo">
+          {{- partial "lazy-image" (dict "alt" "logo icon" "image" "images/logo-icon.png") -}}
+        </a>
       </div>
       <p>{{ site.Params.footer.description | safeHTML }}</p>
     </div>

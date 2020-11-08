@@ -160,6 +160,10 @@ link = "plugins/lazysizes/lazysizes.min.js"
 async = true
 
 [[params.static.js]]
+link = "plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
+async = true
+
+[[params.static.js]]
 link = "plugins/jquery/jquery.min.js"
 
 [[params.static.js]]
