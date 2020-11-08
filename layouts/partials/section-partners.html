@@ -4,7 +4,7 @@
     <div class="partners_slider">
       {{ range .item }}
       <div class="partner_item">
-        {{ partial "lazy-image" (dict "alt" "partner" "image" .image) }}
+        {{ partial "lazy-image" (dict "alt" "partner" "image" .image "width" "420" "height" 150) }}
       </div>
       {{ end }}
     </div>

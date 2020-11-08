@@ -5,7 +5,7 @@
 <section class="banner_sec" id="home">
     <div class="banner_slider">
       {{ range .item}}
-      <div class="b_slide lazy" style="background-image: url({{ .image | relURL }});">
+      <div class="b_slide" style="background-image: url({{ .image | relURL }});">
         <div class="container">
           <div class="banner_caption text-center">
             <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading | safeHTML }}</h3>
@@ -58,7 +58,7 @@
     <div class="row no-gutters">
       <div class="col-md-6">
         {{ with .forClient }}
-        <div class="lets_work_block text-center lazyload" data-bg="images/lets-work-bg-1.jpg">
+        <div class="lets_work_block text-center" style="background: url(images/lets-work-bg-1.jpg)">
           <div class="lets_work_block_inner">
             <h2><span>{{ .title }}</span>{{ .subtitle }}</h2>
             <p>{{ .description }}</p>
@@ -69,7 +69,7 @@
       </div>
       <div class="col-md-6">
         {{ with .forCandidate }}
-        <div class="lets_work_block hiring_block text-center lazyload" data-bg="images/lets-work-bg-2.jpg">
+        <div class="lets_work_block hiring_block text-center" style="background: url(images/lets-work-bg-2.jpg)">
           <div class="lets_work_block_inner">
             <h2><span>{{ .title }}</span>{{ .subtitle }}</h2>
             <p>{{ .description }}</p>

@@ -1,4 +1,4 @@
-<img src="{{ `images/placeholder.jpg` | relURL }}" alt="{{ .alt }}" class="lazyload {{ if .class }}{{ .class }}{{ end }}" data-src="{{ .image | relURL }}">
+<img src="{{ `images/placeholder.jpg` | relURL }}" alt="{{ .alt }}" class="lazy {{ if .class }}{{ .class }}{{ end }}" data-src="{{ .image | relURL }}" width="{{ .width }}" height="{{ .height }}">
 <noscript>
-  <img src="{{ .image | relURL }}">
+  <img src="{{ .image | relURL }}" width="{{ .width }}" height="{{ .height }}">
 </noscript>

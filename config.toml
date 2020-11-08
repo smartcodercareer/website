@@ -86,47 +86,64 @@ target = "static/plugins/jquery.mixitup"
 source = "node_modules/magnific-popup/dist/"
 target = "static/plugins/jquery-magnific-popup"
 
-[[module.mounts]]
-source = "node_modules/lazysizes"
-target = "static/plugins/lazysizes"
+# [[module.mounts]]
+# source = "node_modules/lazysizes"
+# target = "static/plugins/lazysizes"
 
+[[module.mounts]]
+source = "node_modules/vanilla-lazyload/dist/lazyload.min.js"
+target = "static/plugins/lazyload.min.js"
+
+
+# preconnect
+[[params.preconnect]]
+link = "https://ssl.gstatic.com"
+
+[[params.preconnect]]
+link = "https://www.gstatic.com"
+
+[[params.preconnect]]
+link = "https://www.googletagmanager.com"
+
+[[params.preconnect]]
+link = "https://fonts.googleapis.com"
 
 # preloads
-[[params.preload]]
-link = "/fonts/nunito/Nunito-Bold.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/nunito/Nunito-Bold.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/nunito/Nunito-ExtraBold.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/nunito/Nunito-ExtraBold.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/poppins/Poppins-Medium.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/poppins/Poppins-Medium.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/poppins/Poppins-Light.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/poppins/Poppins-Light.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/nunito/Nunito-SemiBold.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/nunito/Nunito-SemiBold.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/poppins/Poppins-Bold.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/poppins/Poppins-Bold.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/webfonts/fa-brands-400.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/webfonts/fa-brands-400.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/fonts/poppins/Poppins-Regular.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/fonts/poppins/Poppins-Regular.woff2"
+# as = "font"
 
-[[params.preload]]
-link = "/webfonts/fa-solid-900.woff2"
-as = "font"
+# [[params.preload]]
+# link = "/webfonts/fa-solid-900.woff2"
+# as = "font"
 
 
 # css plugins
@@ -155,13 +172,13 @@ as = "font"
 
 
 # JS plugin
-[[params.static.js]]
-link = "plugins/lazysizes/lazysizes.min.js"
-async = true
+# [[params.static.js]]
+# link = "plugins/lazysizes/lazysizes.min.js"
+# async = true
 
-[[params.static.js]]
-link = "plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
-async = true
+# [[params.static.js]]
+# link = "plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
+# async = true
 
 [[params.static.js]]
 link = "plugins/jquery/jquery.min.js"
@@ -170,9 +187,9 @@ link = "plugins/jquery/jquery.min.js"
 link = "plugins/popper/popper.min.js"
 async = true
 
-[[params.static.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
-async = true
+# [[params.static.js]]
+# link = "plugins/bootstrap/bootstrap.min.js"
+# async = true
 
 [[params.static.js]]
 link = "plugins/slick-carousel/slick.min.js"
@@ -180,8 +197,8 @@ link = "plugins/slick-carousel/slick.min.js"
 [[params.static.js]]
 link = "plugins/wow/wow.min.js"
 
-[[params.static.js]]
-link = "plugins/jquery.mixitup/mixitup.min.js"
+# [[params.static.js]]
+# link = "plugins/jquery.mixitup/mixitup.min.js"
 
 [[params.static.js]]
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"

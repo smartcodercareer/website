@@ -1,15 +1,9 @@
-{{ $buildConf := (dict "minify" false "target" "esnext") }}
-
-{{ if hugo.IsProduction }}
-{{ $buildConf = merge $buildConf (dict "minify" true) }}
-{{ end }}
-
 <footer class="main_footer wow fadeInUp blue_gradient">
   <div class="container">
     <div class="footer_top  text-center">
       <div class="footer_top_logo">
         <a href="{{ site.BaseURL }}" class="footer-logo">
-          {{- partial "lazy-image" (dict "alt" "logo icon" "image" "images/logo-icon-small.png") -}}
+          {{ partial "lazy-image" (dict "alt" "logo icon" "image" "images/logo-icon-small.png" "width" 70 "height" 70) }}
         </a>
       </div>
       <p>{{ site.Params.footer.description | safeHTML }}</p>
@@ -121,22 +115,6 @@
 {{ end }}
 
 
-<!-- JS Plugins -->
-{{ range site.Params.static.js }}
-<script src="{{ .link | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }}></script>
-{{ end }}
-
-
-<!-- JS Assets -->
-{{ range site.Params.assets.js }}
-{{ $script := resources.Get .link | js.Build $buildConf }}
-{{ if hugo.IsProduction }}
-{{ $script = $script | minify }}
-{{ end }}
-<script src="{{ $script.Permalink | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }}></script>
-{{ end }}
-
-
 {{ if site.Params.cookies.enable }}
 <!-- cookie -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
@@ -160,15 +138,11 @@
 </script>
 {{ end }}
 
-{{ if site.Params.gtag }}
-{{ $script := resources.Get "js/consent.js" | js.Build $buildConf }}
-<script src="{{ $script.Permalink | relURL }}"></script>
-{{ end }}
-
 
 {{ if site.Params.scrollToTop.enable}}
 <a href="javascript:void(0);" class="scrollUp"><i class="fas fa-chevron-up"></i></a>
 {{ end }}
+
 
 {{ if site.Params.modal.enable }}
 {{ with site.Params.modal }}
@@ -216,3 +190,30 @@
 </div>
 {{ end }}
 {{ end }}
+
+
+<!-- JS Plugins -->
+{{ range site.Params.static.js }}
+{{ partial "script" (dict "link" .link "async" .async "defer" .defer) }}
+{{ end }}
+
+
+<!-- JS Assets -->
+{{ range site.Params.assets.js }}
+{{ partial "script" (dict "link" .link "async" .async "defer" .defer "asset" true) }}
+{{ end }}
+
+
+{{ if site.Params.gtag }}
+{{ partial "script" (dict "link" "js/consent.js" "asset" true) }}
+{{ end }}
+
+
+{{ partial "script" (dict "link" "plugins/lazyload.min.js") }}
+
+<script>
+  var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy",
+    use_native: true
+  });
+</script>
