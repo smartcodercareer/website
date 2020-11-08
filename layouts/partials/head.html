@@ -18,21 +18,21 @@
 
   {{ "<!-- plugins -->" | safeHTML }}
   {{ range $index, $item := site.Params.plugins.css }}
-  {{ $style := resources.Get $item.link | resources.Minify }}
+  {{ $style := resources.Get $item.link | minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{ end }}
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
-  {{ $toCssOptions := (dict "outputStyle" "expanded" "enableSourceMap" false) }}
+  {{ $toCssOptions := (dict "outputStyle" "expanded" "enableSourceMap" true) }}
   {{ $postCssOptions := (dict "noMap" false) }}
 
   {{ if hugo.IsProduction }}
-  {{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" false) }}
   {{ $postCssOptions = (dict "noMap" true) }}
   {{ end }}
 
-  {{ $styles := resources.Get "css/style.scss" | resources.ToCSS $toCssOptions | resources.PostCSS $postCssOptions }}
+  {{ $styles := resources.Get "css/style.scss" | toCSS $toCssOptions | postCSS $postCssOptions | minify }}
 
   {{ range site.Params.preload }}
   <link rel="preload" href="{{ .link }}" as="{{ .as }}" crossorigin="anonymous">
