@@ -4,6 +4,12 @@ baseURL = "https://appdy.co.uk/"
 languageCode = "en-us"
 title = "Appdy"
 
+[minify]
+minifyOutput = true
+
+[minify.tdewolff]
+keepConditionalComments = false
+
 [module]
 [[module.mounts]]
 source = "static"
