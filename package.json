@@ -1,5 +1,5 @@
 {
-  "name": "appdy",
+  "name": "appdy-site",
   "version": "1.0.0",
   "description": "",
   "main": "postcss.config.js",
@@ -12,30 +12,35 @@
     "url": "git+https://github.com/Appdy/site.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Adam Faryna (adamfaryna@appdy.co.uk)",
+  "license": "Proprietary",
   "bugs": {
     "url": "https://github.com/Appdy/site/issues"
   },
   "homepage": "https://github.com/Appdy/site#readme",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "cssnano-preset-default": "^4.0.7",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "^7.0.1",
+    "serve": "^11.3.2"
+  },
+  "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@popperjs/core": "^2.5.4",
     "animate.css": "^3.6.0",
-    "aos": "^2.3.4",
-    "autoprefixer": "^10.0.1",
     "bootstrap": "^4.5.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "magnific-popup": "^1.1.0",
     "mixitup": "^3.3.1",
-    "postcss": "^8.1.4",
-    "postcss-cli": "^8.1.0",
-    "serve": "^11.3.2",
     "slick-carousel": "^1.8.1",
     "wow.js": "^1.2.2"
-  },
-  "dependencies": {}
+  }
 }

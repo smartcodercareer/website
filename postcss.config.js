@@ -12,7 +12,7 @@ module.exports = {
         // rejected: true,
         // safelist: [],
       }), require('cssnano')({
-        preset: [require('cssnano-preset-default'), {
+        preset: [require('cssnano-preset-advanced'), {
           discardComments: {removeAll: true},
           colormin: true,
           cssDeclarationSorter: true,
