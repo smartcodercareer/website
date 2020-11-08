@@ -1,0 +1,16 @@
+{{ $toCssOptions := (dict "outputStyle" "expanded" "enableSourceMap" true) }}
+{{ $postCssOptions := (dict "noMap" false) }}
+
+{{ if hugo.IsProduction }}
+{{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ $postCssOptions = (dict "noMap" true) }}
+{{ end }}
+
+{{ $style := resources.Get .css | toCSS $toCssOptions | postCSS $postCssOptions | minify | fingerprint }}
+
+{{ if .lazy }}
+<link rel="preload" href="{{ $style.Permalink }}" as="style" media="screen" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ $style }}"></noscript>
+{{ else }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+{{ end }}
