@@ -171,9 +171,9 @@
     }
 
     // Loader Js
-    $(window).on("load", function(){
-      $(".loader").fadeOut("slow");
-    });
+    // $(window).on("load", function(){
+    //   $(".loader").fadeOut("slow");
+    // });
 
     // go down
     $(".go_down_arrow i.fa, .sliding_link").on('click', function() {

@@ -8,7 +8,7 @@
     <div class="team_list wow fadeInUp">
       {{range .item }}
       <div class="team_member">
-        <img src="{{ .image | relURL}}" alt="team Member">
+        {{ partial "lazy-image" (dict "alt" "Team Member" "image" .image) }}
         <h3 class="name">{{ .name }}</h3>
         <div class="role">{{ .role }}</div>
       </div>

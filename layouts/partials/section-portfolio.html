@@ -23,7 +23,7 @@
           {{ range .item }}
           <div class="mix portfolio_item portfolio designs" style="display: inline-block;">
             <a href="{{ .image }}"}>
-              <img src="{{ .image  }}" alt="portfolio">
+              {{ partial "lazy-image" (dict "alt" "portfolio" "image" .image) }}
               <div class="p_caption">
                 <div class="plus_icon"></div>
                 <h4>{{ .website }}</h4>

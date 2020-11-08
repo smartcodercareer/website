@@ -5,7 +5,7 @@
 <section class="banner_sec" id="home">
     <div class="banner_slider">
       {{ range .item}}
-      <div class="b_slide" style="background-image: url({{ .image | relURL}});">
+      <div class="b_slide lazy" style="background-image: url({{ .image | relURL }});">
         <div class="container">
           <div class="banner_caption text-center">
             <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading | safeHTML }}</h3>

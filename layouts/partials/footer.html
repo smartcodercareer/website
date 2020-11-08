@@ -1,3 +1,9 @@
+{{ $buildConf := (dict "minify" false "target" "esnext") }}
+
+{{ if hugo.IsProduction }}
+{{ $buildConf = merge $buildConf (dict "minify" true) }}
+{{ end }}
+
 <footer class="main_footer wow fadeInUp blue_gradient">
   <div class="container">
     <div class="footer_top  text-center">
@@ -112,21 +118,22 @@
 </div>
 {{ end }}
 
+
 <!-- JS Plugins -->
-{{ range $index, $item := site.Params.assets.js}}
-{{ $script := resources.Get $item.link | resources.Minify }}
-<script src="{{ $script.Permalink | relURL }}"></script>
+{{ range site.Params.static.js }}
+<script src="{{ .link | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }}></script>
 {{ end }}
 
-{{ range site.Params.static.js}}
-<script src="{{ .link | relURL }}"></script>
-{{ end }}
 
-{{ $script := resources.Get "js/script.js" }}
+<!-- JS Assets -->
+{{ range site.Params.assets.js }}
+{{ $script := resources.Get .link | js.Build $buildConf }}
 {{ if hugo.IsProduction }}
-{{ $script = $script | minify}}
+{{ $script = $script | minify }}
 {{ end }}
-<script src="{{ $script.Permalink | relURL }}"></script>
+<script src="{{ $script.Permalink | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }}></script>
+{{ end }}
+
 
 {{ if site.Params.cookies.enable }}
 <!-- cookie -->
@@ -152,13 +159,7 @@
 {{ end }}
 
 {{ if site.Params.gtag }}
-{{ $buildConf := (dict "minify" false "target" "esnext") }}
-
-{{ if hugo.IsProduction }}
-{{ $buildConf = merge $buildConf (dict "minify" true) }}
-{{ end }}
-
-{{ $script = resources.Get "js/consent.js" | js.Build $buildConf }}
+{{ $script := resources.Get "js/consent.js" | js.Build $buildConf }}
 <script src="{{ $script.Permalink | relURL }}"></script>
 {{ end }}
 

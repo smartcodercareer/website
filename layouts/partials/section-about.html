@@ -8,7 +8,8 @@
       </div>
       <div class="col-md-6">
         <div class="about_right wow fadeInRight">
-          <img src="{{`images/about-img.jpg` | relURL}}" alt="about">
+          <span class="{{ .image }}">
+          {{ partial "lazy-image" (dict "alt" "about" "image" "images/about-img.jpg") }}
         </div>
       </div>
     </div>

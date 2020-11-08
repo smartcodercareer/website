@@ -18,7 +18,7 @@
 
   {{ "<!-- plugins -->" | safeHTML }}
   {{ range $index, $item := site.Params.plugins.css }}
-  {{ $style := resources.Get $item.link | minify }}
+  {{ $style := resources.Get $item.link | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{ end }}
 
@@ -32,17 +32,16 @@
   {{ $postCssOptions = (dict "noMap" true) }}
   {{ end }}
 
-  {{ $styles := resources.Get "css/style.scss" | toCSS $toCssOptions | postCSS $postCssOptions | minify }}
+  {{ $styles := resources.Get "css/style.scss" | toCSS $toCssOptions | postCSS $postCssOptions | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 
   {{ range site.Params.preload }}
   <link rel="preload" href="{{ .link }}" as="{{ .as }}" crossorigin="anonymous">
   {{ end }}
 
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-
   {{ "<!--Favicon-->" | safeHTML }}
   <!-- <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/png"> -->
-  <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/png">
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
 
   {{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}

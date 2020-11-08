@@ -23,7 +23,7 @@ hero:
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
       subtitle: "It's about time to get a fair return from your online marketing investments."
-      image: "images/template-one/banner2.jpg"
+      image: "images/banner2.jpg"
       mainCTA:
         enable: false
         label: "Read More"
@@ -264,7 +264,7 @@ contact:
       - content: "You want to know which marketing strategy will <strong>work the best for your business</strong>"
   form:
     title: "Don't Hesitate To Contact With Us, Say Hello......"
-    embed: '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0"></iframe>'
+    embed: '<iframe data-src="https://docs.google.com/forms/d/e/1FAIpQLSdINBVuomyzXRv3llqzhfiZz_aDnXPwmo0PR2Od6UzxNx7qfQ/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0" class="lazyload"></iframe>'
   address:
     enable: false
     address: "1234 Some Avenue, New York, NY 1234"

@@ -1,14 +1,13 @@
-# baseURL = "https://appdy.github.io/"
-baseURL = "https://appdy.co.uk/"
-# baseURL = "http://localhost:5000"
+# baseURL = "https://appdy.co.uk/"
+baseURL = "http://localhost:5000"
 languageCode = "en-us"
 title = "Appdy"
 
-[minify]
-minifyOutput = true
+# [minify]
+# minifyOutput = true
 
-[minify.tdewolff]
-keepConditionalComments = false
+# [minify.tdewolff]
+# keepConditionalComments = false
 
 [module]
 [[module.mounts]]
@@ -87,29 +86,10 @@ target = "static/plugins/jquery.mixitup"
 source = "node_modules/magnific-popup/dist/"
 target = "static/plugins/jquery-magnific-popup"
 
-# css plugins
-# [[params.plugins.css]]
-# link = "plugins/bootstrap/bootstrap.min.css"
+[[module.mounts]]
+source = "node_modules/lazysizes"
+target = "static/plugins/lazysizes"
 
-# [[params.plugins.css]]
-# link = "plugins/slick-carousel/slick.css"
-# [[params.plugins.css]]
-# link = "plugins/slick-carousel/slick-theme.css"
-# [[params.plugins.css]]
-# link = "plugins/animate.css/animate.min.css"
-
-# [[params.plugins.css]]
-# link = "plugins/jquery-magnific-popup/magnific-popup.css"
-# [[params.plugins.css]]
-# link = "plugins/webfonts/all.min.css" # font-awesome
-# [[params.plugins.css]]
-# link = "plugins/themify-icons/themify-icons.css"
-# [[params.plugins.css]]
-# link = "plugins/fontawesome/brands.min.css"
-# [[params.plugins.css]]
-# link = "plugins/fontawesome/fontawesome.min.css"
-# [[params.plugins.css]]
-# link = "plugins/fontawesome/solid.min.css"
 
 # preloads
 [[params.preload]]
@@ -148,15 +128,47 @@ as = "font"
 link = "/webfonts/fa-solid-900.woff2"
 as = "font"
 
-# js plugin
+
+# css plugins
+# [[params.plugins.css]]
+# link = "plugins/bootstrap/bootstrap.min.css"
+
+# [[params.plugins.css]]
+# link = "plugins/slick-carousel/slick.css"
+# [[params.plugins.css]]
+# link = "plugins/slick-carousel/slick-theme.css"
+# [[params.plugins.css]]
+# link = "plugins/animate.css/animate.min.css"
+
+# [[params.plugins.css]]
+# link = "plugins/jquery-magnific-popup/magnific-popup.css"
+# [[params.plugins.css]]
+# link = "plugins/webfonts/all.min.css" # font-awesome
+# [[params.plugins.css]]
+# link = "plugins/themify-icons/themify-icons.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/brands.min.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/fontawesome.min.css"
+# [[params.plugins.css]]
+# link = "plugins/fontawesome/solid.min.css"
+
+
+# JS plugin
+[[params.static.js]]
+link = "plugins/lazysizes/lazysizes.min.js"
+async = true
+
 [[params.static.js]]
 link = "plugins/jquery/jquery.min.js"
 
 [[params.static.js]]
 link = "plugins/popper/popper.min.js"
+async = true
 
 [[params.static.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
+async = true
 
 [[params.static.js]]
 link = "plugins/slick-carousel/slick.min.js"
@@ -169,11 +181,24 @@ link = "plugins/jquery.mixitup/mixitup.min.js"
 
 [[params.static.js]]
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
+async = true
+
 # [[params.static.js]]
 # link = "plugins/aos/aos.js"
 
 # [[params.assets.js]]
 # link = "plugins/slick-carousel/slick.min.js"
+
+
+# JS assets
+[[params.assets.js]]
+link = "js/script.js"
+async = true
+
+# [[params.assets.js]]
+# link = "js/lazy-image.js"
+# async = true
+
 
 [[menu.homepage]]
 URL = "#service"
@@ -219,8 +244,8 @@ weight = 4
 
 [params]
 home = "Home"
-logoDark = "images/logo.png"
-logoLight = "images/logo-white.png"
+logoDark = "images/logo-small.png"
+logoLight = "images/logo-white-small.png"
 phone = ""
 email = "care@appdy.co.uk"
 skype = ""
