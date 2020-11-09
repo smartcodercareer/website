@@ -4,22 +4,18 @@
 {{ $buildConf := (dict "minify" false "target" "esnext") }}
 
 {{ if hugo.IsProduction }}
-{{ $buildConf = merge $buildConf (dict "minify" true) }}
+{{ $buildConf = merge $buildConf (dict "minify" true "sourcemap" "inline") }}
+{{ end }}
+
+{{ if .buildParams }}
+{{ $buildConf = merge $buildConf (dict "params" .buildParams) }}
 {{ end }}
 
 {{ $script = resources.Get $script | js.Build $buildConf }}
 {{ end }}
 
-{{ $fingerprint := "" }}
-
 {{ if .asset }}
-{{ if hugo.IsProduction }}
-{{ $script = $script | minify }}
+{{ $script = $script.Permalink }}
 {{ end }}
 
-{{ $fingerprint = $script | fingerprint }}
-{{ $script = $script.Permalink }}
-<script src="{{ $script | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }} integrity="{{ $fingerprint.Data.Integrity }}" crossorigin="anonymous"></script>
-{{ else }}
 <script src="{{ $script | relURL }}" {{ if .async }}async{{ end }} {{ if .defer }}defer{{ end }} crossorigin="anonymous"></script>
-{{ end }}

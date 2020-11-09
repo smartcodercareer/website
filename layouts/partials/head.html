@@ -24,17 +24,6 @@
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
-  {{ $toCssOptions := (dict "outputStyle" "expanded" "enableSourceMap" true) }}
-  {{ $postCssOptions := (dict "noMap" false) }}
-
-  {{ if hugo.IsProduction }}
-  {{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" false) }}
-  {{ $postCssOptions = (dict "noMap" true) }}
-  {{ end }}
-
-  {{ $styles := resources.Get "css/above-the-fold.scss" | toCSS $toCssOptions | postCSS $postCssOptions | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-
   {{ partial "style" (dict "css" "css/above-the-fold.scss") }}
 
   {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
@@ -50,17 +39,5 @@
   {{ "<!--Favicon-->" | safeHTML }}
   <!-- <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/png"> -->
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
-
-  {{ with site.Params.google_analytics_id }}
-	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', '{{ . }}');
-	</script>
-	{{ end }}
 
 </head>

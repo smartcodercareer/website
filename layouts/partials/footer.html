@@ -87,7 +87,6 @@
   </div>
 </footer>
 
-{{ if site.Params.gtag }}
 <div id="consent-container">
   <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
   <div class="content">
@@ -112,7 +111,6 @@
     </form>
   </div>
 </div>
-{{ end }}
 
 
 {{ if site.Params.cookies.enable }}
@@ -204,13 +202,34 @@
 {{ end }}
 
 
-{{ if site.Params.gtag }}
-{{ partial "script" (dict "link" "js/consent.js" "asset" true) }}
+{{ with site.Params.google_analytics_id }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+</script>
 {{ end }}
+
+{{ with site.Params.facebook_id }}
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                                      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '{{ . }}');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ . }}&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+{{ end }}
+
+{{ partial "script" (dict "link" "js/consent.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
 
 
 {{ partial "script" (dict "link" "plugins/lazyload.min.js") }}
-
 <script>
   var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy",

@@ -275,8 +275,9 @@ owner = "Appdy"
 description = "Digital Agency Based in London"
 startYear = "2016-01-01"
 
-gtag = "GTM-WVDXKLS"
-# google_analytics_id = "UA-129161973-1"
+# gtag = "GTM-WVDXKLS"
+google_analytics_id = "UA-129161973-1"
+facebook_id = "422277788766355"
 # copyright = "© Copyright 2016-2020 Appdy LTD"
 
 [params.footer]
