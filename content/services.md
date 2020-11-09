@@ -1,6 +1,5 @@
 ---
 title: "Services"
-type: service
+type: services
 draft: false
 ---
-
