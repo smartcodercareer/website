@@ -202,7 +202,6 @@ link = "plugins/wow/wow.min.js"
 
 [[params.static.js]]
 link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
-async = true
 
 # [[params.static.js]]
 # link = "plugins/aos/aos.js"
