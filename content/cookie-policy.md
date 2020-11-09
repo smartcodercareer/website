@@ -24,36 +24,21 @@ Depending on the purpose, cookies we use are categorised in one of the following
 
 Necessary cookies are cookies created by us to provide core functionalities on the website.
 
-- appdy_consent_cookie – used to remember if user configured cookie consent configuration.
-- appdy_consent_cookie_analytics – stores configuration for cookies related to analytics.
-- appdy_consent_cookie_marketing – stores configuration for cookies related to marketing.
-- et_bloom_optin_optin_* – used to remember if the opt-in offer was shown already.
-- etBloomCookie_optin_* – used to remember if the opt-in offer was shown already.
+- consent – used to remember if user configured cookie consent configuration.
 - _cfduid – used by Cloudflare as CDN and firewall provider (more details)
-- woocommerce_cart_hash – used to provide shopping cart functionality (more details)
-- woocommerce_items_in_cart- used to provide shopping cart functionality (more details)
-- wp_woocommerce_session_- used to provide shopping cart functionality (more details)
-- woocommerce_recently_viewed- used to provide shopping cart functionality (more details)
-- store_notice[notice id]- used to provide shopping cart functionality (more details)
-- wcf-visited-flow-*, cartflows_session_* – used by Cartflows Wordpress plugin to provide extended checkout functionality. This service uses cookies to keep records on user position in checkout process.
-- newsletter – used by Newsletter Wordpress plugin to maintain information if user signed to the newsletter.
-- wordpress_sec_<hash>, wordpress_test_cookie, wp-settings-1, wp-settings-time-1, wordpress_logged_in_<hash> – used for security measures used to protect user accounts, including preventing fraudulent use of login credentials, and to protect our website and services generally.
-- fr, spin, presence, xs, c_user, sb, dpr, act, datr – used by Facebook Page Plugin, to provide Facebook “like” functionality on the website.
+- fr, spin, presence, xs, c_user, sb, dpr, act, datr – used by Facebook Pixel
 
 ### Marketing cookies
 
 Marketing cookies are cookies either set by us or our partners to provide marketing personalization and advertising functionalities on our website, and through partners platforms.
 
-- _fbp – used in Facebook marketing, to track user interaction with the website (more details)
 - fr – used in Facebook marketing, to track user interaction with the website (more details)
 
 ### Analytics cookies
 
 Analytics cookies are cookies either set by us or our partners to provide analytics on visitors on our websites and user interactions with our website. It helps us create better user experience and provide more content that users found valuable.
 
-- _gid – used by Google Analytics to track user interaction with the website (more details)
-- _ga – used by Google Analytics to track user interaction with the website (more details)
-- _gat – used by Google Analytics to track user interaction with the website (more details)
+- _ga, _gat, _gid, _gat_gtag_[GA-ID] – used by Google Analytics to track user interaction with the website (more details)
 
 ## Disabling Cookies
 
