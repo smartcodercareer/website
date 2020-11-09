@@ -2215,6 +2215,22 @@ section#contact {
   }
 }
 
+.footer-menu {
+  a {
+    text-transform: uppercase;
+    color: white;
+
+    &:hover {
+      border-bottom: 1px dashed white;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+}
+
 .slick-dots li button:before {
   content: none;
 }

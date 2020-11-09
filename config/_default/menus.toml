@@ -41,27 +41,27 @@ weight = 4
 
 
 [[footerOne]]
-URL = "#service"
-name = "Service"
+URL = "/services/"
+name = "Services"
 weight = 1
 
 [[footerOne]]
-URL = "#portfolio"
+URL = "/portfolio/"
 name = "Portfolio"
 weight = 2
 
 [[footerOne]]
-URL = "#about"
-name = "About"
+URL = "/contact/"
+name = "Contact"
 weight = 3
 
 
 [[footerTwo]]
-URL = "#career"
-name = "Career"
+URL = "/about/"
+name = "About"
 weight = 1
 
 [[footerTwo]]
-URL = "#contact"
-name = "Contact"
+URL = "/career/"
+name = "Career"
 weight = 2

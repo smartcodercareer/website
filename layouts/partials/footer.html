@@ -35,8 +35,44 @@
           <a href="skype:{{ site.Params.footer.skype.skype }}?call">{{ site.Params.footer.skype.skype }}</a>
         </div>
       </div>
-    {{ end }}
+      {{ end }}
     </div>
+
+    {{ if or site.Menus.footerone site.Menus.footertwo }}
+    <div class="footer-menu row d-flex justify-content-center">
+      {{ if site.Menus.footerone }}
+      <div class="col-6 col-sm-4 col-lg-3">
+        <ul>
+          {{ range site.Menus.footerone }}
+          <li class="menu-item nav-item">
+            {{ if hasPrefix .URL "#" }}
+            <a class="" href="{{ .URL }}">{{ .Name }}</a>
+            {{ else }}
+            <a class="" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      {{ if site.Menus.footertwo }}
+      <div class="col-6-auto col-sm-1-auto">
+        <ul>
+          {{ range site.Menus.footertwo }}
+          <li class="menu-item nav-item">
+            {{ if hasPrefix .URL "#" }}
+            <a class="" href="{{ .URL }}">{{ .Name }}</a>
+            {{ else }}
+            <a class="" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
     <div class="copyrigt_text d-flex justify-content-between">
       <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} {{ site.Params.owner }}&nbsp;<span class="dot">·</span>
         <span class="footer-links">
