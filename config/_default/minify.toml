@@ -1,0 +1,5 @@
+# [minify]
+# minifyOutput = true
+
+# [minify.tdewolff]
+# keepConditionalComments = false

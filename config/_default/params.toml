@@ -1,0 +1,208 @@
+home = "Home"
+logoDark = "images/logo-small.png"
+logoLight = "images/logo-white-small.png"
+phone = ""
+email = "care@appdy.co.uk"
+skype = ""
+author = "Appdy"
+owner = "Appdy"
+title = "Appdy"
+description = "Digital agency based in London"
+startYear = "2016-01-01"
+
+# gtag = "GTM-WVDXKLS"
+google_analytics_id = "UA-129161973-1"
+facebook_id = "422277788766355"
+# copyright = "© Copyright 2016-2020 Appdy LTD"
+
+[footer]
+description = "Appdy LTD is a business registered in England and Wales since 2016.<br>Company number 10541738"
+
+[footer.phone]
+enable = false
+title = "Call Us On"
+phone = ""
+
+[footer.email]
+enable = false
+title = "Mail us on"
+email = ""
+
+[footer.skype]
+enable = false
+title = "Lets Skype"
+skype = ""
+
+[[footer.links]]
+label = "Privacy Policy"
+URL = "privacy-policy"
+
+[[footer.links]]
+label = "Cookie Policy"
+URL = "cookie-policy"
+
+[[footer.links]]
+label = "Terms Of Service"
+URL = "terms-of-service"
+
+[[footer.links]]
+label = "Business Contact"
+URL = "proposals"
+
+# preloader
+[preloader]
+enable = true
+preloader = "images/preloader.gif" # use png, jpg, svg or gif format
+
+[navCta]
+enable = false
+
+[scrollToTop]
+enable = true
+
+# [[contact]]
+# enabled = true
+
+# [[cookies]]
+# enable
+
+# social site
+
+[social.facebook]
+enable = true
+icon = "fab fa-facebook-f"
+URL = "https://www.facebook.com/appdy.net"
+
+[social.instagram]
+enable = false
+icon = "fab fa-instagram"
+URL = "#"
+
+[social.twitter]
+enable = false
+icon = "fab fa-twitter"
+URL = "#"
+
+[social.youtube]
+enable = false
+icon = "fab fa-youtube"
+URL = "#"
+
+[social.pinterest]
+enable = false
+icon = "fab fa-pinterest-p"
+URL = "#"
+
+[modal]
+enable = false
+
+# preloads
+[[preload]]
+link = "/fonts/nunito/Nunito-Bold.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/nunito/Nunito-ExtraBold.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/poppins/Poppins-Medium.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/poppins/Poppins-Light.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/nunito/Nunito-SemiBold.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/poppins/Poppins-Bold.woff2"
+as = "font"
+
+[[preload]]
+link = "/webfonts/fa-brands-400.woff2"
+as = "font"
+
+[[preload]]
+link = "/fonts/poppins/Poppins-Regular.woff2"
+as = "font"
+
+[[preload]]
+link = "/webfonts/fa-solid-900.woff2"
+as = "font"
+
+
+# JS assets
+[[assets.js]]
+link = "js/script.js"
+async = true
+
+# [[assets.js]]
+# link = "js/lazy-image.js"
+# async = true
+
+
+# css plugins
+# [[plugins.css]]
+# link = "plugins/bootstrap/bootstrap.min.css"
+
+# [[plugins.css]]
+# link = "plugins/slick-carousel/slick.css"
+# [[plugins.css]]
+# link = "plugins/slick-carousel/slick-theme.css"
+# [[plugins.css]]
+# link = "plugins/animate.css/animate.min.css"
+
+# [[plugins.css]]
+# link = "plugins/jquery-magnific-popup/magnific-popup.css"
+# [[plugins.css]]
+# link = "plugins/webfonts/all.min.css" # font-awesome
+# [[plugins.css]]
+# link = "plugins/themify-icons/themify-icons.css"
+# [[plugins.css]]
+# link = "plugins/fontawesome/brands.min.css"
+# [[plugins.css]]
+# link = "plugins/fontawesome/fontawesome.min.css"
+# [[plugins.css]]
+# link = "plugins/fontawesome/solid.min.css"
+
+
+# JS plugin
+# [[static.js]]
+# link = "plugins/lazysizes/lazysizes.min.js"
+# async = true
+
+# [[static.js]]
+# link = "plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
+# async = true
+
+[[static.js]]
+link = "plugins/jquery/jquery.min.js"
+
+[[static.js]]
+link = "plugins/popper/popper.min.js"
+async = true
+
+# [[static.js]]
+# link = "plugins/bootstrap/bootstrap.min.js"
+# async = true
+
+[[static.js]]
+link = "plugins/slick-carousel/slick.min.js"
+
+[[static.js]]
+link = "plugins/wow/wow.min.js"
+
+# [[static.js]]
+# link = "plugins/jquery.mixitup/mixitup.min.js"
+
+[[static.js]]
+link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
+
+# [[static.js]]
+# link = "plugins/aos/aos.js"
+
+# [[assets.js]]
+# link = "plugins/slick-carousel/slick.min.js"

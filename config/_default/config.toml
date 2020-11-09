@@ -1,0 +1,8 @@
+baseURL = "https://appdy.co.uk/"
+# baseURL = "http://localhost:5000"
+languageCode = "en-us"
+title = "Appdy"
+
+[social]
+facebook = "appdy.net"
+twitter = ""

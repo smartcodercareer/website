@@ -1,0 +1,67 @@
+[[homepage]]
+URL = "#service"
+name = "Service"
+weight = 1
+
+[[homepage]]
+URL = "#portfolio"
+name = "Portfolio"
+weight = 2
+
+[[homepage]]
+URL = "#about"
+name = "About"
+weight = 3
+
+[[homepage]]
+URL = "#contact"
+name = "Contact"
+weight = 4
+
+
+[[main]]
+URL = "/service/"
+name = "Service"
+weight = 1
+
+[[main]]
+URL = "/portfolio/"
+name = "Portfolio"
+weight = 2
+
+[[main]]
+URL = "/about/"
+name = "About"
+weight = 3
+
+[[main]]
+URL = "/contact/"
+name = "Contact"
+weight = 4
+
+
+[[footerOne]]
+URL = "#service"
+name = "Service"
+weight = 1
+
+[[footerOne]]
+URL = "#portfolio"
+name = "Portfolio"
+weight = 2
+
+[[footerOne]]
+URL = "#about"
+name = "About"
+weight = 3
+
+
+[[footerTwo]]
+URL = "#career"
+name = "Career"
+weight = 1
+
+[[footerTwo]]
+URL = "#contact"
+name = "Contact"
+weight = 2
