@@ -33,6 +33,10 @@
 
   {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
 
+  <link rel="canonical" href="{{ .Permalink }}"/>
+  <link rel="home" href="{{ .Permalink }}"/>
+  <link rel="alternate" href="{{ .Permalink }}" hreflang="x-default" />
+
   {{ range site.Params.preconnect }}
   <link rel=preconnect href="{{ .link }}">
   {{ end }}
