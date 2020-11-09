@@ -96,17 +96,17 @@ target = "static/plugins/lazyload.min.js"
 
 
 # preconnect
-[[params.preconnect]]
-link = "https://ssl.gstatic.com"
+# [[params.preconnect]]
+# link = "https://ssl.gstatic.com"
 
-[[params.preconnect]]
-link = "https://www.gstatic.com"
+# [[params.preconnect]]
+# link = "https://www.gstatic.com"
 
-[[params.preconnect]]
-link = "https://www.googletagmanager.com"
+# [[params.preconnect]]
+# link = "https://www.googletagmanager.com"
 
-[[params.preconnect]]
-link = "https://fonts.googleapis.com"
+# [[params.preconnect]]
+# link = "https://fonts.googleapis.com"
 
 # preloads
 [[params.preload]]
