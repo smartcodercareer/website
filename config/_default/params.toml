@@ -96,6 +96,18 @@ URL = "#"
 [modal]
 enable = false
 
+
+# preconnect
+[[preconnect]]
+link = "https://ssl.gstatic.com"
+
+[[preconnect]]
+link = "https://www.gstatic.com"
+
+[[preconnect]]
+link = "https://fonts.googleapis.com"
+
+
 # preloads
 [[preload]]
 link = "/fonts/nunito/Nunito-Bold.woff2"
