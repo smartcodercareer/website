@@ -49,7 +49,7 @@ jQuery(function($) {
           ];
           const lat = pos.coords.latitude;
           const long = pos.coords.longitude;
-          const isUE = false;
+          let isUE = false;
 
           for (let i=0; i < data.length; i++) {
             const polygon = data[i];
