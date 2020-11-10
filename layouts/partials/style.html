@@ -10,7 +10,8 @@
 
 {{ if .lazy }}
 <link rel="preload" href="{{ $style.Permalink }}" as="style" media="screen" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ $style }}"></noscript>
+<link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+<noscript><link rel="stylesheet" href="{{ $style.Permalink }}"></noscript>
 {{ else }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
 {{ end }}
