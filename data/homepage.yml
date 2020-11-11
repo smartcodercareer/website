@@ -23,7 +23,7 @@ hero:
     - heading: "SMART DIGITAL PARTNER"
       title: "Appdy Digital Agency"
       subtitle: "It's about time to get a fair return from your online marketing investments."
-      image: "images/banner2.jpg"
+      image: "images/banner.jpg"
       mainCTA:
         enable: false
         label: "Read More"
@@ -76,7 +76,7 @@ services:
 
     - title: "Chatbots"
       icon: "fas fa-robot"
-      description: "Your clients want to chat. We bring you smart robots to automate everything: lead generation, meetings schedule, closing sales, collecting payments. Let robots do the work."
+      description: "Your clients want to chat. We bring smart robots to automate everything: lead generation, meetings schedule, sales, collecting payments. Let robots do the work."
       URL: ""
 
     # - title: "SEO"
@@ -175,7 +175,7 @@ team:
   enable: true
   title: "Our Team"
   subtitle: "Meet Our Leaders"
-  description: "We believe solid leadership is a foundation of both a creative and productive workspace. More than 30 years of combined industry experience helps us tackle any challenge our clients have."
+  description: "We believe knowledge based on experience and leadership is a foundation of both a creative and productive workspace. Over 30 years of combined industry experience helps us tackle any challenge our clients have."
   item:
     - name: "Adam Faryna"
       role: "Head of Marketing"
