@@ -6,16 +6,16 @@
   // var portfoliolist = document.querySelector('.portfolio_tabs');
   // if (portfoliolist) {
   //   mixitup(portfoliolist, {
-  // controls: {
-  //   scope: 'local'
-  // },
-  // selectors: {
-  // target: '.portfolio'
-  // },
-  // load: {
-  //   filter: '.designs, .development, .seo, .marketing'
-  // }
-  // }); //.filter('.filter');
+  //     controls: {
+  //       scope: 'local'
+  //     },
+  //     selectors: {
+  //       target: '.portfolio'
+  //     },
+  //     load: {
+  //       filter: '.designs, .development, .seo, .marketing'
+  //     }
+  //   }); //.filter('.filter');
   // }
 
   // var portfoliolist1 = document.querySelectorAll('#portfoliolist1');
@@ -205,15 +205,46 @@
 
 
     // porfloio slider  js
-    $('.porfloio_slider').slick({
-      dots: false,
+    $('#portfoliolist').slick({
+      dots: true,
       infinite: true,
       speed: 500,
       // fade:true,
-      slidesToShow: 1,
-      arrows:true,
+      slidesToShow: 3,
+      arrows:false,
       autoplay:true,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+
     })
 
 
@@ -363,9 +394,9 @@
     })
 
     // Main Slider Slide animation
-    if ($(".b_slide").hasClass(".slick-active") ) {
-      $(this).find(".wow").removeClass('wow');
-    }
+    // if ($(".b_slide").hasClass(".slick-active") ) {
+    //   $(this).find(".wow").removeClass('wow');
+    // }
 
     $(document).ready(function () {
       // scroll Down js
