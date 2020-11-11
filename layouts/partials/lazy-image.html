@@ -1,4 +1,13 @@
-<img src="{{ `images/placeholder.jpg` | relURL }}" alt="{{ .alt }}" class="lazyload {{ if .class }}{{ .class }}{{ end }}" data-src="{{ .image | relURL }}" width="{{ .width }}" height="{{ .height }}">
+{{ $params := (dict "lazy" true "src" "images/placeholder.jpg") }}
+{{ $params = merge $params . }}
+
+{{ if eq .lazy false}}
+{{ $params = merge $params (dict "src" .image) }}
+{{ end }}
+
+{{ with $params }}
+<img src="{{ .src | relURL }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ if .class }}{{ .class }}{{ end }}" data-src="{{ if .image }}{{ .image | relURL }}{{ end }}" width="{{ .width }}" height="{{ .height }}">
 <noscript>
-  <img src="{{ .image | relURL }}" width="{{ .width }}" height="{{ .height }}">
+  <img src="{{ .src | relURL }}" width="{{ .width }}" height="{{ .height }}">
 </noscript>
+{{ end }}

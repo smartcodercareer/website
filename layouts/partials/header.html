@@ -4,8 +4,8 @@
       <div class="col-lg-2 col-sm-3 col-xs-6 col-5">
         <div class="logo">
           <a href="{{ site.BaseURL }}">
-            <img class="img-responsive light_logo" src="{{ site.Params.logoLight | relURL }}" alt="logo" width="155" height="40">
-            {{ partial "lazy-image" (dict "alt" "logo" "class" "img-responsive dark_logo" "image" site.Params.logoDark "width" 155 "height" 40)}}
+            {{ partial "lazy-image" (dict "alt" "logo" "class" "img-responsive light_logo" "image" site.Params.logoLight "width" 155 "height" 40 "lazy" false)}}
+            {{ partial "lazy-image" (dict "alt" "logo" "class" "img-responsive dark_logo" "image" site.Params.logoDark "width" 155 "height" 40 "lazy" false)}}
           </a>
         </div>
       </div>

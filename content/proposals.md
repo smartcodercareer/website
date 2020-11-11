@@ -10,4 +10,4 @@ Please don't send multiple submissions about the same product or service. It wil
 
 If we find your offer interesting we will contact you shortly.
 
-Thank you.
+Thank you

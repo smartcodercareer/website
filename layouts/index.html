@@ -6,11 +6,16 @@
     <div class="banner_slider">
       {{ range .item}}
       <div class="b_slide" style="background-image: url({{ .image | relURL }});">
-        <div class="container">
-          <div class="banner_caption text-center">
+        <div class="container justify-content-center justify-content-xl-start">
+          <div class="banner_caption text-center text-xl-left">
             <h3 class="wow fadeInLeft" data-wow-delay="0.5s">{{ .heading | safeHTML }}</h3>
             <h1 class="wow fadeInLeft" data-wow-delay="0.9s">{{ .title }}</h1>
             <p class="wow fadeInLeft" data-wow-delay="1.3s">{{ .subtitle }}</p>
+            {{ with site.Data.homepage.CTA }}
+            <div class="text-center">
+              {{ partial "cta-button.html" (dict "CTA" (dict "URL" .URL "title" .title "subtitle" .subtitle "delay" "1.7s")) }}
+            </div>
+            {{ end }}
             {{ if .mainCTA.enable }}
             <a href="{{ .mainCTA.URL }}" class="btn btn_white wow fadeInUp" data-wow-delay="1.6s">{{ .mainCTA.label }}</a>
             {{ end }}

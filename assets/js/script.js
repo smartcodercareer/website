@@ -124,7 +124,7 @@
         {
           scrollTop: $($(this).attr('href')).offset().top - 77,
         },
-        500,
+        1000,
         'linear'
       )
     });
@@ -407,7 +407,7 @@
 
       $( ".sliding_link" ).on("click", function( event ){
         event.preventDefault();
-        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 800);
       });
 
       // portfolio popup js

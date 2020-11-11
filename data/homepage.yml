@@ -1,11 +1,11 @@
 CTA:
   title: "Contact Us"
   subtitle: "Get Your FREE Marketing Audit Now"
-  URL: "#contact"
+  URL: "#contact-container"
 
 hero:
   enable: true
-  scrollDownIcon: true
+  scrollDownIcon: false
   item:
     # - heading: "SMART DIGITAL PARTNER"
     #   title: "Appdy Digital Agency"
@@ -21,7 +21,8 @@ hero:
     #     URL: "#portfolio"
 
     - heading: "SMART DIGITAL PARTNER"
-      title: "Appdy Digital Agency"
+      title: "We Help E-commerce Businesses Skyrocket Their ROI Via Optimized Web Pages And Online Traffic"
+      pitch: ""
       subtitle: "It's about time to get a fair return from your online marketing investments."
       image: "images/banner.jpg"
       mainCTA:

@@ -14,7 +14,7 @@ name = "About"
 weight = 3
 
 [[homepage]]
-URL = "#contact"
+URL = "#contact-container"
 name = "Contact"
 weight = 4
 
