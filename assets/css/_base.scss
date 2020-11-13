@@ -507,7 +507,6 @@ header.main_header .container-fluid {
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
-  height: calc(100vh - 75px);
   position: relative;
   min-height: 585px;
 }
@@ -1985,7 +1984,7 @@ header.main_header {
 }
 .b_slide {
   position: relative;
-  height: calc(100vh + 100px);
+  min-height: calc(100vh + 100px);
 }
 .main_menu_list li.menu-item a {
   color: #fff;
