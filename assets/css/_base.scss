@@ -208,16 +208,6 @@ q {
 
 #about h2 {
   font-size: 30px;
-
-  &.second {
-    &:before {
-      left: calc(100% / 2 - 5px);
-    }
-
-    &:after {
-      left: calc(100% / 2 - 40px);
-    }
-  }
 }
 
 .career-page {
