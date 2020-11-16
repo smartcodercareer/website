@@ -210,6 +210,23 @@ q {
   font-size: 30px;
 }
 
+#about {
+  ul {
+    list-style-type: none;
+  }
+
+  li:before {
+    content: "\2022";
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 900;
+    margin-left: -1em;
+    width: 1em;
+    color: map-get($colors, primary);
+  }
+}
+
+
 .career-page {
   .card-wrap {
     &:nth-child(2n) {
