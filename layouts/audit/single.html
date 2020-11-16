@@ -15,22 +15,11 @@
         {{ end }}
       </div>
       {{ end }}
-
-      <div class="col-lg-9">
-        <div class="content">
-          {{.Content }}
-          {{ if .Params.CTA }}
-          {{ with .Params.CTA }}
-          <div class="text-center">
-            {{ partial "cta-button.html" (dict "CTA" (dict "URL" .URL "title" .title "target" .target)) }}
-          </div>
-          {{ end }}
-          {{ end }}
-        </div>
-      </div>
     </div>
   </div>
 </section>
+
+{{ partial "section-audit.html" . }}
 
 {{ partial "section-partners.html" . }}
 

@@ -1,0 +1,9 @@
+{{ $style := "" }}
+
+{{ if isset .Params "style" }}
+{{ $style = .Get "style" }}
+{{ end }}
+
+<div style="{{ $style | safeCSS }}">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYCpZy5DvCq1hzy9VxOMGBBoaFYk8fTiIwMDIOhQFTIm0fmw/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>

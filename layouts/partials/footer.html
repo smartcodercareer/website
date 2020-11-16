@@ -8,35 +8,6 @@
       </div>
       <p>{{ site.Params.footer.description | safeHTML }}</p>
     </div>
-    <div class="row text-center">
-      {{ if site.Params.footer.phone.enable }}
-      <div class="col-sm-4">
-        <div class="footer_sec">
-          <i class="fa fa-phone-alt"></i>
-          <h3>{{ site.Params.footer.phone.title }}</h3>
-          <a href="tel:{{ site.Params.footer.phone.phone }}">{{ site.Params.footer.phone.phone }}</a>
-        </div>
-      </div>
-      {{ end }}
-      {{ if site.Params.footer.email.enable }}
-      <div class="col-sm-4">
-        <div class="footer_sec">
-          <i class="fa fa-envelope"></i>
-          <h3>{{ site.Params.footer.email.title }}</h3>
-          <a href="mailto:{{ site.Params.footer.email.email }}">{{ site.Params.footer.email.email }}</a>
-        </div>
-      </div>
-      {{ end }}
-      {{ if site.Params.footer.skype.enable }}
-      <div class="col-sm-4">
-        <div class="footer_sec">
-          <i class="fab fa-skype"></i>
-          <h3>{{ site.Params.footer.skype.title }}</h3>
-          <a href="skype:{{ site.Params.footer.skype.skype }}?call">{{ site.Params.footer.skype.skype }}</a>
-        </div>
-      </div>
-      {{ end }}
-    </div>
 
     {{ if or site.Menus.footerone site.Menus.footertwo }}
     <div class="footer-menu row d-flex justify-content-center">
@@ -72,6 +43,36 @@
       {{ end }}
     </div>
     {{ end }}
+
+    <div class="row text-center">
+      {{ if site.Params.footer.phone.enable }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fa fa-phone-alt"></i>
+          <h3>{{ site.Params.footer.phone.title }}</h3>
+          <a href="tel:{{ site.Params.footer.phone.phone }}">{{ site.Params.footer.phone.phone }}</a>
+        </div>
+      </div>
+      {{ end }}
+      {{ if site.Params.footer.email.enable }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fa fa-envelope"></i>
+          <h3>{{ site.Params.footer.email.title }}</h3>
+          <a href="mailto:{{ site.Params.footer.email.email }}">{{ site.Params.footer.email.email }}</a>
+        </div>
+      </div>
+      {{ end }}
+      {{ if site.Params.footer.skype.enable }}
+      <div class="col-sm-4">
+        <div class="footer_sec">
+          <i class="fab fa-skype"></i>
+          <h3>{{ site.Params.footer.skype.title }}</h3>
+          <a href="skype:{{ site.Params.footer.skype.skype }}?call">{{ site.Params.footer.skype.skype }}</a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
 
     <div class="copyrigt_text d-flex justify-content-between">
       <span>© Copyright {{ dateFormat "2006" site.Params.startYear }}-{{now.Format "2006"}} {{ site.Params.owner }}&nbsp;<span class="dot">·</span>
@@ -272,3 +273,5 @@
     use_native: true
   });
 </script>
+
+<script src="//widget.manychat.com/996581947154536.js" async="async"></script>
