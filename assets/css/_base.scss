@@ -1986,8 +1986,19 @@ header.main_header {
   position: relative;
   min-height: calc(100vh + 100px);
 }
-.main_menu_list li.menu-item a {
+
+header.main_header .main_menu_list li.menu-item a {
   color: #fff;
+}
+body header.main_header .main_menu_list li.menu-item a.get_quote {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.main_menu.opened .get_quote {
+  color: white;
+  margin: auto;
 }
 
 a.get_quote {
@@ -2376,7 +2387,7 @@ section#contact {
   .main_menu_list li.menu-item a,a.close_menu,
   header.main_header.dark_bg .main_menu_list li.menu-item a,
   .main_menu_list li.menu-item a {
-    color: #222!important;
+    color: #222;
   }
   header.dark_bg .main_menu_list li.menu-item a.active,
   header.main_header.dark_bg .main_menu_list li.menu-item a.active {
