@@ -1,27 +1,26 @@
 ---
-title: "React Native Dev"
-draft: true
+title: "Facebook Ads Expert"
+draft: false
 ---
 
-We are looking for a talented React Native to join our team.
+We are looking for a talented Facebook Ads specialist to join our team.
 
 We don't care how old are you, where you are from, what are your personal preferences, or what drives you. We want to cultivate a respective work place, where professional attitude matters the most. The only thing we care about is if you can take a job and deliver.
 
-You don't have to have plenty of experience (but that helps). If you have skills, talent, and you feel a passion to build awesome apps with React Native, and you can prove it, we are happy to talk to you.
+You don't have to have plenty of experience (but that helps). If you have skills, talent, and you feel a passion to create and optimize Facebook campaigns, and you can prove it, we are happy to talk to you.
 
 ### In this position, you will:
 
-- work together with other developers and designers on building websites
-- participate in daily video calls for status updates
-- implementing websites from designs
+- research FB Ads target audiences using FB Audiences Insights
+- configure Facebook Ads campaigns
+- craft compelling creatives that convert
+- manage multiple Facebook Ads campaigns via FB Ads Manager
 
 ### Requirements:
 
-- expert in React Native
-- knowledge of iOS and Android platforms
-- knowledge about popular development tools for mobile especially for React Native
-- knowledge of NPM and project dependency management
-- proficiency with git
+- expert in FB Ads strategy planning
+- practical knowledge of research audiences using FB Audiences Insights
+- practical knowledge of FB Ads campaigns and their optimization for ROI
 - ability to be productive in the remote work environment
 
 The salary depends on experience and productivity.
