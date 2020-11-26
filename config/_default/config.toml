@@ -2,6 +2,7 @@ baseURL = "https://appdy.co.uk/"
 # baseURL = "http://localhost:5000"
 languageCode = "en-us"
 title = "Appdy"
+enableRobotsTXT = true
 
 [social]
 facebook = "appdy.net"
