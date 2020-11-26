@@ -280,14 +280,14 @@ contact:
 partners:
   enable: true
   item:
-    - title: "Amazon Web Services"
-      image: "images/partners/aws.png"
+    # - title: "Amazon Web Services"
+    #   image: "images/partners/aws.png"
 
-    - title: "Google Cloud Platform"
-      image: "images/partners/gcp.png"
+    # - title: "Google Cloud Platform"
+    #   image: "images/partners/gcp.png"
 
-    - title: "Microsoft Azure"
-      image: "images/partners/azure.png"
+    # - title: "Microsoft Azure"
+    #   image: "images/partners/azure.png"
 
     - title: "Magento"
       image: "images/partners/magento.png"
@@ -298,20 +298,26 @@ partners:
     - title: "Woocommerce"
       image: "images/partners/woocommerce.png"
 
-    - title: "React"
-      image: "images/partners/react.png"
+    - title: "Shopify"
+      image: "images/partners/shopify.png"
 
-    - title: "Vue"
-      image: "images/partners/vue.png"
+    # - title: "React"
+    #   image: "images/partners/react.png"
 
-    - title: "Java"
-      image: "images/partners/java.png"
+    # - title: "Vue"
+    #   image: "images/partners/vue.png"
 
-    - title: "Jenkins"
-      image: "images/partners/jenkins.png"
+    # - title: "Java"
+    #   image: "images/partners/java.png"
+
+    # - title: "Jenkins"
+    #   image: "images/partners/jenkins.png"
 
     # - title: "Mailchimp"
     #   image: "images/partners/mailchimp.png"
+
+    - title: "ManyChat"
+      image: "images/partners/manychat.png"
 
     - title: "ClickFunnels"
       image: "images/partners/clickfunnels.png"
