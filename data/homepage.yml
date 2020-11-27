@@ -60,16 +60,15 @@ services:
   subtitle: "Results Generating Activities"
   description: ""
   item:
-    - title: "Strategy"
-      icon: "fas fa-map"
-      description: "To win the game of business you need a good plan. A marketing plan is the most important document of your business, we will help you make it right."
-    #   description: "Your website should look professional and also pay tenfold for its bill. How many % of visitors convert to clients? Don’t worry. Let us turn your website into your private ATM."
+    # - title: "Strategy"
+    #   icon: "fas fa-map"
+    #   description: "To win the game of business you need a good plan. A marketing plan is the most important document of your business, we will help you make it right."
     #   URL: ""
 
-    # - title: "Web Design"
-    #   icon: "fa fa-pen-fancy"
-    #   description: "Your website should look professional and also pay tenfold for its bill. How many % of visitors convert to clients? Don’t worry. Let us turn your website into your private ATM."
-    #   URL: ""
+    - title: "Web Design"
+      icon: "fa fa-pen-fancy"
+      description: "Your website should look professional and also pay tenfold for its bill. How many % of visitors convert to clients? Don’t worry. Let us turn your website into your private ATM."
+      URL: ""
 
     - title: "Sales funnels"
       icon: "fas fa-cogs"

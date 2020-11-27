@@ -1,6 +1,6 @@
 ---
 title: "Magento Developer"
-draft: true
+draft: false
 ---
 
 We are looking for a talented Magento Developer to join our team.
