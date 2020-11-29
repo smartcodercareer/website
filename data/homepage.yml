@@ -329,7 +329,7 @@ partners:
 
 
 news:
-  enable: true
+  enable: false
   title: ""
   subtitle: "Read Our Latest News & Blog"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Doneceleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elits."

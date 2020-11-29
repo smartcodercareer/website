@@ -7,3 +7,6 @@ enableRobotsTXT = true
 [social]
 facebook = "devakimbo"
 twitter = ""
+
+[imaging]
+quality = 100

@@ -1,5 +1,4 @@
 ---
-title: "Digital Agency"
+title: "Home"
 draft: false
-type: list
 ---

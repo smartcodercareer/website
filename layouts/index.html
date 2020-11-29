@@ -1,5 +1,17 @@
 {{ define "main" }}
 
+{{ partial "page-title.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
+      {{ range $paginator.Pages }}
+      {{ .Render "thumbnail" }}
+      {{ end }}
+    </div>
+  </div>
+</section>
 
 
 {{ if site.Data.homepage.news.enable }}
@@ -191,5 +203,10 @@
 </section>
 {{ end }}
 {{ end }}
+
+
+
+
+
 
 {{ end }}
