@@ -29,8 +29,6 @@
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
-  {{ partial "style" (dict "css" "css/above-the-fold.scss") }}
-
   {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
 
   <link rel="canonical" href="{{ .Permalink }}"/>

@@ -1,5 +1,5 @@
 {
-  "name": "appdy-site",
+  "name": "devakimbo-site",
   "version": "1.0.0",
   "description": "",
   "main": "postcss.config.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Appdy/site.git"
+    "url": "git@github.com:devakimbo/site.git"
   },
   "keywords": [],
   "author": "Adam Faryna (adamfaryna@appdy.co.uk)",
@@ -23,7 +23,6 @@
     "autoprefixer": "^10.0.1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
-    "cssnano-preset-default": "^4.0.7",
     "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",
     "postcss-preset-env": "^6.7.0",

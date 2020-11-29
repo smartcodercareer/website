@@ -1,9 +1,9 @@
-baseURL = "https://appdy.co.uk/"
+baseURL = "https://devakimbo.com/"
 # baseURL = "http://localhost:5000"
 languageCode = "en-us"
-title = "Appdy"
+title = "Dev Akimbo"
 enableRobotsTXT = true
 
 [social]
-facebook = "appdy.net"
+facebook = "devakimbo"
 twitter = ""

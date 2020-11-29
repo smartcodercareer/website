@@ -1,72 +1,14 @@
-[[homepage]]
-URL = "#services"
-name = "Services"
-weight = 1
-
-[[homepage]]
-URL = "#portfolio"
-name = "Portfolio"
-weight = 2
-
-[[homepage]]
-URL = "#about"
-name = "About"
-weight = 3
-
-[[homepage]]
-URL = "#contact-container"
-name = "Contact"
-weight = 4
-
-
 [[main]]
-URL = "/services/"
-name = "Services"
+URL = "/"
+name = "Home"
 weight = 1
 
 [[main]]
-URL = "/portfolio/"
-name = "Portfolio"
+URL = "/community"
+name = "Community"
 weight = 2
 
 [[main]]
-URL = "/about/"
-name = "About"
-weight = 3
-
-[[main]]
-URL = "/contact/"
-name = "Contact"
-weight = 4
-
-
-[[footerOne]]
-URL = "/services/"
-name = "Services"
-weight = 1
-
-[[footerOne]]
-URL = "/portfolio/"
-name = "Portfolio"
-weight = 2
-
-[[footerOne]]
-URL = "/free-audit/"
-name = "FREE Audit"
-weight = 3
-
-
-[[footerTwo]]
-URL = "/about/"
-name = "About"
-weight = 1
-
-[[footerTwo]]
-URL = "/career/"
-name = "Career"
-weight = 2
-
-[[footerTwo]]
 URL = "/contact/"
 name = "Contact"
 weight = 3

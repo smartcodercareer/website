@@ -1,37 +1,20 @@
 home = "Home"
 logoDark = "images/logo-small.png"
 logoLight = "images/logo-white-small.png"
-phone = "‭+44 7561399765‬"
-email = "care@appdy.co.uk"
-skype = ""
-author = "Appdy"
-owner = "Appdy"
-title = "Appdy"
-description = "Digital agency based in London"
-startYear = "2016-01-01"
+# phone = "‭+44 7561399765‬"
+email = "contact@devakimbo.com"
+author = "Dev Akimbo"
+owner = "Dev Akimbo"
+title = "Dev Akimbo"
+description = "We help ambitious individuals become the top paid IT professionals while building amazing lives worth living."
+startYear = "2019-01-01"
 
 # gtag = "GTM-WVDXKLS"
-google_analytics_id = "UA-129161973-1"
-facebook_id = "422277788766355"
+google_analytics_id = "UA-150778271-8"
+facebook_id = "2662574160653636"
 # copyright = "© Copyright 2016-2020 Appdy LTD"
 
 [footer]
-description = "Appdy LTD is a business registered in England and Wales since 2016.<br>Company number 10541738"
-
-[footer.phone]
-enable = false
-title = "Call Us On"
-phone = ""
-
-[footer.email]
-enable = false
-title = "Mail us on"
-email = ""
-
-[footer.skype]
-enable = false
-title = "Lets Skype"
-skype = ""
 
 [[footer.links]]
 label = "Privacy Policy"
@@ -48,6 +31,11 @@ URL = "terms-of-service"
 [[footer.links]]
 label = "Business Contact"
 URL = "proposals"
+
+[[footer.links]]
+label = "Earnings Disclaimer"
+URL = "earnings-disclaimer"
+
 
 # preloader
 [preloader]
@@ -71,7 +59,7 @@ enable = true
 [social.facebook]
 enable = true
 icon = "fab fa-facebook-f"
-URL = "https://www.facebook.com/appdy.net"
+URL = "https://www.facebook.com/devakimbo"
 
 [social.instagram]
 enable = false
@@ -79,19 +67,24 @@ icon = "fab fa-instagram"
 URL = "#"
 
 [social.twitter]
-enable = false
+enable = true
 icon = "fab fa-twitter"
-URL = "#"
+URL = "https://twitter.com/AdamFaryna"
 
 [social.youtube]
-enable = false
+enable = true
 icon = "fab fa-youtube"
-URL = "#"
+URL = "https://www.youtube.com/channel/UCP9kyhK4ET0lWapEGtlkwAw"
 
 [social.pinterest]
 enable = false
 icon = "fab fa-pinterest-p"
 URL = "#"
+
+[social.github]
+enable = true
+icon = "fab fa-github"
+URL = "https://github.com/adamfaryna"
 
 [modal]
 enable = false
@@ -109,29 +102,29 @@ link = "https://fonts.googleapis.com"
 
 
 # preloads
-[[preload]]
-link = "/fonts/nunito/Nunito-Bold.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/nunito/Nunito-Bold.woff2"
+# as = "font"
 
-[[preload]]
-link = "/fonts/nunito/Nunito-ExtraBold.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/nunito/Nunito-ExtraBold.woff2"
+# as = "font"
 
-[[preload]]
-link = "/fonts/poppins/Poppins-Medium.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/poppins/Poppins-Medium.woff2"
+# as = "font"
 
-[[preload]]
-link = "/fonts/poppins/Poppins-Light.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/poppins/Poppins-Light.woff2"
+# as = "font"
 
-[[preload]]
-link = "/fonts/nunito/Nunito-SemiBold.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/nunito/Nunito-SemiBold.woff2"
+# as = "font"
 
-[[preload]]
-link = "/fonts/poppins/Poppins-Bold.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/poppins/Poppins-Bold.woff2"
+# as = "font"
 
 [[preload]]
 link = "/webfonts/fa-brands-400.woff2"
@@ -201,11 +194,11 @@ async = true
 # link = "plugins/bootstrap/bootstrap.min.js"
 # async = true
 
-[[static.js]]
-link = "plugins/slick-carousel/slick.min.js"
+# [[static.js]]
+# link = "plugins/slick-carousel/slick.min.js"
 
-[[static.js]]
-link = "plugins/wow/wow.min.js"
+# [[static.js]]
+# link = "plugins/wow/wow.min.js"
 
 # [[static.js]]
 # link = "plugins/jquery.mixitup/mixitup.min.js"

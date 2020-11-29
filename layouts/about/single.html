@@ -21,14 +21,8 @@
 
 {{ partial "section-about.html" . }}
 
-{{ partial "section-counter.html" . }}
-
-{{ partial "section-team.html" . }}
-
 <div class="text-center">
   {{ partial "cta-button.html" (dict "CTA" .Params.CTA )}}
 </div>
-
-{{ partial "section-partners" . }}
 
 {{ end }}
