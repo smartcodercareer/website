@@ -1,7 +1,7 @@
 <div class="col-lg-4 col-sm-6 mb-4 thumbnail">
   <article class="card shadow">
     {{ $image := index (.Resources.Match (printf "images/%s" .Params.FeaturedImage)) 0 }}
-    {{ $image := $image.Fit "314x176"}}
+    {{ $image := $image.Fit "314x177"}}
 
     <a href="{{ .Permalink }}">
       <img class="rounded card-img-top" src="{{ $image.RelPermalink }}" alt="{{.Title }}">

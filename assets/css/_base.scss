@@ -47,9 +47,18 @@ a {
 .thumbnail {
   padding: 10px;
   margin-bottom: 20px;
-  width: 33%;
+  width: 30%;
+  float: left;
 
   h2 {
     font-size: 20px;
+  }
+}
+
+.clearfix {
+  &:after {
+    clear: both;
+    content: ' '; // The space content is one way to avoid an Opera bug.
+    display: table;
   }
 }

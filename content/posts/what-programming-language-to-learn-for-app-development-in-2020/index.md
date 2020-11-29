@@ -1,16 +1,16 @@
 ---
 title: "What Programming Language to Learn for App Development in 2020"
-date: 2020-11-29T19:11:39Z
+date: 2020-04-10T19:11:39Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
-draft: false
 author: Adam Faryna
 featuredImage: What-Programming-Language-To-Learn-First-In-2020.jpg
 images:
 series: []
-tags: []
+tags: ["android", "app development", "flutter", "ionic", "ios", "mobile", "react native", "xamarin"]
 audio: []
 videos: []
+draft: false
 ---
 
 As you probably already know, there are two important platforms in mobile apps development. iOS and Android (there is also Windows, but nobody cares). To be considered that you are a mobile app developer, you have to know how to build apps for at least one of them.

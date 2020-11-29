@@ -4,7 +4,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="row">
+    <div class="row clearfix">
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
       {{ range $paginator.Pages }}
       {{ .Render "thumbnail" }}
