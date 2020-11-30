@@ -1,6 +1,6 @@
 ---
 title: "Python 3 Build in and Reserved Keywords"
-date: 2020-11-30T22:27:21Z
+date: 2020-04-22T18:27:21Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
