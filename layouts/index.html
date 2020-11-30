@@ -3,13 +3,11 @@
 {{ partial "page-title.html" . }}
 
 <section class="section">
-  <div class="container">
-    <div class="row clearfix">
-      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
-      {{ range $paginator.Pages }}
-      {{ .Render "thumbnail" }}
-      {{ end }}
-    </div>
+  <div class="container posts">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
+    {{ range $paginator.Pages }}
+    {{ .Render "thumbnail" }}
+    {{ end }}
   </div>
 </section>
 

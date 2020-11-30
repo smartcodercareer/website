@@ -28,6 +28,11 @@ h6 {
   font-size: 28px;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 a {
   color: map-get($colors, text);
   text-decoration: none;
@@ -44,11 +49,15 @@ a {
   padding: 30px;
 }
 
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .thumbnail {
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 30%;
-  float: left;
+  max-width: 314px;
+  margin: auto;
+  margin-bottom: 40px;
 
   h2 {
     font-size: 20px;
@@ -60,5 +69,37 @@ a {
     clear: both;
     content: ' '; // The space content is one way to avoid an Opera bug.
     display: table;
+  }
+}
+
+@include media($mobile-l) {
+  .thumbnail {
+    img {
+      width: 314px;
+      height: 177px;
+    }
+  }
+}
+
+@include media($tablet) {
+  .thumbnail {
+    margin: 0 15px 40px;
+  }
+}
+
+@include media($laptop) {
+  .posts {
+    justify-content: center;
+  }
+
+  .thumbnail {
+    padding: 10px 30px 10px 10px;
+    margin: 0 0 40px;
+  }
+}
+
+@include media($laptop-l) {
+  .posts {
+    justify-content: flex-start
   }
 }

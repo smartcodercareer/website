@@ -1,25 +1,28 @@
-<div class="col-lg-4 col-sm-6 mb-4 thumbnail">
-  <article class="card shadow">
-    {{ $image := index (.Resources.Match (printf "images/%s" .Params.FeaturedImage)) 0 }}
-    {{ $image := $image.Fit "314x177"}}
+<article class="card shadow thumbnail">
+  {{ $image := index (.Resources.Match (printf "images/%s" .Params.FeaturedImage)) 0 }}
+  {{ $src := $image.Fit "314x177" }}
+  {{ $srcset := "" }}
+  {{ $srcset = printf "%s, %s 314w"  $srcset ($image.Fit "314x177").RelPermalink }}
+  {{ $srcset = printf "%s, %s 300w"  $srcset ($image.Fit "300x168").RelPermalink }}
+  {{ $srcset = printf "%s, %s 220w"  $srcset ($image.Fit "220x124").RelPermalink }}
+  {{ $srcset = printf "%s, %s 150w"  $srcset ($image.Fit "150x84").RelPermalink }}
 
-    <a href="{{ .Permalink }}">
-      <img class="rounded card-img-top" src="{{ $image.RelPermalink }}" alt="{{.Title }}">
-    </a>
-    <div class="card-body">
-      <h2 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
-      </h2>
-      <entry-meta>
-        <span class="byline">
-          by
-          <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
+  <a href="{{ .Permalink }}">
+    <img class="rounded card-img-top" src="{{ $src.RelPermalink }}" srcset="{{ $srcset }}" alt="{{.Title }}">
+  </a>
+  <div class="card-body">
+    <h2 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
+    </h2>
+    <entry-meta>
+      <span class="byline">
+        by
+        <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
 
-          </span>
-          <a href="#" title="View all posts by Adam Faryna">
-            <span class="author-name" itemprop="name">{{ .Params.author }}</span>
-          </a>
         </span>
-      </entry-meta>
-    </div>
-  </article>
-</div>
+        <a href="#" title="View all posts by Adam Faryna">
+          <span class="author-name" itemprop="name">{{ .Params.author }}</span>
+        </a>
+      </span>
+    </entry-meta>
+  </div>
+</article>
