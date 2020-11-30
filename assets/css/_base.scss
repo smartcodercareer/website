@@ -49,6 +49,18 @@ a {
   padding: 30px;
 }
 
+.content {
+  p {
+    a {
+      color: map-get($colors, primary);
+
+      &:hover {
+      color: map-get($colors, primary-hover);
+      }
+    }
+  }
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;

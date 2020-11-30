@@ -1,0 +1,8 @@
+{{ $title := .Get "title"}}
+{{ $alt := .Get "alt"}}
+{{ $src := .Get "src"}}
+
+<figure>
+  <img  src="{{ $src | safeURL }}" title="{{ $title }}" alt="{{ with $alt }}{{ $alt }}{{ else }}{{ $title }}{{ end }}" />
+  <figcaption>{{ $title }}</figcaption>
+</figure>
