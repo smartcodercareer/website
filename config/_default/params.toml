@@ -1,6 +1,5 @@
 home = "Home"
-logoDark = "images/logo-small.png"
-logoLight = "images/logo-white-small.png"
+logo = "images/logo-oneliner.png"
 # phone = "‭+44 7561399765‬"
 email = "contact@devakimbo.com"
 author = "Dev Akimbo"
@@ -131,7 +130,7 @@ link = "/webfonts/fa-brands-400.woff2"
 as = "font"
 
 [[preload]]
-link = "/fonts/poppins/Poppins-Regular.woff2"
+link = "/webfonts/fa-brands-400.woff2"
 as = "font"
 
 [[preload]]
@@ -183,12 +182,12 @@ async = true
 # link = "plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"
 # async = true
 
-[[static.js]]
-link = "plugins/jquery/jquery.min.js"
+# [[static.js]]
+# link = "plugins/jquery/jquery.min.js"
 
-[[static.js]]
-link = "plugins/popper/popper.min.js"
-async = true
+# [[static.js]]
+# link = "plugins/popper/popper.min.js"
+# async = true
 
 # [[static.js]]
 # link = "plugins/bootstrap/bootstrap.min.js"
@@ -203,8 +202,8 @@ async = true
 # [[static.js]]
 # link = "plugins/jquery.mixitup/mixitup.min.js"
 
-[[static.js]]
-link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
+# [[static.js]]
+# link = "plugins/jquery-magnific-popup/jquery.magnific-popup.js"
 
 # [[static.js]]
 # link = "plugins/aos/aos.js"
