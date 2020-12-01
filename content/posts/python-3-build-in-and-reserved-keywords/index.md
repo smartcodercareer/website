@@ -5,7 +5,7 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: Python-3-Build-in-And-Reserved-Keywords.jpg
-images:
+images: []
 series: []
 tags: ["Python", "Python3"]
 audio: []

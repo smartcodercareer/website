@@ -5,9 +5,9 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: Web-Application-vs-Website-1.jpg
-images:
+images: []
 series: []
-tags: ["back end", "front end", "beginner"]
+tags: ["Back End", "Front End", "Beginner"]
 audio: []
 videos: []
 draft: false

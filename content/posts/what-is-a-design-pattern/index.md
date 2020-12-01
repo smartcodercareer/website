@@ -5,7 +5,7 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: What-is-a-Design-Pattern.jpg
-images:
+images: []
 series: []
 tags: ["Design Pattern"]
 audio: []

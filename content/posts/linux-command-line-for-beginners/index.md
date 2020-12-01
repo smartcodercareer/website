@@ -5,9 +5,9 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: Linux-Command-Line-for-Beginners.jpg
-images:
+images: []
 series: []
-tags: ["beginner", "command line", "git", "programming"]
+tags: ["B[]eginner", "Command Line", "Git", "Programming"]
 audio: []
 videos: []
 draft: false

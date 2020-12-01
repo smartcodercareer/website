@@ -5,9 +5,9 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: What-Programming-Language-To-Learn-First-In-2020.jpg
-images:
+images: []
 series: []
-tags: ["full stack", "it career", "mobile", "programming"]
+tags: ["Full Stack", "IT Career", "Mobile", "Programming"]
 audio: []
 videos: []
 draft: false

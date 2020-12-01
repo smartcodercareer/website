@@ -5,9 +5,9 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: The-6-Biggest-Reasons-Why-You-Will-Fail-To-Learn-Programming.jpg
-images:
+images: []
 series: []
-tags: ["app development", "beginner dev", "web development"]
+tags: ["App Development", "Beginner Dev", "Web Development"]
 audio: []
 videos: []
 draft: false

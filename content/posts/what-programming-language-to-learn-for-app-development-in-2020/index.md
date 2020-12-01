@@ -5,9 +5,9 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: What-Programming-Language-To-Learn-First-In-2020.jpg
-images:
+images: []
 series: []
-tags: ["android", "app development", "flutter", "ionic", "ios", "mobile", "react native", "xamarin"]
+tags: ["Android", "App Development", "Flutter", "Ionic", "iOS", "Mobile", "React Native", "Xamarin"]
 audio: []
 videos: []
 draft: false

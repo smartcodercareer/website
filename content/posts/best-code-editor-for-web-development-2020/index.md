@@ -5,7 +5,7 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage:
-images:
+images: []
 series: []
 tags: ["Atom", "Editor", "Emacs", "IDE", "Spacemacs", "Sublime Text", "Vim", "VSC", "Web Development"]
 audio: []

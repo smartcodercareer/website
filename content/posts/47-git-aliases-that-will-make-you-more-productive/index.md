@@ -5,7 +5,7 @@ publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
 featuredImage: 47-Git-Aliases-That-Will-Make-You-More-Productive.jpg
-images:
+images: []
 series: []
 tags: ["Git", "Hacks", "Web Development"]
 audio: []
