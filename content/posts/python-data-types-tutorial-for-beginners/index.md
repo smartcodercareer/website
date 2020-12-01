@@ -10,7 +10,7 @@ series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]
 audio: []
 videos: []
-draft: false
+draft: true
 ---
 
 In this post you will learn the 5 most basic data types in Python. These data types are building blocks for more complex data types, so learning them is essential for every Python developer.
