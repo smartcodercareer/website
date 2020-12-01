@@ -125,9 +125,9 @@ link = "https://fonts.googleapis.com"
 # link = "/fonts/poppins/Poppins-Bold.woff2"
 # as = "font"
 
-[[preload]]
-link = "/webfonts/fa-brands-400.woff2"
-as = "font"
+# [[preload]]
+# link = "/fonts/poppins/Poppins-Regular.woff2"
+# as = "font"
 
 [[preload]]
 link = "/webfonts/fa-brands-400.woff2"

@@ -34,13 +34,13 @@ target = "static/plugins/bootstrap"
 # source = "node_modules/animate.css"
 # target = "assets/plugins/animate.css"
 
-[[mounts]]
-source = "node_modules/slick-carousel/slick"
-target = "assets/plugins/slick-carousel"
+# [[mounts]]
+# source = "node_modules/slick-carousel/slick"
+# target = "assets/plugins/slick-carousel"
 
-[[mounts]]
-source = "node_modules/slick-carousel/slick"
-target = "static/plugins/slick-carousel"
+# [[mounts]]
+# source = "node_modules/slick-carousel/slick"
+# target = "static/plugins/slick-carousel"
 
 # [[mounts]]
 # source = "node_modules/aos/dist"
@@ -50,21 +50,21 @@ target = "static/plugins/slick-carousel"
 source = "node_modules/slick-carousel/slick/ajax-loader.gif"
 target = "static/css/ajax-loader.gif"
 
-[[mounts]]
-source = "node_modules/slick-carousel/slick/fonts"
-target = "static/css/fonts"
+# [[mounts]]
+# source = "node_modules/slick-carousel/slick/fonts"
+# target = "static/css/fonts"
 
-[[mounts]]
-source = "node_modules/@popperjs/core/dist/umd"
-target = "static/plugins/popper"
+# [[mounts]]
+# source = "node_modules/@popperjs/core/dist/umd"
+# target = "static/plugins/popper"
 
-[[mounts]]
-source = "node_modules/wow.js/dist"
-target = "static/plugins/wow"
+# [[mounts]]
+# source = "node_modules/wow.js/dist"
+# target = "static/plugins/wow"
 
-[[mounts]]
-source = "node_modules/mixitup/dist"
-target = "static/plugins/jquery.mixitup"
+# [[mounts]]
+# source = "node_modules/mixitup/dist"
+# target = "static/plugins/jquery.mixitup"
 
 [[mounts]]
 source = "node_modules/magnific-popup/dist/"
