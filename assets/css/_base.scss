@@ -37,6 +37,10 @@ h6 {
   font-size: 28px;
 }
 
+span {
+  line-height: 1.5;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -87,19 +91,24 @@ a {
 
 .main-footer {
   text-align: center;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .social-contacts {
   list-style-type: none;
   margin-bottom: 20px;
+  padding: 0;
 
   li {
     display:inline-block;
 
     i {
-      font-size: 35px;
+      font-size: 40px;
       margin: 0 10px;
+
+      &:hover {
+        color: map-get($colors, primary);
+      }
     }
   }
 }
@@ -112,6 +121,10 @@ a {
   .thumbnail {
     width: 314px;
     margin: 0 15px 40px;
+  }
+
+  .main-footer {
+    padding: 20px;
   }
 }
 
