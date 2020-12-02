@@ -16,6 +16,7 @@
   left: 0;
   right: 0;
   max-height: 0;
+  margin: 0;
   transition: max-height .2s ease-out;
 }
 
@@ -37,6 +38,11 @@
   font-size: 2em;
   width: 150px;
   text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.header.scrolled .logo {
+  width: 120px;
 }
 
 .header .menu-icon .navicon {

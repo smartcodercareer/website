@@ -1,3 +1,35 @@
+import { debounce } from "./common"
+
+const header = document.querySelector("header.header");
+
+const scrollHandler = debounce(function () {
+  console.log("test")
+  if (window.scrollY) {
+    header.classList.add("scrolled");
+
+  } else {
+    header.classList.remove("scrolled");
+  }
+}, 30)
+
+document.addEventListener("scroll", scrollHandler);
+
+scrollHandler();
+
+// if (IntersectionObserver) {
+//   let options = {
+//     root: document.body,
+//     rootMargin: "0px",
+//     treshold: 1.0
+//   };
+
+//   let observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       console.log(entry)
+
+//     })}, options);
+// }
+
 // (function() {
 //   "use strict";
 
