@@ -1,19 +1,22 @@
 #primary {
-  width: 70%;
+  width: 100%;
 }
 
 .page-title {
+  text-align: center;
+
   img {
     margin-bottom: 1rem;
   }
 
   h1 {
+    font-size: 45px;
     margin-bottom: 20px;
   }
 }
 
 .right-sidebar {
-  width: 30%;
+  width: 100%;
 
   > div {
     border: 2px solid #f0f0f0;
@@ -120,10 +123,8 @@
 
 .posts-page .content {
   display: flex;
+  flex-wrap: wrap;
 
-  #primary {
-    padding-right: 30px;
-  }
 
   .right-sidebar {
     label span {
@@ -154,10 +155,12 @@
   margin: 20px 0;
 
   a {
+    display: inline-block;
     font-size: 18px;
-    margin: 0 10px 10px 0;
+    margin: 0 5px 10px 0;
     padding: 5px 10px;
     border-radius: 4px;
+    white-space: nowrap;
 
     i,
     span {
@@ -206,5 +209,93 @@
     &:hover {
       background: #fbb44a;
     }
+  }
+}
+
+.about-author {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+
+  img {
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+  }
+
+  .name,
+  .name-mobile {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .name-mobile {
+    display: block;
+    // text-align: center;
+  }
+
+  .bio {
+    display: inline;
+    font-size: 16px;
+    margin-bottom: 10px;
+    clear: both;
+  }
+
+  .www {
+    display: block;
+    text-align: center;
+  }
+
+  .details {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@include media($tablet) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .about-author {
+    .name {
+      display: block
+    }
+
+    img {
+      display: inline-block;
+      float: left;
+      margin: 0 15px 0 0;
+    }
+
+    .name-mobile {
+      display: none;
+    }
+  }
+}
+
+@include media($laptop) {
+  .page-title {
+    text-align: left;
+  }
+
+  .posts-page .content {
+    flex-wrap: nowrap;
+
+    #primary {
+      padding-right: 30px;
+    }
+  }
+
+  #primary {
+    width: 70%;
+  }
+
+  .right-sidebar {
+    width: 30%;
   }
 }

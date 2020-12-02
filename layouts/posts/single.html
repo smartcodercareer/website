@@ -4,10 +4,23 @@
   <div id="primary">
     {{ partial "page-title" . }}
     {{ partial "social-share" . }}
-
     {{ .Content }}
-
     {{ partial "social-share" . }}
+
+    <div class="about-author">
+      {{ range .Site.Params.authors }}
+      {{ if eq .name $.Params.author }}
+      <p class="name">{{ .name }}</p>
+      <p class="details">
+        <img alt="{{ .name }} gravatar" src="{{ .gravatar }}" />
+        <span class="name-mobile">{{ .name }}</span>
+        <span class="bio">{{ .bio }}</span>
+      </p>
+      <a href="https://{{ .www }}" target="_blank" class="www text-primary">Personal Website</a>
+      {{ end }}
+      {{ end }}
+    </div>
+
   </div>
   <aside class="right-sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
     <div class="search-sidebar">
