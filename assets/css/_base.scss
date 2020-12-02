@@ -113,6 +113,18 @@ a {
   }
 }
 
+.card-title {
+  margin: 0;
+
+  a {
+    color: map-get($colors, text-dark);
+  }
+}
+
+.entry-meta {
+  margin-top: .5rem;
+}
+
 .main-footer {
   text-align: center;
   padding: 20px 0;

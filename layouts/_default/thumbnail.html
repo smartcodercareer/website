@@ -11,17 +11,14 @@
     <img class="rounded card-img-top" src="{{ $src.RelPermalink }}" srcset="{{ $srcset }}" alt="{{.Title }}">
   </a>
   <div class="card-body">
-    <h2 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
+    <h2 class="card-title"><a href="{{ .Permalink }}">{{.Title }}</a>
     </h2>
     <entry-meta>
       <span class="byline">
         by
         <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
-
-        </span>
-        <a href="#" title="View all posts by Adam Faryna">
           <span class="author-name" itemprop="name">{{ .Params.author }}</span>
-        </a>
+        </span>
       </span>
     </entry-meta>
   </div>
