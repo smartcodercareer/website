@@ -4,7 +4,8 @@
 @import "node_modules/magnific-popup/dist/magnific-popup";
 
 @import "variables";
-@import "common";
+@import "mixins";
+@import "utils";
 @import "fonts";
 @import "base";
 @import "module/consent";

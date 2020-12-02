@@ -4,14 +4,14 @@ logo = "images/logo-oneliner.png"
 email = "contact@devakimbo.com"
 author = "Dev Akimbo"
 owner = "Dev Akimbo"
-title = "Dev Akimbo"
+title = "DEV Akimbo"
 description = "We help ambitious individuals become the top paid IT professionals while building amazing lives worth living."
 startYear = "2019-01-01"
 
 # gtag = "GTM-WVDXKLS"
 google_analytics_id = "UA-150778271-8"
 facebook_id = "2662574160653636"
-# copyright = "© Copyright 2016-2020 Appdy LTD"
+# copyright = "© 2016-2020 Appdy LTD"
 
 [footer]
 
@@ -23,17 +23,17 @@ URL = "privacy-policy"
 label = "Cookie Policy"
 URL = "cookie-policy"
 
-[[footer.links]]
-label = "Terms Of Service"
-URL = "terms-of-service"
+# [[footer.links]]
+# label = "Terms Of Service"
+# URL = "terms-of-service"
 
-[[footer.links]]
-label = "Business Contact"
-URL = "proposals"
+# [[footer.links]]
+# label = "Business Contact"
+# URL = "proposals"
 
-[[footer.links]]
-label = "Earnings Disclaimer"
-URL = "earnings-disclaimer"
+# [[footer.links]]
+# label = "Earnings Disclaimer"
+# URL = "earnings-disclaimer"
 
 
 # preloader
@@ -45,7 +45,7 @@ preloader = "images/preloader.gif" # use png, jpg, svg or gif format
 enable = false
 
 [scrollToTop]
-enable = true
+enable = false
 
 # [[contact]]
 # enabled = true
@@ -57,7 +57,7 @@ enable = true
 
 [social.facebook]
 enable = true
-icon = "fab fa-facebook-f"
+icon = "fab fa-facebook"
 URL = "https://www.facebook.com/devakimbo"
 
 [social.instagram]

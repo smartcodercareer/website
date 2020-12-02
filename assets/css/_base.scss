@@ -1,10 +1,14 @@
 * {
   font-family: "Cabin", sans-serif;
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: map-get($colors, text);
 }
 
 body {
   margin: 0;
+  min-height: calc(100vh - 243px);
 }
 
 h1 {
@@ -69,7 +73,6 @@ a {
 .posts {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 20px;
 }
 
 .thumbnail {
@@ -82,16 +85,28 @@ a {
   }
 }
 
-.clearfix {
-  &:after {
-    clear: both;
-    content: ' '; // The space content is one way to avoid an Opera bug.
-    display: table;
+.main-footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-contacts {
+  list-style-type: none;
+  margin-bottom: 20px;
+
+  li {
+    display:inline-block;
+
+    i {
+      font-size: 35px;
+      margin: 0 10px;
+    }
   }
 }
 
-// @include media($mobile-l) {
-// }
+.copyright-text {
+  font-size: 15px;
+}
 
 @include media($tablet) {
   .thumbnail {
@@ -111,4 +126,7 @@ a {
 }
 
 @include media($laptop-l) {
+  .posts {
+    padding: 0 20px;
+  }
 }
