@@ -4,7 +4,7 @@ date: 2020-04-22T18:27:21Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: Python-3-Build-in-And-Reserved-Keywords.jpg
+image: Python-3-Build-in-And-Reserved-Keywords.jpg
 images: []
 series: []
 tags: ["Python", "Python3"]

@@ -13,6 +13,23 @@ google_analytics_id = "UA-150778271-8"
 facebook_id = "2662574160653636"
 # copyright = "© 2016-2020 Appdy LTD"
 
+showPublishedData = false
+
+[[popular]]
+page = "/posts/python-3-installation-tutorial-for-beginners"
+
+[[popular]]
+page = "/posts/the-6-biggest-reasons-why-you-will-fail-to-learn-programming"
+
+[[popular]]
+page = "/posts/what-programming-language-to-learn-for-web-development-in-2020"
+
+[[popular]]
+page = "/posts/what-programming-language-to-learn-first-in-2020"
+
+[[popular]]
+page = "/posts/the-5-best-methods-to-learn-programming"
+
 [footer]
 
 [[footer.links]]

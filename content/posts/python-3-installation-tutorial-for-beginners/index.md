@@ -4,7 +4,7 @@ date: 2020-06-07T21:47:50Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: Python-Installation-for-Beginners-Course-Module-1-Environment-Setup-Thumbnail.jpg
+image: Python-Installation-for-Beginners-Course-Module-1-Environment-Setup-Thumbnail.jpg
 images: []
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]

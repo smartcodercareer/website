@@ -4,7 +4,7 @@ date: 2020-12-01T17:47:14Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: Python-String-Manipulation-for-Beginners-Tutorial-Module-4-Python-Developer-Crash-Course.jpg
+image: Python-String-Manipulation-for-Beginners-Tutorial-Module-4-Python-Developer-Crash-Course.jpg
 images: []
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "String", "Tutorial", "Web Development"]

@@ -4,7 +4,7 @@ date: 2020-04-19T12:44:51Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: Why-Laptop-Is-More-Expensive-Than-MacBooks-For-Web-Developers.jpg
+image: Why-Laptop-Is-More-Expensive-Than-MacBooks-For-Web-Developers.jpg
 images: []
 series: []
 tags: ["Hardware", "Laptop", "Macbook", "Web Development", "Windows"]

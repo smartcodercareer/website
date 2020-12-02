@@ -1,85 +1,13 @@
 .pagination {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  justify-content: space-between;
   margin: 0;
-  list-style: none;
-  border-radius: .25rem;
 
-  li {
-    margin-left: -1px;
-
-    &.first {
-      display: none;
-    }
-
-    &.prev {
-      a {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-    }
-
-    a {
-      border: 1px solid map-get($colors, text);
-      border-collapse: collapse;
-      padding: 1rem;
-    }
-
-    &.current {
-      z-index: 1;
-
-      span,
-      a {
-        color: white;
-        border-color: map-get($colors, primary);
-        background: map-get($colors, primary);
-
-        &:hover {
-          color: white;
-        }
-      }
-    }
-
-    &:first-of-type {
-      a {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-    }
-
-    &:last-of-type {
-      a {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
-    }
+  span {
+    font-size: 20px;
 
     &:hover {
-      z-index: 1;
-
-      span,
-      a {
-        color: map-get($colors, primary);
-        border-color: map-get($colors, primary);
-      }
-    }
-  }
-}
-
-@include media($tablet) {
-  .pagination  {
-    li {
-      &.first {
-        display: list-item;
-      }
-
-      &.prev {
-        a {
-          border-radius: 0;
-        }
-      }
+      color: map-get($colors, primary);
     }
   }
 }

@@ -87,6 +87,8 @@ a {
 }
 
 .content {
+  margin-top: 150px;
+
   p {
     a {
       color: map-get($colors, primary);
@@ -118,6 +120,10 @@ a {
 
   a {
     color: map-get($colors, text-dark);
+
+    &:hover {
+      color: map-get($colors, primary);
+    }
   }
 }
 

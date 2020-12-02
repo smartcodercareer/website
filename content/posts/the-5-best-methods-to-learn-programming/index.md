@@ -4,7 +4,7 @@ date: 2020-04-14T13:54:42Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: The-5-Best-Methods-To-Learn-Programming.jpg
+image: The-5-Best-Methods-To-Learn-Programming.jpg
 images: []
 series: []
 tags: ["Beginner", "Programming"]

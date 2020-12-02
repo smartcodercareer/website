@@ -3,14 +3,13 @@ import { debounce } from "./common"
 const header = document.querySelector("header.header");
 
 const scrollHandler = debounce(function () {
-  console.log("test")
   if (window.scrollY) {
     header.classList.add("scrolled");
 
   } else {
     header.classList.remove("scrolled");
   }
-}, 30)
+}, 50)
 
 document.addEventListener("scroll", scrollHandler);
 

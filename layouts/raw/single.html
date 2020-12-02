@@ -1,21 +1,10 @@
 {{ define "main" }}
 
-<section class="page-title" style="margin-top:150px;">
-  {{ if .Params.subtitle }}
-  <span>{{ .Params.subtitle }}</span>
-  {{ end }}
-  <h1>{{.Title}}</h1>
-</section>
+{{ partial "page-title" . }}
 
 <section class="section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-        <div class="content">
-          {{.Content }}
-        </div>
-      </div>
-    </div>
+  <div class="content">
+    {{.Content }}
   </div>
 </section>
 

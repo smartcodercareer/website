@@ -4,7 +4,7 @@ date: 2020-04-30T17:38:05Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: why-learning-to-code-gets-harder.jpg
+image: why-learning-to-code-gets-harder.jpg
 images: []
 series: []
 tags: ["IT Career", "Programming"]

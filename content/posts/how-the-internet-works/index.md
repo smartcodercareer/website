@@ -4,7 +4,7 @@ date: 2020-04-21T22:23:29Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: how-the-internet-works.jpg
+image: how-the-internet-works.jpg
 images: []
 series: []
 tags: ["Beginner", "Web Development"]

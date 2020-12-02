@@ -4,7 +4,7 @@ date: 2020-11-29T23:38:03Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: What-Programming-Language-To-Learn-For-Web-Development-in-2020.jpg
+image: What-Programming-Language-To-Learn-For-Web-Development-in-2020.jpg
 images: []
 series: []
 tags: []

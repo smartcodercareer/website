@@ -1,0 +1,141 @@
+#primary {
+  width: 70%;
+}
+
+.right-sidebar {
+  width: 30%;
+
+  > div {
+    border: 2px solid #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.search-sidebar {
+  input {
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    color: map-get($colors, text);
+  }
+}
+
+.course-promo-sidebar {
+  .introduction {
+    display: block;
+    font-size: 21px;
+    font-weight: 700;
+    color: map-get($colors, text-dark);
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    background: map-get($colors, secondary);
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    border: none;
+
+    &:hover {
+      background: map-get($colors, secondary-hover);
+    }
+  }
+}
+
+.right-sidebar .popular-recent {
+  border: 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    height: 40px;
+    list-style: none;
+    overflow: hidden;
+    z-index: 1;
+
+    li {
+      display: inline;
+      float: left;
+      // font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+
+      a {
+        float: left;
+        line-height: 40px;
+        padding: 0 13px 0 10px;
+        border: 0px solid #f0f0f0;
+        border-bottom: none;
+
+        &.selected {
+          border-width: 2px;
+          background: white;
+        }
+      }
+    }
+  }
+
+  > div {
+    margin-top: -3px;
+    padding: 5px;
+    border: 2px solid #f0f0f0;
+    padding: 10px;
+    overflow: hidden;
+
+    .post {
+      margin-top: 5px;
+      border-top: 1px solid #f0f0f0;
+      max-height: 90px;
+      overflow: hidden;
+    }
+
+    img {
+      margin: 5px 10px 0 0;
+    }
+
+    span {
+      line-height: 20px;
+    }
+  }
+}
+
+.posts-page .content {
+  display: flex;
+
+  #primary {
+    padding-right: 30px;
+  }
+
+  .right-sidebar {
+    label span {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      hight: 1px;
+      width: 1px;
+      border: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.popular-recent {
+  img {
+    float: left;
+    width: 150px;
+    height: 84px;
+  }
+}
+
+.facebook-snippet {
+  width: 288px;
+  height: 130px;
+}

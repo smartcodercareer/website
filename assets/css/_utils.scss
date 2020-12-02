@@ -5,3 +5,11 @@
     display: table;
   }
 }
+
+.text-primary {
+  color: map-get($colors, primary);
+
+  &:hover {
+    color: map-get($colors, primary-hover);
+  }
+}

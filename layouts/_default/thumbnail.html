@@ -1,5 +1,5 @@
 <article class="card shadow thumbnail">
-  {{ $image := index (.Resources.Match (printf "images/%s" .Params.FeaturedImage)) 0 }}
+  {{ $image := index (.Resources.Match (printf "images/%s" .Params.image)) 0 }}
   {{ $src := $image.Fit "314x177" }}
   {{ $srcset := "" }}
   {{ $srcset = printf "%s, %s 314w"  $srcset ($image.Fit "314x177").RelPermalink }}

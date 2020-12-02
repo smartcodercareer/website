@@ -4,7 +4,7 @@ date: 2020-04-17T09:53:00Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage: Linux-Command-Line-for-Beginners.jpg
+image: Linux-Command-Line-for-Beginners.jpg
 images: []
 series: []
 tags: ["B[]eginner", "Command Line", "Git", "Programming"]

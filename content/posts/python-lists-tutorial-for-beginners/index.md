@@ -4,7 +4,7 @@ date: 2020-12-01T17:50:40Z
 publishDate: "2020-01-01"
 lastmod: "2020-01-01"
 author: Adam Faryna
-featuredImage:
+image:
 images: []
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]
