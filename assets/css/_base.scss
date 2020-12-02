@@ -159,6 +159,10 @@ a {
   font-size: 15px;
 }
 
+.yt-snippet {
+  margin-bottom: 1.5rem;
+}
+
 @include media($tablet) {
   .thumbnail {
     width: 314px;

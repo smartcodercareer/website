@@ -3,15 +3,11 @@
 <div class="content">
   <div id="primary">
     {{ partial "page-title" . }}
+    {{ partial "social-share" . }}
 
     {{ .Content }}
-    {{ if .Params.CTA }}
-    {{ with .Params.CTA }}
-    <div class="text-center">
-      {{ partial "cta-button.html" (dict "CTA" (dict "URL" .URL "title" .title "target" .target)) }}
-    </div>
-    {{ end }}
-    {{ end }}
+
+    {{ partial "social-share" . }}
   </div>
   <aside class="right-sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
     <div class="search-sidebar">

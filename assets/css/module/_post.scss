@@ -2,6 +2,16 @@
   width: 70%;
 }
 
+.page-title {
+  img {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
 .right-sidebar {
   width: 30%;
 
@@ -138,4 +148,63 @@
 .facebook-snippet {
   width: 288px;
   height: 130px;
+}
+
+.social-share {
+  margin: 20px 0;
+
+  a {
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    i,
+    span {
+      color: white;
+    }
+  }
+
+  i {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .2;
+  }
+
+  .fb-share {
+    background: map-get($colors, facebook);
+
+    &:hover {
+      background: map-get($colors, facebook-hover);
+    }
+  }
+
+  .twitter-share {
+    background: map-get($colors, twitter);
+
+    &:hover {
+      background: map-get($colors, twitter-hover);
+    }
+  }
+
+  .linkedin-share {
+    background: map-get($colors, linkedin);
+
+    &:hover {
+      background: map-get($colors, linkedin-hover);
+    }
+  }
+
+  .email-share {
+    background: map-get($colors, primary);
+
+    &:hover {
+      background: #fbb44a;
+    }
+  }
 }
