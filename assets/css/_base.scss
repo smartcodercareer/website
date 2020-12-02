@@ -69,10 +69,11 @@ a {
 .posts {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .thumbnail {
-  max-width: 314px;
+  max-width: 353px;
   margin: auto;
   margin-bottom: 40px;
 
@@ -89,34 +90,25 @@ a {
   }
 }
 
-@include media($mobile-l) {
-  .thumbnail {
-    img {
-      width: 314px;
-      height: 177px;
-    }
-  }
-}
+// @include media($mobile-l) {
+// }
 
 @include media($tablet) {
   .thumbnail {
+    width: 314px;
     margin: 0 15px 40px;
   }
 }
 
 @include media($laptop) {
   .posts {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .thumbnail {
-    padding: 10px 30px 10px 10px;
     margin: 0 0 40px;
   }
 }
 
 @include media($laptop-l) {
-  .posts {
-    justify-content: flex-start
-  }
 }
