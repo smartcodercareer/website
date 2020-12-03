@@ -1,5 +1,5 @@
 {{ $placeholder := "images/placeholder.jpg" }}
-{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "") }}
+{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "" "title" "") }}
 {{ $params = merge $params . }}
 
 {{ $width := "" }}
@@ -18,7 +18,6 @@
 {{ if $params.static }}
 {{ $src = $params.src | relURL }}
 {{ else }}
-
 {{ with $params.page.Resources.GetMatch $params.src }}
 {{ $orig := . }}
 
@@ -54,7 +53,7 @@
 {{ end }}
 
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ .class }}" data-src="{{ $src }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}">
+<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ .class }}" data-src="{{ $src }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}">
 <noscript>
   <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>

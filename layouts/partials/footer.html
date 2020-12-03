@@ -156,6 +156,10 @@
 {{ partial "script" (dict "link" .link "async" .async "defer" .defer "asset" true) }}
 {{ end }}
 
+{{ if eq .Type "posts" }}
+{{ partial "script" (dict "link" "js/post.js" "async" true "asset" true) }}
+{{ end }}
+
 
 {{ with site.Params.google_analytics_id }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
@@ -182,7 +186,6 @@
 {{ end }}
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
-
 
 {{ partial "script" (dict "link" "plugins/lazyload.min.js") }}
 <script>

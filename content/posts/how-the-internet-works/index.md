@@ -25,7 +25,7 @@ The Internet is built with a global, vast network of data centers connected toge
 
 Data centers host HTTP servers, databases, and other things.
 
-{{< figure src="images/network-of-data-centers.jpg" title="fig 1. Network of data centers" >}}
+{{< figure src="network-of-data-centers.jpg" title="fig 1. Network of data centers" >}}
 
 ## Client request a website
 
@@ -49,13 +49,13 @@ If everything is ok, the server replies which HTML5 format document. This HTML5 
 
 To get these extra resources, our internet browser may make many requests to receive all of them.
 
-{{< figure src="images/HTTP-request-and-response.jpg" title="fig 2. HTTP request and response" >}}
+{{< figure src="HTTP-request-and-response.jpg" title="fig 2. HTTP request and response" >}}
 
 ## Tracking server requests
 
 If we are curious about what is actually downloaded when you go to the amazon.com website, you can open the browser inspector tool - every popular browser have one - go to the Network tab, and reload the page. You will see all the requests that were made to load this web page.
 
-{{< figure src="images/tracking-webpage-download.jpg" title="fig 3. Tracking server requests" >}}
+{{< figure src="tracking-webpage-download.jpg" title="fig 3. Tracking server requests" >}}
 
 ## Conclusion
 

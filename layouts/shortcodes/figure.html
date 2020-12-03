@@ -2,7 +2,11 @@
 {{ $alt := .Get "alt" }}
 {{ $src := .Get "src" }}
 
+{{ if eq $alt nil }}
+{{ $alt = $title }}
+{{ end }}
+
 <figure>
-  <img  src="{{ $src | safeURL }}" title="{{ $title }}" alt="{{ with $alt }}{{ $alt }}{{ else }}{{ $title }}{{ end }}" />
+  {{ partial "image" (dict "src" (printf "images/%s" $src) "alt" $title "title" $title "page" .Page "lazy" false) }}
   <figcaption>{{ $title }}</figcaption>
 </figure>

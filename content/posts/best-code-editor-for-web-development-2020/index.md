@@ -25,7 +25,7 @@ Because as of 2020, free editors provide all the features web developer could ev
 
 ## Visual Studio Code (VSC)
 
-{{< figure src="images/visual-studio-code-screenshot.jpg" title="Visual Studio Code screenshot">}}
+{{< figure src="visual-studio-code-screenshot.jpg" title="Visual Studio Code screenshot">}}
 
 On the very top of the list landed a real dark horse of recent years. Thanks to big changes in Microsoft attitude from "open source is a cancer", to "open source is a future", Visual Studio Code joined to the collection of great open source tools that many of us couldn't imagine to code without it.
 
@@ -49,7 +49,7 @@ If you are just starting, do yourself a big favor and disable IntelliSense (VSC 
 
 ## Emacs
 
-{{< figure src="images/spacemacs-screenshot-scaled.png" title="Emacs screenshot (spacemacs)" >}}
+{{< figure src="spacemacs-screenshot-scaled.png" title="Emacs screenshot (spacemacs)" >}}
 
 Surprised?! You shouldn't be. Emacs is my favorite code editor, and this is my blog, so it had to happen.
 
@@ -73,7 +73,7 @@ Otherwise, if you are looking for an ideal tool, not only for coding but literal
 
 ## VIM
 
-{{< figure src="images/vim-screenshot.jpg" title="VIM screenshot" >}}
+{{< figure src="vim-screenshot.jpg" title="VIM screenshot" >}}
 
 VIM become very popular in the last ten years due to the popularity of open-source and Ruby on Rails framework. Because of that, plenty of features and extensions were added, making this "simple" text editor serious competitor even for paid tools.
 
@@ -101,7 +101,7 @@ You can use VIM in any operating system.
 
 ## Sublime Text
 
-{{< figure src="images/sublime-screenshot.jpg" title="SublimeText screenshot" >}}
+{{< figure src="sublime-screenshot.jpg" title="SublimeText screenshot" >}}
 
 Before Visual Studio Code dominated the coding world, Sublime Text was the most popular editor.
 
@@ -123,7 +123,7 @@ Sublime Text is available for MacOS, Windows, and Linux.
 
 ## Atom
 
-{{< figure src="images/atom-screenshot.jpg" title="Atom screenshot" >}}
+{{< figure src="atom-screenshot.jpg" title="Atom screenshot" >}}
 
 Atom for a long time was considered Sublime Text but free. It's only half truth, but fairly accurate. Atom gives similar to Sublime Text user interface,  but today Atom is so much more than Sublime Text ever was.
 

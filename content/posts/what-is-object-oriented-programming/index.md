@@ -28,7 +28,7 @@ We will use UML2 class diagram notation for modeling.
 ### Classes and objects
 
 To model this world, we will have object Human. It can look like this. Human has properties typical to the characteristics that all of us has. He has a first name, last name, date of birth, gender, and national insurance number.
-{{< figure src="images/diagram-1-Human-1.jpg" title="UML2 class diagram for Human type" >}}
+{{< figure src="diagram-1-Human-1.jpg" title="UML2 class diagram for Human type" >}}
 
 He also has some methods that we can invoke on him. We can make him consume some food, rest for X number of hours, sniff some object, and so on. This is the definition of the class Human, and this class is used to create objects of type Human. Every object we create using this class will have this set of properties and methods.
 
@@ -36,7 +36,7 @@ Let's create a class Goblin.
 
 As you can see, the Goblin class is very similar to Human. It has almost the same set of properties and methods. The only difference is goblins can play goblin chess while Human play regular chess. They also have different insurance numbers.
 
-{{< figure src="images/diagram-2-Human-Goblin-1.jpg" title="UML2 class diagram for Human and Goblin types" >}}
+{{< figure src="diagram-2-Human-Goblin-1.jpg" title="UML2 class diagram for Human and Goblin types" >}}
 
 Because there are so many commonalities between these two classes, we can try to model it in a more object oriented way.
 
@@ -46,15 +46,15 @@ Now, as you see we created class Humanoid, which is a class that both classes Hu
 
 The class like Humanoid is called parent class or superclass for both Human and Goblin classes. The Human and Goblin classes now become subclasses or child classes of Humanoid. This is a simple inheritance scenario in object oriented programming.
 
-{{< figure src="images/diagram-3-Inheritance-1.jpg" title="UML2 class diagram for with inheritance" >}}
+{{< figure src="diagram-3-Inheritance-1.jpg" title="UML2 class diagram for with inheritance" >}}
 
 Let's assume in our game the world has more species than just humans and goblins. We have a deers and boars as well. Again, both of these types have set of properties and methods similar to Humanoids. But can we consider these objects as a humanoids?
 
-{{< figure src="images/diagram-4-Deer-Boar-1.jpg" title="UML2 class diagram for Deer and Boar types" >}}
+{{< figure src="diagram-4-Deer-Boar-1.jpg" title="UML2 class diagram for Deer and Boar types" >}}
 
 Not really. What we can do instead is to create another class, let's call it Animal that will gather properties common for all the animals in the game.
 
-{{< figure src="images/diagram-5-Animal-1.jpg" title="UML2 class diagram for Animal type" >}}
+{{< figure src="diagram-5-Animal-1.jpg" title="UML2 class diagram for Animal type" >}}
 
 Now, as you see, it looks much better. We moved all the common properties to the shared superclass, and our diagram looks much cleaner.
 
@@ -64,7 +64,7 @@ But as you see, we still have a duplication here. There are a lot of similaritie
 
 That's what we have got. We introduced class Creature. It gathers all the shared properties and methods for both Human and Animal classes.
 
-{{< figure src="images/diagram-6-Creature-1.jpg" title="UML2 class diagram for Creature type" >}}
+{{< figure src="diagram-6-Creature-1.jpg" title="UML2 class diagram for Creature type" >}}
 
 This is multiple level inheritance because the depth of it is more than 2.
 
@@ -84,7 +84,7 @@ But let's keep things as simple as possible and assume we have all the pieces. T
 
 Let's create another class named Game, which will be our controller class. This class will generate humans, animals, and goblins and make them interact with each other.
 
-{{< figure src="images/diagram-7-Game-1.jpg" title="UML2 class diagram for Game type" >}}
+{{< figure src="diagram-7-Game-1.jpg" title="UML2 class diagram for Game type" >}}
 
 The Game class will create only one object of the game at a time. When that happens, it will render the world of the game and put all the creatures into it. It will also bind a user interface so we can play it, not only watch it.
 
@@ -96,7 +96,7 @@ The presented example is a very simplified model of object oriented programming,
 
 Another way of looking at object oriented programming is a tool for grouping similar functionalities together.
 
-{{< figure src="images/diagram-8-RenderUtils-1.jpg" title="UML2 class diagram for RenderUtils type" >}}
+{{< figure src="diagram-8-RenderUtils-1.jpg" title="UML2 class diagram for RenderUtils type" >}}
 
 For example, our game may have a class RenderUtils, and this class is not mean to be instantiated, it also not meant to be extended by any subclasses. It just groups methods related to rendering, that other objects may invoke.
 
