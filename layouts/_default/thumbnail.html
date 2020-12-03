@@ -1,6 +1,6 @@
 <article class="card shadow thumbnail">
   <a href="{{ .Permalink }}">
-    {{ partial "image" (dict "src" (printf "images/%s" .Params.image) "alt" .Title "size" "314x177" "sizes" (dict "314x177" "300x168" "220x124" "150x84")) }}
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "314x177" "sizes" (dict "320" "240x135" "375" "295x166" "425" "314x177") "page" .) }}
   </a>
   <div class="card-body">
     <h2 class="card-title"><a href="{{ .Permalink }}">{{.Title }}</a>

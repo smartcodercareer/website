@@ -1,7 +1,7 @@
 <div class="page-title">
   {{ if or .Params.image .Params.date .Params.author }}
   {{ if .Params.image }}
-  <img src="images/{{ .Params.image }}" alt="{{.Title}}">
+  {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "698x393" "sizes" (slice "260x146" "315x177" "365x206" "698x393") "page" .) }}
   {{ end }}
 
   {{ if .Params.subtitle }}

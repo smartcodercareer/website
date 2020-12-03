@@ -31,6 +31,10 @@
 
   {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
 
+  {{ if eq .Type "posts" }}
+  {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
+  {{ end }}
+
   <link rel="canonical" href="{{ .Permalink }}"/>
   <link rel="home" href="{{ .Permalink }}"/>
   <link rel="alternate" href="{{ .Permalink }}" hreflang="x-default" />

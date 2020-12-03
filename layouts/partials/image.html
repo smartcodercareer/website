@@ -1,11 +1,16 @@
 {{ $placeholder := "images/placeholder.jpg" }}
-{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "" "page" .) }}
+{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "") }}
 {{ $params = merge $params . }}
 
+{{ $width := "" }}
+{{ $height := "" }}
+{{ $sizes := ""}}
 
+{{ if $params.size }}
 {{ $size := split .size "x" }}
-{{ $width := index $size 0 }}
-{{ $height := index $size 1 }}
+{{ $width = index $size 0 }}
+{{ $height = index $size 1 }}
+{{ end }}
 
 {{ $srcset := "" }}
 {{ $src := "" }}
@@ -13,23 +18,44 @@
 {{ if $params.static }}
 {{ $src = $params.src | relURL }}
 {{ else }}
-{{ $orig := $params.page.Resources.GetMatch $params.src }}
 
-{{ if $params.size }}
-{{ $src = $orig.Fit $params.size }}
+{{ with $params.page.Resources.GetMatch $params.src }}
+{{ $orig := . }}
+
+{{ if eq $width "" }}
+{{ $width = $orig.Width }}
 {{ end }}
 
-{{ $src = $src.RelPermalink }}
+{{ if eq $height "" }}
+{{ $height = $orig.Height }}
+{{ end }}
 
-{{ range $params.sizes }}
-{{ $w := index (split . "x") 0 }}
-{{ $srcset = printf "%s, %s  %sw" $srcset ($orig.Fit . ).RelPermalink $w }}
+
+{{ if $params.size }}
+{{ $src = ($orig.Fit $params.size).RelPermalink }}
+{{ else }}
+{{ $src = $orig.RelPermalink }}
+{{ end }}
+
+{{ $index := 0 }}
+
+{{ range $key, $value := $params.sizes }}
+{{ $w := index (split $value "x") 0 }}
+{{ if eq $index 0 }}
+{{ $srcset = printf "%s %sw" ($orig.Fit $value).RelPermalink $w }}
+{{ $sizes = printf "%s %svw" (printf "(min-width: %spx)" $key) $w }}
+{{ else }}
+{{ $srcset = printf "%s, %s %sw" $srcset ($orig.Fit $value).RelPermalink $w }}
+{{ $sizes = printf "%s, %s %svw" $sizes (printf "(min-width: %spx)" $key) $w }}
+{{ end }}
+{{ $index = add $index 1 }}
+{{ end }}
 {{ end }}
 {{ end }}
 
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ .class }}" data-src="{{ $src }}" width="{{ $width }}" height="{{ $height }}" srcset="{{ $srcset }}">
+<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ .class }}" data-src="{{ $src }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}">
 <noscript>
-  <img src="{{ $src }}" width="{{ $width }}" height="{{ $height }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
+  <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>
 {{ end }}

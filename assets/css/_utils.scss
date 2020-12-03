@@ -13,3 +13,9 @@
     color: map-get($colors, primary-hover);
   }
 }
+
+.text-hover-highlight {
+  &:hover {
+    color: map-get($colors, primary);
+  }
+}

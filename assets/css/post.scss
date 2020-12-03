@@ -1,3 +1,11 @@
+@import "variables";
+@import "mixins";
+
+pre {
+  white-space: pre-wrap;
+  margin-bottom: 1.5rem;
+}
+
 #primary {
   width: 100%;
 }
@@ -10,7 +18,7 @@
   }
 
   h1 {
-    font-size: 45px;
+    font-size: 32px;
     margin-bottom: 20px;
   }
 }
@@ -35,6 +43,8 @@
 }
 
 .course-promo-sidebar {
+  text-align: center;
+
   .introduction {
     display: block;
     font-size: 21px;
@@ -44,9 +54,10 @@
   }
 
   button {
-    display: block;
+    display: inline-block;
     font-size: 15px;
     width: 100%;
+    max-width: 250px;
     color: white;
     background: map-get($colors, secondary);
     font-weight: 600;
@@ -110,6 +121,12 @@
       display: block;
     }
 
+    a:hover {
+      span {
+        color: map-get($colors, primary);
+      }
+    }
+
     .post {
       margin-top: 5px;
       border-top: 1px solid #f0f0f0;
@@ -153,8 +170,13 @@
 }
 
 .facebook-snippet {
-  width: 288px;
-  height: 130px;
+  width: 100%;
+  height: 155px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .social-share {
@@ -262,6 +284,28 @@
   }
 }
 
+.related-posts {
+  .post-rels {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      width: 100%;
+      margin-bottom: 20px;
+
+      span {
+        display: block;
+      }
+
+      &:hover {
+        span {
+          color: map-get($colors, primary);
+        }
+      }
+    }
+  }
+}
+
 @include media($tablet) {
   h1 {
     font-size: 50px;
@@ -282,11 +326,27 @@
       display: none;
     }
   }
+
+  .related-posts {
+    .post-rels {
+      a {
+        max-width: 32%;
+
+        & ~ a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 }
 
 @include media($laptop) {
   .page-title {
     text-align: left;
+
+    h1 {
+      font-size: 45px;
+    }
   }
 
   .posts-page .content {
@@ -304,4 +364,12 @@
   .right-sidebar {
     width: 30%;
   }
+
+  // .related-posts {
+  //   .post-rels {
+  //     a {
+  //       max-width: 220px;
+  //     }
+  //   }
+  // }
 }
