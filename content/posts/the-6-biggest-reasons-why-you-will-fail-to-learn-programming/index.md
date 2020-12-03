@@ -33,9 +33,9 @@ What works the best for web development, is start by learning HTML, CSS, and Jav
 
 Make things as simple as possible for you, so you will have much bigger chances to succeed.
 
-If you want to learn more about starting to code for mobile app development, check out my post <a href="/what-programming-language-to-learn-for-app-development-in-2020/">What Programming Language To Learn For App Development In 2020</a>.
+If you want to learn more about starting to code for mobile app development, check out my post [What Programming Language To Learn For App Development In 2020](/posts/what-programming-language-to-learn-for-app-development-in-2020/).
 
-If you want more detail on learning to code for web development, check this post <a href="/what-programming-language-to-learn-for-web-development-in-2020">What Programming Language To Learn For Web Development in 2020</a>.
+If you want more detail on learning to code for web development, check this post [What Programming Language To Learn For Web Development in 2020](/posts/what-programming-language-to-learn-for-web-development-in-2020/).
 
 ## Reason 5 - not enough coding, or no coding at all
 

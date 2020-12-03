@@ -28,7 +28,7 @@ If you are new to git aliases, let me give you a brief introduction.
 For example, if you want to display the repository log as a nice colored tree, you will type something like this.
 
 ```bash
-git log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
+git log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 ```
 
 If you have an alias, you can just type `git ls` to get the same effect.

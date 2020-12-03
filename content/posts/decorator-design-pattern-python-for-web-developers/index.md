@@ -31,7 +31,7 @@ Let's first create a function that we want to decorate.
 
 ```python
 def house():
-    print("house")`
+    print("house")
 ```
 
 And the decorator function itself:
@@ -197,7 +197,7 @@ def with_garden(size="regular"):
             f()
             print("with " + size + " garden")
         return with_garden_nested_2
-    return with_garden_nested_1`</pre>
+    return with_garden_nested_1
 ```
 
 To make it work, we had to add another nested function that wraps our previous decorator function.
@@ -375,7 +375,7 @@ class Blog:
 
     @secured(UserRole.WRITER)
     def write_post(self, user):
-        print(user.name + " insert post")`</pre>
+        print(user.name + " insert post")
 ```
 
 We want to secure two functions with different levels of security - `reading blog posts` available for readers and `writing blog post` available only for writers.

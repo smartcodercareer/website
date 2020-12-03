@@ -51,7 +51,7 @@ class Logger:
     def instance():
         if (Logger._instance == None):
             Logger._instance = Logger()
-        return Logger._instance`</pre>
+        return Logger._instance
 ```
 
 The structure of the Logger `__init__` function keeps from creating more than one instance of the class. If we try to create subsequent Logger objects, the `__init__` function will raise an exception.

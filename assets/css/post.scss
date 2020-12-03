@@ -4,6 +4,16 @@
 pre {
   white-space: pre-wrap;
   margin-bottom: 1.5rem;
+
+  code {
+    background: none;
+  }
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: #e4e6e8;
 }
 
 #primary {
@@ -57,7 +67,7 @@ pre {
     display: inline-block;
     font-size: 15px;
     width: 100%;
-    max-width: 250px;
+    max-width: 288px;
     color: white;
     background: map-get($colors, secondary);
     font-weight: 600;

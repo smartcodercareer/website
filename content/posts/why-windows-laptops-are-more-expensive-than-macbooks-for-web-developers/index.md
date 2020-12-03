@@ -39,7 +39,7 @@ Now, we roughly know what we get, let's have a look at what we really paid for.
 
 ## Crappy keyboard
 
-As a web developer, you will use a keyboard a lot. If you found your new laptop has hard to press buttons and after a couple of minutes of typing your fingers, demands attention, then sorry you were out of luck this time.&nbsp;
+As a web developer, you will use a keyboard a lot. If you found your new laptop has hard to press buttons and after a couple of minutes of typing your fingers, demands attention, then sorry you were out of luck this time.
 
 A terrible keyboard is typical for any price range of the laptops. If there is a laptop with a really good keyboard that I can use all day long without complaining, other than MacBook, please show me the one.
 

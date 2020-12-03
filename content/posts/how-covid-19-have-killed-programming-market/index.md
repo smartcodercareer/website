@@ -43,7 +43,7 @@ There are still a lot of opportunities for programmers - as I will describe late
 
 ### New technologies have no much chance to emerge
 
-<br>Because the market gets heavily chilled, some of the new technologies like Flutter will not grow as fast as they could. Other popular modern technologies that already build their position including React, React Native, Angular, Vue, Node will also slow down.
+Because the market gets heavily chilled, some of the new technologies like Flutter will not grow as fast as they could. Other popular modern technologies that already build their position including React, React Native, Angular, Vue, Node will also slow down.
 
 In the crisis, people are reluctant to invest in relatively new things and prefer to stick to the solutions used to work in the past.
 

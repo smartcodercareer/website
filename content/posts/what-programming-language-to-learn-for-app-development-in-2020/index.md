@@ -43,8 +43,6 @@ Learning to code in close to native platform language will let you create more a
 
 As you see, learning to code in Swift can be a good idea if you want to become a pure iOS developer. But even if you took this article because of iOS, keep reading it further to not fall into common pitfalls for beginners.
 
-
-
 ### Why not Objective-C?
 
 When Swift showed up, the Objective-C become the language of last resort. iOS developers fall back to it when there is no other way to particular code pieces of an app in another way.

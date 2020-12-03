@@ -32,7 +32,7 @@
   {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
 
   {{ if eq .Type "posts" }}
-  {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
+  {{ partial "style" (dict "css" "css/post.scss" "lazy" true) }}
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}"/>
