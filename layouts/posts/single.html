@@ -21,6 +21,27 @@
       {{ end }}
     </div>
 
+    <div class="related-posts">
+      {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}
+      {{ if and (lt ($.Scratch.Get "related_matches") $.Site.Params.NumRelatedPosts) (ge (intersect $.Params.tags .Params.tags | len) 1) }}
+      {{ if not ($.Scratch.Get "related_matches") }}
+      <h3>Related Posts</h3>
+      <div class="post-rels">
+        {{end}}
+
+        <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
+          {{ partial "image" (dict "src" (printf "%s/images/%s" .File.Dir .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "220x124") }}
+          <span>{{ .Title }}</span>
+        </a>
+
+        {{ $.Scratch.Add "related_matches" 1 }}
+        {{ end }}
+        {{ end }}
+        {{ if $.Scratch.Get "related_matches" }}
+      </div>
+      {{ end }}
+    </div>
+
   </div>
   <aside class="right-sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
     <div class="search-sidebar">
@@ -31,39 +52,40 @@
     </div>
 
     <div class="course-promo-sidebar">
-      {{ partial "lazy-image" (dict "src" "images/laurel.jpg") }}
+      {{ partial "image" (dict "src" "images/laurel.jpg" "size" "288x258" "static" true) }}
       <span class="introduction">5 Day FREE IT Career Planning Course!</span>
       <button class="optin-career-planing-course" type="button">Sign me up!</button>
     </div>
 
     <div class="popular-recent">
       <ul class="clear">
-        <li><a href="#popular" class="selected">🔥 Popular</a></li>
-        <li><a href="#recent">⏱️Recent</a></li>
+        <li><a href="#popular" class="popular selected">🔥 Popular</a></li>
+        <li><a href="#recent" class="recent">⏱️Recent</a></li>
       </ul>
-      <div class="popular">
+      <div class="popular selected">
         {{ range .Site.Params.popular }}
-        {{ $page := .page }}
-        {{ with $.Site.GetPage .page }}
-        {{ with .Params }}
+        {{ $page := $.Site.GetPage .page }}
+        {{ with $page.Params }}
         <div class="post clearfix">
-          <a href="#" alt="Post '{{ .Title }}' thumbnail.">
-            {{ partial "lazy-image" (dict "src" (printf "%s/images/%s" $page .Image) "alt" "foo") }}
+          <a href="{{ $page.Permalink }}" alt="Post '{{ .Title }}' thumbnail.">
+            {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
         </div>
-        {{ end }}
         {{ end }}
         {{ end }}
       </div>
       <div class="recent">
         {{ range (where .Site.RegularPages "Section" "posts" | first 5) }}
+        {{ $page := . }}
+        {{ with $page.Params }}
         <div class="post clearfix">
-          <a href="#" alt="Post '{{ .Params.Title }}' thumbnail.">
-            {{ partial "lazy-image" (dict "src" (printf "%s/images/%s" .Dir .Params.Image) "alt" "foo") }}
+          <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
+            {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
         </div>
+        {{ end }}
         {{ end }}
       </div>
     </div>

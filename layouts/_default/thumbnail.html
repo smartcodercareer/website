@@ -1,14 +1,6 @@
 <article class="card shadow thumbnail">
-  {{ $image := index (.Resources.Match (printf "images/%s" .Params.image)) 0 }}
-  {{ $src := $image.Fit "314x177" }}
-  {{ $srcset := "" }}
-  {{ $srcset = printf "%s, %s 314w"  $srcset ($image.Fit "314x177").RelPermalink }}
-  {{ $srcset = printf "%s, %s 300w"  $srcset ($image.Fit "300x168").RelPermalink }}
-  {{ $srcset = printf "%s, %s 220w"  $srcset ($image.Fit "220x124").RelPermalink }}
-  {{ $srcset = printf "%s, %s 150w"  $srcset ($image.Fit "150x84").RelPermalink }}
-
   <a href="{{ .Permalink }}">
-    <img class="rounded card-img-top" src="{{ $src.RelPermalink }}" srcset="{{ $srcset }}" alt="{{.Title }}">
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.image) "alt" .Title "size" "314x177" "sizes" (dict "314x177" "300x168" "220x124" "150x84")) }}
   </a>
   <div class="card-body">
     <h2 class="card-title"><a href="{{ .Permalink }}">{{.Title }}</a>
