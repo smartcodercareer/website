@@ -1,7 +1,7 @@
 #!/bin/sh
 
 domain="test.devakimbo.com"
-repo="deploy"
+repo="bitbucket"
 branch="gh-pages"
 
 # DIR=$(dirname "$0")
