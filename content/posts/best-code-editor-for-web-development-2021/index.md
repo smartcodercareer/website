@@ -7,7 +7,7 @@ author: Adam Faryna
 image: best-code-editor-for-web-development-2021.jpg
 images: []
 series: []
-tags: ["Atom", "Editor", "Emacs", "IDE", "Spacemacs", "Sublime Text", "Vim", "VSC", "Web Development"]
+tags: ["Atom", "Editor", "Emacs", "IDE", "Spacemacs", "Sublime Text", "Vim", "Visual Studio Code", "Web Development"]
 audio: []
 videos: []
 draft: false

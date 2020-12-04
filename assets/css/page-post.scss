@@ -368,22 +368,22 @@ figure {
 
     li {
       display: inline-block;
-      background: #5e5e5e1a;
-      font-size: 14px;
-      padding: 5px 10px;
-      border-radius: 20px;
       margin: 10px 10px 10px 0;
 
       &:hover {
-        background: map-get($colors, primary);
 
         a {
+          background: map-get($colors, primary);
           color: white;
         }
       }
 
       a {
+        font-size: 14px;
+        padding: 5px 10px;
         white-space: nowrap;
+        background: #5e5e5e1a;
+        border-radius: 20px;
       }
     }
   }
