@@ -1,7 +1,7 @@
 ---
-title: "What Programming Language to Learn for App Development in 2020"
+title: What Programming Language to Learn for App Development in 2020
 date: 2020-04-10T19:11:39Z
-publishDate: "2020-01-01"
+publishDate: 2020-04-10
 lastmod: "2020-01-01"
 author: Adam Faryna
 image: What-Programming-Language-To-Learn-First-In-2020.jpg

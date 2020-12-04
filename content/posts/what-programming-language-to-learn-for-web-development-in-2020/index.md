@@ -1,8 +1,8 @@
 ---
-title: "What Programming Language to Learn for Web Development in 2020"
+title: What Programming Language to Learn for Web Development in 2020
 date: 2020-11-29T23:38:03Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-11-29
+lastmod: 2020-01-01
 author: Adam Faryna
 image: What-Programming-Language-To-Learn-For-Web-Development-in-2020.jpg
 images: []

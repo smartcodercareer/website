@@ -1,8 +1,8 @@
 ---
-title: "Web App vs Website"
+title: Web App vs Website
 date: 2020-04-16T18:45:42Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-04-16
+lastmod: 2020-01-01
 author: Adam Faryna
 image: Web-Application-vs-Website-1.jpg
 images: []

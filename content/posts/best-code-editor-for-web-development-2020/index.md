@@ -1,8 +1,8 @@
 ---
-title: "Best Code Editor for Web Development 2020"
+title: Best Code Editor for Web Development 2020
 date: 2020-04-18T12:26:29Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-04-18
+lastmod: 2020-01-01
 author: Adam Faryna
 image:
 images: []

@@ -1,8 +1,8 @@
 ---
-title: "Python 3 Build in and Reserved Keywords"
+title: Python 3 Build in and Reserved Keywords
 date: 2020-04-22T18:27:21Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-04-22
+lastmod: 2020-01-01
 author: Adam Faryna
 image: Python-3-Build-in-And-Reserved-Keywords.jpg
 images: []

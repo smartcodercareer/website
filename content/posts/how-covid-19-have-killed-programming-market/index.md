@@ -1,8 +1,8 @@
 ---
-title: "How Covid 19 Have Killed Programming Market"
+title: How Covid 19 Have Killed Programming Market
 date: 2020-05-02T21:38:41Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-05-02
+lastmod: 2020-01-01
 author: Adam Faryna
 image: How-Covid-19-have-changed-programming-market.jpg
 images: []

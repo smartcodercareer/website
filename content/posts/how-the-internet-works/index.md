@@ -1,8 +1,8 @@
 ---
-title: "How the Internet Works"
+title: How the Internet Works
 date: 2020-04-21T22:23:29Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-04-21
+lastmod: 2020-01-01
 author: Adam Faryna
 image: how-the-internet-works.jpg
 images: []

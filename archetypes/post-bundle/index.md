@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-01-01
+lastmod: 2020-01-01
 author: Adam Faryna
 image:
 images: []

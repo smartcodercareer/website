@@ -1,8 +1,8 @@
 ---
-title: "The 5 Best Methods to Learn Programming"
+title: The 5 Best Methods to Learn Programming
 date: 2020-04-14T13:54:42Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate: 2020-04-14
+lastmod: 2020-01-01
 author: Adam Faryna
 image: The-5-Best-Methods-To-Learn-Programming.jpg
 images: []

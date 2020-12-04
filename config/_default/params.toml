@@ -15,6 +15,7 @@ facebook_id = "2662574160653636"
 
 showPublishedData = false
 numRelatedPosts = 3
+numListPosts = 9
 
 [[authors]]
 name = "Adam Faryna"

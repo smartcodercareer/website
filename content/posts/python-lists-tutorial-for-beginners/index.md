@@ -1,8 +1,8 @@
 ---
-title: "Python Lists Tutorial for Beginners"
+title: Python Lists Tutorial for Beginners
 date: 2020-12-01T17:50:40Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate:
+lastmod: 2020-01-01
 author: Adam Faryna
 image:
 images: []

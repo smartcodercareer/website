@@ -1,8 +1,8 @@
 ---
-title: "Python Operations on Strings Tutorial for Beginners"
+title: Python Operations on Strings Tutorial for Beginners
 date: 2020-12-01T17:47:14Z
-publishDate: "2020-01-01"
-lastmod: "2020-01-01"
+publishDate:
+lastmod: 2020-01-01
 author: Adam Faryna
 image: Python-String-Manipulation-for-Beginners-Tutorial-Module-4-Python-Developer-Crash-Course.jpg
 images: []

@@ -3,7 +3,7 @@
 {{ partial "page-title.html" . }}
 
 <section class="list">
-  {{ $paginator := .Paginate .Data.Pages 6 }}
+  {{ $paginator := .Paginate .Data.Pages .Site.Params.numListPosts }}
   {{ range $paginator.Pages }}
   {{ .Render "post" }}
   {{ end }}
