@@ -75,9 +75,8 @@ function getNextSibling(elem, selector) {
   }
 }
 
-
-// <div id="image-modal" class="img-modal">
-//   <span class="close">&times;</span>
-//   <img class="modal-content" id="img01">
-//   <div id="caption"></div>
-// </div>
+document.querySelectorAll(".optin-career-planing-course").forEach(item => {
+  item.addEventListener("click", () => {
+    sender('b2aa78d27b1267')
+  });
+});

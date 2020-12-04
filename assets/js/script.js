@@ -1,4 +1,5 @@
 import { debounce } from "./common"
+// import "./subscription"
 
 const header = document.querySelector("header.header");
 
