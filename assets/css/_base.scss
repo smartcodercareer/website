@@ -6,6 +6,7 @@
   color: map-get($colors, text);
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
@@ -135,6 +136,7 @@ a {
   list-style-type: none;
   margin-bottom: 20px;
   padding: 0;
+  margin-left: 0;
 
   li {
     display:inline-block;
