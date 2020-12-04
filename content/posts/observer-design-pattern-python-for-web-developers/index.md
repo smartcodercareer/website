@@ -4,7 +4,7 @@ date: 2020-04-25T18:32:14Z
 publishDate: 2020-04-25
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: Observer-Design-Pattern-Python-for-Web-Developers.jpg
+image: observer-design-pattern-python-for-web-developers.jpg
 images: []
 series: []
 tags: ["Design Pattern", "Python", "Python3"]

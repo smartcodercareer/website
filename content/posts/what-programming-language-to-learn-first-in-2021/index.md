@@ -4,7 +4,7 @@ date: 2020-08-13T06:12:00Z
 publishDate: 2020-12-04
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: What-Programming-Language-To-Learn-First-In-2021.jpg
+image: what-programming-language-to-learn-first-in-2021.jpg
 images: []
 series: []
 tags: ["Full Stack", "IT Career", "Mobile", "Programming"]

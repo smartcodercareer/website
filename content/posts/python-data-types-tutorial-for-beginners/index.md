@@ -4,7 +4,7 @@ date: 2020-06-08T16:25:25Z
 publishDate: 2020-06-08
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: Python-Data-Types-Tutorial-for-Beginners-Module-2-Python-Developer-Crash-Course.jpg
+image: python-data-types-tutorial-for-beginners-module-2-python-developer-crash-course.jpg
 images: []
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]

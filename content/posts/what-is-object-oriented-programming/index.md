@@ -4,7 +4,7 @@ date: 2020-04-14T10:08:00Z
 publishDate: 2020-04-14
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: What-Is-Object-Oriented-Programming.jpg
+image: what-is-object-oriented-programming.jpg
 images: []
 series: []
 tags: ["Beginner", "OOP"]

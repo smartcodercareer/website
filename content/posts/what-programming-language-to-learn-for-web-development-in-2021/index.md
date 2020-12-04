@@ -4,7 +4,7 @@ date: 2020-04-12T23:38:03Z
 publishDate: 2020-12-02
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: What-Programming-Language-To-Learn-For-Web-Development-in-2021.jpg
+image: what-programming-language-to-learn-for-web-development-in-2021.jpg
 images: []
 series: []
 tags: []

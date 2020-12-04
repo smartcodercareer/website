@@ -49,7 +49,7 @@ If everything is ok, the server replies which HTML5 format document. This HTML5 
 
 To get these extra resources, our internet browser may make many requests to receive all of them.
 
-{{< figure src="HTTP-request-and-response.jpg" title="fig 2. HTTP request and response" >}}
+{{< figure src="http-request-and-response.jpg" title="fig 2. HTTP request and response" >}}
 
 ## Tracking server requests
 

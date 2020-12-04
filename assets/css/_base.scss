@@ -9,6 +9,10 @@
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   min-height: calc(100vh - 243px);
 }
