@@ -1,6 +1,6 @@
 #!/bin/sh
 
-domain="appdy.co.uk"
+domain="test.devakimbo.com"
 repo="deploy"
 branch="gh-pages"
 

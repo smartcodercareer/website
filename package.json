@@ -15,9 +15,9 @@
   "author": "Adam Faryna (adamfaryna@appdy.co.uk)",
   "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/Appdy/site/issues"
+    "url": "https://github.com/devakimbo/site/issues"
   },
-  "homepage": "https://github.com/Appdy/site#readme",
+  "homepage": "https://github.com/devakimbo/site#readme",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^10.0.1",
