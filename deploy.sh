@@ -1,6 +1,6 @@
 #!/bin/sh
 
-domain="test.devakimbo.com"
+domain="gh.devakimbo.com"
 repo="bitbucket"
 branch="gh-pages"
 
