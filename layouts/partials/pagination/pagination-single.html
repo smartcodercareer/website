@@ -1,0 +1,25 @@
+<div class="pagination">
+  {{ if .PrevInSection }}
+  {{with .PrevInSection }}
+  <div class="prev">
+    <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
+      {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
+      <span class="text-hover-highlight">Previous Post: {{ .Title }}</span>
+      <i class="fas fa-arrow-left"></i>
+    </a>
+  </div>
+  {{ end }}
+  {{ else }}
+  <div></div>
+  {{ end }}
+
+  {{with .NextInSection }}
+  <div class="next">
+    <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
+      {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
+      <span class="text-hover-highlight">Next Post: {{ .Title }}</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  {{end}}
+</div>

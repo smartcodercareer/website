@@ -28,6 +28,8 @@
       </div>
     </footer>
 
+    {{ partial "pagination/pagination-single" . }}
+
     <div class="related-posts">
       {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}
       {{ if and (lt ($.Scratch.Get "related_matches") $.Site.Params.NumRelatedPosts) (ge (intersect $.Params.tags .Params.tags | len) 1) }}
