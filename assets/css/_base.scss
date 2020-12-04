@@ -87,7 +87,7 @@ a {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
+  padding: 150px 30px 0;
 }
 
 .content {
@@ -106,7 +106,7 @@ a {
   margin-bottom: 40px;
 }
 
-.posts {
+section.list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -173,6 +173,10 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.pagination {
+  width: 100%;
+}
+
 @include media($tablet) {
   .thumbnail {
     width: 314px;
@@ -185,7 +189,7 @@ a {
 }
 
 @include media($laptop) {
-  .posts {
+  section.list {
     justify-content: space-between;
   }
 

@@ -1,9 +1,17 @@
-<article class="">
-  <img class="rounded card-img-top" src="{{.Params.FeaturedImage | relURL}}" alt="{{.Title }}">
+<article class="card shadow thumbnail">
+  <a href="{{ .Permalink }}">
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "314x177" "sizes" (dict "320" "240x135" "375" "295x166" "425" "314x177") "page" .) }}
+  </a>
   <div class="card-body">
-    <h4 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
-    </h4>
-    <p class="cars-text">{{.Summary}}</p>
-    <a href="{{.Permalink}}" class="btn btn-sm btn-primary">Read More</a>
+    <h2 class="card-title"><a href="{{ .Permalink }}">{{.Title }}</a>
+    </h2>
+    <entry-meta>
+      <span class="byline">
+        by
+        <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
+          <span class="author-name" itemprop="name">{{ .Params.author }}</span>
+        </span>
+      </span>
+    </entry-meta>
   </div>
 </article>

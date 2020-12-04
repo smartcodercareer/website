@@ -1,15 +1,12 @@
 {{ define "main" }}
 
-<section class="section" style="margin-top:150px;">
-  <div class="container posts">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
-    {{ range $paginator.Pages }}
-    {{ .Render "thumbnail" }}
-    {{ end }}
-  </div>
+<section class="list">
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") 6 }}
+  {{ range $paginator.Pages }}
+  {{ .Render "post" }}
+  {{ end }}
 
   {{ partial "pagination.html" . }}
-
 </section>
 
 {{ end }}
