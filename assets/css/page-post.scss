@@ -447,6 +447,10 @@ figure {
 
 .pagination {
   flex-wrap: wrap;
+
+  i {
+    top: 50%;
+  }
 }
 
 @-webkit-keyframes zoom {

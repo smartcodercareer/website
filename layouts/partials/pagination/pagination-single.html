@@ -1,25 +1,21 @@
 <div class="pagination">
   {{ if .PrevInSection }}
   {{with .PrevInSection }}
-  <div class="prev">
-    <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
-      {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
-      <span class="text-hover-highlight">Previous Post: {{ .Title }}</span>
-      <i class="fas fa-arrow-left"></i>
-    </a>
-  </div>
+  <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="prev" aria-label="Previous">
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
+    <span class="text-hover-highlight" aria-hidden="true">Previous Post: {{ .Title }}</span>
+    <i class="fas fa-arrow-left"></i>
+  </a>
   {{ end }}
   {{ else }}
   <div></div>
   {{ end }}
 
   {{with .NextInSection }}
-  <div class="next">
-    <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
-      {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
-      <span class="text-hover-highlight">Next Post: {{ .Title }}</span>
-      <i class="fas fa-arrow-right"></i>
-    </a>
-  </div>
+  <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="next" aria-label="Next">
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
+    <span class="text-hover-highlight" aria-hidden="true">Next Post: {{ .Title }}</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
   {{end}}
 </div>

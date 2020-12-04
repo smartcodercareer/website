@@ -2,12 +2,19 @@
 {{ if gt $pag.TotalPages 1 }}
 <div class="pagination">
   {{ if $pag.HasPrev }}
-  <a href="{{ $pag.Prev.URL }}" aria-label="Previous"><span aria-hidden="true">&lt; Previous Posts</span></a>
+  <a href="{{ $pag.Prev.URL }}" class="prev" aria-label="Previous">
+    <span class="text-hover-highlight" aria-hidden="true">Previous Posts</span>
+    <i class="fas fa-arrow-left"></i>
+  </a>
   {{ else }}
   <div></div>
   {{ end }}
+
   {{ if $pag.HasNext }}
-  <a href="{{ $pag.Next.URL }}" aria-label="Next"><span aria-hidden="true">Newer Posts &gt;</span></a>
+  <a href="{{ $pag.Next.URL }}" class="next" aria-label="Next">
+    <span class="text-hover-highlight" aria-hidden="true">Newer Posts</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
   {{ end }}
 </div>
 {{ end }}
