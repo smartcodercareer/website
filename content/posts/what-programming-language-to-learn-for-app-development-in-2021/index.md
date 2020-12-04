@@ -1,10 +1,10 @@
 ---
-title: What Programming Language to Learn for App Development in 2020
+title: What Programming Language to Learn for App Development in 2021
 date: 2020-04-10T19:11:39Z
-publishDate: 2020-04-10
+publishDate: 2020-12-03
 lastmod: "2020-01-01"
 author: Adam Faryna
-image: What-Programming-Language-To-Learn-First-In-2020.jpg
+image: what-programming-language-to-learn-for-app-development-in-2021.jpg
 images: []
 series: []
 tags: ["Android", "App Development", "Flutter", "Ionic", "iOS", "Mobile", "React Native", "Xamarin"]
@@ -83,7 +83,7 @@ The good part is, you don't have to learn the basics for too long before startin
 
 ## But I want to give React Native or Flutter a try now
 
-If you already decided that you will not want to learn native mobile languages and you want to jump straight into modern frameworks, as of 2020, there is a window of opportunity for that.
+If you already decided that you will not want to learn native mobile languages and you want to jump straight into modern frameworks, as of 2021, there is a window of opportunity for that.
 
 But first, the best advice I can give you is...
 
@@ -95,7 +95,7 @@ It is not a new technology, and many people know it and are good at it, so there
 
 Also, if you check offers at job boards, you will notice that most of the positions for React Native require you also to know native mobile languages, so you can't hide behind React Native.
 
-### As of 2020, is it better to start with the Flutter?
+### As of 2021, is it better to start with the Flutter?
 
 Flutter is new, and this is his biggest, if not only strength.
 

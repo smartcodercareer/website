@@ -1,10 +1,10 @@
 ---
-title: What Programming Language to Learn First in 2020
+title: What Programming Language to Learn First in 2021
 date: 2020-08-13T06:12:00Z
-publishDate: 2020-08-13
+publishDate: 2020-12-04
 lastmod: 2020-01-01
 author: Adam Faryna
-image: What-Programming-Language-To-Learn-First-In-2020.jpg
+image: What-Programming-Language-To-Learn-First-In-2021.jpg
 images: []
 series: []
 tags: ["Full Stack", "IT Career", "Mobile", "Programming"]
@@ -53,7 +53,7 @@ If you don't know which path to choose, write the comment below, so I will try t
 
 So, for example, if you want to build mobile apps, you should narrow your interest to one platform, let say iOS. But it can also be Android if you prefer. From there, the best choice these days is to learn native platform languages.
 
-I wrote a verbose post about it [What Programming Language To Learn For App Development In 2020](/posts/what-programming-language-to-learn-for-app-development-in-2020). If you are after the mobile app development, don't forget to check it out.
+I wrote a verbose post about it [What Programming Language To Learn For App Development In 2021](/posts/what-programming-language-to-learn-for-app-development-in-2021). If you are after the mobile app development, don't forget to check it out.
 
 ## I want to be a web developer
 
@@ -89,7 +89,7 @@ I know they are courses and books that will teach you how to do that by teaching
 
 ## Conclusion
 
-As you can see, there is no simple answer to the question "what programming language should learn first in 2020". It all depends on what you want to specialize in.
+As you can see, there is no simple answer to the question "what programming language should learn first in 2021". It all depends on what you want to specialize in.
 
 If you narrow your interest down to a specific niche, choose only one programming language that you will be using daily, and learn basic concepts as mentioned above, you have much bigger chances to succeed.
 

@@ -106,21 +106,6 @@ a {
   margin-bottom: 40px;
 }
 
-section.list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.thumbnail {
-  max-width: 353px;
-  margin: auto;
-  margin-bottom: 40px;
-
-  h2 {
-    font-size: 20px;
-  }
-}
-
 .card-title {
   margin: 0;
 
@@ -173,33 +158,8 @@ section.list {
   margin-bottom: 1.5rem;
 }
 
-.pagination {
-  width: 100%;
-}
-
 @include media($tablet) {
-  .thumbnail {
-    width: 314px;
-    margin: 0 15px 40px;
-  }
-
   .main-footer {
     padding: 20px;
-  }
-}
-
-@include media($laptop) {
-  section.list {
-    justify-content: space-between;
-  }
-
-  .thumbnail {
-    margin: 0 0 40px;
-  }
-}
-
-@include media($laptop-l) {
-  .posts {
-    padding: 0 20px;
   }
 }

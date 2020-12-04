@@ -1,10 +1,10 @@
 ---
-title: Best Code Editor for Web Development 2020
+title: Best Code Editor for Web Development 2021
 date: 2020-04-18T12:26:29Z
-publishDate: 2020-04-18
+publishDate: 2020-12-01
 lastmod: 2020-01-01
 author: Adam Faryna
-image:
+image: best-code-editor-for-web-development-2021.jpg
 images: []
 series: []
 tags: ["Atom", "Editor", "Emacs", "IDE", "Spacemacs", "Sublime Text", "Vim", "VSC", "Web Development"]
@@ -21,7 +21,7 @@ For your convenience, I created a list of top free code editors below.
 
 Why only free?
 
-Because as of 2020, free editors provide all the features web developer could ever dream of just a few years ago. It's just doesn't make sense to buy anything more.
+Because as of 2021, free editors provide all the features web developer could ever dream of just a few years ago. It's just doesn't make sense to buy anything more.
 
 ## Visual Studio Code (VSC)
 
@@ -31,7 +31,7 @@ On the very top of the list landed a real dark horse of recent years. Thanks to 
 
 Visual Studio Code has all the basic features any coder would expect from the code editor. The most important features are: syntax highlighting, indentation, autocomplete, autosuggestions (via IntelliSense), search and replace, refactoring, buildin debugger, and git integration. And everything is available right from the box. But if you feel that something is missing, you can easily install extensions from the catalog.
 
-As of 2020, Microsoft owns Typescript, NPM, and Github you can expect there will be build-in integrations with these tools as well. Because of that, Visual Studio Code becomes an official requirement in many positions, so don't be surprised if on job interview somebody asks you "we use Visual Studio Code, do you know how to use it?".
+As of 2021, Microsoft owns Typescript, NPM, and Github you can expect there will be build-in integrations with these tools as well. Because of that, Visual Studio Code becomes an official requirement in many positions, so don't be surprised if on job interview somebody asks you "we use Visual Studio Code, do you know how to use it?".
 
 It's annoying, but the only thing we can do about it if we don't want to use Visual Studio Code is to at least know the basics, or get to know other editor well enough so we can keep our ground with confidence.
 
@@ -143,7 +143,7 @@ Atom works on across operating systems, so you can use it no matter what system 
 
 ## Conclusion
 
-So here it is, the best code editors for web developers in 2020.
+So here it is, the best code editors for web developers in 2021.
 
 If you are a beginner and you wish I would give you only one, sorry. All of them are good.
 

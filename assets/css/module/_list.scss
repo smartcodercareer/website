@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+
+  span {
+    font-size: 20px;
+
+    &:hover {
+      color: map-get($colors, primary);
+    }
+  }
+}
+
+section.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  max-width: 353px;
+  margin: auto;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@include media($tablet) {
+  .thumbnail {
+    width: 314px;
+    margin: 0 15px 40px;
+  }
+}
+
+@include media($laptop) {
+  .thumbnail {
+    margin: 0 30px 40px 0;
+  }
+
+  section.list {
+    // justify-content: space-between;
+  }
+}
+
+@include media($laptop-l) {
+  .list {
+    // padding: 0 20px;
+  }
+}

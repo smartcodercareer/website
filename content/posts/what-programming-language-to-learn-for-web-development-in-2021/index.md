@@ -1,10 +1,10 @@
 ---
-title: What Programming Language to Learn for Web Development in 2020
-date: 2020-11-29T23:38:03Z
-publishDate: 2020-11-29
+title: What Programming Language to Learn for Web Development in 2021
+date: 2020-04-12T23:38:03Z
+publishDate: 2020-12-02
 lastmod: 2020-01-01
 author: Adam Faryna
-image: What-Programming-Language-To-Learn-For-Web-Development-in-2020.jpg
+image: What-Programming-Language-To-Learn-For-Web-Development-in-2021.jpg
 images: []
 series: []
 tags: []
@@ -51,7 +51,7 @@ So if you plan to work in the web industry, ask yourself this question “what p
 
 Is it solving problems on the server-side or related to security? Is it building APIs? Is it test automation? Is it building amazing user interfaces, or being an expert in some fancy framework? These all sound like different universes, and they are.
 
-## What programming language to learn for web development in 2020
+## What programming language to learn for web development in 2021
 Ok, we already have a clarity what web development is, we can focus on our theme question.
 
 The thing is when you are just starting, everything is new, and programming is hard. So to make things simple, the best thing to do is to simplify things.
@@ -96,7 +96,7 @@ When I started to learn to code, there were only books and little to no internet
 
 So use all the resources you can, but first, learn the basics, and then you can decide which other language or framework you will start learning next.
 
-So this is my answer to the question “What Programming Language To Learn first For Web Development in 2020”, they are HTML, CSS, and Javascript in this order.
+So this is my answer to the question “What Programming Language To Learn first For Web Development in 2021”, they are HTML, CSS, and Javascript in this order.
 
 If you found this post helpful, consider sharing it, so I will be motivated to publish more posts that will help you get the IT career you want.
 

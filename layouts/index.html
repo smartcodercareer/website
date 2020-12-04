@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section class="list">
-  {{ $paginator := .Paginate (where (where .Site.RegularPages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
+  {{ $paginator := .Paginate (where (where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
   {{ range $paginator.Pages }}
   {{ .Render "post" }}
   {{ end }}
