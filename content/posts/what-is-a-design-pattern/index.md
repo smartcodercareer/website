@@ -3,7 +3,7 @@ title: What Is a Design Pattern
 date: 2020-04-23T13:05:18Z
 publishDate: 2020-04-23
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: What-is-a-Design-Pattern.jpg
 images: []
 series: []

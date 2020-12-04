@@ -3,7 +3,7 @@ title: Python Operations on Strings Tutorial for Beginners
 date: 2020-12-01T17:47:14Z
 publishDate:
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Python-String-Manipulation-for-Beginners-Tutorial-Module-4-Python-Developer-Crash-Course.jpg
 images: []
 series: []

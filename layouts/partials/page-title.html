@@ -13,15 +13,19 @@
   <h1>{{ .Title }}</h1>
   {{ end }}
 
-  {{ if or .Params.date .Params.author }}
+  {{ $author := ""}}
+  {{ range .Params.authors }}
+  {{ $author = . }}
+  {{ end }}
+
+  {{ if or .Params.date $author }}
   <div class="entry-meta">
-    {{ if or (and .Site.Params.showPublishedData .Params.date) .Params.author }}
-    <p>{{ if (and .Site.Params.showPublishedData .Params.date) }}Published on {{ .PublishDate.Format "Jan 02, 2006" }} {{ end }}{{ if .Params.author }}by <span class="text-primary">{{.Params.Author}}</span>{{ end }}</p>
+    {{ if or (and .Site.Params.showPublishedData .Params.date) $author }}
+    <p>{{ if (and .Site.Params.showPublishedData .Params.date) }}Published on {{ .PublishDate.Format "Jan 02, 2006" }} {{ end }}{{ if $author }}by <a href="{{ (printf `authors/%s` $author | urlize) | relURL }}" class="text-primary" title="View all posts by {{ $author }}">{{ $author }}</a>{{ end }}</p>
     {{ end }}
 
     {{ if eq .Type "posts" }}
     {{ partial "social-share" . }}
-
     {{ end }}
   </div>
 

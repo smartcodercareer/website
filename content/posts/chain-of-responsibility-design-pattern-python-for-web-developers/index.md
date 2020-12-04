@@ -3,7 +3,7 @@ title: Chain of Responsibility Design Pattern Python for Web Developers
 date: 2020-04-28T22:14:17Z
 publishDate: 2020-04-28
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Chain-of-Responsibility-Design-Pattern-–-Python-for-Web-Developers.jpg
 images: []
 series: []

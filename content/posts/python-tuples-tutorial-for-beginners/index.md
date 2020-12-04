@@ -3,7 +3,7 @@ title: Python Tuples Tutorial for Beginners
 date: 2020-12-01T17:53:24Z
 publishDate:
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image:
 images: []
 series: []

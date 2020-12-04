@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "module/about-author";
 
 pre {
   white-space: pre-wrap;
@@ -248,49 +249,6 @@ code {
   }
 }
 
-.about-author {
-  padding: 15px;
-  border: 1px solid #ccc;
-  margin-bottom: 1rem;
-
-  img {
-    border: 1px solid #d8d8d8;
-    border-radius: 50%;
-  }
-
-  .name,
-  .name-mobile {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .name {
-    display: none;
-  }
-
-  .name-mobile {
-    display: block;
-  }
-
-  .bio {
-    display: inline;
-    font-size: 16px;
-    margin-bottom: 10px;
-    clear: both;
-  }
-
-  .www {
-    display: block;
-    text-align: center;
-  }
-
-  .details {
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-}
-
 .related-posts {
   .post-rels {
     display: flex;
@@ -307,40 +265,6 @@ code {
       &:hover {
         span {
           color: map-get($colors, primary);
-        }
-      }
-    }
-  }
-}
-
-@include media($tablet) {
-  h1 {
-    font-size: 50px;
-  }
-
-  .about-author {
-    .name {
-      display: block
-    }
-
-    img {
-      display: inline-block;
-      float: left;
-      margin: 0 15px 0 0;
-    }
-
-    .name-mobile {
-      display: none;
-    }
-  }
-
-  .related-posts {
-    .post-rels {
-      a {
-        max-width: 32%;
-
-        & ~ a {
-          margin-left: 10px;
         }
       }
     }
@@ -464,6 +388,22 @@ figure {
 }
 
 @include media($tablet) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .related-posts {
+    .post-rels {
+      a {
+        max-width: 32%;
+
+        & ~ a {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
   .img-modal {
     .modal-content {
       max-width: 80%;

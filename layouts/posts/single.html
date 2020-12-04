@@ -13,19 +13,7 @@
         {{ end }}
       </ul>
 
-      <div class="about-author">
-        {{ range .Site.Params.authors }}
-        {{ if eq .name $.Params.author }}
-        <p class="name">{{ .name }}</p>
-        <p class="details">
-          <img alt="{{ .name }} gravatar" src="{{ .gravatar }}" />
-          <span class="name-mobile">{{ .name }}</span>
-          <span class="bio">{{ .bio }}</span>
-        </p>
-        <a href="https://{{ .www }}" target="_blank" class="www text-primary">Personal Website</a>
-        {{ end }}
-        {{ end }}
-      </div>
+      {{ partial "about-author" (dict "author" (index .Params.authors 0)) }}
     </footer>
 
     {{ partial "pagination/pagination-single" . }}

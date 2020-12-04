@@ -1,0 +1,23 @@
+{{ $author := .author }}
+
+<div class="about-author">
+  {{ range site.Params.authors }}
+  {{ if eq .name $author }}
+  <p class="name">{{ .name }}</p>
+  <p class="details">
+    <img alt="{{ .name }} gravatar" src="{{ .photo }}" />
+    <span class="name-mobile">{{ .name }}</span>
+    <span class="bio">{{ .bio }}</span>
+  </p>
+
+  <div class="links">
+    {{ with .www }}
+    <a href="//{{ . }}" target="_blank" class="www text-primary">Website</a>&nbsp;|&nbsp;
+    {{ end }}
+
+    <a href="{{ (printf `authors/%s` $author | urlize) | relURL }}" class="text-primary" title="View all posts by {{ $author }}">View all posts by {{ $author }}</a>
+  </div>
+
+  {{ end }}
+  {{ end }}
+</div>

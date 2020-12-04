@@ -3,7 +3,7 @@ title: Singleton Design Pattern Python for Web Developers
 date: 2020-11-30T23:29:19Z
 publishDate: 2020-11-30
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Singleton-Design-Pattern-Python-for-Web-Developers.jpg
 images: []
 series: []

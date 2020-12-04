@@ -3,7 +3,7 @@ title: 47 Git Aliases That Will Make You More Productive
 date: 2020-04-19T21:50:14Z
 publishDate: 2020-04-19
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: 47-Git-Aliases-That-Will-Make-You-More-Productive.jpg
 images: []
 series: []

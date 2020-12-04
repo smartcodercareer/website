@@ -1,0 +1,59 @@
+.about-author {
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+
+  img {
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+  }
+
+  .name,
+  .name-mobile {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .name-mobile {
+    display: block;
+  }
+
+  .bio {
+    display: inline;
+    font-size: 16px;
+    margin-bottom: 10px;
+    clear: both;
+  }
+
+  .details {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .links {
+    text-align: center;
+  }
+}
+
+@include media($tablet) {
+  .about-author {
+    .name {
+      display: block
+    }
+
+    img {
+      display: inline-block;
+      float: left;
+      margin: 0 15px 0 0;
+    }
+
+    .name-mobile {
+      display: none;
+    }
+  }
+}

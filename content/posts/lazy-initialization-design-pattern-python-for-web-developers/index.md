@@ -3,7 +3,7 @@ title: Lazy Initialization Design Pattern Python for Web Developers
 date: 2020-04-27T14:12:38Z
 publishDate: 2020-04-27
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Lazy-Initialization-Design-Pattern-Python-for-Web-Developers.jpg
 images: []
 series: []

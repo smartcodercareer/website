@@ -3,7 +3,7 @@ title: Best Code Editor for Web Development 2021
 date: 2020-04-18T12:26:29Z
 publishDate: 2020-12-01
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: best-code-editor-for-web-development-2021.jpg
 images: []
 series: []

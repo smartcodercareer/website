@@ -3,7 +3,7 @@ title: Why Windows Laptops Are More Expensive Than Macbooks for Web Developers
 date: 2020-04-19T12:44:51Z
 publishDate: 2020-04-19
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Why-Laptop-Is-More-Expensive-Than-MacBooks-For-Web-Developers.jpg
 images: []
 series: []

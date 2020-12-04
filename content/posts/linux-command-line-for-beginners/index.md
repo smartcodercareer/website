@@ -3,7 +3,7 @@ title: Linux Command Line for Beginners
 date: 2020-04-17T09:53:00Z
 publishDate: 2020-04-17
 lastmod: 2020-01-01
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: Linux-Command-Line-for-Beginners.jpg
 images: []
 series: []

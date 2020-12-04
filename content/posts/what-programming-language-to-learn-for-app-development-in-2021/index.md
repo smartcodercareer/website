@@ -3,7 +3,7 @@ title: What Programming Language to Learn for App Development in 2021
 date: 2020-04-10T19:11:39Z
 publishDate: 2020-12-03
 lastmod: "2020-01-01"
-author: Adam Faryna
+authors: ["Adam Faryna"]
 image: what-programming-language-to-learn-for-app-development-in-2021.jpg
 images: []
 series: []
