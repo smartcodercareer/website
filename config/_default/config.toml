@@ -11,6 +11,11 @@ twitter = ""
 [imaging]
 quality = 90
 
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
 [markup]
   [markup.highlight]
     anchorLineNos = false

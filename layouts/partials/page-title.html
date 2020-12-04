@@ -4,13 +4,21 @@
   {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "698x393" "sizes" (slice "260x146" "315x177" "365x206" "698x393") "page" .) }}
   {{ end }}
 
-  {{ if .Params.subtitle }}
-  <span>{{ .Params.subtitle }}</span>
-  {{ end }}
-  <h1>{{.Title}}</h1>
+    {{ if .Params.subtitle }}
+    <span>{{ .Params.subtitle }}</span>
+    {{ end }}
+    <h1>{{.Title}}</h1>
 
-  {{ if or (and .Site.Params.showPublishedData .Params.date) .Params.author }}
-  <p>{{ if (and .Site.Params.showPublishedData .Params.date) }}Published on {{ .PublishDate.Format "Jan 02, 2006" }} {{ end }}{{ if .Params.author }}by <span class="text-primary">{{.Params.Author}}</span>{{ end }}</p>
-  {{ end }}
+  <div class="entry-meta">
+    {{ if or (and .Site.Params.showPublishedData .Params.date) .Params.author }}
+    <p>{{ if (and .Site.Params.showPublishedData .Params.date) }}Published on {{ .PublishDate.Format "Jan 02, 2006" }} {{ end }}{{ if .Params.author }}by <span class="text-primary">{{.Params.Author}}</span>{{ end }}</p>
+    {{ end }}
+
+    {{ if eq .Type "posts" }}
+    {{ partial "social-share" . }}
+
+    {{ end }}
+  </div>
+
   {{ end }}
 </div>

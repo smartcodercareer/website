@@ -3,23 +3,30 @@
 <div class="content">
   <div id="primary">
     {{ partial "page-title" . }}
-    {{ partial "social-share" . }}
     {{ .Content }}
     {{ partial "social-share" . }}
 
-    <div class="about-author">
-      {{ range .Site.Params.authors }}
-      {{ if eq .name $.Params.author }}
-      <p class="name">{{ .name }}</p>
-      <p class="details">
-        <img alt="{{ .name }} gravatar" src="{{ .gravatar }}" />
-        <span class="name-mobile">{{ .name }}</span>
-        <span class="bio">{{ .bio }}</span>
-      </p>
-      <a href="https://{{ .www }}" target="_blank" class="www text-primary">Personal Website</a>
-      {{ end }}
-      {{ end }}
-    </div>
+    <footer class="entry-meta">
+      <ul class="tags">
+        {{ range (.GetTerms "tags") }}
+        <li><a href="{{ .Permalink }}" rel="tag">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+
+      <div class="about-author">
+        {{ range .Site.Params.authors }}
+        {{ if eq .name $.Params.author }}
+        <p class="name">{{ .name }}</p>
+        <p class="details">
+          <img alt="{{ .name }} gravatar" src="{{ .gravatar }}" />
+          <span class="name-mobile">{{ .name }}</span>
+          <span class="bio">{{ .bio }}</span>
+        </p>
+        <a href="https://{{ .www }}" target="_blank" class="www text-primary">Personal Website</a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </footer>
 
     <div class="related-posts">
       {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}

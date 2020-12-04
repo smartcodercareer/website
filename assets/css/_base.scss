@@ -19,7 +19,6 @@ body {
 
 h1 {
   font-size: 50px;
-  margin-bottom: 40px;
 }
 
 h2 {
@@ -103,6 +102,10 @@ a {
   }
 }
 
+.page-title {
+  margin-bottom: 40px;
+}
+
 .posts {
   display: flex;
   flex-wrap: wrap;
@@ -132,6 +135,10 @@ a {
 
 .entry-meta {
   margin-top: .5rem;
+
+  * {
+    font-size: 15px;
+  }
 }
 
 .main-footer {
