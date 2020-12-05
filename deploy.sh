@@ -10,19 +10,20 @@ then
     exit 1;
 fi
 
+# if [[ -d ".git/worktrees/public/" ]]
+# then
+#   echo "Delating .git/worktrees/public/"
+#   rm -rf .git/worktrees/public/
+# fi
+
+git worktree remove -f public
 git worktree prune
-git br -d gh-pages
+git br -D gh-pages
 
 if [[ -d "resources" ]]
 then
   echo "Deleting old resources"
   rm -rf resources
-fi
-
-if [[ -d ".git/worktrees/public/" ]]
-then
-  echo "Delating .git/worktrees/public/"
-  rm -rf .git/worktrees/public/
 fi
 
 npm run build:prod:clean
@@ -37,6 +38,8 @@ mkdir public
 
 echo "Checking out $branch branch into public"
 git worktree add -b $branch public $repo/$branch
+
+rm -rf public/*
 
 echo "Generating site (minified HTML)"
 npm run build:prod
