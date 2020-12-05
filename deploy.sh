@@ -13,6 +13,20 @@ fi
 git worktree prune
 git br -d gh-pages
 
+if [[ -d "resources" ]]
+then
+  echo "Deleting old resources"
+  rm -rf resources
+fi
+
+if [[ -d ".git/worktrees/public/" ]]
+then
+  echo "Delating .git/worktrees/public/"
+  rm -rf .git/worktrees/public/
+fi
+
+npm run build:prod:clean
+
 if [[ -d "public" ]]
 then
   echo "Deleting old publication"
@@ -20,20 +34,6 @@ then
 fi
 
 mkdir public
-
-if [[ -d "resources" ]]
-then
-  echo "Deleting old resources"
-  rm -rf public
-fi
-
-npm run build:prod:clean
-
-if [[ -d ".git/worktrees/public/" ]]
-then
-  echo "Delating .git/worktrees/public/"
-  rm -rf .git/worktrees/public/
-fi
 
 echo "Checking out $branch branch into public"
 git worktree add -b $branch public $repo/$branch
