@@ -1,6 +1,7 @@
 #!/bin/bash
 
-domain="gh.devakimbo.com"
+# domain="gh.devakimbo.com"
+domain="devakimbo.github.io/site-2"
 repo="deploy"
 branch="gh-pages"
 
