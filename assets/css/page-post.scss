@@ -2,6 +2,17 @@
 @import "mixins";
 @import "module/about-author";
 
+#content {
+  padding-top: 30px;
+}
+
+.highlight {
+  border: 1px solid map-get($colors, border);
+  padding: 10px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
 pre {
   white-space: pre-wrap;
   margin-bottom: 1.5rem;
@@ -12,9 +23,12 @@ pre {
 }
 
 code {
-  padding: 2px 4px;
   border-radius: 3px;
   background: #e4e6e8;
+
+  span {
+    font-family: sans-serif;
+  }
 }
 
 #primary {
@@ -420,7 +434,7 @@ figure {
     }
   }
 
-  .posts-page .content {
+  .posts-page #content > .content {
     flex-wrap: nowrap;
 
     #primary {
