@@ -15,7 +15,7 @@ then
 fi
 
 git worktree prune
-g br -d gh-pages
+git br -d gh-pages
 
 if [[ -d "public" ]]
 then
