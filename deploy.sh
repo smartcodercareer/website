@@ -33,7 +33,7 @@ echo "Checking out $branch branch into public"
 git worktree add -B $branch public $repo/$branch
 
 echo "Generating site (minified HTML)"
-hugo --minify --ignoreCache --cleanDestinationDir --gc
+npm run build:prod
 
 cd public
 
