@@ -1,5 +1,3 @@
-baseURL = "https://gh.devakimbo.com/"
-# baseURL = "http://localhost:5000"
 languageCode = "en-us"
 title = "DEV Akimbo"
 enableRobotsTXT = true
