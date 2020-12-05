@@ -14,6 +14,8 @@ then
     exit 1;
 fi
 
+git worktree prune
+
 if [[ -d "public" ]]
 then
   echo "Deleting old publication"
@@ -21,7 +23,6 @@ then
 fi
 
 mkdir public
-git worktree prune
 
 if [[ -d ".git/worktrees/public/" ]]
 then
