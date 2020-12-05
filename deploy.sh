@@ -43,8 +43,6 @@ npm run build:prod
 
 cd public
 
-exit
-
 if [[ -n $domain ]]
 then
   echo "Adding CNAME"
