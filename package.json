@@ -4,8 +4,8 @@
   "description": "",
   "main": "postcss.config.js",
   "scripts": {
-    "start": "hugo",
-    "debug": "hugo --gc --disableFastRender -v",
+    "start": "hugo server -v",
+    "debug": "hugo server --gc --disableFastRender -v",
     "build:prod": "hugo -e production --minify --cleanDestinationDir --gc -v",
     "build:test": "hugo -e development --minify --cleanDestinationDir --gc -v && serve public",
     "serve": "serve public"
