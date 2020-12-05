@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/zsh
 
-# domain="gh.devakimbo.com"
-domain="devakimbo.github.io/site-2"
+domain="gh.devakimbo.com"
+# domain="devakimbo.github.io/site-2"
 repo="deploy"
 branch="gh-pages"
 
@@ -52,6 +52,19 @@ then
   echo "Adding CNAME"
   echo $domain > CNAME
 fi
+
+# paths=("${(@f)$(find . -name '_*')}")
+# unset 'paths[-1]'
+
+# include=""
+
+# for i ("$paths[@]") include="$include,\"$i\""
+
+# includes="includes: [$include]"
+# include="include: [$include]"
+
+# echo $include > _config.yml
+# echo $includes >> _config.yml
 
 echo "Updating $branch branch"
 git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
