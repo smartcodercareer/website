@@ -34,6 +34,8 @@ fi
 echo "Checking out $branch branch into public"
 git worktree add -b $branch public $repo/$branch
 
+return
+
 echo "Generating site (minified HTML)"
 npm run build:prod
 
