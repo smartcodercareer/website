@@ -21,6 +21,14 @@ fi
 
 mkdir public
 
+if [[ -d "resources" ]]
+then
+  echo "Deleting old resources"
+  rm -rf public
+fi
+
+npm run build:prod:clean
+
 if [[ -d ".git/worktrees/public/" ]]
 then
   echo "Delating .git/worktrees/public/"
