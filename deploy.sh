@@ -26,7 +26,7 @@ then
   rm -rf resources
 fi
 
-npm run build:prod:clean
+# npm run build:prod:clean
 
 if [[ -d "public" ]]
 then
