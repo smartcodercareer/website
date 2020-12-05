@@ -2,23 +2,18 @@ window.onload = () => {
   var images = document.querySelectorAll('.lazy');
 
   images.forEach(element => {
-    var smallImage = element.getElementsByClassName('img-small')[0];
-
-    // Load placeholder image
-    var img = new Image();
-    img.src = smallImage.getAttribute('src')
-    img.onload = function () {
-      smallImage.classList.add('loaded')
-    }
-
-    // Load large image
     var largeImage = new Image();
-    largeImage.srcset = element.getAttribute('data-imgset');
     largeImage.src = element.getAttribute('data-src');
-    // largeImage.classList.add('lozad')
+    largeImage.sizes = element.hasAttribute("data-sizes") ? element.getAttribute("data-sizes") : "";
+
+    largeImage.srcset = element.hasAttribute("data-srcset") ? element.getAttribute("data-srcset") : "";
+    largeImage.className = element.getAttribute("class");
+    largeImage.title = element.getAttribute("title");
+    largeImage.alt = element.getAttribute("alt");
+
     largeImage.onload = function () {
       largeImage.classList.add('loaded');
-      smallImage.replaceWith(largeImage);
+      element.replaceWith(largeImage);
     }
   })
 };

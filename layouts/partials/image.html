@@ -29,7 +29,6 @@
 {{ $height = $orig.Height }}
 {{ end }}
 
-
 {{ if $params.size }}
 {{ $src = ($orig.Fit $params.size).RelPermalink }}
 {{ else }}
@@ -53,7 +52,7 @@
 {{ end }}
 
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazyload{{ end }} {{ .class }}" data-src="{{ $src }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}">
+<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" data-sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}">
 <noscript>
   <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>
