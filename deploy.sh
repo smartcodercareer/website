@@ -30,7 +30,7 @@ then
 fi
 
 echo "Checking out $branch branch into public"
-git worktree add -B $branch public $repo/$branch
+git worktree add -b $branch public $repo/$branch
 
 echo "Generating site (minified HTML)"
 npm run build:prod
@@ -44,6 +44,6 @@ then
 fi
 
 echo "Updating $branch branch"
-git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
+git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
 
 cd ..
