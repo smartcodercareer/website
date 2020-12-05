@@ -22,3 +22,6 @@
   // m.parentNode.insertBefore(a, m)
   document.head.append(a);
 })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+
+// show popup: Ebook: Learn 12 Reasons Why People Fail To Learn to Code And How To Overcome Them overview
+sender('b2aa78d27b1267');

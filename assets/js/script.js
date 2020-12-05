@@ -1,5 +1,5 @@
 import { debounce } from "./common";
-// import "./subscription"
+import "./subscription";
 import "./lazy";
 
 const header = document.querySelector("header.header");
