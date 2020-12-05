@@ -4,10 +4,6 @@ domain="gh.devakimbo.com"
 repo="deploy"
 branch="gh-pages"
 
-# DIR=$(dirname "$0")
-
-# cd $DIR/..
-
 if [[ $(git status -s) ]]
 then
     echo "The working directory is dirty. Please commit any pending changes."
@@ -46,6 +42,6 @@ then
 fi
 
 echo "Updating $branch branch"
-git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
+git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
 
 cd ..
