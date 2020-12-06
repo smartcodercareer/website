@@ -14,9 +14,6 @@
 }
 
 pre {
-  white-space: pre-wrap;
-  margin-bottom: 1.5rem;
-
   code {
     background: none;
   }
@@ -204,6 +201,7 @@ code {
 
 .social-share {
   margin: 20px 0;
+  text-align: center;
 
   a {
     display: inline-block;
@@ -422,6 +420,10 @@ figure {
     .modal-content {
       max-width: 80%;
     }
+  }
+
+  .social-share {
+    text-align: left;
   }
 }
 
