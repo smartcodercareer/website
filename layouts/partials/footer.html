@@ -204,12 +204,4 @@ document.head.append(a);
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
 
-{{ partial "script" (dict "link" "plugins/lazyload.min.js") }}
-<script>
-  var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazyload",
-    use_native: true
-  });
-</script>
-
 <script src="//widget.manychat.com/996581947154536.js" async="async"></script>
