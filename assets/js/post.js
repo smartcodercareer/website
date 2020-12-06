@@ -89,12 +89,21 @@ document.querySelectorAll(".optin-career-planing-course").forEach(item => {
   });
 });
 
-function showSnackbar(event) {
+
+window.app = window.app || {};
+window.app.showSnackbar = function showSnackbar(event) {
   event.preventDefault();
 
-  const elem = event.target;
+  if (!event || !navigator.clipboard) {
+    return
+  }
+
+  const elem = event.target.parentNode;
   const x = document.getElementById("snackbar");
-  x.innerText = elem.innerText;
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", "") }, 3000);
+  const url = window.location.href.split("#")[0] + elem.getAttribute("href");
+
+  navigator.clipboard.writeText(url).then(() => {
+    x.className = "show";
+    setTimeout(() => x.className = x.className.replace("show", ""), 3000);
+  });
 }
