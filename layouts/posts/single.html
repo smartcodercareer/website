@@ -19,24 +19,20 @@
     {{ partial "pagination/pagination-single" . }}
 
     <div class="related-posts">
-      {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}
-      {{ if and (lt ($.Scratch.Get "related_matches") $.Site.Params.NumRelatedPosts) (ge (intersect $.Params.tags .Params.tags | len) 1) }}
-      {{ if not ($.Scratch.Get "related_matches") }}
       <h3>Related Posts</h3>
       <div class="post-rels">
-        {{ end }}
-
+      {{ $relatedPostsCount := 0 }}
+      {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}
+      {{ if and (lt $relatedPostsCount $.Site.Params.NumRelatedPosts) (ge (intersect $.Params.tags .Params.tags | len) 1) }}
         <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
           {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
           <span class="text-hover-highlight">{{ .Title }}</span>
         </a>
 
-        {{ $.Scratch.Add "related_matches" 1 }}
-        {{ end }}
-        {{ end }}
-        {{ if $.Scratch.Get "related_matches" }}
-      </div>
+        {{ $relatedPostsCount = add $relatedPostsCount 1 }}
       {{ end }}
+      {{ end }}
+      </div>
     </div>
 
   </div>
