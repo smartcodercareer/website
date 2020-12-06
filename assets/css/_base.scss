@@ -59,7 +59,7 @@ span {
 p {
   font-size: 18px;
   line-height: 1.4;
-  color: #5e5e5e;
+  color: map-get($colors, text);
   margin-bottom:1.5rem;
 }
 
@@ -71,7 +71,7 @@ ul {
 li {
   font-size: 18px;
   line-height: 1.4;
-  color: #5e5e5e;
+  color: map-get($colors, text);
 }
 
 img {

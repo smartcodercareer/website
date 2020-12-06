@@ -43,7 +43,7 @@ When I first started to learn to code there weren't many code editors to choose 
 
 So as a professional web developer I had to use Eclipse, JDeveloper, NetBeans, or IntelliJ. IntelliJ is a paid app and I was on a budget. JDeveloper used to eat a lot of resources and look bad, the same as NetBeans. The only option left was Eclipse, very limited, and buggy at that time.
 
-By the way, in my first job we used Eclipse together with a paid plugin called MyEclipse, to make it a little more robust, I'm surprised they still exist to this day [myeclipsecn.com/](https://www.myeclipsecn.com/).
+By the way, in my first job we used Eclipse together with a paid plugin called MyEclipse, to make it a little more robust, I'm surprised they still exist to this day [myeclipsecn.com](https://www.myeclipsecn.com/).
 
 Today you have Visual Studio Code, Atom, Emacs, Vim, SublimeText, Eclipse, PyCharm, NetBeans, and more. They are all very powerful code editors, and all of them are free. They have features that used to be available only in paid apps.
 

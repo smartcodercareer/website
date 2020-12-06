@@ -217,7 +217,7 @@ For more information about the usage of the `cp` command type `man cp`.
 
 From time to time, we need to find a file or folder with particular characteristics, like, for example, a specific name or containing phrase in its name.
 
-For this task, we can use the powerful `find command`. This command has very complex and can be used in many ways. You can find all of the ways to use this command by reading it's by manual. To display manual for `find` command, type:
+For this task, we can use the powerful `find` command. This command has very complex and can be used in many ways. You can find all of the ways to use this command by reading it's by manual. To display manual for `find` command, type:
 
 ```bash
 man find

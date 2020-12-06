@@ -73,7 +73,7 @@ function openModalImage(src, text) {
 }
 
 function getNextSibling(elem, selector) {
-  var sibling = elem.nextElementSibling;
+  const sibling = elem.nextElementSibling;
 
   if (!selector) return sibling;
 
@@ -88,3 +88,13 @@ document.querySelectorAll(".optin-career-planing-course").forEach(item => {
     sender('b2aa78d27b1267')
   });
 });
+
+function showSnackbar(event) {
+  event.preventDefault();
+
+  const elem = event.target;
+  const x = document.getElementById("snackbar");
+  x.innerText = elem.innerText;
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", "") }, 3000);
+}

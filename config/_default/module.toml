@@ -22,13 +22,13 @@ target = "static/plugins"
 source = "node_modules/@fortawesome/fontawesome-free/webfonts"
 target = "static/webfonts"
 
-[[mounts]]
-source = "node_modules/jquery/dist"
-target = "static/plugins/jquery"
+# [[mounts]]
+# source = "node_modules/jquery/dist"
+# target = "static/plugins/jquery"
 
-[[mounts]]
-source = "node_modules/bootstrap/dist/js"
-target = "static/plugins/bootstrap"
+# [[mounts]]
+# source = "node_modules/bootstrap/dist/js"
+# target = "static/plugins/bootstrap"
 
 # [[mounts]]
 # source = "node_modules/animate.css"
@@ -46,9 +46,9 @@ target = "static/plugins/bootstrap"
 # source = "node_modules/aos/dist"
 # target = "static/plugins/aos"
 
-[[mounts]]
-source = "node_modules/slick-carousel/slick/ajax-loader.gif"
-target = "static/css/ajax-loader.gif"
+# [[mounts]]
+# source = "node_modules/slick-carousel/slick/ajax-loader.gif"
+# target = "static/css/ajax-loader.gif"
 
 # [[mounts]]
 # source = "node_modules/slick-carousel/slick/fonts"
@@ -66,14 +66,14 @@ target = "static/css/ajax-loader.gif"
 # source = "node_modules/mixitup/dist"
 # target = "static/plugins/jquery.mixitup"
 
-[[mounts]]
-source = "node_modules/magnific-popup/dist/"
-target = "static/plugins/jquery-magnific-popup"
+# [[mounts]]
+# source = "node_modules/magnific-popup/dist/"
+# target = "static/plugins/jquery-magnific-popup"
 
 # [[mounts]]
 # source = "node_modules/lazysizes"
 # target = "static/plugins/lazysizes"
 
-[[mounts]]
-source = "node_modules/vanilla-lazyload/dist/lazyload.min.js"
-target = "static/plugins/lazyload.min.js"
+# [[mounts]]
+# source = "node_modules/vanilla-lazyload/dist/lazyload.min.js"
+# target = "static/plugins/lazyload.min.js"
