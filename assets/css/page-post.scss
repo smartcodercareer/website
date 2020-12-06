@@ -8,13 +8,14 @@
 }
 
 .highlight {
-  border: 1px solid map-get($colors, border);
-  padding: 10px;
-  overflow-x: auto;
-  margin-bottom: 1.5rem;
 }
 
 pre {
+  padding: 10px;
+  margin-bottom: 1.5rem;
+  border: 1px solid map-get($colors, border);
+  overflow-x: auto;
+
   code {
     background: none;
   }
@@ -85,7 +86,6 @@ code {
     font-weight: 600;
     padding: 10px 20px;
     margin-top: 10px;
-    border-radius: 3px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.4;
@@ -209,7 +209,6 @@ code {
     font-size: 18px;
     margin: 0 5px 10px 0;
     padding: 5px 10px;
-    border-radius: 4px;
     white-space: nowrap;
 
     i,
@@ -285,7 +284,7 @@ code {
 }
 
 figure {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 
   img {
     cursor: zoom-in;
