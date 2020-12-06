@@ -200,7 +200,7 @@ code {
 }
 
 .social-share {
-  margin: 20px 0;
+  margin: 10px 0;
   text-align: center;
 
   a {
@@ -296,6 +296,8 @@ figure {
 }
 
 .entry-meta {
+  border-bottom: 1px solid map-get($colors, border);
+
   .tags {
     display: flex;
     flex-wrap: wrap;
