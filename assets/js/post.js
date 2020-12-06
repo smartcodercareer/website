@@ -37,7 +37,7 @@ document.querySelectorAll("figure img").forEach(item => {
   item.addEventListener("click", event => {
     const item = event.target;
     const src = item.getAttribute("src");
-    const caption = getNextSibling(item, "figcaption");
+    const caption = item.parentNode.querySelector("figcaption");
     const text = caption ? caption.innerText : "";
     openModalImage(src, text);
   });
