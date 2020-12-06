@@ -1,6 +1,5 @@
 import { deleteCookie } from "./common"
 
-
 function fbInit() {
   document.addEventListener("consent-marketing", function(e) {
     if (e.detail.status) {

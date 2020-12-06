@@ -1,7 +1,6 @@
 import { deleteCookie } from "./common"
 import { gaId } from '@params';
 
-
 function gaInit() {
   document.addEventListener("consent-analytics", function(e) {
     if (e.detail.status) {

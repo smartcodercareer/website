@@ -187,6 +187,7 @@ document.head.append(a);
 </script>
 {{ end }}
 
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 {{ with site.Params.facebook_id }}
 <script>
   !function(f,b,e,v,n,t,s)
@@ -200,6 +201,9 @@ document.head.append(a);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ . }}&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
+
+{{ partial "script" (dict "link" "js/fbpixel.js" "asset" true . }}
+{{ end }}
 {{ end }}
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}

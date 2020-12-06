@@ -1,1 +1,4 @@
 baseURL = "http://localhost:5000"
+
+[params]
+env = "development"
