@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="content">
+<section class="content">
   <article id="primary">
     {{ partial "page-title" . }}
     {{ .Content }}
@@ -41,56 +41,58 @@
   </article>
 
   <aside class="right-sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
-    <div class="search-sidebar">
+    <section class="search-sidebar">
       <label>
         <span>Search for:</span>
         <input name="search" class="search-field" type="search" value="Search..." title="Search for post" />
       </label>
-    </div>
+    </section>
 
-    <div class="course-promo-sidebar">
+    <section class="course-promo-sidebar">
       {{ partial "image" (dict "src" "images/laurel.jpg" "size" "288x258" "static" true) }}
       <span class="introduction">5 Day FREE IT Career Planning Course!</span>
       <button class="optin-career-planing-course" type="button">Sign me up!</button>
-    </div>
+    </section>
 
-    <div class="popular-recent">
+    <section id="popular-recent">
       <ul class="clear">
         <li><a href="#popular" class="popular selected">🔥 Popular</a></li>
         <li><a href="#recent" class="recent">⏱️Recent</a></li>
       </ul>
-      <div class="popular selected">
+
+      <div class="popular-list selected">
         {{ range .Site.Params.popular }}
         {{ $page := $.Site.GetPage .page }}
         {{ with $page.Params }}
-        <div class="post clearfix">
+        <section class="post clearfix">
           <a href="{{ $page.Permalink }}" alt="Post '{{ .Title }}' thumbnail.">
             {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
-        </div>
+        </section>
         {{ end }}
         {{ end }}
       </div>
-      <div class="recent">
+
+      <div class="recent-list">
         {{ range (where .Site.RegularPages "Section" "posts" | first 5) }}
         {{ $page := . }}
         {{ with $page.Params }}
-        <div class="post clearfix">
+        <section class="post clearfix">
           <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
             {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
-        </div>
+        </section>
         {{ end }}
         {{ end }}
       </div>
-    </div>
+    </section>
 
-    <div class="facebook-snippet">
+    <section class="facebook-snippet">
       <iframe name="f2885963d4ac714" width="1000px" height="1000px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v7.0/plugins/page.php?adapt_container_width=true&amp;app_id=1016249582090260&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df127aa554a86adc%26domain%3Ddevakimbo.com%26origin%3Dhttps%253A%252F%252Fdevakimbo.com%252Ff1c74c7d3647a04%26relation%3Dparent.parent&amp;container_width=288&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fdevakimbo&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=false&amp;tabs=&amp;width=" style="border: none; visibility: visible;" class=""></iframe>
-    </div>
+    </section>
   </aside>
-</div>
+</section>
 
 {{ end }}

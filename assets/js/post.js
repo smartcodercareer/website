@@ -1,29 +1,37 @@
-document.querySelector(".popular-recent ul").addEventListener("click", event => {
+const popularRecent = document.getElementById("popular-recent");
+const popularRecentLinks = popularRecent.querySelector("ul");
+
+popularRecentLinks.addEventListener("click", event => {
   const target = event.target;
 
   if (target instanceof HTMLAnchorElement) {
-    const href = target.attributes.href;
-    const ul = target.parentNode.parentNode;
-    const wrapper = ul.parentNode;
-    const popular = wrapper.querySelector("div.popular");
-    const recent = wrapper.querySelector("div.recent");
-    const popularBtn = ul.querySelector(".popular");
-    const recentBtn = ul.querySelector(".recent")
-
-    if (href.value === "#popular") {
-      popular.classList.add("selected");
-      recent.classList.remove("selected");
-      popularBtn.classList.add("selected");
-      recentBtn.classList.remove("selected");
-
-    } else {
-      recent.classList.add("selected");
-      popular.classList.remove("selected");
-      recentBtn.classList.add("selected");
-      popularBtn.classList.remove("selected");
-    }
+    updatePopularRecent(target.getAttribute("href"));
   }
 });
+
+if (window.location.hash) {
+  updatePopularRecent(window.location.hash);
+}
+
+function updatePopularRecent(hash) {
+  const popular = popularRecent.querySelector(".popular-list");
+  const recent = popularRecent.querySelector(".recent-list");
+  const popularBtn = popularRecentLinks.querySelector(".popular");
+  const recentBtn = popularRecentLinks.querySelector(".recent");
+
+  if (hash === "#popular") {
+    popular.classList.add("selected");
+    recent.classList.remove("selected");
+    popularBtn.classList.add("selected");
+    recentBtn.classList.remove("selected");
+
+  } else {
+    recent.classList.add("selected");
+    popular.classList.remove("selected");
+    recentBtn.classList.add("selected");
+    popularBtn.classList.remove("selected");
+  }
+}
 
 document.querySelectorAll("figure img").forEach(item => {
   item.addEventListener("click", event => {
