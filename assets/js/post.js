@@ -92,8 +92,6 @@ document.querySelectorAll(".optin-career-planing-course").forEach(item => {
 
 window.app = window.app || {};
 window.app.showSnackbar = function showSnackbar(event) {
-  event.preventDefault();
-
   if (!event || !navigator.clipboard) {
     return
   }

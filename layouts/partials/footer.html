@@ -42,31 +42,6 @@
   </span>
 </footer>
 
-<div id="consent-container">
-  <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
-  <div class="content">
-    <span class="description">This website uses cookies to enhance site navigation, analyse site usage, and assist in our marketing efforts. Without cookies some feature may not be available. By clicking "Accept cookies" you agree to our <a href="/privacy-policy" class="consent-cookie-policy">Cookie Policy</a>.</span>
-    <form>
-			<div class="option">
-        <label>
-          <input type="checkbox" name="necessary" checked="checked" disabled="disabled"><span>Necessary</span>
-        </label>
-      </div>
-			<div class="option">
-        <label>
-          <input type="checkbox" name="marketing"><span>Marketing</span>
-        </label>
-      </div>
-			<div class="option">
-        <label>
-          <input type="checkbox" name="analytics"><span>Analytics</span>
-        </label>
-      </div>
-      <div class="buttons"><button type="button" class="save">Save</button><button type="button" class="accept-all">Accept All</button></div>
-    </form>
-  </div>
-</div>
-
 
 {{ if site.Params.cookies.enable }}
 <!-- cookie -->
@@ -202,10 +177,37 @@ document.head.append(a);
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ . }}&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
 
-{{ partial "script" (dict "link" "js/fbpixel.js" "asset" true . }}
+{{ partial "script" (dict "link" "js/fbpixel.js" "asset" true) }}
 {{ end }}
 {{ end }}
 
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+<div id="consent-container">
+  <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
+  <div class="content">
+    <span class="description">This website uses cookies to enhance site navigation, analyse site usage, and assist in our marketing efforts. Without cookies some feature may not be available. By clicking "Accept cookies" you agree to our <a href="/privacy-policy" class="consent-cookie-policy">Cookie Policy</a>.</span>
+    <form>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="necessary" checked="checked" disabled="disabled"><span>Necessary</span>
+        </label>
+      </div>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="marketing"><span>Marketing</span>
+        </label>
+      </div>
+			<div class="option">
+        <label>
+          <input type="checkbox" name="analytics"><span>Analytics</span>
+        </label>
+      </div>
+      <div class="buttons"><button type="button" class="save">Save</button><button type="button" class="accept-all">Accept All</button></div>
+    </form>
+  </div>
+</div>
+
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
+{{ end }}
 
 <script src="//widget.manychat.com/996581947154536.js" async="async"></script>
