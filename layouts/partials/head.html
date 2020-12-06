@@ -58,8 +58,8 @@
 
   {{ if .OutputFormats.Get "RSS" }}
   {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ site.BaseURL }}index.xml" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
   {{ end }}
 
@@ -70,6 +70,6 @@
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
 
   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-  {{ partial "script" (dict "link" "js/ ganalytics.js" "asset" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
+  {{ partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
   {{ end }}
 </head>

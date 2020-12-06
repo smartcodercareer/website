@@ -110,6 +110,11 @@ enable = true
 icon = "fab fa-github"
 URL = "https://github.com/adamfaryna"
 
+[social.rss]
+enable = true
+icon = "fas fa-rss"
+
+
 [modal]
 enable = false
 

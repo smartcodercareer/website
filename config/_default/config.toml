@@ -2,6 +2,8 @@ languageCode = "en-us"
 title = "DEV Akimbo"
 enableRobotsTXT = true
 
+summaryLength = 200 # 320 Google Rich snippet length
+
 [social]
 facebook = "devakimbo"
 twitter = ""
