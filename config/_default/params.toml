@@ -223,7 +223,7 @@ async = true
 
 [[static.js]]
 link = "plugins/fuse/fuse.min.js"
-# async = true
+async = true
 
 # [[static.js]]
 # link = "plugins/lazysizes/lazysizes.min.js"

@@ -2,32 +2,32 @@
   <ul class="social-contacts">
     {{ if site.Params.social.youtube.enable }}
     {{ with site.Params.social.youtube }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on YouTube"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on YouTube"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.facebook.enable }}
     {{ with site.Params.social.facebook }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on Facebook"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Facebook"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.instagram.enable }}
     {{ with site.Params.social.instagram }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on Instagram"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Instagram"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.twitter.enable }}
     {{ with site.Params.social.twitter }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on Twitter"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Twitter"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.pinterest.enable }}
     {{ with site.Params.social.pinterest }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on Pinterest"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Pinterest"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.github.enable }}
     {{ with site.Params.social.github }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow" title="{{ site.Params.title }} on Github"><i class="{{ .icon }}"></i></a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Github"><i class="{{ .icon }}"></i></a></li>
     {{ end }}
     {{ end }}
 
@@ -181,7 +181,7 @@
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ . }}&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
 
-{{ partial "script" (dict "link" "js/fbpixel.js" "asset" true) }}
+{{ partial "script" (dict "link" "js/fbpixel.js" "asset" true "async" true) }}
 {{ end }}
 {{ end }}
 
