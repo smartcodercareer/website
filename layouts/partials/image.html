@@ -15,16 +15,10 @@
 {{ $srcset := "" }}
 {{ $src := "" }}
 
-{{ if or $params.static }}
+{{ if $params.static }}
 {{ $src = $params.src | relURL }}
 {{ else }}
-{{ $orig := "" }}
-
-{{ if $params.asset }}
-{{ $orig = resources.GetMatch $params.src }}
-{{ else }}
-{{ $orig = $params.page.Resources.GetMatch $params.src }}
-{{ end }}
+{{ $orig := $params.page.Resources.GetMatch $params.src }}
 
 {{ if eq $width "" }}
 {{ $width = $orig.Width }}

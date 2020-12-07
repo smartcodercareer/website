@@ -4,11 +4,14 @@
 {{ end }}
 
 <article class="card shadow thumbnail">
+  {{ if .Params.Image }}
   <a href="{{ .Permalink }}">
-    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "314x177" "sizes" (dict "320" "240x135" "375" "295x166" "425" "314x177") "page" .) }}
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "314x177" "sizes" (slice "240x135" "295x166" "314x177") "page" .) }}
   </a>
+  {{ end }}
   <div class="card-body">
     <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ if .Params.authors }}
     <div class="entry-meta">
       <span class="byline">
         by
@@ -19,5 +22,6 @@
         </span>
       </span>
     </div>
+    {{ end }}
   </div>
 </article>

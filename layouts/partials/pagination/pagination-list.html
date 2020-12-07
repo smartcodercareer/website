@@ -3,7 +3,7 @@
 <div class="pagination">
   {{ if $pag.HasPrev }}
   <a href="{{ $pag.Prev.URL }}" class="prev" aria-label="Previous">
-    <span class="text-hover-highlight" aria-hidden="true">Previous Posts</span>
+    <span class="text-hover-highlight" aria-hidden="true">Previous</span>
     <i class="fas fa-arrow-left"></i>
   </a>
   {{ else }}
@@ -12,7 +12,7 @@
 
   {{ if $pag.HasNext }}
   <a href="{{ $pag.Next.URL }}" class="next" aria-label="Next">
-    <span class="text-hover-highlight" aria-hidden="true">Newer Posts</span>
+    <span class="text-hover-highlight" aria-hidden="true">Next</span>
     <i class="fas fa-arrow-right"></i>
   </a>
   {{ end }}
