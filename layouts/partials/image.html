@@ -15,11 +15,16 @@
 {{ $srcset := "" }}
 {{ $src := "" }}
 
-{{ if $params.static }}
+{{ if or $params.static }}
 {{ $src = $params.src | relURL }}
 {{ else }}
-{{ with $params.page.Resources.GetMatch $params.src }}
-{{ $orig := . }}
+{{ $orig := "" }}
+
+{{ if $params.asset }}
+{{ $orig = resources.GetMatch $params.src }}
+{{ else }}
+{{ $orig = $params.page.Resources.GetMatch $params.src }}
+{{ end }}
 
 {{ if eq $width "" }}
 {{ $width = $orig.Width }}
@@ -47,13 +52,16 @@
 {{ $index = add $index 1 }}
 {{ end }}
 {{ end }}
-{{ end }}
 
 {{ $width = printf `width="%spx"` $width | safeHTMLAttr }}
 {{ $height = printf `height="%spx"` $height | safeHTMLAttr }}
 
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
+{{ if .lazy }}
+<img src="{{ $placeholder | relURL }}" alt="{{ .alt }}" class="lazy {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
+{{ else }}
+<img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
+{{ end }}
 <noscript>
   <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>
