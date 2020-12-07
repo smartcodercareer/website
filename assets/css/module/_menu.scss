@@ -33,6 +33,7 @@
 
   .search {
     display: none;
+    width: 100px;
 
     input {
       padding: 3px 20px;
@@ -70,25 +71,25 @@
       position: relative;
       transition: background .2s ease-out;
       width: 18px;
-    }
 
-    .navicon:before,
-    .navicon:after {
-      background: #333;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all .2s ease-out;
-      width: 100%;
-    }
+      &:before,
+      &:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
 
-    .navicon:before {
-      top: 5px;
-    }
+      &:before {
+        top: 5px;
+      }
 
-    .navicon:after {
-      top: -5px;
+      &:after {
+        top: -5px;
+      }
     }
   }
 

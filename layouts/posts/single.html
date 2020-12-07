@@ -19,7 +19,9 @@
 
       </div>
 
+      {{ .Scratch.Add "paginationExtended" true }}
       {{ partial "pagination/pagination-single" . }}
+      {{ .Scratch.Delete "paginationExtended" }}
 
       <div class="related-posts">
         <h3>Related Posts</h3>

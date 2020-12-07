@@ -3,7 +3,7 @@
 <div class="about-author">
   {{ range site.Params.authors }}
   {{ if eq .name $author }}
-  <p class="name">{{ .name }}</p>
+  <h2 class="name">{{ .name }}</h2>
   <div class="details">
     <img alt="{{ .name }} gravatar" src="{{ .photo }}" />
     <span class="name-mobile">{{ .name }}</span>

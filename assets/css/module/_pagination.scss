@@ -1,4 +1,5 @@
 .pagination {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -11,13 +12,7 @@
     }
   }
 
-  .prev:hover *,
-  .next:hover * {
-    color: map-get($colors, primary);
-  }
-
   i {
-    display: none;
     position: absolute;
 
     &:before {
@@ -29,15 +24,40 @@
   .next {
     position: relative;
     margin: 1.5rem 0;
+    width: 110px;
+
+    &:hover *,
+    &:hover * {
+      color: map-get($colors, primary);
+    }
+  }
+
+  .prev {
+    padding-left: 35px;
+
+    i {
+      left: 0;
+    }
+  }
+
+  .next {
+    padding-right: 35px;
+    text-align: right;
+
+    i {
+      right: 0;
+    }
+  }
+
+  &.extended {
+    a {
+      width: initial;
+    }
   }
 }
 
 @include media($tablet) {
   .pagination {
-    i {
-      display: inline;
-    }
-
     .prev,
     .next {
       max-width: 40%;
@@ -57,6 +77,21 @@
       i {
         right: 0;
       }
+    }
+
+    &.extended {
+      a {
+        width: 300px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@include media($laptop) {
+  .pagination {
+    .next {
+      margin-right: 20px;
     }
   }
 }
