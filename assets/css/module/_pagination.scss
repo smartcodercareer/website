@@ -12,12 +12,10 @@
     }
   }
 
-  i {
+  svg {
     position: absolute;
-
-    &:before {
-      font-size: 25px;
-    }
+    width: 25px;
+    height: 25px;
   }
 
   .prev,
@@ -25,17 +23,19 @@
     position: relative;
     margin: 1.5rem 0;
     width: 110px;
+    max-width: 80px;
 
     &:hover *,
     &:hover * {
       color: map-get($colors, primary);
+      fill: map-get($colors, primary);
     }
   }
 
   .prev {
     padding-left: 35px;
 
-    i {
+    svg {
       left: 0;
     }
   }
@@ -44,45 +44,48 @@
     padding-right: 35px;
     text-align: right;
 
-    i {
+    svg {
       right: 0;
     }
   }
 
   &.extended {
+    text-align: left;
+
     a {
       width: initial;
+      max-width: initial;
+    }
+
+    .next {
+      text-align: left;
+    }
+
+    svg {
+      top: 50%;
     }
   }
 }
 
 @include media($tablet) {
   .pagination {
-    .prev,
-    .next {
-      max-width: 40%;
-    }
-
     .prev {
       padding-left: 30px;
-
-      i {
-        left: 0;
-      }
     }
 
     .next {
       padding-right: 30px;
-
-      i {
-        right: 0;
-      }
     }
 
     &.extended {
       a {
         width: 300px;
         text-align: left;
+      }
+
+      .prev,
+      .next {
+        max-width: 40%;
       }
     }
   }
