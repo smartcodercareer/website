@@ -63,9 +63,9 @@ URL = "cookie-policy"
 
 
 # preloader
-[preloader]
-enable = true
-preloader = "images/preloader.gif" # use png, jpg, svg or gif format
+# [preloader]
+# enable = true
+# preloader = "images/preloader.gif" # use png, jpg, svg or gif format
 
 [navCta]
 enable = false
@@ -130,14 +130,6 @@ link = "https://www.gstatic.com"
 [[preconnect]]
 link = "https://fonts.googleapis.com"
 
-
-[[preload]]
-link = "/webfonts/fa-brands-400.woff2"
-as = "font"
-
-[[preload]]
-link = "/webfonts/fa-solid-900.woff2"
-as = "font"
 
 [[preload]]
 link = "/fonts/Cabin/static/Cabin-SemiBold.ttf"
