@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+set -e
+
 domain="devakimbo.com"
 # domain="devakimbo.github.io/site-2"
 repo="deploy"
