@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-set -e
 
 domain="devakimbo.com"
 # domain="devakimbo.github.io/site-2"
@@ -43,6 +42,8 @@ echo "Checking out $branch branch into public"
 git worktree add -b $branch public $repo/$branch
 
 rm -rf public/*
+
+set -e
 
 echo "Generating site (minified HTML)"
 npm run build:prod
