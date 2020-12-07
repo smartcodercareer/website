@@ -21,7 +21,7 @@ numListPosts = 9
 [[authors]]
 name = "Adam Faryna"
 www = "devakimbo.com"
-photo = "https://www.gravatar.com/avatar/239175829b11add1eeccf71c8916020f?s=120"
+photo = "/images/authors/author-adam-faryna.jpeg"
 bio = "Adam is a seasoned software developer, fluent in more than 50 programming languages, tools, and frameworks. He started his IT career in 2007. He worked as an employee, contractor, freelancer, independent developer, mentor, teacher, and digital agency owner. These days he is focused on his passion for teaching and building online businesses."
 
 

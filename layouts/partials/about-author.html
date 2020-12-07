@@ -5,7 +5,7 @@
   {{ if eq .name $author }}
   <h2 class="name">{{ .name }}</h2>
   <div class="details">
-    <img alt="{{ .name }} gravatar" src="{{ .photo }}" />
+    {{ partial "image" (dict "src" .photo "size" "120x120" "alt" (printf "%s photo" .name) "static" true) }}
     <span class="name-mobile">{{ .name }}</span>
     <span class="bio">{{ .bio }}</span>
 
