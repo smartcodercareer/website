@@ -1,6 +1,6 @@
 <div class="page-title">
   {{ if .Params.image }}
-  {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "719x405" "sizes" (slice "290x163" "345x194" "395x222" "330x185" "666x375") "page" .) }}
+  {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" .Title "size" "719x405" "sizes" (slice "290x163" "345x194" "395x222" "330x185" "666x375" "719x405") "page" .) }}
   {{ end }}
 
   {{ if .Params.subtitle }}

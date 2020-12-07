@@ -29,19 +29,19 @@
 {{ end }}
 
 {{ if $params.size }}
-{{ $src = ($orig.Fit $params.size).RelPermalink }}
+{{ $src = ($orig.Resize (printf "%sx" $width)).RelPermalink }}
 {{ else }}
 {{ $src = $orig.RelPermalink }}
 {{ end }}
 
 {{ $index := 0 }}
 
-{{ range $key, $value := $params.sizes }}
-{{ $w := index (split $value "x") 0 }}
+{{ range $params.sizes }}
+{{ $w := index (split . "x") 0 }}
 {{ if eq $index 0 }}
-{{ $srcset = printf "%s %sw" ($orig.Fit $value).RelPermalink $w }}
+{{ $srcset = printf "%s %sw" ($orig.Resize (printf "%sx" $w)).RelPermalink $w }}
 {{ else }}
-{{ $srcset = printf "%s, %s %sw" $srcset ($orig.Fit $value).RelPermalink $w }}
+{{ $srcset = printf "%s, %s %sw" $srcset ($orig.Resize (printf "%sx" $w)).RelPermalink $w }}
 {{ end }}
 {{ $index = add $index 1 }}
 {{ end }}

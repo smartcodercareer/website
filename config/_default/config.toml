@@ -8,8 +8,8 @@ summaryLength = 200 # 320 Google Rich snippet length
 facebook = "devakimbo"
 twitter = ""
 
-[imaging]
-quality = 90
+# [imaging]
+# quality = 90
 
 [taxonomies]
   # category = "categories"
