@@ -215,6 +215,8 @@
 
 {{ partial "script" (dict "link" "js/subscription.js" "asset" false "async" true) }}
 
-<script src="//widget.manychat.com/996581947154536.js" async="async"></script>
+{{ if site.Params.manychatId }}
+<script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>
+{{ end }}
 
 {{ end }}
