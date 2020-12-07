@@ -2,8 +2,8 @@
   {{ if .PrevInSection }}
   {{with .PrevInSection }}
   <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="prev" aria-label="Previous">
-    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
-    <span class="text-hover-highlight" aria-hidden="true">Previous Post: {{ .Title }}</span>
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "290x163" "sizes" (slice "290x163" "345x194" "395x222" "265x149" "236x133") "page" .) }}
+    <span class="text-hover-highlight" aria-hidden="true"><span class="nowrap">Previous Post:</span>{{ .Title }}</span>
     <i class="fas fa-arrow-left"></i>
   </a>
   {{ end }}
@@ -13,8 +13,8 @@
 
   {{with .NextInSection }}
   <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="next" aria-label="Next">
-    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "260x146" "sizes" (dict "320" "206x116" "375" "260x146" "425" "315x177" "768" "365x205" "1024" "220x124") "page" .) }}
-    <span class="text-hover-highlight" aria-hidden="true">Next Post: {{ .Title }}</span>
+    {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "290x163" "sizes" (slice "290x163" "345x194" "395x222" "265x149" "236x133") "page" .) }}
+    <span class="text-hover-highlight" aria-hidden="true"><span class="nowrap">Next Post:</span>{{ .Title }}</span>
     <i class="fas fa-arrow-right"></i>
   </a>
   {{end}}

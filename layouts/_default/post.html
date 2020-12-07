@@ -9,15 +9,15 @@
   </a>
   <div class="card-body">
     <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <entry-meta>
+    <div class="entry-meta">
       <span class="byline">
         by
         <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
           <a href="{{ (printf `authors/%s` $author | urlize) | relURL }}" title="View all posts by {{ $author }}">
-            <span class="author-name text-hover-highlight" itemprop="name">{{ $author }}</span>
+           <span class="author-name text-hover-highlight" itemprop="name">{{ $author }}</span>
           </a>
         </span>
       </span>
-    </entry-meta>
+    </div>
   </div>
 </article>

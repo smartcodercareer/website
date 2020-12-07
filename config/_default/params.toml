@@ -131,35 +131,6 @@ link = "https://www.gstatic.com"
 link = "https://fonts.googleapis.com"
 
 
-# preloads
-# [[preload]]
-# link = "/fonts/nunito/Nunito-Bold.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/nunito/Nunito-ExtraBold.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/poppins/Poppins-Medium.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/poppins/Poppins-Light.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/nunito/Nunito-SemiBold.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/poppins/Poppins-Bold.woff2"
-# as = "font"
-
-# [[preload]]
-# link = "/fonts/poppins/Poppins-Regular.woff2"
-# as = "font"
-
 [[preload]]
 link = "/webfonts/fa-brands-400.woff2"
 as = "font"
@@ -176,6 +147,9 @@ as = "font"
 link = "/fonts/Cabin/static/Cabin-Regular.ttf"
 as = "font"
 
+[[preload]]
+link = "/fonts/Cabin/static/Cabin-Bold.ttf"
+as = "font"
 
 # JS assets
 [[assets.js]]

@@ -39,6 +39,8 @@
   {{ partial "style" (dict "css" "css/page-raw.scss" "lazy" true) }}
   {{ else if eq .Section "authors" }}
   {{ partial "style" (dict "css" "css/page-author.scss" "lazy" true) }}
+  {{ else if .IsHome }}
+  {{ partial "style" (dict "css" "css/page-list.scss" "lazy" true) }}
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}"/>

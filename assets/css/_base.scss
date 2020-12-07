@@ -121,26 +121,6 @@ a {
   margin-bottom: 40px;
 }
 
-.card-title {
-  margin: 0;
-
-  a {
-    color: map-get($colors, text-dark);
-
-    &:hover {
-      color: map-get($colors, primary);
-    }
-  }
-}
-
-.entry-meta {
-  margin-top: .5rem;
-
-  * {
-    font-size: 15px;
-  }
-}
-
 .main-footer {
   text-align: center;
   padding: 20px 0;
@@ -174,69 +154,9 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  span {
-    font-size: 20px;
-
-    &:hover {
-      color: map-get($colors, primary);
-    }
-  }
-
-  .prev:hover *,
-  .next:hover * {
-    color: map-get($colors, primary);
-  }
-
-  i {
-    display: none;
-    position: absolute;
-
-    &:before {
-      font-size: 25px;
-    }
-  }
-
-  .prev,
-  .next {
-    position: relative;
-    margin: 1.5rem 0;
-  }
-}
 
 @include media($tablet) {
   .main-footer {
     padding: 20px;
-  }
-
-  .pagination {
-    i {
-      display: inline;
-    }
-
-    .prev,
-    .next {
-      max-width: 40%;
-    }
-
-    .prev {
-      padding-left: 30px;
-
-      i {
-        left: 0;
-      }
-    }
-
-    .next {
-      padding-right: 30px;
-
-      i {
-        right: 0;
-      }
-    }
   }
 }

@@ -41,10 +41,8 @@
 {{ $w := index (split $value "x") 0 }}
 {{ if eq $index 0 }}
 {{ $srcset = printf "%s %sw" ($orig.Fit $value).RelPermalink $w }}
-{{ $sizes = printf "%s %svw" (printf "(min-width: %spx)" $key) $w }}
 {{ else }}
 {{ $srcset = printf "%s, %s %sw" $srcset ($orig.Fit $value).RelPermalink $w }}
-{{ $sizes = printf "%s, %s %svw" $sizes (printf "(min-width: %spx)" $key) $w }}
 {{ end }}
 {{ $index = add $index 1 }}
 {{ end }}
@@ -55,7 +53,7 @@
 {{ $height = printf `height="%spx"` $height | safeHTMLAttr }}
 
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" data-sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
+<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
 <noscript>
   <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>
