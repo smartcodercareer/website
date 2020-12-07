@@ -134,12 +134,13 @@ a {
   li {
     display:inline-block;
 
-    i {
-      font-size: 40px;
+    svg {
+      width: 40px;
       margin: 0 10px;
+      fill: map-get($colors, text);
 
       &:hover {
-        color: map-get($colors, primary);
+        fill: map-get($colors, primary);
       }
     }
   }
