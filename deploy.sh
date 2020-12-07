@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-domain="gh.devakimbo.com"
+domain="devakimbo.com"
 # domain="devakimbo.github.io/site-2"
 repo="deploy"
 branch="gh-pages"

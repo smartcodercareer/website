@@ -1,4 +1,5 @@
-baseURL = "https://gh.devakimbo.com/"
+baseURL = "https://devakimbo.com/"
+# baseURL = "https://gh.devakimbo.com/"
 # baseURL = "https://devakimbo.github.io/site-2"
 
 [params]
