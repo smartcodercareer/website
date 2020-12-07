@@ -1,9 +1,9 @@
 {{ $emailUrl := (printf `mailto:?Subject=%s&Body=Check out this awesome article by %s\n\n%s.` .Title .Params.author .Permalink) }}
 
 <div class="social-share">
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook!" class="fb-share" target="_blank"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook!" class="fb-share" target="_blank" rel="nofollow noreferrer"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
 
-  <a href="https://twitter.com/share?url={{ .Permalink }}" title="Share on Twitter!" class="twitter-share" target="_blank"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+  <a href="https://twitter.com/share?url={{ .Permalink }}" title="Share on Twitter!" class="twitter-share" target="_blank" rel="nofollow noreferrer"><i class="fab fa-twitter"></i><span>Twitter</span></a>
 
-  <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title }}" class="linkedin-share" target="_blank"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+  <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title }}" class="linkedin-share" target="_blank" rel="nofollow noreferrer"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
 </div>

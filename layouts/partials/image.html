@@ -51,8 +51,11 @@
 {{ end }}
 {{ end }}
 
+{{ $width = printf `width="%spx"` $width | safeHTMLAttr }}
+{{ $height = printf `height="%spx"` $height | safeHTMLAttr }}
+
 {{ with $params }}
-<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" data-sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}">
+<img src="{{ if .lazy }}{{ $placeholder | relURL }}{{ else }}{{ $src }}{{ end }}" alt="{{ .alt }}" class="{{ if .lazy }}lazy{{ end }} {{ .class }}" data-src="{{ $src }}" data-srcset="{{ $srcset }}" data-sizes="{{ $sizes }}" title="{{ with $params.title }}{{ . }}{{ end }}" {{ with $width }}{{ . }}{{ end }} {{ with $height }}{{ . }}{{ end }}>
 <noscript>
   <img src="{{ $src }}" alt="{{ .alt }}" class="{{ .class }}" srcset="{{ $srcset }}">
 </noscript>
