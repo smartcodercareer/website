@@ -35,9 +35,6 @@
     "serve": "^11.3.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "font-awesome": "^4.7.0",
     "fuse.js": "^6.4.3"
   }
 }

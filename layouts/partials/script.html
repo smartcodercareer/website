@@ -1,10 +1,10 @@
 {{ $script := .link }}
 
 {{ if .asset }}
-{{ $buildConf := (dict "minify" false "target" "esnext") }}
+{{ $buildConf := (dict "minify" false "target" "esnext" "sourcemap" "inline") }}
 
 {{ if hugo.IsProduction }}
-{{ $buildConf = merge $buildConf (dict "minify" true "sourcemap" "inline") }}
+{{ $buildConf = merge $buildConf (dict "minify" true "sourcemap" "") }}
 {{ end }}
 
 {{ if .buildParams }}
