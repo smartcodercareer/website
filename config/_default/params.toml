@@ -170,12 +170,6 @@ async = true
 # link = "plugins/webfonts/all.min.css" # font-awesome
 # [[plugins.css]]
 # link = "plugins/themify-icons/themify-icons.css"
-# [[plugins.css]]
-# link = "plugins/fontawesome/brands.min.css"
-# [[plugins.css]]
-# link = "plugins/fontawesome/fontawesome.min.css"
-# [[plugins.css]]
-# link = "plugins/fontawesome/solid.min.css"
 
 
 # JS plugin
