@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /images/partners/
+Disallow: /tags/
+Disallow: /authors/
+Disallow: /404.html
+Disallow: /index.json
+Disallow: /*.yml$
+Disallow: /*.xml$
