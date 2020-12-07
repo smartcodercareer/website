@@ -155,7 +155,7 @@
     // m.parentNode.insertBefore(a, m)
     document.head.append(a);
   })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-  sender(1);
+  /* sender(1); */
 </script>
 
 {{ with site.Params.google_analytics_id }}
@@ -213,7 +213,7 @@
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
 
-{{ partial "script" (dict "link" "js/subscription.js" "asset" false "async" true) }}
+{{ partial "script" (dict "link" "js/subscription.js" "asset" true "async" true) }}
 
 {{ if site.Params.manychatId }}
 <script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>
