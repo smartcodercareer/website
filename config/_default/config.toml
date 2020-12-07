@@ -30,3 +30,9 @@ quality = 90
     noClasses = true
     style = "autumn"
     tabWidth = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  # section = ["HTML", "RSS", "JSON"]
+  # taxonomyTerm = ["HTML", "RSS", "JSON"]
+  # taxonomy = ["HTML", "RSS", "JSON"]

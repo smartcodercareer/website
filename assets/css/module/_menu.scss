@@ -24,11 +24,23 @@
     transition: max-height .2s ease-out;
   }
 
-  ul {
+  ul.menu {
     padding: 0;
     list-style: none;
     overflow: hidden;
     background-color: #fff;
+  }
+
+  .search {
+    display: none;
+
+    input {
+      padding: 3px 20px;
+    }
+
+    a {
+      padding: 0 10px;
+    }
   }
 
   li a {
@@ -115,6 +127,14 @@
     &.scrolled .logo {
       width: 150px;
       margin-left: 20px;
+    }
+
+    ul.menu {
+      overflow: initial;
+    }
+
+    .search {
+      display: block;
     }
 
     .logo {

@@ -1,0 +1,45 @@
+.search {
+  position: relative;
+
+  input {
+    border: none;
+    width: 100%;
+    z-index: 1;
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  ul {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    background: map-get($colors, primary);
+    color: white;
+    margin: 20px 0 0;
+    overflow: scroll;
+    max-height: 400px;
+    z-index: 1;
+
+    li {
+      padding: 10px;
+
+      & ~ li {
+        border-top: 1px solid white;
+      }
+
+      &:hover {
+        background: map-get($colors, primary-hover);
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      span {
+        color: white;
+      }
+    }
+  }
+}

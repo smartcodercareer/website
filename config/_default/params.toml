@@ -204,6 +204,18 @@ async = true
 
 
 # JS plugin
+[[assets.js]]
+link = "js/search.js"
+async = true
+
+# [[assets.js]]
+# link = "js/subscription.js"
+# async = true
+
+[[static.js]]
+link = "plugins/fuse/fuse.min.js"
+# async = true
+
 # [[static.js]]
 # link = "plugins/lazysizes/lazysizes.min.js"
 # async = true

@@ -41,12 +41,7 @@
   </article>
 
   <aside class="right-sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
-    <section class="search-sidebar">
-      <label>
-        <span>Search for:</span>
-        <input name="search" class="search-field" type="search" value="Search..." title="Search for post" />
-      </label>
-    </section>
+    {{ partial "search" (dict "section" true) }}
 
     <section class="course-promo-sidebar">
       {{ partial "image" (dict "src" "images/laurel.jpg" "size" "288x258" "static" true) }}

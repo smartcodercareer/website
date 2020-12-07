@@ -22,6 +22,10 @@ target = "static/plugins"
 source = "node_modules/@fortawesome/fontawesome-free/webfonts"
 target = "static/webfonts"
 
+[[mounts]]
+source = "node_modules/fuse.js/dist"
+target = "static/plugins/fuse"
+
 # [[mounts]]
 # source = "node_modules/jquery/dist"
 # target = "static/plugins/jquery"

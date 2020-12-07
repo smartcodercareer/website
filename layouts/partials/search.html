@@ -1,0 +1,16 @@
+{{ if .section }}
+<section class="search">
+
+  {{ else }}
+  <li class="search">
+    {{ end }}
+
+    <input type="search" placeholder="Search..." title="Search for post">
+    <ul></ul>
+
+    {{ if .section }}
+</section>
+
+{{ else }}
+  </li>
+  {{ end }}
