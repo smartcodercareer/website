@@ -1,5 +1,5 @@
 {{ $placeholder := "images/placeholder.png" }}
-{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "" "title" "") }}
+{{ $params := (dict "lazy" true "sizes" (dict) "class" "" "alt" "" "title" "" "asset" false) }}
 {{ $params = merge $params . }}
 
 {{ $width := "" }}
@@ -18,7 +18,14 @@
 {{ if $params.static }}
 {{ $src = $params.src | relURL }}
 {{ else }}
-{{ $orig := $params.page.Resources.GetMatch $params.src }}
+
+{{ $orig := "" }}
+
+{{ if $params.asset }}
+{{ $orig = resources.Get $params.src }}
+{{ else }}
+{{ $orig = $params.page.Resources.GetMatch $params.src }}
+{{ end }}
 
 {{ if eq $width "" }}
 {{ $width = $orig.Width }}

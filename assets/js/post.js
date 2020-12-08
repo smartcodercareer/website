@@ -1,3 +1,5 @@
+import { showModal, closeModal } from "./modal";
+
 const popularRecent = document.getElementById("popular-recent");
 const popularRecentLinks = popularRecent.querySelector("ul");
 
@@ -83,13 +85,6 @@ function getNextSibling(elem, selector) {
   }
 }
 
-// document.querySelectorAll(".optin-career-planing-course").forEach(item => {
-//   item.addEventListener("click", () => {
-//     sender('b2aa78d27b1267')
-//   });
-// });
-
-
 window.app = window.app || {};
 window.app.showSnackbar = function showSnackbar(event) {
   if (!event || !navigator.clipboard) {
@@ -104,4 +99,8 @@ window.app.showSnackbar = function showSnackbar(event) {
     x.className = "show";
     setTimeout(() => x.className = x.className.replace("show", ""), 3000);
   });
-}
+};
+
+document.querySelector(".optin-career-planing-course").addEventListener("click", () => {
+  showModal("it-career-planning-course");
+});

@@ -15,6 +15,10 @@ body {
   font-smooth: auto;
   -webkit-font-smoothing: antialiased;
   color: map-get($colors, text);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 ::selection {

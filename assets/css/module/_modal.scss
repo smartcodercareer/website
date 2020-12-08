@@ -1,0 +1,76 @@
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+
+  &.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close {
+    position: absolute;
+    width: 25px;
+    padding: 3px;
+    top: 15px;
+    right: 15px;
+
+    &:hover {
+      border-radius: 50px;
+      background: #e2e2e2;
+    }
+  }
+
+  .backdrop {
+    position: absolute;
+    background: black;
+    opacity: .86;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  img {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 0;
+    background: white;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    width: 100%;
+
+    form p {
+      font-size: 36px;
+    }
+  }
+
+  .sender-form-field .sender-form-box {
+    width: initial;
+  }
+}
+
+@include media($tablet) {
+  .modal {
+    img {
+      display: block;
+      margin-left: 30px;
+    }
+  }
+}

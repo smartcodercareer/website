@@ -10,7 +10,7 @@
   {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ hugo.Generator }}
 
-{{ if hugo.IsProduction }}
+  {{ if hugo.IsProduction }}
   <meta name="robots" content="INDEX, FOLLOW">
   {{ else }}
   <meta name="robots" content="NOINDEX, NOFOLLOW">
