@@ -140,8 +140,7 @@
 {{ partial "script" (dict "link" "js/post.js" "async" true "asset" true) }}
 {{ end }}
 
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-
+{{ if hugo.IsProduction }}
 {{ with site.Params.senderId }}
 <script>
   (function (s, e, n, d, er) {
@@ -186,7 +185,7 @@
 {{ end }}
 {{ end }}
 
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+{{ if hugo.IsProduction }}
 <div id="consent-container">
   <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
   <div class="content">
