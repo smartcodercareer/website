@@ -1,18 +1,26 @@
-var fuse;
-var firstRun = true;
-var resultsAvailable = false;
+let fuse;
+let firstRun = true;
+let readyForSearch = false;
+let resultsAvailable = false;
+let lastValue = "";
 
 for (item of document.querySelectorAll(".search input")) {
   item.addEventListener("keyup", async (event) => {
+    const target = event.target;
+    lastValue = target.value;
+
     try {
       if (firstRun) {
         firstRun = false;
         await loadSearch();
+        readyForSearch = true;
       }
 
-      const target = event.target;
-      console.log(target.value);
-      executeSearch(target.value, target.parentNode);
+      if (readyForSearch) {
+        readyForSearch = false;
+        executeSearch(lastValue, target.parentNode);
+        readyForSearch = true;
+      }
 
     } catch (err) {
       console.error(err)
@@ -21,11 +29,11 @@ for (item of document.querySelectorAll(".search input")) {
 }
 
 function fetchJSONFile(path, callback) {
-  var httpRequest = new XMLHttpRequest();
+  let httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
       if (httpRequest.status === 200) {
-        var data = JSON.parse(httpRequest.responseText);
+        let data = JSON.parse(httpRequest.responseText);
         if (callback) callback(data);
       }
     }
@@ -54,7 +62,7 @@ function executeSearch(term, wrapper) {
 
 function loadSearch() {
   return new Promise((resolve, reject) => fetchJSONFile('/index.json', data => {
-    var options = {
+    let options = {
       shouldSort: true,
       location: 0,
       distance: 100,
@@ -72,7 +80,7 @@ function loadSearch() {
       resolve();
 
     } catch (err) {
-      reject();
+      reject(err);
     }
   }));
 }
