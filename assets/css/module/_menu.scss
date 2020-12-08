@@ -25,18 +25,19 @@
   }
 
   ul.menu {
-    padding: 0;
     list-style: none;
     overflow: hidden;
     background-color: #fff;
   }
 
   .search {
-    display: none;
-    width: 100px;
+    margin: 0 20px 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 
     input {
-      padding: 3px 20px;
+      padding: 3px 0;
+      border-bottom: 1px solid map-get($colors, border);
     }
 
     a {
@@ -97,8 +98,9 @@
     display: none;
 
     &:checked {
-      & ~ .menu {
+      & ~ ul.menu {
         max-height: 240px;
+        overflow: visible;
       }
 
       & ~ .menu-icon .navicon {
@@ -123,7 +125,7 @@
 
 @include media($tablet) {
   .header {
-    padding: 10px 50px;
+    padding: 10px 30px;
 
     &.scrolled .logo {
       width: 150px;
@@ -136,6 +138,7 @@
 
     .search {
       display: block;
+      width: 165px;
     }
 
     .logo {
@@ -158,5 +161,11 @@
     .menu-icon {
       display: none;
     }
+  }
+}
+
+@include media($laptop) {
+  .header {
+    padding: 10px 50px;
   }
 }

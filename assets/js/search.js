@@ -6,8 +6,8 @@ for (item of document.querySelectorAll(".search input")) {
   item.addEventListener("keyup", async (event) => {
     try {
       if (firstRun) {
-        await loadSearch();
         firstRun = false;
+        await loadSearch();
       }
 
       const target = event.target;
