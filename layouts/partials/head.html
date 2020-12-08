@@ -70,8 +70,7 @@
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
 
   {{ if hugo.IsProduction }}
-  {{ partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
-
   {{ partial "style" (dict "css" "css/consent.scss" "lazy" true) }}
+  {{ partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
   {{ end }}
 </head>
