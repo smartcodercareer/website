@@ -3,7 +3,7 @@
   {{with .PrevInSection }}
   <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="prev" aria-label="Previous">
     {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "360x222" "sizes" (slice "255x143" "310x174" "360x222" "265x149" "236x133" "360x222") "page" .) }}
-    {{- partial "icon" "chevron-left" -}}
+    {{- partial "icon" (dict "type" "chevron-left") -}}
     <span class="text-hover-highlight" aria-hidden="true"></i>Previous: {{ .Title }}</span>
   </a>
   {{ end }}
@@ -15,7 +15,7 @@
   <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." class="next" aria-label="Next">
     {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "360x222" "sizes" (slice "290x163" "345x194" "395x222" "265x149" "236x133" "360x222") "page" .) }}
     <span class="text-hover-highlight" aria-hidden="true">Next: {{ .Title }}</span>
-    {{- partial "icon" "chevron-right" -}}
+    {{- partial "icon" (dict "type" "chevron-right") -}}
   </a>
   {{end}}
 </div>

@@ -2,39 +2,36 @@
   <ul class="social-contacts">
     {{ if site.Params.social.youtube.enable }}
     {{ with site.Params.social.youtube }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on YouTube" aria-label="YouTube link">{{- partial "icon" "youtube" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on YouTube" aria-label="YouTube link">{{- partial "icon" (dict "type" "youtube") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.facebook.enable }}
     {{ with site.Params.social.facebook }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Facebook" aria-label="Facebook link">{{- partial "icon" "facebook" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Facebook" aria-label="Facebook link">{{- partial "icon" (dict "type" "facebook") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.instagram.enable }}
     {{ with site.Params.social.instagram }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Instagram" aria-label="Instagram link">{{- partial "icon" "instagram" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Instagram" aria-label="Instagram link">{{- partial "icon" (dict "type" "instagram") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.twitter.enable }}
     {{ with site.Params.social.twitter }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Twitter" aria-label="Twitter link">{{- partial "icon" "twitter" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Twitter" aria-label="Twitter link">{{- partial "icon" (dict "type" "twitter") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.pinterest.enable }}
     {{ with site.Params.social.pinterest }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Pinterest" aria-label="Pinterest link">{{- partial "icon" "pinterest" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Pinterest" aria-label="Pinterest link">{{- partial "icon" (dict "type" "pinterest") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.github.enable }}
     {{ with site.Params.social.github }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Github" aria-label="GitHub link">{{- partial "icon" "github" -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Github" aria-label="GitHub link">{{- partial "icon" (dict "type" "github") -}}</a></li>
     {{ end }}
     {{ end }}
-
     {{ if site.Params.social.rss.enable }}
-    <li>
-      <a href="{{ site.Params.baseURL }}index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link" target="_blank">{{- partial "icon" "rss-feed" -}}</a>
-    </li>
+    <li><a href="{{ site.Params.baseURL }}index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link" target="_blank">{{- partial "icon" (dict "type" "rss-feed") -}}</a></li>
     {{ end }}
   </ul>
 
@@ -140,7 +137,6 @@
 {{ partial "script" (dict "link" "js/post.js" "async" true "asset" true) }}
 {{ end }}
 
-{{ if hugo.IsProduction }}
 {{ with site.Params.senderId }}
 <script>
   (function (s, e, n, d, er) {
@@ -158,6 +154,7 @@
 </script>
 {{ end }}
 
+{{ if hugo.IsProduction }}
 {{ with site.Params.google_analytics_id }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
@@ -185,9 +182,8 @@
 {{ end }}
 {{ end }}
 
-{{ if hugo.IsProduction }}
 <div id="consent-container">
-  <i title="Cookie consent" class="fas fa-cookie-bite trigger"></i>
+  {{- partial "icon" (dict "type" "cookie" "class" "trigger") -}}
   <div class="content">
     <span class="description">This website uses cookies to enhance site navigation, analyse site usage, and assist in our marketing efforts. Without cookies some feature may not be available. By clicking "Accept cookies" you agree to our <a href="/privacy-policy" class="consent-cookie-policy">Cookie Policy</a>.</span>
     <form>
@@ -212,6 +208,7 @@
 </div>
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
+{{ if hugo.IsProduction }}
 
 {{ if site.Params.manychatId }}
 <script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>

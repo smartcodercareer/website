@@ -1,13 +1,13 @@
 import { getCookie } from "./common";
+const gaInit = require("./ganalytics").default;
+const fbInit = require("./fbpixel").default;
 
 
-if (gtag) {
-  const gaInit = require("./ganalytics").default;
+if (typeof gtag !== "undefined") {
   gaInit();
 }
 
-if (fbq) {
-  const fbInit = require("./fbpixel").default;
+if (typeof fbq !== "undefined") {
   fbInit();
 }
 

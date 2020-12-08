@@ -3,7 +3,7 @@
 <div class="pagination">
   {{ if $pag.HasPrev }}
   <a href="{{ $pag.Prev.URL }}" class="prev" aria-label="Previous">
-    {{- partial "icon" "chevron-left" -}}
+    {{- partial "icon" (dict "type" "chevron-left") -}}
     <span class="text-hover-highlight" aria-hidden="true">Previous</span>
   </a>
   {{ else }}
@@ -13,7 +13,7 @@
   {{ if $pag.HasNext }}
   <a href="{{ $pag.Next.URL }}" class="next" aria-label="Next">
     <span class="text-hover-highlight" aria-hidden="true">Next</span>
-    {{- partial "icon" "chevron-right" -}}
+    {{- partial "icon" (dict "type" "chevron-right") -}}
   </a>
   {{ end }}
 </div>
