@@ -4,14 +4,7 @@ module.exports = {
     require('autoprefixer'),
     require('postcss-reporter'),
     ...process.env.HUGO_ENVIRONMENT === 'production'
-      ? [require('@fullhuman/postcss-purgecss')({
-        content: ['./**/*.html', './**/*.css'],
-        variables: true,
-        fontFace: true,
-        keyframes: true,
-        // rejected: true,
-        // safelist: [],
-      }), require('cssnano')({
+      ? [require('cssnano')({
         preset: [require('cssnano-preset-advanced'), {
           discardComments: {removeAll: true},
           colormin: true,
