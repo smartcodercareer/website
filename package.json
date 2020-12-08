@@ -7,7 +7,8 @@
     "start": "hugo server -v",
     "debug": "hugo server --gc --disableFastRender -v --verboseLog",
     "build:prod": "hugo -e production --minify --gc -v",
-    "build:prod:clean": "hugo -e production --cleanDestinationDir --minify --gc -v",
+    "build:prod:clean": "npm run clean && hugo -e production --cleanDestinationDir --minify --gc -v",
+    "build:prod:test": "npm run build:prod:clean && serve public",
     "build:test": "npm run clean && hugo -e development --minify --cleanDestinationDir --gc -v && serve public",
     "clean": "rm -rf public resources",
     "serve": "serve public"

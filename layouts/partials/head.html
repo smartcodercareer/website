@@ -35,8 +35,6 @@
 
   {{ if eq .Type "posts" }}
   {{ partial "style" (dict "css" "css/page-post.scss" "lazy" true) }}
-  {{ else if eq .Type "raw" }}
-  {{ partial "style" (dict "css" "css/page-raw.scss" "lazy" true) }}
   {{ else if eq .Section "authors" }}
   {{ partial "style" (dict "css" "css/page-author.scss" "lazy" true) }}
   {{ else if .IsHome }}
@@ -73,5 +71,7 @@
 
   {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
   {{ partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
+
+  {{ partial "style" (dict "css" "css/consent.scss" "lazy" true) }}
   {{ end }}
 </head>
