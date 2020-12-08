@@ -142,21 +142,22 @@
 
 {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 
+{{ with site.Params.senderId }}
 <script>
   (function (s, e, n, d, er) {
-    s['Sender'] = er
+    s['Sender'] = er;
     s[er] = s[er] || function () {
       (s[er].q = s[er].q || []).push(arguments)
     }, s[er].l = 1 * new Date();
-    var a = e.createElement(n);
-    // m = e.getElementsByTagName(n)[0];
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
     a.async = 1;
     a.src = d;
-    // m.parentNode.insertBefore(a, m)
-    document.head.append(a);
+    m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
-  /* sender(1); */
+  sender({{ . }})
 </script>
+{{ end }}
 
 {{ with site.Params.google_analytics_id }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
@@ -167,7 +168,7 @@
 </script>
 {{ end }}
 
-{{ with site.Params.facebook_id }}
+{{ with site.Params.facebookId }}
 <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -212,8 +213,6 @@
 </div>
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
-
-{{ partial "script" (dict "link" "js/subscription.js" "asset" true "async" true) }}
 
 {{ if site.Params.manychatId }}
 <script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>

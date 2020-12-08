@@ -83,11 +83,11 @@ function getNextSibling(elem, selector) {
   }
 }
 
-document.querySelectorAll(".optin-career-planing-course").forEach(item => {
-  item.addEventListener("click", () => {
-    sender('b2aa78d27b1267')
-  });
-});
+// document.querySelectorAll(".optin-career-planing-course").forEach(item => {
+//   item.addEventListener("click", () => {
+//     sender('b2aa78d27b1267')
+//   });
+// });
 
 
 window.app = window.app || {};

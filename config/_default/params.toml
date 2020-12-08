@@ -10,8 +10,10 @@ startYear = "2019-01-01"
 
 # gtag = "GTM-WVDXKLS"
 google_analytics_id = "UA-150778271-8"
-facebook_id = "2662574160653636"
+facebookId = "2662574160653636"
 manychatId = ""
+senderId = "b2aa78d27b1267"
+
 # copyright = "© 2016-2020 Appdy LTD"
 
 showPublishedData = false
