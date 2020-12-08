@@ -1,5 +1,6 @@
 import { debounce } from "./common";
 import "./lazy";
+import "./search";
 
 const header = document.querySelector("header.header");
 

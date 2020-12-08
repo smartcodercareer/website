@@ -133,17 +133,17 @@ link = "https://www.gstatic.com"
 link = "https://fonts.googleapis.com"
 
 
-[[preload]]
-link = "/fonts/Cabin/static/Cabin-SemiBold.ttf"
-as = "font"
+# [[preload]]
+# link = "/fonts/Cabin/static/Cabin-SemiBold.ttf"
+# as = "font"
 
-[[preload]]
-link = "/fonts/Cabin/static/Cabin-Regular.ttf"
-as = "font"
+# [[preload]]
+# link = "/fonts/Cabin/static/Cabin-Regular.ttf"
+# as = "font"
 
-[[preload]]
-link = "/fonts/Cabin/static/Cabin-Bold.ttf"
-as = "font"
+# [[preload]]
+# link = "/fonts/Cabin/static/Cabin-Bold.ttf"
+# as = "font"
 
 # JS assets
 [[assets.js]]
@@ -175,9 +175,9 @@ async = true
 
 
 # JS plugin
-[[assets.js]]
-link = "js/search.js"
-async = true
+# [[assets.js]]
+# link = "js/search.js"
+# async = true
 
 # [[assets.js]]
 # link = "js/subscription.js"
