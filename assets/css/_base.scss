@@ -1,9 +1,5 @@
 * {
-  font-family: "Cabin", sans-serif;
-  font-smooth: auto;
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: map-get($colors, text);
   margin: 0;
   padding: 0;
   outline: none;
@@ -14,7 +10,11 @@ button {
 }
 
 body {
+  font-family: Arial, x-locale-body, sans-serif;
   min-height: calc(100vh - 243px);
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
+  color: map-get($colors, text);
 }
 
 ::selection {
@@ -57,8 +57,9 @@ span {
 }
 
 p {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: -.00278rem;
   color: map-get($colors, text);
   margin-bottom:1.5rem;
 
@@ -77,8 +78,8 @@ ul {
 }
 
 li {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.6;
   color: map-get($colors, text);
 }
 
