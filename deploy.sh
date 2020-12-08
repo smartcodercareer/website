@@ -24,7 +24,7 @@ git br -D gh-pages
 
 if [[ -d "resources" ]]
 then
-  echo "Deleting old resources"
+  echo "Deleting old resources..."
   rm -rf resources
 fi
 
@@ -32,18 +32,20 @@ fi
 
 if [[ -d "public" ]]
 then
-  echo "Deleting old publication"
+  echo "Deleting old publication..."
   rm -rf public
 fi
 
 mkdir public
 
-echo "Checking out $branch branch into public"
+echo "Checking out $branch branch into public..."
 git worktree add -b $branch public $repo/$branch
+
+rm -rf public/*
 
 set -e
 
-echo "Generating site (minified HTML)"
+echo "Generating site (minified HTML)..."
 npm run build:prod
 
 cd public
