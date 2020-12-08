@@ -35,6 +35,8 @@
 
   {{ if eq .Type "posts" }}
   {{ partial "style" (dict "css" "css/page-post.scss" "lazy" true) }}
+  {{ else if eq .Type "coder-career-accelerator" }}
+  {{ partial "style" (dict "css" "css/landing-page.scss" "lazy" true) }}
   {{ else if eq .Section "authors" }}
   {{ partial "style" (dict "css" "css/page-author.scss" "lazy" true) }}
   {{ else if .IsHome }}

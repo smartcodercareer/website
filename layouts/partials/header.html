@@ -9,10 +9,6 @@
     <label class="menu-icon" for="menu-btn" aria-expanded="false"><span class="navicon"></span></label>
 
     <ul id="primary-menu" class="menu">
-      <li class="nav-item {{ if .IsHome }}active{{ end }}">
-        <a class="nav-link" href="{{ site.BaseURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>Home</a>
-      </li>
-
       {{ $current := . }}
       {{ range site.Menus.main }}
       {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}

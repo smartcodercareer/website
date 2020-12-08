@@ -51,7 +51,7 @@ function executeSearch(term, wrapper) {
     searchitems = '';
 
   } else {
-    for (let item in results.slice(0,5)) {
+    for (let item in results) {
       searchitems = searchitems + '<li><a href="' + results[item].item.permalink + '" tabindex="0">' + '<span class="title">' + results[item].item.title + '</span>';
     }
     resultsAvailable = true;
@@ -71,7 +71,8 @@ function loadSearch() {
       keys: [
         'title',
         'permalink',
-        'summary'
+        'summary',
+        "tags"
       ]
     };
 

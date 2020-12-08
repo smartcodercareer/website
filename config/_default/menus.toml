@@ -4,6 +4,11 @@ name = "Community"
 weight = 1
 
 [[main]]
+URL = "/coder-career-accelerator/"
+name = "Career Accelerator"
+weight = 2
+
+[[main]]
 URL = "/contact/"
 name = "Contact"
-weight = 2
+weight = 3

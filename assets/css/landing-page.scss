@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+
+.form-block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sender-form-box {
+  p {
+    font-size: 30px;
+  } 
+}

@@ -138,7 +138,7 @@
 
     .search {
       display: block;
-      width: 165px;
+      width: 95px;
       margin-bottom: 0;
     }
 
@@ -168,5 +168,9 @@
 @include media($laptop) {
   .header {
     padding: 10px 50px;
+
+    .search {
+      width: 165px;
+    }
   }
 }
