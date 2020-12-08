@@ -6,7 +6,13 @@
 {{ $postCssOptions = (dict "noMap" true) }}
 {{ end }}
 
-{{ $style := resources.Get .css | toCSS $toCssOptions | postCSS $postCssOptions | minify | fingerprint }}
+{{ $style := resources.Get .css | toCSS $toCssOptions | postCSS $postCssOptions  }}
+
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify }}
+{{ end }}
+
+{{ $style = $style | fingerprint}}
 
 {{ if .lazy }}
 <link rel="preload" href="{{ $style.Permalink }}" as="style" media="screen" onload="this.onload=null;this.rel='stylesheet'">
