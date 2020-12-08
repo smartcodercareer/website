@@ -41,8 +41,6 @@ mkdir public
 echo "Checking out $branch branch into public"
 git worktree add -b $branch public $repo/$branch
 
-rm -rf public/*
-
 set -e
 
 echo "Generating site (minified HTML)"
