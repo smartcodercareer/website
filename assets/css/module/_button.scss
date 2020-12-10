@@ -1,0 +1,18 @@
+button {
+  border: none;
+  color: white;
+
+  &.primary {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    background: map-get($colors, primary);
+
+    &:hover {
+      background: map-get($colors, primary-hover);
+    }
+  }
+}

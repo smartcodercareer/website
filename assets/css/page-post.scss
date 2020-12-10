@@ -93,22 +93,9 @@ code {
 
   button {
     display: inline-block;
-    font-size: 15px;
     width: 100%;
     max-width: 288px;
-    color: white;
-    background: map-get($colors, secondary);
-    font-weight: 600;
-    padding: 10px 20px;
     margin-top: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.4;
-    border: none;
-
-    &:hover {
-      background: map-get($colors, secondary-hover);
-    }
   }
 }
 
