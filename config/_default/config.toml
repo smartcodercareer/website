@@ -2,14 +2,15 @@ languageCode = "en-us"
 title = "DEV Akimbo"
 enableRobotsTXT = true
 
-summaryLength = 200 # 320 Google Rich snippet length
+summaryLength = 20 # 320 characters Google Rich snippet length
 
 [social]
-facebook = "devakimbo"
-twitter = ""
+  facebook = "devakimbo"
+  twitter = ""
+  facebook_admin = ""
 
 [imaging]
-quality = 90
+  quality = 90
 
 [taxonomies]
   # category = "categories"
@@ -33,6 +34,6 @@ quality = 90
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-  # section = ["HTML", "RSS", "JSON"]
-  # taxonomyTerm = ["HTML", "RSS", "JSON"]
-  # taxonomy = ["HTML", "RSS", "JSON"]
+    # section = ["HTML", "RSS", "JSON"]
+                 # taxonomyTerm = ["HTML", "RSS", "JSON"]
+    # taxonomy = ["HTML", "RSS", "JSON"]

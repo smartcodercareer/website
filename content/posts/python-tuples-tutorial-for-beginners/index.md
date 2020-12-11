@@ -4,12 +4,11 @@ date: 2020-12-01T17:53:24Z
 publishDate:
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image:
-images: []
+images: ["python-tuples-tutorial-for-beginners.jpg"]
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]
 audio: []
-videos: []
+videos: ["https://youtu.be/hjdiTcq9pAs"]
 draft: true
 ---
 

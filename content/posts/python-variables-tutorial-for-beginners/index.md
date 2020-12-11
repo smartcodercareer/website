@@ -4,12 +4,11 @@ date: 2020-12-01T17:36:40Z
 publishDate:
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image:
-images: []
+images: ["python-variables-tutorial-for-beginners.jpg"]
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]
 audio: []
-videos: []
+videos: ["https://youtu.be/7XDVfDOLxNw"]
 draft: true
 ---
 

@@ -7,7 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
+  {{ if .IsPage }}
+  {{ range .Params.authors }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ else }}
   {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ end }}
+
   {{ hugo.Generator }}
 
   {{ if hugo.IsProduction }}
@@ -31,21 +36,45 @@
 
   {{ "<!-- Main Stylesheet -->" | safeHTML }}
 
-  {{ partial "style" (dict "css" "css/styles.scss" "lazy" true) }}
+  {{- partial "style" (dict "css" "css/styles.scss" "lazy" true) -}}
 
-  {{ if eq .Type "posts" }}
-  {{ partial "style" (dict "css" "css/page-post.scss" "lazy" true) }}
-  {{ else if eq .Type "coder-career-accelerator" }}
-  {{ partial "style" (dict "css" "css/landing-page.scss" "lazy" true) }}
-  {{ else if eq .Section "authors" }}
-  {{ partial "style" (dict "css" "css/page-author.scss" "lazy" true) }}
-  {{ else if .IsHome }}
-  {{ partial "style" (dict "css" "css/page-list.scss" "lazy" true) }}
-  {{ else if eq .Kind "404" }}
-  {{ partial "style" (dict "css" "css/page-404.scss" "lazy" true) }}
+  {{- if eq .Type "posts" -}}
+  {{- partial "style" (dict "css" "css/page-post.scss" "lazy" true) -}}
+  {{- else if eq .Type "coder-career-accelerator" -}}
+  {{- partial "style" (dict "css" "css/landing-page.scss" "lazy" true) -}}
+  {{- else if eq .Section "authors" -}}
+  {{- partial "style" (dict "css" "css/page-author.scss" "lazy" true) -}}
+  {{- else if or .IsHome .Type "list" -}}
+  {{- partial "style" (dict "css" "css/page-list.scss" "lazy" true) -}}
+  {{- else if eq .Kind "404" -}}
+  {{- partial "style" (dict "css" "css/page-404.scss" "lazy" true) -}}
   {{ end }}
 
-  <link rel="canonical" href="{{ .Permalink }}"/>
+  {{ $paginator := "" }}
+
+  {{- if .IsHome -}}
+  {{ $paginator = .Paginate (where (where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
+  {{- else if eq .Kind "term" -}}
+  {{ $paginator = .Paginate .Data.Pages .Site.Params.numListPosts }}
+  {{ end }}
+
+  {{ if $paginator }}
+  {{ .Scratch.Set "paginator" $paginator }}
+  {{ end }}
+
+  {{ if $paginator }}
+  {{ if .Paginator.HasNext }}
+  <link rel="next" href="{{ .Paginator.Next.URL }}" />
+  {{end}}
+  {{ if .Paginator.HasPrev }}
+  <link rel="prev" href="{{ .Paginator.Prev.URL }}" />
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Paginator.URL }}">
+  {{ else }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ end }}
+
   <link rel="home" href="{{ .Permalink }}"/>
   <link rel="alternate" href="{{ .Permalink }}" hreflang="x-default" />
 
@@ -58,6 +87,7 @@
   {{ end }}
 
   {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
   <!-- <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/png"> -->
 
   {{ if .OutputFormats.Get "RSS" }}
@@ -67,15 +97,13 @@
   {{ end }}
   {{ end }}
 
-  {{ template "_internal/opengraph.html" . }}
+  {{- partial "opengraph" . -}}
   {{ template "_internal/schema.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
-
-  <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
 
   {{ partial "style" (dict "css" "css/consent.scss" "lazy" true) }}
 
   {{ if hugo.IsProduction }}
-  {{ partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
+  {{- partial "script" (dict "link" "js/ganalytics.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) -}}
   {{ end }}
 </head>

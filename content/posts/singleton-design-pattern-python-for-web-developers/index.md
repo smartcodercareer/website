@@ -4,8 +4,7 @@ date: 2020-11-30T23:29:19Z
 publishDate: 2020-11-30
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: singleton-design-pattern-python-for-web-developers.jpg
-images: []
+images: ["singleton-design-pattern-python-for-web-developers.jpg"]
 series: []
 tags: ["Design Pattern", "Python", "Python3"]
 audio: []

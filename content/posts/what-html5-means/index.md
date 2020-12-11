@@ -4,8 +4,7 @@ date: 2020-04-20T22:43:36Z
 publishDate: 2020-04-20
 lastmod: "2020-01-01"
 authors: ["Adam Faryna"]
-image: what-html-means.jpg
-images: []
+images: ["what-html-means.jpg"]
 series: []
 tags: ["Beginner", "Web Development"]
 audio: []

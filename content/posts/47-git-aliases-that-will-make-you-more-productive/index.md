@@ -4,8 +4,7 @@ date: 2020-04-19T21:50:14Z
 publishDate: 2020-04-19
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: 47-git-aliases-that-will-make-you-more-productive.jpg
-images: []
+images: ["47-git-aliases-that-will-make-you-more-productive.jpg"]
 series: []
 tags: ["Git", "Hacks", "Web Development"]
 audio: []

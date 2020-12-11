@@ -1,5 +1,4 @@
 {{ define "main" }}
-
 <section class="content">
   <article id="primary">
     {{ partial "page-title" . }}
@@ -30,7 +29,7 @@
           {{ range where (where .Site.Pages.ByDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix }}
           {{ if and (lt $relatedPostsCount $.Site.Params.NumRelatedPosts) (ge (intersect $.Params.tags .Params.tags | len) 1) }}
           <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail.">
-            {{ partial "image" (dict "src" (printf "images/%s" .Params.Image) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "395x222" "sizes" (slice "290x163" "345x194" "395x222" "236x133" "213x120" "230x129") "page" .) }}
+            {{ partial "image" (dict "src" (printf "images/%s" (index .Params.Images 0)) "alt" (printf "Thumbnail for '%s' post" .Params.Title) "size" "395x222" "sizes" (slice "290x163" "345x194" "395x222" "236x133" "213x120" "230x129") "page" .) }}
             <span class="text-hover-highlight">{{ .Title }}</span>
           </a>
 
@@ -63,7 +62,7 @@
         {{ with $page.Params }}
         <section class="post clearfix">
           <a href="{{ $page.Permalink }}" alt="Post '{{ .Title }}' thumbnail." rel="nofollow">
-            {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "sizes" (slice "150x85") "page" $page) }}
+            {{ partial "image" (dict "src" (printf "images/%s" (index .Images 0)) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "sizes" (slice "150x85") "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
         </section>
@@ -77,7 +76,7 @@
         {{ with $page.Params }}
         <section class="post clearfix">
           <a href="{{ .Permalink }}" alt="Post '{{ .Params.Title }}' thumbnail." rel="nofollow">
-            {{ partial "image" (dict "src" (printf "images/%s" .Image) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "sizes" (slice "150x85") "page" $page) }}
+            {{ partial "image" (dict "src" (printf "images/%s" (index .Images 0)) "alt" (printf "Thumbnail for '%s' post" .Title) "size" "150x85" "sizes" (slice "150x85") "page" $page) }}
             <span>{{ if le (len .Title) 45 }}{{ .Title }}{{ else }}{{ substr .Title 0 45 }}...{{ end }}</span>
           </a>
         </section>

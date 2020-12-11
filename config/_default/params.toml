@@ -2,10 +2,11 @@ home = "Home"
 logo = "/images/logo-oneliner.jpg"
 # phone = "‭+44 7561399765‬"
 email = "contact@devakimbo.com"
-author = "Dev Akimbo"
-owner = "Dev Akimbo"
+author = "DEV Akimbo"
+owner = "DEV Akimbo"
 title = "DEV Akimbo"
-description = "We help ambitious individuals become the top paid IT professionals while building amazing lives worth living."
+description = "We help ambitious individuals become the top paid software developers while building amazing lives worth living."
+images = ["/images/logo-share.png"]
 startYear = "2019-01-01"
 
 # gtag = "GTM-WVDXKLS"
@@ -21,10 +22,12 @@ numRelatedPosts = 3
 numListPosts = 9
 
 [[authors]]
-name = "Adam Faryna"
-www = "devakimbo.com"
-photo = "/images/authors/author-adam-faryna.jpeg"
-bio = "Adam is a seasoned software developer, fluent in more than 50 programming languages, tools, and frameworks. He started his IT career in 2007. He worked as an employee, contractor, freelancer, independent developer, mentor, teacher, and digital agency owner. These days he is focused on his passion for teaching and building online businesses."
+  name = "Adam Faryna"
+  www = "devakimbo.com"
+  photo = "/images/authors/author-adam-faryna.jpeg"
+  bio = "Adam is a seasoned software developer, fluent in more than 50 programming languages, tools, and frameworks. He started his IT career in 2007. He worked as an employee, contractor, freelancer, independent developer, mentor, teacher, and digital agency owner. These days he is focused on his passion for teaching and building online businesses."
+  [authors.social]
+    facebook = "devakimbo"
 
 
 [[popular]]

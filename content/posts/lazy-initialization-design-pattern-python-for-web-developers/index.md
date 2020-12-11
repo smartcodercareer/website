@@ -4,8 +4,7 @@ date: 2020-04-27T14:12:38Z
 publishDate: 2020-04-27
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: lazy-initialization-design-pattern-python-for-web-developers.jpg
-images: []
+images: ["lazy-initialization-design-pattern-python-for-web-developers.jpg"]
 series: []
 tags: ["Design Pattern", "Python", "Python3"]
 audio: []

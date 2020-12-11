@@ -4,10 +4,9 @@ date: 2020-04-11T23:24:22Z
 publishDate: 2020-04-11
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: the-6-biggest-reasons-why-you-will-fail-to-learn-programming.jpg
-images: []
+images: ["the-6-biggest-reasons-why-you-will-fail-to-learn-programming.jpg"]
 series: []
-tags: ["App Development", "Beginner Dev", "Web Development"]
+tags: ["App Development", "Beginner", "Web Development"]
 audio: []
 videos: []
 draft: false

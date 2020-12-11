@@ -4,8 +4,7 @@ date: 2020-04-16T18:45:42Z
 publishDate: 2020-04-16
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: web-application-vs-website.jpg
-images: []
+images: ["web-application-vs-website.jpg"]
 series: []
 tags: ["Back End", "Front End", "Beginner"]
 audio: []

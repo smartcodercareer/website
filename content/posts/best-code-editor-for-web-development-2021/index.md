@@ -4,8 +4,7 @@ date: 2020-04-18T12:26:29Z
 publishDate: 2020-12-01
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: best-code-editor-for-web-development-2021.jpg
-images: []
+images: ["best-code-editor-for-web-development-2021.jpg"]
 series: []
 tags: ["Atom", "Editor", "Emacs", "IDE", "Spacemacs", "Sublime Text", "Vim", "Visual Studio Code", "Web Development"]
 audio: []

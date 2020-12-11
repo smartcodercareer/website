@@ -4,8 +4,7 @@ date: 2020-05-02T21:38:41Z
 publishDate: 2020-05-02
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: how-covid-19-have-changed-programming-market.jpg
-images: []
+images: ["how-covid-19-have-changed-programming-market.jpg"]
 series: []
 tags: ["IT Career", "Programming"]
 audio: []

@@ -4,8 +4,7 @@ date: 2020-04-28T22:14:17Z
 publishDate: 2020-04-28
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: chain-of-responsibility-design-pattern-python-for-web-developers.jpg
-images: []
+images: ["chain-of-responsibility-design-pattern-python-for-web-developers.jpg"]
 series: []
 tags: ["Design Pattern", "Python", "Python3"]
 audio: []

@@ -4,8 +4,7 @@ date: 2020-04-23T22:58:03Z
 publishDate: 2020-04-23
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: decorator-design-pattern-python-for-web-developers.jpg
-images: []
+images: ["decorator-design-pattern-python-for-web-developers.jpg"]
 series: []
 tags: ["Design Pattern", "Python", "Python3"]
 audio: []

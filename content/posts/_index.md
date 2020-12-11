@@ -1,7 +1,7 @@
 ---
 title: Blog
-aliases: ["posts","articles","blog"]
-tags: ["index"]
+aliases: ["Posts","Articles"]
+tags: ["Index"]
 description: "Blog page"
 type: post
 cascade:

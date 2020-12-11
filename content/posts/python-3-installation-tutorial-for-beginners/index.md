@@ -4,12 +4,11 @@ date: 2020-06-07T21:47:50Z
 publishDate: 2020-06-07
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: python-installation-for-beginners-course-module-1-environment-setup-thumbnail.jpg
-images: []
+images: ["python-installation-for-beginners-course-module-1-environment-setup.jpg"]
 series: []
 tags: ["App Development", "Beginner", "Python", "Python3", "Tutorial", "Web Development"]
 audio: []
-videos: []
+videos: ["https://youtu.be/sd0aa3u_drI"]
 draft: false
 ---
 

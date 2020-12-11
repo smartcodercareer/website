@@ -4,8 +4,7 @@ date: 2020-04-26T16:16:52Z
 publishDate: 2020-04-26
 lastmod: 2020-01-01
 authors: ["Adam Faryna"]
-image: abstract-factory-design-pattern-python-for-web-developers.jpg
-images: []
+images: ["abstract-factory-design-pattern-python-for-web-developers.jpg"]
 series: []
 tags: ["Design Pattern", "Python", "Python3"]
 audio: []
