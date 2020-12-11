@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-
   {{ if .IsPage }}
   {{ range .Params.authors }}<meta name="author" content="{{ . }}">{{ end }}
   {{ else }}
@@ -14,12 +13,6 @@
   {{ end }}
 
   {{ hugo.Generator }}
-
-  {{ if hugo.IsProduction }}
-  <meta name="robots" content="INDEX, FOLLOW">
-  {{ else }}
-  <meta name="robots" content="NOINDEX, NOFOLLOW">
-  {{ end }}
 
   {{ if site.Params.gtag }}
   <!-- Google Tag Manager -->
@@ -73,6 +66,20 @@
   <link rel="canonical" href="{{ .Paginator.URL }}">
   {{ else }}
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ end }}
+
+  {{ if $paginator }}
+  {{ if $paginator.HasPrev }}
+  <meta name="robots" content="noindex, follow">
+  {{ else }}
+ 	<meta name="robots" content="index, follow">
+  {{ end }}
+  {{ else }}
+  <meta name="robots" content="index, follow">
+  {{ end }}
+
+  {{ if not hugo.IsProduction }}
+  <meta name="robots" content="noindex, nofollow">
   {{ end }}
 
   <link rel="home" href="{{ .Permalink }}"/>

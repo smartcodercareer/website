@@ -1,8 +1,10 @@
 User-agent: *
 Disallow: /tags/
 Disallow: /authors/
-Disallow: /credits
+Disallow: /credits/
 Disallow: /404.html
 Disallow: /index.json
 Disallow: /*.yml$
 Disallow: /*.xml$
+
+Sitemap: https://devakimbo.com/sitemap.xml
