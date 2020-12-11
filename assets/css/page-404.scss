@@ -1,0 +1,43 @@
+@import "variables";
+@import "mixins";
+
+.options {
+  text-align: center;
+
+  > a {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .search {
+    border-bottom: 1px solid map-get($colors, border);
+    padding-bottom: 5px;
+    max-width: 200px;
+    margin: auto;
+
+    input {
+      font-size: 20px;
+    }
+  }
+}
+
+@include media($tablet) {
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+@include media-min-max($tablet, $laptop) {
+  img {
+    max-width: 450px;
+  }
+}
+
+@include media-max($laptop) {
+  .options {
+    margin-top: 40px;
+  }
+}

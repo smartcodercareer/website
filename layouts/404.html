@@ -1,6 +1,10 @@
-{{ define "main"}}
+{{ define "main" }}
 <main id="main" class="page-404">
-  <img alt="" src="{{ `/images/404.jpg` | absURL }}" width="1200" height="628" />
-  <h3 id="title" style="text-align: center;"><a href="{{ `/` | relURL }}">Back To Home</a></h3>
+  {{ partial "image" (dict "src" "images/404.jpg" "size" "700x366" "sizes" (slice "290x153" "345x180" "450x235" "390x207" "700x366") "asset" true) }}
+
+  <div class="options">
+    <a href="{{ `/` | relURL }}" class="primary">Back To Home</a>
+    {{ partial "search" (dict) }}
+  </div>
 </main>
 {{ end }}

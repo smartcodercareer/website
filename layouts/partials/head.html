@@ -41,6 +41,8 @@
   {{ partial "style" (dict "css" "css/page-author.scss" "lazy" true) }}
   {{ else if .IsHome }}
   {{ partial "style" (dict "css" "css/page-list.scss" "lazy" true) }}
+  {{ else if eq .Kind "404" }}
+  {{ partial "style" (dict "css" "css/page-404.scss" "lazy" true) }}
   {{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}"/>

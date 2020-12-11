@@ -1,8 +1,9 @@
 {{ if .section }}
 <section class="search">
-
-  {{ else }}
+  {{ else if .list }}
   <li class="search">
+    {{ else }}
+    <div class="search">
     {{ end }}
 
     <input type="search" placeholder="Search" title="Search for post">
@@ -11,6 +12,8 @@
     {{ if .section }}
 </section>
 
-{{ else }}
+{{ else if .list }}
   </li>
+  {{ else }}
+  </div>
   {{ end }}

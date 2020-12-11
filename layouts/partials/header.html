@@ -36,7 +36,7 @@
       </li>
       {{ end }}
       {{ end }}
-    {{- partial "search" (dict) -}}
+    {{- partial "search" (dict "list" true) -}}
     </ul>
 
     {{ if site.Params.navCta.enable }}
