@@ -51,6 +51,10 @@ URL = "privacy-policy"
 label = "Cookie Policy"
 URL = "cookie-policy"
 
+[[footer.links]]
+label = "Credits"
+URL = "credits"
+
 # [[footer.links]]
 # label = "Terms Of Service"
 # URL = "terms-of-service"
