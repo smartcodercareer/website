@@ -10,7 +10,7 @@
     "build:prod:clean": "npm run clean && hugo -e production --cleanDestinationDir --minify --gc -v",
     "build:prod:test": "npm run build:prod:clean && serve public",
     "build:test": "npm run clean && hugo -e development --minify --cleanDestinationDir --gc -v && serve public",
-    "clean": "rm -rf public resources",
+    "clean": "rm -rf public resources $TMPDIR/hugo_cache/",
     "serve": "serve public"
   },
   "repository": {
