@@ -82,12 +82,13 @@ code {
 
 .course-promo-sidebar {
   text-align: center;
+  background: #00af80;
 
   .introduction {
     display: block;
     font-size: 21px;
     font-weight: 700;
-    color: map-get($colors, text-dark);
+    color: white;
     text-align: center;
   }
 
@@ -96,6 +97,12 @@ code {
     width: 100%;
     max-width: 288px;
     margin-top: 10px;
+    font-size: 20px;
+    background: red;
+
+    &:hover {
+      background: map-get($colors, primary);
+    }
   }
 }
 
@@ -207,15 +214,21 @@ section.content {
   text-align: center;
 
   a {
-    display: inline-block;
+    display: inline-flex;
     font-size: 18px;
     margin: 0 5px 10px 0;
     padding: 5px 10px;
     white-space: nowrap;
 
-    i,
+    svg,
     span {
       color: white;
+    }
+
+    svg {
+      fill: white;
+      width: 18px;
+      margin-right: 5px;
     }
   }
 

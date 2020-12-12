@@ -7,7 +7,7 @@
     {{ end }}
     {{ if site.Params.social.facebook.enable }}
     {{ with site.Params.social.facebook }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Facebook" aria-label="Facebook link">{{- partial "icon" (dict "type" "facebook") -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Facebook" aria-label="Facebook link">{{- partial "icon" (dict "type" "facebook-oval") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.instagram.enable }}
@@ -17,7 +17,7 @@
     {{ end }}
     {{ if site.Params.social.twitter.enable }}
     {{ with site.Params.social.twitter }}
-    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Twitter" aria-label="Twitter link">{{- partial "icon" (dict "type" "twitter") -}}</a></li>
+    <li><a href="{{ .URL }}" target="_blank" rel="nofollow noreferrer" title="{{ site.Params.title }} on Twitter" aria-label="Twitter link">{{- partial "icon" (dict "type" "twitter-oval") -}}</a></li>
     {{ end }}
     {{ end }}
     {{ if site.Params.social.pinterest.enable }}

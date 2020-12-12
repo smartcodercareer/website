@@ -1,4 +1,5 @@
 import { showModal, closeModal } from "./modal";
+import "./subscription";
 
 const popularRecent = document.getElementById("popular-recent");
 const popularRecentLinks = popularRecent.querySelector("ul");
