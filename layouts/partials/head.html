@@ -33,14 +33,14 @@
 
   {{- if eq .Type "posts" -}}
   {{- partial "style" (dict "css" "css/page-post.scss" "lazy" true) -}}
+  {{- else if eq .Kind "404" -}}
+  {{- partial "style" (dict "css" "css/page-404.scss" "lazy" true) -}}
   {{- else if eq .Type "coder-career-accelerator" -}}
   {{- partial "style" (dict "css" "css/landing-page.scss" "lazy" true) -}}
   {{- else if eq .Section "authors" -}}
   {{- partial "style" (dict "css" "css/page-author.scss" "lazy" true) -}}
-  {{- else if or .IsHome .Type "list" -}}
+  {{- else if or .IsHome (eq .Type "list") -}}
   {{- partial "style" (dict "css" "css/page-list.scss" "lazy" true) -}}
-  {{- else if eq .Kind "404" -}}
-  {{- partial "style" (dict "css" "css/page-404.scss" "lazy" true) -}}
   {{ end }}
 
   {{ $paginator := "" }}
