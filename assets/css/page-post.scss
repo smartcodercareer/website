@@ -10,13 +10,14 @@
 
 @for $i from 1 through 4 {
   h#{$i} {
-    i {
+    svg {
       display: none !important;
-      color: map-get($colors, primary);
+      fill: map-get($colors, primary);
+      width: 25px;
     }
 
     &:hover {
-      i {
+      svg {
         display: inline !important;
       }
     }
@@ -232,11 +233,6 @@ section.content {
     }
   }
 
-  i {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-
   span {
     font-size: 15px;
     font-weight: 800;
@@ -402,10 +398,6 @@ figure {
 
 .pagination {
   flex-wrap: wrap;
-
-  i {
-    top: 50%;
-  }
 }
 
 #snackbar {

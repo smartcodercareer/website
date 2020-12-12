@@ -1,7 +1,7 @@
 {{ if eq $.Page.Type "posts" }}
 <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}
   {{- if and (ge .Level 2) (le .Level 4) }}{{" " -}}
-  <a class="header-link" href="#{{ .Anchor | safeURL }}" title="Go to '{{ .Text }}' section." onclick="app.showSnackbar(event)"><i class="fas fa-link"></i></a>
+  <a class="header-link" href="#{{ .Anchor | safeURL }}" title="Go to '{{ .Text }}' section." onclick="app.showSnackbar(event)">{{- partial "icon" (dict "type" "link") -}}</a>
   {{- end -}}
 </h{{ .Level }}>
 {{ else }}
