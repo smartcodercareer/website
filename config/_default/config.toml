@@ -10,8 +10,8 @@ summaryLength = 20 # 320 characters Google Rich snippet length
   facebook_admin = "122893529374205"
   facebook_app_id = "1016249582090260"
 
-[imaging]
-  quality = 90
+# [imaging]
+#   quality = 90
 
 [taxonomies]
   # category = "categories"
