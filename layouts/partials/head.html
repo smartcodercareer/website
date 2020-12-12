@@ -57,13 +57,13 @@
 
   {{ if $paginator }}
   {{ if .Paginator.HasNext }}
-  <link rel="next" href="{{ .Paginator.Next.URL }}" />
+  <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
   {{end}}
   {{ if .Paginator.HasPrev }}
-  <link rel="prev" href="{{ .Paginator.Prev.URL }}" />
+  <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
   {{ end }}
 
-  <link rel="canonical" href="{{ .Paginator.URL }}">
+  <link rel="canonical" href="{{ .Paginator.URL | absURL }}">
   {{ else }}
   <link rel="canonical" href="{{ .Permalink }}">
   {{ end }}
