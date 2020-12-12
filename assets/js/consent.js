@@ -13,7 +13,7 @@ if (typeof fbq !== "undefined") {
 
 const container = document.getElementById("consent-container");
 
-showConsentIfUE();
+setTimeout(showConsentIfUE, 3000);
 
 container.querySelector(".trigger").addEventListener("click", toggleContent)
 
