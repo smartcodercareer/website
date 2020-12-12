@@ -10,6 +10,11 @@
 .card-title {
   margin: 0;
 
+  h2 {
+    min-height: 48px;
+    line-height: 1.3;
+  }
+
   a {
     color: map-get($colors, text-dark);
 
@@ -29,4 +34,3 @@
     font-size: 15px;
   }
 }
-
