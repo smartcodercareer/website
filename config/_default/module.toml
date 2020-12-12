@@ -18,9 +18,9 @@ target = "assets/plugins"
 source = "static/plugins"
 target = "static/plugins"
 
-[[mounts]]
-source = "node_modules/fuse.js/dist"
-target = "static/plugins/fuse"
+# [[mounts]]
+# source = "node_modules/fuse.js/dist"
+# target = "static/plugins/fuse"
 
 # [[mounts]]
 # source = "node_modules/jquery/dist"

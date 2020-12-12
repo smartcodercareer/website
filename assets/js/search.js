@@ -11,6 +11,7 @@ for (item of document.querySelectorAll(".search input")) {
 
     try {
       if (firstRun) {
+        fuse = await import("fuse.js");
         firstRun = false;
         await loadSearch();
         readyForSearch = true;
