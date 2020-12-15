@@ -21,6 +21,7 @@
       "src": "\{{ (resources.Get "images/appicons/icon-192.png" | fingerprint).RelPermalink }}",
       "type": "image\/png",
       "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "\{{ (resources.Get "images/appicons/icon-256.png" | fingerprint).RelPermalink }}",

@@ -96,7 +96,7 @@
   {{ end }}
 
   <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="/images/appicons/icon-192.png">
+  <link rel="apple-touch-icon" href="{{ `images/appicons/icon-192.png` | absURL }} ">
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
