@@ -93,6 +93,8 @@
   <link rel="preload" href="{{ .link }}" as="{{ .as }}" crossorigin="anonymous">
   {{ end }}
 
+  <link rel="manifest" href="/manifest.json">
+
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
   <!-- <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/png"> -->

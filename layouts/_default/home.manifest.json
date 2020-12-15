@@ -1,0 +1,25 @@
+{
+  "name": "DEV Akimbo",
+  "short_name": "DevAkimbo",
+  "icons": [
+    {
+      "src": "\{{ (resources.Get "images/icons/icon-128.png" | fingerprint).RelPermalink }}",
+      "type": "image\/png",
+      "sizes": "128x128",
+    },
+    {
+      "src": "\{{ (resources.Get "images/icons/icon-192.png" | fingerprint).RelPermalink }}",
+      "type": "image\/png",
+      "sizes": "192x192",
+    },
+    {
+      "src": "\{{ (resources.Get "images/icons/icon-512.png" | fingerprint).RelPermalink }}",
+      "type": "image\/png",
+      "sizes": "512x512",
+    },
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
