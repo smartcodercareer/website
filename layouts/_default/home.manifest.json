@@ -1,6 +1,6 @@
 {
   "name": "DEV Akimbo",
-  "short_name": "DevAkimbo",
+  "short_name": "DEV Akimbo",
   "icons": [
     {
       "src": "\{{ (resources.Get "images/icons/icon-128.png" | fingerprint).RelPermalink }}",
