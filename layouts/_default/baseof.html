@@ -6,6 +6,10 @@
     {{ partial "gtag.html" .}}
     {{ partial "header.html" . }}
 
+    {{ $cacheTemplate := resources.Get "templates/cache.json" }}
+    {{ $cache := $cacheTemplate | resources.ExecuteAsTemplate "./../cache.json" . }}
+    {{- substr $cache.Permalink 0 0 -}}
+
     <div id="content">
       {{ block "main" . }}{{ end }}
     </div>

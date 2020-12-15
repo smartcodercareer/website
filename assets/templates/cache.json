@@ -1,0 +1,89 @@
+{{ $buildConf := (dict "minify" false "target" "esnext" "sourcemap" "inline") }}
+{{ if hugo.IsProduction }}
+{{ $buildConf = merge $buildConf (dict "minify" true "sourcemap" "") }}
+{{ end }}
+
+{{ $buildConf = merge $buildConf (dict "params" (dict "gaId" site.Params.google_analytics_id)) }}
+
+{{ $toCssOptions := (dict "outputStyle" "expanded" "enableSourceMap" true) }}
+{{ $postCssOptions := (dict "noMap" false) }}
+
+{{ if hugo.IsProduction }}
+{{ $toCssOptions = (dict "outputStyle" "compressed" "enableSourceMap" false) }}
+{{ $postCssOptions = (dict "noMap" true) }}
+{{ end }}
+
+
+{{ $cacheFiles := (slice) }}
+{{ range (slice "css/styles.scss" "css/consent.scss" "css/page-list.scss" "css/page-post.scss" "css/landing-page.scss") }}
+{{ $style := resources.Get . | toCSS $toCssOptions | postCSS $postCssOptions }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify }}
+{{ end }}
+{{ $style = $style | fingerprint }}
+{{ $cacheFiles = $cacheFiles | append $style }}
+{{ end }}
+{{ range (slice "js/script.js" "js/consent.js" "js/post.js") }}
+{{ $script := resources.Get . | js.Build $buildConf }}
+{{ $cacheFiles = $cacheFiles | append $script }}
+{{ end }}
+
+
+{{ $offlineFiles := (slice) }}
+{{ range (slice "css/styles.scss") }}
+{{ $style := resources.Get . | toCSS $toCssOptions | postCSS $postCssOptions }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify }}
+{{ end }}
+{{ $style = $style | fingerprint }}
+{{ $offlineFiles = $offlineFiles | append $style }}
+{{ end }}
+{{ range (slice "js/script.js") }}
+{{ $script := resources.Get . | js.Build $buildConf }}
+{{ $offlineFiles = $offlineFiles | append $script }}
+{{ end }}
+
+
+{{ $notFoundFiles := (slice) }}
+{{ range (slice "css/styles.scss") }}
+{{ $style := resources.Get . | toCSS $toCssOptions | postCSS $postCssOptions }}
+{{ if hugo.IsProduction }}
+{{ $style = $style | minify }}
+{{ end }}
+{{ $style = $style | fingerprint }}
+{{ $notFoundFiles = $notFoundFiles | append $style }}
+{{ end }}
+{{ range (slice "js/script.js") }}
+{{ $script := resources.Get . | js.Build $buildConf }}
+{{ $notFoundFiles = $notFoundFiles | append $script }}
+{{ end }}
+
+{
+  "cacheFiles": [
+    {{- range $index, $file := $cacheFiles -}}
+    {{- if ne (add $index 1) (len $cacheFiles) -}}
+    {{- printf "\"%s\"," $file.RelPermalink -}}
+    {{- else -}}
+    {{- printf "\"%s\"" $file.RelPermalink -}}
+    {{- end -}}
+    {{- end -}}
+  ],
+  "offlineFiles": [
+    {{- range $index, $file := $offlineFiles -}}
+    {{- if ne (add $index 1) (len $offlineFiles) -}}
+    {{- printf "\"%s\"," $file.RelPermalink -}}
+    {{- else -}}
+    {{- printf "\"%s\"" $file.RelPermalink -}}
+    {{- end -}}
+    {{- end -}}
+  ],
+  "notFoundFiles": [
+    {{- range $index, $file := $notFoundFiles -}}
+    {{- if ne (add $index 1) (len $notFoundFiles) -}}
+    {{- printf "\"%s\"," $file.RelPermalink -}}
+    {{- else -}}
+    {{- printf "\"%s\"" $file.RelPermalink -}}
+    {{- end -}}
+    {{- end -}}
+  ]
+}

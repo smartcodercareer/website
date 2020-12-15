@@ -21,6 +21,8 @@ showPublishedData = false
 numRelatedPosts = 3
 numListPosts = 9
 
+serviceWorker = true
+
 [[authors]]
   name = "Adam Faryna"
   www = "devakimbo.com"

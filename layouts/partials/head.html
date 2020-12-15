@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  <meta name="theme-color" content="#ffffff"/>
+
   {{ if .IsPage }}
   {{ range .Params.authors }}<meta name="author" content="{{ . }}">{{ end }}
   {{ else }}
@@ -94,6 +96,7 @@
   {{ end }}
 
   <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/images/appicons/icon-192.png">
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
