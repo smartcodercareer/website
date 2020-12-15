@@ -109,8 +109,9 @@
   {{ end }}
   {{ end }}
 
+  {{- partial "schema" . -}}
+
   {{- partial "opengraph" . -}}
-  {{ template "_internal/schema.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
 
   {{ partial "style" (dict "css" "css/consent.scss" "lazy" true) }}
