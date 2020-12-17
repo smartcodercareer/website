@@ -5,11 +5,11 @@
   "main": "postcss.config.js",
   "scripts": {
     "start": "hugo server -v --gc",
-    "debug": "hugo server --gc --disableFastRender -v --verboseLog --noHTTPCache --debug --path-warnings",
+    "debug": "npm run clean && hugo server --gc --disableFastRender -v --verboseLog --noHTTPCache --debug --path-warnings",
     "build:prod": "hugo -e production --minify --gc -v",
     "build:prod:clean": "npm run clean && hugo -e production --cleanDestinationDir --minify --gc -v",
     "build:prod:test": "npm run build:prod:clean && serve public",
-    "build:test": "npm run clean && hugo -e development --minify --cleanDestinationDir --gc -v && serve public",
+    "build:test": "npm run clean && hugo -e development --cleanDestinationDir --gc -v && serve public",
     "clean": "rm -rf public resources $TMPDIR/hugo_cache/",
     "serve": "serve public"
   },

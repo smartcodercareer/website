@@ -1,23 +1,24 @@
-{{ $organizationName := delimit (.Site.Params.Owner | lower | split " ") "" }}
-{{ $organization := printf `%s#/schema/organization/%s` (.Site.baseURL | safeHTML) $organizationName }}
-{{ $organizationURL := .Site.baseURL | safeHTML }}
-{{ $logo := printf `%s#/schema/image/logo` .Site.baseURL | safeHTML }}
+{{ $brand := .Site.Params.Owner }}
+{{ $organizationName := delimit (split (.Site.Params.Owner | lower) " ") "" }}
+{{ $organization := printf `%s/#/schema/organization/%s` (.Site.BaseURL | safeHTML) $organizationName }}
+{{ $organizationURL := .Site.BaseURL | safeHTML }}
+{{ $logo := printf `%s/#/schema/image/logo/%s` (.Site.BaseURL | safeHTML) $organizationName }}
 {{ $logoURL := "images/logo-oneliner.jpg" | absURL | safeHTML }}
 {{ $logoCaption := printf "%s logo." .Site.Params.Title }}
-{{ $website := printf "%s#/schema/website/%s" (.Site.baseURL | safeHTML) $organizationName }}
-{{ $websiteURL := .Site.baseURL | safeHTML }}
-{{ $websiteTitle := .Site.Title | safeJS }}
-{{ $breadcrumb := printf "%s#/schema/breadcrumb/%s" (.Site.baseURL | safeHTML) $organizationName}}
+{{ $website := printf "%s/#/schema/website/%s" (.Site.BaseURL | safeHTML) $organizationName }}
+{{ $websiteURL := .Site.BaseURL | safeHTML }}
+{{ $websiteTitle := .Site.Title }}
+{{ $breadcrumb := printf "%s/#/schema/breadcrumb/%s" (.Site.BaseURL | safeHTML) $organizationName}}
 
-{{ if or .IsHome .IsSection -}}
+{{ if or .IsHome .IsSection }}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@graph": [{
-      "@type": "Organization"
+      "@type": "Organization",
       "@id": {{ $organization }},
-      "brand": {{ $organizationName }},
-      "url": {{ .Site.baseURL }},
+      "brand": {{ $brand }},
+      "url": {{ .Site.BaseURL }},
       "logo": {
         "@type": "ImageObject",
         "@id": {{ $logo }},
@@ -26,12 +27,15 @@
         "height": 36,
         "caption": {{ $logoCaption }}
       },
-      "sameAs": [{{ range $i, $link := .Site.Params.social.fullLinks }}{{ if $i }}, {{ $link }}{{ end }}{{ end }}],
+      "image": {
+        "@id": {{ $logo }}
+      },
+      "sameAs": [{{ delimit .Site.Params.social.fullLinks ", " }}]
     }, {
       "@type": "WebSite",
       "@id": {{ $website }},
       "url": {{ $websiteURL }},
-      "name": {{ $websiteTitle }},
+      "name": "{{ $websiteTitle }}",
       "publisher": {
         "@id": {{ $organization }}
       }
@@ -39,8 +43,8 @@
       "@type": "WebPage",
       "@id": {{ .Permalink }},
       "url": {{ .Permalink }},
-      "inLanguage": {{ .Site.LanguageCode | default "en-US" }},
-      "name": "{{ .Site.Title | safeJS }}",
+      "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
+      "name": "{{ .Site.Title }}",
       "datePublished": "2020-12-15T08:13:22+00:00",
       "dateModified": "2020-12-15T21:54:07+00:00",
       "description": "{{ .Site.Params.Description }}",
@@ -51,7 +55,7 @@
         "@id": {{ $organization }}
       }
     }
-      {{ if .Sections }}
+      {{ if and (not .IsHome) .Sections }}
              , {
                "@type": "BreadcrumbList",
                "@id": {{ $breadcrumb }},
@@ -75,15 +79,16 @@
   }
 </script>
 {{ else if eq .Type "posts" }}
+{{ "else if eq .Type posts" }}
 {{ $author :=  or .Params.author .Site.Author.name }}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@graph": [{
-      "@type": "Organization"
+      "@type": "Organization",
       "@id": {{ $organization }},
-      "brand": {{ $organizationName }},
-      "url": {{ .Site.baseURL }},
+      "brand": {{ $brand }},
+      "url": {{ .Site.BaseURL }},
       "logo": {
         "@type": "ImageObject",
         "@id": {{ $logo }},
@@ -93,27 +98,22 @@
         "caption": {{ $logoCaption }}
       },
       "image": {
-        "@id": {{ printf "%s#/schema/image/%s" (.Permalink | safeHTML) (.Title | anchorize) }},
-        "inLanguage": {{ .Site.LanguageCode | default "en-US" }},
-        "url": "{{ index .Params.images 0 }}",
-        "width": 719,
-        "height": 405,
-        "caption": {{ .Title }}
+        "@id": {{ $logo }}
       },
-      "sameAs": [{{ range $i, $link := .Site.Params.social.fullLinks }}{{ if $i }}, {{ $link }}{{ end }}{{ end }}],
+      "sameAs": [{{ delimit .Site.Params.social.fullLinks ", " }}]
     }, {
       "@type": "WebSite",
       "@id": {{ $website }},
       "url": {{ $websiteURL }},
       "name": {{ $websiteTitle }},
       "publisher": {
-        "@id": {{ $organizationName }}
+        "@id": {{ $organization }}
       }
     }, {
       "@type": "WebPage",
       "@id": {{ .Permalink }},
       "url": {{ .Permalink }},
-      "inLanguage": {{ .Site.LanguageCode | default "en-US" }},
+      "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
       "name": {{ $websiteTitle }},
       "datePublished": {{ .PublishDate }},
       "dateModified": {{ .Lastmod }},
@@ -146,8 +146,8 @@
       "articleSection": "{{ .Section }}",
       "name": "{{ .Title | safeJS }}",
       "headline": "{{ .Title | safeJS }}",
-      "description": "{{ if .Description }}{{ .Description | safeJS }}{{ else }}{{if .IsPage}}{{ .Summary  }}{{ end }}{{ end }}",
-      "inLanguage": {{ .Site.LanguageCode | default "en-us" }},
+      "description": {{ .Summary | safeJS }},
+      "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -180,19 +180,19 @@
       "url" : {{ .Permalink }},
       "wordCount" : "{{ .WordCount }}",
       "keywords" : [{{ delimit .Params.tags ", " }}]
-    ]
-  }]
+    }]
   }
 </script>
 {{ else }}
+{{ "else" }}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@graph": [{
-      "@type": "Organization"
+      "@type": "Organization",
       "@id": {{ $organization }},
-      "brand": {{ $organizationName }},
-      "url": {{ $organizationURL}},
+      "brand": {{ $brand }},
+      "url": {{ $organizationURL }},
       "logo": {
         "@type": "ImageObject",
         "@id": {{ $logo }},
@@ -201,53 +201,46 @@
         "height": 36,
         "caption": {{ $logoCaption }}
       },
-      {{ with .Params.images }}
       "image": {
-        "@id": {{ printf "%s#/schema/image/%s" (.Permalink | safeHTML) (.Title | anchorize) }},
-        "inLanguage": {{ .Site.LanguageCode | default "en-US" }},
-        "url": {{ (.Resources.GetMatch (index .Params.images 0)).Permalink }},
-        "width": 719,
-        "height": 405,
-        "caption": "{{ .Title }}"
+        "@id": {{ $logo }}
       },
-      {{ end }}
-      "sameAs": [{{ range $i, $link := .Site.Params.social.fullLinks }}{{ if $i }}, {{ $link }}{{ end }}{{ end }}],
+      "sameAs": [{{ delimit .Site.Params.social.fullLinks ", " }}]
     }, {
       "@type": "WebSite",
       "@id": {{ $website }},
       "url": {{ $websiteURL }},
-      "name": "{{ .Site.Title | safeJS }}",
+      "name": "{{ $websiteTitle }}",
       "publisher": {
-        "@id": {{ $organizationName }}
+        "@id": {{ $organization }}
       }
     }, {
       "@type": "WebPage",
       "@id": {{ .Permalink }},
       "url": {{ .Permalink }},
-      "inLanguage": {{ .Site.LanguageCode | default "en-US" }},
-      "name": "{{ .Site.Title | safeJS }}",
+      "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
+      "name": "{{ .Title }}",
       "datePublished": {{ .PublishDate }},
       "dateModified": {{ .Lastmod }},
-      "description": "{{ .Description }}",
+      "description": "{{ .Summary }}",
       "isPartOf": {
-        "@id": {{ $organizationURL }}
+        "@id": {{ $organization }}
       },
       "about": {
-        "@id": {{ $organizationURL }}
+        "@id": {{ $organization }}
       }
     }, {
       "@type": "BreadcrumbList",
       "@id": {{ $breadcrumb }},
       "itemListElement": [
-        {{ range $i, $item := .Sections }}
+        {{ range where .Site.Pages "Section" .Section }}
         {
           "@type": "ListItem",
-          "position": {{ add $i 1 }},
+          "position": "1",
           "item": {
             "@type": "WebPage",
-            "@id": "{{ $item.Permalink }}",
-            "url": "{{ $item.Permalink }}",
-            "name": "{{ $item.Title | safeJS }}"
+            "@id": {{ .Permalink }},
+            "url": {{ .Permalink }},
+            "name": "{{ .Title }}"
           }
         }
         {{ end }}

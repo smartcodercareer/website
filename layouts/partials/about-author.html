@@ -1,23 +1,21 @@
 {{ $author := .author }}
 
 <div class="about-author">
-  {{ range site.Params.authors }}
-  {{ if eq .name $author }}
-  <h2 class="name">{{ .name }}</h2>
+  {{ range where (where site.Pages "Section" "authors") ".Params.title" "eq" $author }}
+  <h2 class="name">{{ .Title }}</h2>
   <div class="details">
-    {{- partial "image" (dict "src" .photo "size" "120x120" "alt" (printf "%s photo" .name) "static" true) -}}
-    <span class="name-mobile">{{ .name }}</span>
-    <span class="bio">{{ .bio }}</span>
+    {{- partial "image" (dict "src" .Params.photo "size" "120x120" "alt" (printf "%s photo" .Title) "sizes" (slice "120x120") "page" .) -}}
+
+    <span class="name-mobile">{{ .Title }}</span>
+    <span class="bio">{{ .Params.Summary }}</span>
 
     <div class="links">
-      {{ with .www }}
+      {{ with .Params.www }}
       <a href="//{{ . }}" target="_blank" rel="nofollow noreferrer" class="www text-primary">Website</a>&nbsp;|&nbsp;
       {{ end }}
 
-      <a href="{{ (printf `authors/%s` $author | urlize) | relURL }}" class="text-primary" title="View all posts by {{ $author }}">View all posts by {{ $author }}</a>
+      <a href="{{ .Permalink }}" class="text-primary" title="View all posts by {{ $author }}">View all posts by {{ .Title }}</a>
     </div>
   </div>
-
-  {{ end }}
   {{ end }}
 </div>
