@@ -1,8 +1,8 @@
 ---
 title: Blog
 tags: ["Index"]
-description: "Blog page"
-type: post
+description: "Blog posts"
+type: list
 cascade:
   type: posts
 ---

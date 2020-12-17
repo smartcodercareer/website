@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8">
-  <title>{{ .Title }} | {{ .Site.Title}}</title>
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
 
   {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,7 +47,7 @@
 
   {{ $paginator := "" }}
 
-  {{- if .IsHome -}}
+  {{- if or .IsHome .IsSection -}}
   {{ $paginator = .Paginate (where (where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
   {{- else if eq .Kind "term" -}}
   {{ $paginator = .Paginate .Data.Pages .Site.Params.numListPosts }}
@@ -78,10 +78,6 @@
   {{ end }}
   {{ else }}
   <meta name="robots" content="index, follow">
-  {{ end }}
-
-  {{ if not hugo.IsProduction }}
-  <meta name="robots" content="noindex, nofollow">
   {{ end }}
 
   <link rel="home" href="{{ .Permalink }}"/>

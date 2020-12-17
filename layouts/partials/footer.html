@@ -216,7 +216,7 @@
 
 {{ end }}
 
-{{ if site.Params.ServiceWorker }}
+{{ with site.Params.ServiceWorker }}
 <script>
   if('serviceWorker' in navigator) {
     const PREFETCH = true;

@@ -4,3 +4,4 @@ baseURL = "https://devakimbo.com/"
 
 [params]
 env = "production"
+serviceWorker = true
