@@ -41,7 +41,7 @@
   {{- partial "style" (dict "css" "css/landing-page.scss" "lazy" true) -}}
   {{- else if eq .Section "authors" -}}
   {{- partial "style" (dict "css" "css/page-author.scss" "lazy" true) -}}
-  {{- else if or .IsHome (eq .Type "list") -}}
+  {{- else if or .IsHome (eq .Kind "term") -}}
   {{- partial "style" (dict "css" "css/page-list.scss" "lazy" true) -}}
   {{ end }}
 
