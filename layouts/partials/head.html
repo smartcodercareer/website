@@ -96,11 +96,9 @@
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/png">
   <!-- <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/png"> -->
 
-  {{ if .OutputFormats.Get "RSS" }}
   {{ with .OutputFormats.Get "RSS" }}
-  <link href="{{ site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-  <link href="{{ site.BaseURL }}index.xml" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
-  {{ end }}
+  <link href="{{ site.BaseURL }}/blog/index.xml" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ site.BaseURL }}/blog/index.xml" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
   {{ end }}
 
   {{- partial "schema" . -}}
