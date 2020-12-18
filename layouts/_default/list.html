@@ -3,8 +3,7 @@
 {{ partial "page-title.html" . }}
 
 <section class="list">
-  {{ $paginator := .Scratch.Get "paginator" }}
-  {{ range $paginator.Pages }}
+  {{ range .Paginator.Pages }}
   {{ .Render "post" }}
   {{ end }}
 

@@ -3,21 +3,33 @@
 {{ $author = . }}
 {{ end }}
 
-<article class="card shadow thumbnail">
-  {{ if .Params.Images }}
+<article class="card shadow {{ if ne .Type `authors` }}thumbnail{{ end }}">
+  {{ if or .Params.Images .Params.photo }}
   <a href="{{ .Permalink }}">
-    {{ partial "image" (dict "src" (printf "images/%s" (index .Params.Images 0)) "alt" .Title "size" "395x223" "sizes" (slice "290x163" "306x172" "314x177" "345x194" "395x223" "990x555") "page" .) }}
+    {{ $image := "" }}
+    {{ $class := "" }}
+    {{ $size := "" }}
+    {{ if .Params.Images }}
+    {{ $image = printf "images/%s" (index .Params.Images 0) }}
+    {{ $size = "395x223" }}
+    {{ else }}
+    {{ $image = .Params.photo }}
+    {{ $class = "oval" }}
+    {{ $size = "200x200" }}
+    {{ end }}
+
+    {{ partial "image" (dict "src" $image "alt" .Title "size" $size "sizes" (slice "290x163" "306x172" "314x177" "345x194" "395x223" "990x555") "class" $class "page" .) }}
   </a>
   {{ end }}
   <div class="card-body">
     <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ if .Params.authors }}
+    {{ if $author }}
     <div class="entry-meta">
       <span class="byline">
         by
-        <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope>
+        <span class="author vcard">
           <a href="{{ (printf `authors/%s` $author | urlize) | relURL }}" title="View all posts by {{ $author }}">
-           <span class="author-name text-hover-highlight" itemprop="name">{{ $author }}</span>
+           <span class="author-name text-hover-highlight">{{ $author }}</span>
           </a>
         </span>
       </span>

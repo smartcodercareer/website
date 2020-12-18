@@ -22,7 +22,7 @@
 {{ $orig := "" }}
 
 {{ if $params.asset }}
-{{ $orig = resources.Get $params.src }}
+{{ $orig = resources.GetMatch $params.src }}
 {{ else }}
 {{ $orig = $params.page.Resources.GetMatch $params.src }}
 {{ end }}

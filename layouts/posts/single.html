@@ -70,7 +70,7 @@
       </div>
 
       <div class="recent-list">
-        {{ range (where .Site.RegularPages "Section" "posts" | first 5) }}
+        {{ range (where .Site.RegularPages "Section" "blog" | first 5) }}
         {{ $page := . }}
         {{ with $page.Params }}
         <section class="post clearfix">
