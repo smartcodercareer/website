@@ -6,8 +6,7 @@
 
 <h2>Articles</h2>
 <section class="list">
-  {{ $paginator := .Paginate (where (where .Data.Pages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
-  {{ range $paginator.Pages }}
+  {{ range (.Scratch.Get "paginator").Pages }}
   {{ .Render "post" }}
   {{ end }}
 

@@ -3,6 +3,7 @@ title = "DEV Akimbo"
 enableRobotsTXT = true
 
 summaryLength = 20 # 320 characters Google Rich snippet length
+paginate = 9
 
 [social]
   facebook = "devakimbo"

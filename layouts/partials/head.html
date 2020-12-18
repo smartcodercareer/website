@@ -46,11 +46,10 @@
   {{ end }}
 
   {{ $paginator := "" }}
-
   {{- if or .IsHome .IsSection -}}
-  {{ $paginator = .Paginate (where (where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) .Site.Params.numListPosts }}
+  {{ $paginator = .Paginate (where (where .Site.RegularPages.ByPublishDate.Reverse "Type" "posts") "Date.Unix" "<" .Date.Unix) }}
   {{- else if eq .Kind "term" -}}
-  {{ $paginator = .Paginate .Data.Pages .Site.Params.numListPosts }}
+  {{ $paginator = .Paginate .Data.Pages }}
   {{ end }}
 
   {{ if $paginator }}
@@ -58,14 +57,13 @@
   {{ end }}
 
   {{ if $paginator }}
-  {{ if .Paginator.HasNext }}
-  <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
+  {{ if $paginator.HasNext }}
+  <link rel="next" href="{{ $paginator.Next.URL | absURL }}" />
   {{end}}
-  {{ if .Paginator.HasPrev }}
-  <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+  {{ if $paginator.HasPrev }}
+  <link rel="prev" href="{{ $paginator.Prev.URL | absURL }}" />
   {{ end }}
-
-  <link rel="canonical" href="{{ .Paginator.URL | absURL }}">
+  <link rel="canonical" href="{{ $paginator.URL | absURL }}">
   {{ else }}
   <link rel="canonical" href="{{ .Permalink }}">
   {{ end }}
