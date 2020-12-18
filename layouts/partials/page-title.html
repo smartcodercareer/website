@@ -8,7 +8,7 @@
   {{ end }}
 
   {{ if eq .Kind "term" }}
-  <h1>{{ .Data.Singular | title }} "{{ .Title }}"</h1>
+  <h1>{{ .Title }} ({{ .Data.Singular | title }})</h1>
   {{ else }}
   <h1>{{ .Title }}</h1>
   {{ end }}

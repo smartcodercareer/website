@@ -1,4 +1,4 @@
 ---
-title: "DEV Akimbo"
+title: "Home"
 draft: false
 ---

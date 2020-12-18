@@ -1,14 +1,24 @@
 {{ $brand := .Site.Params.Owner }}
 {{ $organizationName := delimit (split (.Site.Params.Owner | lower) " ") "" }}
-{{ $organization := printf `%s/#/schema/organization/%s` (.Site.BaseURL | safeHTML) $organizationName }}
+{{ $organization := printf `%s#/schema/organization/%s` (.Site.BaseURL | safeHTML) $organizationName }}
 {{ $organizationURL := .Site.BaseURL | safeHTML }}
-{{ $logo := printf `%s/#/schema/image/logo/%s` (.Site.BaseURL | safeHTML) $organizationName }}
+{{ $logo := printf `%s#/schema/image/logo/%s` (.Site.BaseURL | safeHTML) $organizationName }}
 {{ $logoURL := "images/logo-oneliner.jpg" | absURL | safeHTML }}
 {{ $logoCaption := printf "%s logo." .Site.Params.Title }}
-{{ $website := printf "%s/#/schema/website/%s" (.Site.BaseURL | safeHTML) $organizationName }}
+{{ $website := printf "%s#/schema/website/%s" (.Site.BaseURL | safeHTML) $organizationName }}
 {{ $websiteURL := .Site.BaseURL | safeHTML }}
 {{ $websiteTitle := .Site.Title }}
-{{ $breadcrumb := printf "%s/#/schema/breadcrumb/%s" (.Site.BaseURL | safeHTML) $organizationName}}
+{{ $breadcrumb := printf "%s#/schema/breadcrumb/%s" (.Site.BaseURL | safeHTML) $organizationName}}
+
+{{ $breadcrumbItems := (slice .) }}
+{{ $breadcrumbCurrentItem := . }}
+{{ range (slice 1 2 3 4) }}
+{{ if $breadcrumbCurrentItem.Parent }}
+{{ $breadcrumbItems = $breadcrumbItems | append $breadcrumbCurrentItem.Parent }}
+{{ $breadcrumbCurrentItem = $breadcrumbCurrentItem.Parent }}
+{{ end }}
+{{ end }}
+{{ $breadcrumbItems = partial "reverse-slice" $breadcrumbItems }}
 
 {{ if or .IsHome .IsSection }}
 <script type="application/ld+json">
@@ -54,33 +64,33 @@
       "about": {
         "@id": {{ $organization }}
       }
-    }
-      {{ if and (not .IsHome) .Sections }}
-             , {
-               "@type": "BreadcrumbList",
-               "@id": {{ $breadcrumb }},
-               "itemListElement": [
-                 {{ range $i, $item := .Sections }}
-                 {
-                   "@type": "ListItem",
-                   "position": {{ add $i 1 }},
-                   "item": {
-                     "@type": "WebPage",
-                     "@id": {{ $item.Permalink }},
-                     "url": {{ $item.Permalink }},
-                     "name": "{{ $item.Title | safeJS }}"
-                   }
-                 }
-                 {{ end }}
-               ]
-             }
-      {{ end }}
-    ]
+    }, {
+      "@type": "BreadcrumbList",
+      "@id": {{ $breadcrumb }},
+      "itemListElement": [
+        {{ range $i, $item := $breadcrumbItems -}}
+        {{- if ne $i 0 -}}, {{- end -}}
+        {
+          "@type": "ListItem",
+          "position": {{ add $i 1 }},
+          "item": {
+            "@type": "WebPage",
+            "@id": {{ $item.Permalink }},
+            "url": {{ $item.Permalink }},
+            "name": "{{ $item.Title }}"
+          }
+        }
+        {{- end -}}
+      ]
+    }]
   }
 </script>
 {{ else if eq .Type "posts" }}
-{{ "else if eq .Type posts" }}
+{{ "else if eq .Type posts" -}}
 {{ $author :=  or .Params.author .Site.Author.name }}
+{{ $author }}
+
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -114,7 +124,7 @@
       "@id": {{ .Permalink }},
       "url": {{ .Permalink }},
       "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
-      "name": {{ $websiteTitle }},
+      "name": {{ .Title }},
       "datePublished": {{ .PublishDate }},
       "dateModified": {{ .Lastmod }},
       "description": {{ .Site.Params.Description }},
@@ -128,25 +138,26 @@
       "@type": "BreadcrumbList",
       "@id": {{ $breadcrumb }},
       "itemListElement": [
-        {{ range $i, $item := .Sections }}
+        {{ range $i, $item := $breadcrumbItems -}}
+        {{- if ne $i 0 -}}, {{- end -}}
         {
           "@type": "ListItem",
           "position": {{ add $i 1 }},
           "item": {
             "@type": "WebPage",
-            "@id": "{{ $item.Permalink }}",
-            "url": "{{ $item.Permalink }}",
-            "name": "{{ $item.Title | safeJS }}"
+            "@id": {{ $item.Permalink }},
+            "url": {{ $item.Permalink }},
+            "name": "{{ $item.Title }}"
           }
         }
-        {{ end }}
+        {{- end -}}
       ]
     }, {
       "@type": "BlogPosting",
       "articleSection": "{{ .Section }}",
       "name": "{{ .Title | safeJS }}",
       "headline": "{{ .Title | safeJS }}",
-      "description": {{ .Summary | safeJS }},
+      "description": "{{ .Summary | safeJS }}",
       "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
@@ -184,7 +195,7 @@
   }
 </script>
 {{ else }}
-{{ "else" }}
+{{ "else" -}}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -218,7 +229,11 @@
       "@id": {{ .Permalink }},
       "url": {{ .Permalink }},
       "inLanguage": "{{ .Site.LanguageCode | default `en-US` }}",
+      {{ if eq .Kind "term" -}}
+      "name": "{{ .Title }} ({{ .Data.Singular | title }})",
+      {{ else }}
       "name": "{{ .Title }}",
+      {{ end -}}
       "datePublished": {{ .PublishDate }},
       "dateModified": {{ .Lastmod }},
       "description": "{{ .Summary }}",
@@ -232,18 +247,19 @@
       "@type": "BreadcrumbList",
       "@id": {{ $breadcrumb }},
       "itemListElement": [
-        {{ range where .Site.Pages "Section" .Section }}
+        {{ range $i, $item := $breadcrumbItems -}}
+        {{- if ne $i 0 -}}, {{- end -}}
         {
           "@type": "ListItem",
-          "position": "1",
+          "position": {{ add $i 1 }},
           "item": {
             "@type": "WebPage",
-            "@id": {{ .Permalink }},
-            "url": {{ .Permalink }},
-            "name": "{{ .Title }}"
+            "@id": {{ $item.Permalink }},
+            "url": {{ $item.Permalink }},
+            "name": "{{ $item.Title }}"
           }
         }
-        {{ end }}
+        {{- end -}}
       ]
     }]
   }
