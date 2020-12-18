@@ -1,8 +1,8 @@
 ---
 title: Decorator Design Pattern Python for Web Developers
 date: 2020-04-23T22:58:03Z
-publishDate: 2020-04-23
-lastmod: 2020-01-01
+publishDate: 2020-04-24T22:58:03Z
+lastmod: 2020-04-23T22:58:03Z
 authors: ["Adam Faryna"]
 images: ["decorator-design-pattern-python-for-web-developers.jpg"]
 series: []

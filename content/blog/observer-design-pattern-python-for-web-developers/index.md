@@ -1,8 +1,8 @@
 ---
 title: Observer Design Pattern Python for Web Developers
 date: 2020-04-25T18:32:14Z
-publishDate: 2020-04-25
-lastmod: 2020-01-01
+publishDate: 2020-04-25T20:32:14Z
+lastmod: 2020-04-25T18:40:14Z
 authors: ["Adam Faryna"]
 images: ["observer-design-pattern-python-for-web-developers.jpg"]
 series: []

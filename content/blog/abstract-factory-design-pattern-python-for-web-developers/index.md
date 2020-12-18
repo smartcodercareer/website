@@ -1,8 +1,8 @@
 ---
 title: Abstract Factory Design Pattern Python for Web Developers
-date: 2020-04-26T16:16:52Z
-publishDate: 2020-04-26
-lastmod: 2020-01-01
+date: 2020-04-25T16:16:52Z
+publishDate: 2020-04-26T16:16:52Z
+lastmod: 2020-04-26T12:16:52Z
 authors: ["Adam Faryna"]
 images: ["abstract-factory-design-pattern-python-for-web-developers.jpg"]
 series: []

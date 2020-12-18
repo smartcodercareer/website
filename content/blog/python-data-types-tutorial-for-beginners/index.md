@@ -1,8 +1,8 @@
 ---
 title: Python Data Types Tutorial for Beginners
 date: 2020-06-08T16:25:25Z
-publishDate: 2020-06-08
-lastmod: 2020-01-01
+publishDate: 2020-06-08T18:25:25Z
+lastmod: 2020-06-08T17:25:25Z
 authors: ["Adam Faryna"]
 images: ["python-data-types-tutorial-for-beginners.jpg"]
 series: []

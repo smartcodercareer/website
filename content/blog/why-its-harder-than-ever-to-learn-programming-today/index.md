@@ -1,8 +1,8 @@
 ---
 title: Why Its Harder Than Ever to Learn Programming Today
 date: 2020-04-30T17:38:05Z
-publishDate: 2020-04-30
-lastmod: 2020-01-01
+publishDate: 2020-04-30T17:48:05Z
+lastmod: 2020-04-30T17:38:05Z
 authors: ["Adam Faryna"]
 images: ["why-learning-to-code-gets-harder.jpg"]
 series: []

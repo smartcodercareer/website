@@ -1,8 +1,8 @@
 ---
 title: What HTML5 Means
 date: 2020-04-20T22:43:36Z
-publishDate: 2020-04-20
-lastmod: "2020-01-01"
+publishDate: 2020-04-20T23:43:36Z
+lastmod: 2020-04-20T22:50:36Z
 authors: ["Adam Faryna"]
 images: ["what-html-means.jpg"]
 series: []

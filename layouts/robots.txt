@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /tags/
-Disallow: /authors/
 Disallow: /credits/
 Disallow: /404.html
 Disallow: /index.json

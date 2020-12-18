@@ -1,8 +1,8 @@
 ---
 title: Web App vs Website
 date: 2020-04-16T18:45:42Z
-publishDate: 2020-04-16
-lastmod: 2020-01-01
+publishDate: 2020-04-16T19:45:42Z
+lastmod: 2020-04-16T18:50:42Z
 authors: ["Adam Faryna"]
 images: ["web-application-vs-website.jpg"]
 series: []

@@ -1,8 +1,8 @@
 ---
 title: Python 3 Installation Tutorial for Beginners
 date: 2020-06-07T21:47:50Z
-publishDate: 2020-06-07
-lastmod: 2020-01-01
+publishDate: 2020-06-07T23:47:50Z
+lastmod: 2020-06-07T22:47:50Z
 authors: ["Adam Faryna"]
 images: ["python-installation-for-beginners.jpg"]
 series: []

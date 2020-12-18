@@ -1,8 +1,8 @@
 ---
 title: What Programming Language to Learn First in 2021
 date: 2020-08-13T06:12:00Z
-publishDate: 2020-12-04
-lastmod: 2020-01-01
+publishDate: 2020-12-04T06:22:00Z
+lastmod: 2020-12-04T06:12:00Z
 authors: ["Adam Faryna"]
 images: ["what-programming-language-to-learn-first-in-2021.jpg"]
 series: []

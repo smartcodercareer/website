@@ -1,8 +1,8 @@
 ---
 title: The 6 Biggest Reasons Why You Will Fail to Learn Programming
 date: 2020-04-11T23:24:22Z
-publishDate: 2020-04-11
-lastmod: 2020-01-01
+publishDate: 2020-04-11T23:40:22Z
+lastmod: 2020-04-11T23:30:22Z
 authors: ["Adam Faryna"]
 images: ["the-6-biggest-reasons-why-you-will-fail-to-learn-programming.jpg"]
 series: []

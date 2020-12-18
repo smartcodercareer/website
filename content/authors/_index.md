@@ -1,8 +1,8 @@
 ---
-title: "Authors"
-kind: "taxonomy"
+title: Authors
+kind: taxonomy
 tags: ["Index"]
-type: "list"
+type: list
 cascade:
-  kind: "author"
+  kind: author
 ---

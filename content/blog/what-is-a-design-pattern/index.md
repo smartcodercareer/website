@@ -1,8 +1,8 @@
 ---
 title: What Is a Design Pattern
 date: 2020-04-23T13:05:18Z
-publishDate: 2020-04-23
-lastmod: 2020-01-01
+publishDate: 2020-04-23T15:05:18Z
+lastmod: 2020-04-23T13:15:18Z
 authors: ["Adam Faryna"]
 images: ["what-is-a-design-pattern.jpg"]
 series: []

@@ -1,8 +1,8 @@
 ---
 title: What Programming Language to Learn for Web Development in 2021
 date: 2020-04-12T23:38:03Z
-publishDate: 2020-12-02
-lastmod: 2020-01-01
+publishDate: 2020-12-02T23:58:03Z
+lastmod: 2020-12-02T23:38:03Z
 authors: ["Adam Faryna"]
 images: ["what-programming-language-to-learn-for-web-development-in-2021.jpg"]
 series: []

@@ -1,8 +1,8 @@
 ---
 title: What Is Object Oriented Programming
 date: 2020-04-14T10:08:00Z
-publishDate: 2020-04-14
-lastmod: 2020-01-01
+publishDate: 2020-04-14T11:08:00Z
+lastmod: 2020-04-14T10:10:00Z
 authors: ["Adam Faryna"]
 images: ["what-is-object-oriented-programming.jpg"]
 series: []

@@ -22,10 +22,7 @@ numRelatedPosts = 3
 numListPosts = 9
 
 
-[social.fullLinks]
-  facebook = "https://www.facebook.com/devakimbo"
-  youtube = "https://www.youtube.com/channel/UCP9kyhK4ET0lWapEGtlkwAw"
-  twitter = "https://twitter.com/devakimbo"
+socialFullLinks = ["https://www.facebook.com/devakimbo", "https://www.youtube.com/channel/UCP9kyhK4ET0lWapEGtlkwAw", "https://twitter.com/devakimbo"]
 
 
 [[popular]]
