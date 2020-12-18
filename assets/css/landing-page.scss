@@ -4,10 +4,14 @@
 .form-block {
   display: flex;
   justify-content: space-around;
-}
 
-.sender-form-box {
-  p {
-    font-size: 30px;
-  } 
+  .sender-form-field {
+    .sender-form-box {
+      width: 100%;
+
+      p {
+        font-size: 30px;
+      }
+    }
+  }
 }

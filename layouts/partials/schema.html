@@ -95,10 +95,8 @@
   }
 </script>
 {{ else if eq .Type "posts" }}
-{{ "else if eq .Type posts" -}}
 
 {{ $authorName := .Site.Author.name }}
-
 {{ if .Params.authors }}
 {{ $authorName = index .Params.authors 0 }}
 {{ end }}
@@ -219,7 +217,6 @@
   }
 </script>
 {{ else }}
-{{ "else" -}}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",

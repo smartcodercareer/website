@@ -1,13 +1,12 @@
 ---
-title: "Coder Career Accelerator 🚀"
+title: Coder Career Accelerator 🚀
 date: 2020-11-01T19:59:07Z
-type: coder-career-accelerator
-draft: false
+type: landing-page
 ---
 
 We haven't announced that yet but we are planning something big, something that can't be found anywhere else on the internet.
 
-Coder career is hard and there is no place for doing mistakes because they cost a lot, not only in wasted time and money but also in missed opportunities. The programming landscape is tricky and it never was as complex as it's now, thanks to the number of emerging technologies and old but stable tech stack. 
+Coder career is hard and there is no place for doing mistakes because they cost a lot, not only in wasted time and money but also in missed opportunities. The programming landscape is tricky and it never was as complex as it's now, thanks to the number of emerging technologies and old but stable tech stack.
 
 If you take your coder career and life seriously **Coder Career Accelerator** is the place and community you want to join.
 
