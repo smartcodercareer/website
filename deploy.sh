@@ -46,7 +46,7 @@ rm -rf public/*
 set -e
 
 echo "Generating site (minified HTML)..."
-npm run build:prod
+npm run build:prod:clean
 
 cd public
 
