@@ -24,15 +24,16 @@
     display: block;
   }
 
-  .bio {
-    display: inline;
-    font-size: 16px;
-    clear: both;
-  }
-
   .details {
     margin-bottom: 1rem;
     text-align: center;
+  }
+
+  .bio {
+    display: inline-block;
+    font-size: 16px;
+    clear: both;
+    text-align: left;
   }
 
   .links {
@@ -48,6 +49,14 @@
   .about-author {
     .name {
       display: block
+    }
+
+    .details {
+      text-align: left;
+    }
+
+    .bio {
+      display: inline;
     }
 
     img {
