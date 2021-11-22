@@ -1,8 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-
-domain="devakimbo.com"
-# domain="devakimbo.github.io/site-2"
+domain="www.devakimbo.com"
 repo="deploy"
 branch="gh-pages"
 
@@ -18,10 +16,6 @@ fi
 #   rm -rf .git/worktrees/public/
 # fi
 
-git worktree remove -f public
-git worktree prune
-git br -D gh-pages
-
 if [[ -d "resources" ]]
 then
   echo "Deleting old resources..."
@@ -29,6 +23,15 @@ then
 fi
 
 # npm run build:prod:clean
+
+if [[ -d ".git/worktrees/public/" ]]
+then
+  echo "Delating .git/worktrees/public/"
+  git worktree prune
+  git worktree remove -f public
+  rm -rf .git/worktrees/public/
+  git br -D gh-pages
+fi
 
 if [[ -d "public" ]]
 then

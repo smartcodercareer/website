@@ -137,6 +137,7 @@
 {{ partial "script" (dict "link" "js/post.js" "async" true "asset" true) }}
 {{ end }}
 
+{{ if hugo.IsProduction }}
 {{ with site.Params.senderId }}
 <script>
   (function (s, e, n, d, er) {
@@ -154,7 +155,6 @@
 </script>
 {{ end }}
 
-{{ if hugo.IsProduction }}
 {{ with site.Params.google_analytics_id }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
@@ -180,8 +180,13 @@
 
 {{ partial "script" (dict "link" "js/fbpixel.js" "asset" true "async" true) }}
 {{ end }}
+
+{{ if site.Params.manychatId }}
+<script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>
+{{ end }}
 {{ end }}
 
+{{ if site.Params.consent }}
 <div id="consent-container">
   {{- partial "icon" (dict "type" "cookie" "class" "trigger") -}}
   <div class="content">
@@ -208,12 +213,6 @@
 </div>
 
 {{ partial "script" (dict "link" "js/consent.js" "asset" true "async" true "buildParams" (dict "gaId" site.Params.google_analytics_id)) }}
-{{ if hugo.IsProduction }}
-
-{{ if site.Params.manychatId }}
-<script src="//widget.manychat.com/{{ site.Params.manychatId }}.js" async="async"></script>
-{{ end }}
-
 {{ end }}
 
 {{ with site.Params.ServiceWorker }}

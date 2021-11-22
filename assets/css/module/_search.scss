@@ -20,7 +20,12 @@
     margin: 20px 0 0;
     overflow: scroll;
     max-height: 400px;
+    visibility: visible;
     z-index: 1;
+
+    &:empty {
+      visibility: hidden;
+    }
 
     li {
       padding: 10px;

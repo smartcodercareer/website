@@ -76,7 +76,7 @@ function openModalImage(src, text) {
 }
 
 function getNextSibling(elem, selector) {
-  const sibling = elem.nextElementSibling;
+  let sibling = elem.nextElementSibling;
 
   if (!selector) return sibling;
 
