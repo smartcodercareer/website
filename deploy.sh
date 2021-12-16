@@ -38,6 +38,9 @@ git worktree add -b $branch public $repo/$branch
 
 set -e
 
+echo "Cleaning up the environment..."
+yarn clean
+
 echo "Generating site (minified HTML)"
 hugo --minify
 
