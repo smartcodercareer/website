@@ -42,7 +42,7 @@ echo "Cleaning up the environment..."
 yarn clean
 
 echo "Generating site (minified HTML)"
-hugo --minify
+hugo --minify --cleanDestinationDir --gc -v
 
 # echo "Generating site (minified HTML)..."
 # npm run build:prod:clean
