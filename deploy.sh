@@ -69,6 +69,6 @@ fi
 # echo $includes >> _config.yml
 
 echo "Updating $branch branch"
-git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo master:$branch
+git add --all && git commit --allow-empty -m "Publishing to $branch" && git push -f $repo $branch
 
 cd ..
