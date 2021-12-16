@@ -36,19 +36,19 @@ fi
 echo "Checking out $branch branch into public..."
 git worktree add -b $branch public $repo/$branch
 
-set -e
+# set -e
 
-echo "Cleaning up the environment..."
-yarn clean
+# echo "Cleaning up the environment..."
+# yarn clean
 
-echo "Generating site (minified HTML)"
-hugo --minify --cleanDestinationDir --gc -v
+# echo "Generating site (minified HTML)"
+# hugo --minify --cleanDestinationDir --gc
 
 # echo "Generating site (minified HTML)..."
 # npm run build:prod:clean
 
-# echo "Generating site (minified HTML)"
-# hugo --minify
+echo "Generating site (minified HTML)"
+hugo --minify
 
 cd public
 
