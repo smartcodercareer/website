@@ -38,8 +38,11 @@ git worktree add -b $branch public $repo/$branch
 
 set -e
 
-echo "Generating site (minified HTML)..."
-npm run build:prod:clean
+echo "Generating site (minified HTML)"
+hugo --minify
+
+# echo "Generating site (minified HTML)..."
+# npm run build:prod:clean
 
 # echo "Generating site (minified HTML)"
 # hugo --minify
