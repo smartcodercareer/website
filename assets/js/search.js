@@ -57,7 +57,15 @@ function executeSearch(term, wrapper) {
     resultsAvailable = true;
   }
 
-  wrapper.querySelector("ul").innerHTML = searchitems;
+  const ul = wrapper.querySelector("ul");
+
+  if (searchitems.length) {
+    ul.style = 'display: block';
+    ul.innerHTML = searchitems;
+
+  } else {
+    ul.style = 'display: none';
+  }
 }
 
 function loadSearch() {
