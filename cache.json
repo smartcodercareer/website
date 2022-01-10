@@ -93,7 +93,7 @@
 
 
 {
-  "cacheFiles": ["/css/styles.min.617c956f5978a0359c41ae46c5faf3f65cc4fa2bb4044f3041d706e9f1e47bdb.css","/css/consent.min.56f4bc07366815ed27d6c8fc058df65549e37756b9ae26f6a487f228794809f0.css","/css/page-list.min.ca661efe654d57754a078c3888a1f8fd9306474fed5d1514cc5e860d3f7780b4.css","/css/page-post.min.c5175237a019215761c1f6a4d4de3274e92e9e72bd41c2f79a59719293e55946.css","/css/landing-page.min.422039e6a20e7dfd456f55de7bac5040434e29994fcf4e22c22ca9c5782803a5.css","/js/script.js","/js/consent.js","/js/post.js"],
-  "offlineFiles": ["/css/styles.min.617c956f5978a0359c41ae46c5faf3f65cc4fa2bb4044f3041d706e9f1e47bdb.css","/js/script.js"],
-  "notFoundFiles": ["/css/styles.min.617c956f5978a0359c41ae46c5faf3f65cc4fa2bb4044f3041d706e9f1e47bdb.css","/js/script.js"]
+  "cacheFiles": ["/css/styles.min.f1af44e96285009e7abd9f4b962792a80d83cbd2b5ad5da861c5cc5b6fd85a75.css","/css/consent.min.56f4bc07366815ed27d6c8fc058df65549e37756b9ae26f6a487f228794809f0.css","/css/page-list.min.ca661efe654d57754a078c3888a1f8fd9306474fed5d1514cc5e860d3f7780b4.css","/css/page-post.min.c5175237a019215761c1f6a4d4de3274e92e9e72bd41c2f79a59719293e55946.css","/css/landing-page.min.422039e6a20e7dfd456f55de7bac5040434e29994fcf4e22c22ca9c5782803a5.css","/js/script.js","/js/consent.js","/js/post.js"],
+  "offlineFiles": ["/css/styles.min.f1af44e96285009e7abd9f4b962792a80d83cbd2b5ad5da861c5cc5b6fd85a75.css","/js/script.js"],
+  "notFoundFiles": ["/css/styles.min.f1af44e96285009e7abd9f4b962792a80d83cbd2b5ad5da861c5cc5b6fd85a75.css","/js/script.js"]
 }
