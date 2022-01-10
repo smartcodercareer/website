@@ -28,15 +28,17 @@ if [[ -d ".git/worktrees/public/" ]]
 then
   echo "Delating .git/worktrees/public/"
   git worktree prune
-  # git worktree remove -f public
+  git worktree remove -f public
   rm -rf .git/worktrees/public/
-  # git br -D gh-pages
+  git br -D gh-pages
 fi
 
 echo "Checking out $branch branch into public..."
 git worktree add -b $branch public $repo/$branch
 
-# set -e
+rm -rf public/*
+
+set -e
 
 # echo "Cleaning up the environment..."
 # yarn clean
