@@ -11,9 +11,9 @@ images = ["/images/logo-share.png"]
 startYear = "2016-01-01"
 
 # gtag = "GTM-WVDXKLS"
-google_analytics_id = "UA-150778271-8"
+# google_analytics_id = "UA-150778271-8"
 consent = false
-facebookId = "2662574160653636"
+# facebookId = "2662574160653636"
 # manychatId = ""
 senderId = "b2aa78d27b1267"
 
