@@ -30,7 +30,11 @@ then
   git worktree prune
   git worktree remove -f public
   rm -rf .git/worktrees/public/
-  git br -D gh-pages
+fi
+
+if [[ `git br|grep $branch` ]]
+then
+  git br -D $branch
 fi
 
 echo "Checking out $branch branch into public..."
