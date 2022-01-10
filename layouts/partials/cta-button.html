@@ -1,8 +1,0 @@
-{{ with .CTA }}
-<a href="{{ .URL }}" class="btn blue_gradient wow slideInUp cta" {{ if .target }}target="{{ .target}}"{{ end }} data-wow-delay="{{ if .delay }}{{ .delay }}{{ end }}">
-  <span class="title">{{ .title }}</span>
-  {{ if .subtitle }}
-  <span class="subtitle">{{ .subtitle }}</span>
-  {{ end }}
-</a>
-{{ end }}

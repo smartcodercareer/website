@@ -1,8 +1,0 @@
-baseURL = "https://devakimbo.com/"
-# baseURL = "http://localhost:5000/"
-# baseURL = "https://gh.devakimbo.com/"
-# baseURL = "https://devakimbo.github.io/site-2"
-
-[params]
-env = "production"
-serviceWorker = true
